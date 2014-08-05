@@ -63,15 +63,15 @@
 
 .font-s3() { //this sets the baseline for the layout but gets overridden per template
   font-size: 16px;
-  line-height: 22px;
+  line-height: 26px;
 }
 
 .font-s2() {
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .font-s1() {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 22px;
 }

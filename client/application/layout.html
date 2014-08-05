@@ -8,10 +8,15 @@
       <a href="{{pathFor 'careers'}}">Careers</a>
       <a href="http://blog.percolatestudio.com">Blog</a>
       <a data-contact>Contact</a>
+      <a data-menu>Contact</a>
     </nav>
-    
-    {{> contactOverlay}}
-    
     {{> yield}}
+    <footer>
+     <div class="tagline">Build Dreams.</div>
+     <span class="copyright">&copy; 2014 Percolate Studio PTY LTD</span>
+     <a href="http://twitter.com/percolatestudio"><span class="icon-twitter"></span></a>
+    </footer>
   </div>
+  {{> contactOverlay}}
+  {{> menuOverlay}}
 </template>

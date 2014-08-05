@@ -1,0 +1,41 @@
+<template name="what">
+  <header>
+    <div class="col-left">
+      <h1 class="title-page">What</h1>
+      <p class="description-page">Percolate creates digital products to improve peoples lives. We identify challenges, design solutions, and make technology human. </p>
+    </div>
+    <div class="col-right bg-image-what"></div>
+  </header>
+
+  <section class="section-what">
+    {{#each items}}
+      <div class="item" style="background-image: url(https://farm4.staticflickr.com/3770/13820513543_b5e11b52ba_z_d.jpg); background-size: cover;">
+        <h1>{{name}}</h1>
+        <p>{{contents}}</p>
+      </div>
+    {{/each}}
+  </section>
+  <section class="section-clients">
+    <h2 class="title-section">Selected Clients</h2>
+    <div class="grid-5">
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+      <div class="tech">
+        <img src="http://placehold.it/240x300">
+      </div>
+    </div>
+  </section>
+</template>

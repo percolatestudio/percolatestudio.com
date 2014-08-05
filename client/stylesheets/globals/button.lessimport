@@ -1,0 +1,227 @@
+[class^="btn-"],
+[class*=" btn-"] {
+  .transition( all 200ms ease-in );
+  .type-bold;
+
+  /* Sizing */
+  font-size: 12px !important;
+  line-height: 20px !important; //override line-height always so we can use em's to size.
+  padding: .65em 1.25em; //more compact buttons 8 15 yields 36px button
+
+
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important; //prevents global link styles from applying
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.caps {
+    .section-subtitle(@color-empty);
+    text-indent:.3em; //reqiured to balance out the extra right spacing from letter-spacing
+    [class^="icon-"],
+    [class*=" icon-"] {
+      text-indent: 0;
+    }
+  }
+  &.upload {
+    position: relative;
+    input[type="file"] {
+      opacity: 0;
+      .position(absolute, 0,0,0,0);
+    }
+  }
+  &[class*="small"] {
+    padding: .35em 1em;
+  }
+  &[class*="primary"] {
+    background-color: @color-primary;
+    color: @color-empty;
+    &:hover{
+      background-color: darken(@color-primary, 5%);
+    }
+    &:active {
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+  }
+  &[class*="secondary"] {
+    background: @color-secondary;
+    color: @color-empty;
+    &:hover{
+      background-color: darken(@color-secondary, 5%);
+    }
+    &:active{
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+  }
+  &[class*="tertiary"] {
+    background-color: darken(@color-rare, 5%);
+    color: @color-full;
+    &:hover{
+      background-color: darken(@color-rare, 10%);
+    }
+    &:active{
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+  }
+  &[class*="pagination"] {
+    color: @color-well;
+    padding: .65em 1em;
+    &:first-of-type { //beginning cap
+      border-radius: 3px 0 0 3px;
+      background: @color-rare;
+    }
+    &:last-of-type { //end cap
+      border-radius: 0 3px 3px 0;
+      background: @color-medium-rare;
+    }
+    &:hover{
+      background-color: darken(@color-medium-rare, 10%) !important;
+      >[class^="icon-"],
+      >[class*=" icon-"] {
+        color: @color-full;
+      }
+    }
+    &:active{
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+    >[class^="icon-"],
+    >[class*=" icon-"] {
+      color: @color-well;
+      font-size: 1rem;
+      margin-right: 0;
+    }
+  }
+  &[class*="loading"] {
+    cursor: progress;
+    &[class*="primary"] { //color for primary
+      background: lighten(@color-primary, 10%);
+      &:before {
+        .animation(spin 1s infinite linear);
+        display: inline-block;
+        margin-right: 6px;
+
+        letter-spacing: 0;//overrides .caps text-indent
+        text-indent: 0;//overrides .caps text-indent
+        margin-left:-.3em; //overrides .caps text-indent
+
+
+        /* Icon for nochrome, taken straight from icon.lessimport */
+        font-family: 'percolate';
+      	speak: none;
+      	font-style: normal;
+      	font-weight: normal;
+      	font-variant: normal;
+      	text-transform: none;
+      	line-height: 1;
+
+      	/* Better Font Rendering =========== */
+      	-webkit-font-smoothing: antialiased;
+      	-moz-osx-font-smoothing: grayscale;
+
+      	/* Down arrow */
+        content: "\e60e";
+      }
+    }
+  }
+  &[class*="progress"] {
+    .rest,
+    .active { .transition( all 700ms cubic-bezier(0.175, 0.885, 0.335, 1.05) ); }
+
+    .rest { display: inline-block; }
+    .active { display: none; }
+    .progress {
+      .position(absolute, 0, auto, auto, 0, auto, 3px);
+      .transition( opacity 100ms cubic-bezier(0.175, 0.885, 0.335, 1.05) );
+      background: rgba(0,0,0,.2);
+      opacity: 0;
+      z-index: 1;
+    }
+
+    &[disabled] {
+      cursor: progress;
+      opacity: 1; //reset disabled master style
+      .rest { display: none; }
+      .active {
+        opacity: .8;
+        display: inline-block;
+      }
+      @-webkit-keyframes pulsate {
+        0% { opacity: .5;}
+        50% { opacity: 1.0;}
+        100% { opacity: .5;}
+      }
+      .progress {
+        opacity: 1;
+        -webkit-animation: pulsate 2s cubic-bezier(0.175, 0.885, 0.335, 1.05);
+        -webkit-animation-iteration-count: infinite;
+      }
+      &[class*="primary"] { //color for primary
+        background: lighten(@color-primary, 10%);
+        .progress { background: darken(@color-primary, 5%); }
+      }
+      //color for secondary & tertiary follow the same pattern if required
+    }
+  }
+  &[class*="toggle"] {
+    .background-image(linear-gradient(to bottom, rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 100%));
+    background-color: rgba(241, 241, 241, 0.5);
+    color: @color-full;
+    padding-left: .5em;
+    padding-right: .5em;
+    &:hover{
+      color: @color-primary;
+    }
+    &:active, &.active {
+      box-shadow: rgba(0,0,0,.1) 0 0 0 1px inset;
+      background: rgba(0,0,0,.4);
+      color: @color-empty;
+    }
+  }
+  //overlays
+  &[class*="wire"] {
+    background-color: transparent;
+    box-shadow: rgba(255, 255, 255, .9) 0 0 0 1px inset;
+    color: @color-empty;
+    &:hover {}
+    &:active {}
+  }
+
+  &[disabled] {
+    opacity: .5;
+  }
+  >[class^="icon-"],
+  >[class*=" icon-"] {
+    display: inline-block;
+    font-size: 1em;
+    line-height: inherit;
+    margin-right: .5em;
+    vertical-align: top; //alignment because line-height inherits the button lineheight /// prevents 1px vertical offset
+    width: 1em;
+  }
+}//end btn
+
+.btns-group {
+  .display(flex);
+  .flex-wrap(wrap);
+  max-width: 400px;
+  width: 100%;
+  [class*="btn-toggle"] {
+    .ellipsized;
+    .flex(1);
+    border-radius: 0;
+    float: left;
+
+    & + [class*="btn-toggle"] {
+      margin-left: -1px;
+      border-left: 1px solid @color-well;
+    }
+    &:first-of-type {
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-of-type {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}

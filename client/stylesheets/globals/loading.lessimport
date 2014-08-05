@@ -1,0 +1,36 @@
+.loading-spinner(@border-size: 2px) {
+  border-bottom: @border-size solid rgba(255,255,255,.7);
+	border-left: @border-size solid rgba(255,255,255,.7);
+	border-right: @border-size solid @color-primary;
+	border-top: @border-size solid @color-primary;
+	border-radius: 100%;
+	.animation(spin .8s infinite linear);
+}
+
+.page-loading {
+  .loading-spinner;
+  margin: 30% auto;
+	height: 3em;
+	width: 3em;
+  @media screen and (min-width: 40em) {
+    height: 6em;
+    width: 6em;
+  }
+}
+
+.inline-loading {
+  //for searchOverlay & elsewhere
+  .loading-spinner(1px);
+  display: inline-block;
+	height: .75em; //default size, loading is a tad smaller than text
+	width: .75em;
+}
+
+@-webkit-keyframes spin {
+  0% { .transform(rotate(0deg)); }
+  100% { .transform(rotate(359deg)); }
+}
+@keyframes spin {
+  0% { .transform(rotate(0deg)); }
+  100% { .transform(rotate(359deg)); }
+}

@@ -1,0 +1,17 @@
+// various mixins that make it simpler to do common things
+.position(@type; @top: auto; @right: auto; @bottom: auto; @left: auto; @width: auto; @height: auto) {
+  position: @type;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+  width: @width;
+  height: @height;
+}
+
+// give an element a max-width and center
+.max-width(@width) {
+  max-width: @width;
+  margin-left: auto;
+  margin-right: auto;
+}

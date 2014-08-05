@@ -1,0 +1,25 @@
+.overlay-screen {
+  .fill-with-absolute-position;
+  background: rgba(241, 241, 241, 0.96);
+
+  padding: 1em 0;
+  @media screen and (min-width: 30em) { padding: 2em 0; }
+  @media screen and (min-width: 40em) { padding: 4em 0; }
+
+  opacity: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 9;
+
+  > .overlay-close {
+    .position(absolute, .75em, .75em, auto, auto, 3em, 3em);
+    padding-top: .75em;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+    .icon-cross {
+      .font-m2;
+      color: @color-well;
+    }
+  }
+}

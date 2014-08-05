@@ -1,0 +1,111 @@
+* {
+  .box-sizing( border-box );
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+html, button, input, textarea, select {
+  .type-primary;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  //this is unused right now because of namespacing,
+  //when we convert everything over to these styles remove the namespacing in main.less
+  .font-s3();
+  .type-primary;
+  color: @color-full;
+}
+
+/* Default type layout */
+h1, h2, h3, h4, h5, h6 {
+  .type-primary;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  .font-m3;
+}
+
+h2 {
+  .font-m2;
+}
+
+h3 {
+  .font-m1;
+}
+
+h4 {
+  .font-s3;
+}
+
+h5 {
+  .font-s2;
+  .type-bold;
+  color: @color-medium-rare;
+  text-transform: uppercase;
+}
+
+h6 {
+  .font-s1;
+  color: @color-medium;
+}
+
+p {
+  .font-s3;
+}
+
+sub,
+sup {
+  font-size: .8em;
+}
+
+sub {
+  bottom: -.2em;
+}
+
+sup {
+  top: -.2em;
+}
+
+b, em {
+  .type-bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid @color-medium-rare;
+  margin: .5em 0;
+}
+
+code, pre {
+  .font-s1;
+  .type-code;
+  background: lighten(@color-raw, 3%);
+  box-shadow: @color-raw 0 0 0 1px inset;
+  border-radius: 2px;
+}
+code {
+  color: @color-tertiary;
+  display: inline-block;
+  vertical-align: baseline;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+pre {
+  color: @color-medium-well;
+  padding: 1em 1.25em;
+  white-space: pre-wrap;
+}
+
+figure {
+  margin: 0;
+  figcaption {
+    margin-top: .25em;
+    text-indent: .75em;
+  }
+}

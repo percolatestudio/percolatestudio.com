@@ -1,0 +1,60 @@
+<template name="contactOverlay">
+  <a class="overlay-close">
+    <span class="icon-close-thin"></span>
+  </a>
+  <div class="title-overlay">Work with us</div>
+  <fieldset>
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="Email Address">
+    <textarea name="about" placeholder="About your company and project"></textarea>
+
+    <div class="fieldset-group">
+      <div class="fieldset-group-title">Services <span class="subtext">Select all that apply</span></div>
+      <a class="btn-toggle active">Strategy</a>
+      <a class="btn-toggle">Design</a>
+      <a class="btn-toggle active">Engineering</a>
+      <a class="btn-toggle">Consulting</a>
+    </div>
+    <div class="fieldset-group">
+      <div class="fieldset-group-title">Timing</div>
+      <div class="btns-group">
+        <a class="btn-toggle">Today</a>
+        <a class="btn-toggle active">This Quarter</a>
+        <a class="btn-toggle">This Year</a>
+      </div>
+    </div>
+    <div class="fieldset-group">
+      <div class="fieldset-group-title">Budget</div>
+      <div class="btns-group">
+        <a class="btn-toggle">25k–50k</a>
+        <a class="btn-toggle active">50k–100k</a>
+        <a class="btn-toggle">+100k</a>
+        <a class="btn-toggle">Not sure</a>
+      </div>
+    </div>
+    <button class="btn-primary" type="submit">Send Message</button>
+  </fieldset>
+  <div class="ancillary-contact vcard">
+    <div class="wrapper-connect">
+      <div class="title-ancillary">Connect</div>
+      <div class="list-vertical">
+        <a class="url" href="http://twitter.com/percolatestudio">Twitter</a>
+        <a class="url" href="http://github.com/percolatestudio">Github</a>
+        <a class="email" href="mailto:us@percolatestudio.com?subject=Hello%20Percolate">Email</a>
+      </div>
+    </div>
+    <div class="wrapper-visit">
+      <div class="title-ancillary">Visit <span class="fn organization-name">Percolate Studio</span></div>
+      <div class="location-wrapper organization-unit adr">
+        <span>Percolate USA</span>
+        <span class="street-address">169 11th Street</span>
+        <span class="locality">San Francisco</span>, <span class="region">CA</span> <span class="postal-code">94301</span>
+      </div>
+      <div class="location-wrapper organization-unit adr">
+        <span>Percolate AUS</span>
+        <span class="street-address">50 Herbert Street</span>
+        <span class="locality">Melbourne</span>, <span class="region">VIC</span> <span class="postal-code">3001</span>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,50 @@
+/* Core */
+@color-primary: #5586df; //blue
+@color-secondary: #f55050; //red
+@color-tertiary: #2ca699;
+@color-complementary: #edfafa; //light turquoise
+
+
+/* Binary */
+@color-positive: #3fb34f; //proceed
+@color-negative: #ff4800; //delete, alert
+@color-neutral: #dbad1f; // note
+
+
+/* Position/Sort */
+@color-sort-ascending: #fe7777 ; //red
+@color-sort-descending: @color-positive ; // green
+
+
+/* Greyscale */
+@color-empty: white;
+@color-raw: #f8f8f8;
+@color-raw-alt: darken(@color-raw, 3%);
+@color-rare: #EEE;
+@color-medium-rare: #ddd;
+@color-medium: #999;
+@color-medium-well: #666;
+@color-well: #444;
+@color-full: #333;
+
+/* Graphs */
+@color-helpful: #66a451;
+@color-comment: #2a69ac;
+@color-response: #e96c3e;
+@color-engagement: @color-medium-well;
+//note the semi-transparent area graphs are the color values above at 30% opacity
+
+
+/* Social */
+@color-facebook: #3b5998;
+@color-google: #58586d;
+@color-yahoo: #9238AB;
+@color-twitter: #46c8f5;
+@color-stumble: #e2451c;
+@color-pinterest: #cc2127;
+@color-youtube: #da4337;
+
+
+/* Misc */
+@color-note: #ffffe4; //alert table rows, saturate 10% for striped
+@color-search: #f8f8fe;

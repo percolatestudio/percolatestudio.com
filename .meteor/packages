@@ -7,3 +7,4 @@ standard-app-packages
 autopublish
 insecure
 iron-router
+static-collections

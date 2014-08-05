@@ -1,0 +1,17 @@
+<template name="layout">
+  <div class="layout {{menuOpenClass}} {{contactOpenClass}}">
+    <nav>
+      <a href="{{pathFor 'why'}}">Why</a>
+      <a href="{{pathFor 'how'}}">How</a>
+      <a href="{{pathFor 'what'}}">What</a>
+      <a href="{{pathFor 'home'}}">ICON</a>
+      <a href="{{pathFor 'careers'}}">Careers</a>
+      <a href="http://blog.percolatestudio.com">Blog</a>
+      <a data-contact>Contact</a>
+    </nav>
+    
+    {{> contactOverlay}}
+    
+    {{> yield}}
+  </div>
+</template>

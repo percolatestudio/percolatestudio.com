@@ -1,5 +1,12 @@
-.type-primary() {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+.type-regular() {
+  font-family: 'DINWeb', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.type-italic() {
+  font-family: 'DINWeb-Ita', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
   font-weight: 400;
 }
 
@@ -9,17 +16,20 @@
 }
 
 .type-light() {
-  font-family: 'Open Sans Light';
-  font-weight: 200;
+  font-family: 'DinWeb-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .type-semibold() {
-  font-family: 'Open Sans Semibold';
-  font-weight: 700;
+  font-family: 'DINWeb-Medium', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .type-bold() {
-  font-family: 'Open Sans';
+  font-family: 'DINWeb-Bold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-style: normal;
   font-weight: 700;
 }
 

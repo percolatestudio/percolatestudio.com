@@ -114,7 +114,7 @@ label {
   }
   >.alert,
   >.error {
-    .type-primary;
+    .type-regular;
     color: @color-negative;
     &:before { content: ' ';}
   }
@@ -283,7 +283,7 @@ textarea {
       color: @color-primary;
       &:after{ //tooltips
         .font-s1;
-        .type-primary;
+        .type-regular;
         .transform( translateX(-50%) );
 
         background-color: rgba(0,0,0,.7);

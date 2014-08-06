@@ -6,14 +6,14 @@
     color: @color-full;
   	margin: 0;
   	outline: none;
-  	
+
   	&[disabled] {
     	opacity: .5;
   	}
-  }  
+  }
 }
 
-//Note: pointer events may not be supported in ie10, may need to reassess 
+//Note: pointer events may not be supported in ie10, may need to reassess
 
 /* standard colors */
 .a-select {
@@ -147,7 +147,7 @@
 	}
 	&:after {
   	content: "";
-		
+
     //position the icon-font
     font-size: .75em;
     height: 5px;
@@ -171,7 +171,7 @@
 
   	/* Down arrow */
     content: "\e626";
-		
+
 	}
 	&:before {
 	  //border-left: 1px solid @color-rare; this is a border on the select 'button' rhs

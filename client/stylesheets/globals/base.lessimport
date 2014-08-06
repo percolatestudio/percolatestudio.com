@@ -5,7 +5,7 @@
 }
 
 html, button, input, textarea, select {
-  .type-primary;
+  .type-regular;
   outline: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,13 +13,13 @@ html, button, input, textarea, select {
 
 body {
   .font-s3();
-  .type-primary;
+  .type-regular;
   color: @color-full;
 }
 
 /* Default type layout */
 h1, h2, h3, h4, h5, h6 {
-  .type-primary;
+  .type-regular;
   margin: 0;
   padding: 0;
 }
@@ -69,8 +69,12 @@ sup {
   top: -.2em;
 }
 
-b, em {
+b {
   .type-bold;
+}
+
+em {
+  .type-italic;
 }
 
 hr {

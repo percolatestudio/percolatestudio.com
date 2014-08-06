@@ -1,0 +1,18 @@
+[class^="section-"],
+[class*=" section-"] {
+
+  &[class*="services"] {}
+  &[class*="process"] {}
+  &[class*="team"] {}
+  &[class*="technology"] {}
+
+  &[class*="lookfor"] {}
+  &[class*="openings"] {}
+
+  &[class*="what"] {}
+  &[class*="clients"] {}
+
+  &[class*="home-why"] {}
+  &[class*="home-how"] {}
+  &[class*="home-what"] {}
+}

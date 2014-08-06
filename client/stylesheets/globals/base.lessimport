@@ -12,8 +12,6 @@ html, button, input, textarea, select {
 }
 
 body {
-  //this is unused right now because of namespacing,
-  //when we convert everything over to these styles remove the namespacing in main.less
   .font-s3();
   .type-primary;
   color: @color-full;

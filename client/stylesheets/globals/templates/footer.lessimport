@@ -1,0 +1,4 @@
+footer {
+  color: @color-empty;
+  //background: @color-well;
+}

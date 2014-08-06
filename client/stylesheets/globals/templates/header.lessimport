@@ -1,0 +1,21 @@
+header {
+  .inline-block-whitespace;
+
+  .col-left,
+  .col-right {
+    display: inline-block;
+    height: 400px;
+    vertical-align: top;
+    width: 50%;
+  }
+  .col-left {
+
+  }
+  .col-right {
+
+  }
+  .title-page {
+    .font-l3;
+    .type-light;
+  }
+}

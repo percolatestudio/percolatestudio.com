@@ -1,0 +1,13 @@
+[class^="bg-image"],
+[class*=" bg-image"] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &[class*="how"] { }
+  &[class*="what"] { background-image: url('https://farm4.staticflickr.com/3770/13820513543_b5e11b52ba_z_d.jpg'); }
+  &[class*="careers"] {}
+  &[class*="who-we-are"] {}
+  &[class*="who-we-are-2"] {}
+  &[class*="who-we-are-3"] {}
+}

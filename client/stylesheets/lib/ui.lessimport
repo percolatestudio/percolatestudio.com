@@ -18,8 +18,8 @@
 }
 
 .std-xpadding() {
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .inline-block-whitespace() {
@@ -60,6 +60,6 @@
     content: " "; /* 1 */
     display: table; /* 2 */
   }
-  
+
   &:after { clear: both; }
 }

@@ -1,5 +1,5 @@
 /* Core */
-@color-primary: #5586df; //blue
+@color-primary: #c44524; //crimson orange
 @color-secondary: #f55050; //red
 @color-tertiary: #2ca699;
 @color-complementary: #edfafa; //light turquoise
@@ -21,7 +21,7 @@
 @color-raw: #f8f8f8;
 @color-raw-alt: #f5f5f5;
 @color-rare: #EEE;
-@color-medium-rare: #ddd;
+@color-medium-rare: #ccc;
 @color-medium: #808080;
 @color-medium-well: #666;
 @color-well: #555;

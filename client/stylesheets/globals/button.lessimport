@@ -4,12 +4,10 @@
   .type-bold;
 
   /* Sizing */
-  font-size: 13px !important;
+  font-size: 16px !important;
   line-height: 20px !important; //override line-height always so we can use em's to size.
-  padding: .65em 1.25em; //more compact buttons 8 15 yields 36px button
+  padding: 1.05em 1.25em .95em; //more compact buttons 8 15 yields 48px button
 
-
-  border-radius: 3px;
   display: inline-block;
   position: relative;
   text-align: center;
@@ -46,10 +44,10 @@
     }
   }
   &[class*="secondary"] {
-    background: @color-secondary;
-    color: @color-empty;
+    background: @color-rare;
+    color: @color-full;
     &:hover{
-      background-color: darken(@color-secondary, 5%);
+      background-color: darken(@color-rare, 5%);
     }
     &:active{
       box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
@@ -109,7 +107,7 @@
   //overlays
   &[class*="wire"] {
     background-color: transparent;
-    box-shadow: rgba(255, 255, 255, .9) 0 0 0 1px inset;
+    box-shadow: rgba(255, 255, 255, .95) 0 0 0 2px inset;
     color: @color-empty;
     &:hover {}
     &:active {}

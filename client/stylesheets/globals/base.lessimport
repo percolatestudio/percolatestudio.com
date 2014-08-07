@@ -25,19 +25,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  .font-m3;
+  .font-l1;
 }
 
 h2 {
-  .font-m2;
+  .font-m3;
 }
 
 h3 {
-  .font-m1;
+  .font-m2;
 }
 
 h4 {
-  .font-s3;
+  .font-m1;
 }
 
 h5 {
@@ -48,7 +48,6 @@ h5 {
 }
 
 h6 {
-  .font-s1;
   color: @color-medium;
 }
 

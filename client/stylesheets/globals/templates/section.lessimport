@@ -1,18 +1,208 @@
 [class^="section-"],
 [class*=" section-"] {
+  overflow: hidden;
+  position: relative;
 
-  &[class*="services"] {}
-  &[class*="process"] {}
-  &[class*="team"] {}
+  .title-section {
+    .font-m1;
+    .std-xpadding;
+    .section-subtitle(@color-well);
+
+    height: 1em;
+    line-height: 1em;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding-top: .12em; //vertical offset for baseline alignment due to all caps
+    text-decoration: none;
+  }
+
+  .subtitle-section {
+    .font-m2;
+    .type-semibold;
+    //line-height: 1;
+    margin-bottom: .25rem;
+  }
+  .subtitle-section + p {
+    .font-m1;
+    color: @color-medium-well;
+  }
+
+  &[class*="services"] {
+    background: @color-raw;
+    padding-bottom: 6em;
+
+    .subsection {
+      padding: 0 5%;
+      text-align: center;
+
+      img {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 3.5em;
+        background: #eee;
+      }
+    }
+  }
+  &[class*="process"] {
+    &:after {
+     .position(absolute, 0, auto, 0, 50%, 2px);
+     .transform(translateX(-50%));
+
+     background: @color-raw;
+     content: '';
+     z-index: 0;
+    }
+
+    ol.process {
+      counter-reset: ol-counter;
+      list-style-type: none;
+      margin: 1.5em auto 3em;
+      max-width: 600px;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+
+      li.subsection {
+        margin-bottom: 5em;
+        //& + .subsection { margin-top: 3em; }
+
+        position: relative;
+        &:before {
+          .font-m2;
+          .position(absolute, -2.25em, auto, auto, 50%);
+          .transform(translateX(-50%));
+
+          background: @color-empty;
+          color: @color-primary;
+          content: counter(ol-counter);
+          counter-increment: ol-counter;
+          display: block;
+          padding-top: .12em; //vertical offset for baseline alignment due to all caps
+          text-align: center;
+        }
+        &:not(:first-child):after {
+          content: '';
+          .position(absolute, -3.75em, auto, auto, 50%);
+          .transform(translateX(-50%));
+
+          border-top: 7px solid @color-raw;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+        }
+      }
+    }
+
+  }
+  &[class*="team"] {
+    background: @color-raw;
+    .grid-5 {
+      background: @color-medium-rare;
+      img {
+        height: auto;
+        width: 100%;
+      }
+      .name {
+        .font-m1;
+        .position(absolute, auto, 1.25rem, .5rem, 1.25rem);
+
+        color: @color-empty;
+      }
+    }
+  }
   &[class*="technology"] {}
 
-  &[class*="lookfor"] {}
-  &[class*="openings"] {}
+  &[class*="lookfor"] {
+    background: @color-raw;
+
+
+    .subsection {
+      padding-left: 2.5em;
+      margin-bottom: 4.5em;
+
+      img {
+        width: auto;
+        height: 2em;
+        margin-bottom: 2em;
+        background: #eee;
+      }
+    }
+  }
+  &[class*="openings"] {
+    .openings {
+      .std-xpadding;
+      margin-bottom: 4.5em;
+
+      .subtitle-openings {
+        .font-m1;
+        margin-bottom: 2rem;
+      }
+
+      .opening {
+        margin-bottom: 1.5rem;
+        .title-opening {
+          .type-bold;
+        }
+        .location-opening {
+          color: @color-medium;
+        }
+      }
+    }
+  }
 
   &[class*="what"] {}
   &[class*="clients"] {}
 
-  &[class*="home-why"] {}
-  &[class*="home-how"] {}
+  &[class*="home-why"] {
+    background: @color-full;
+    height: 600px - 36px;
+    position: relative;
+    text-align: center;
+
+    .hero-wrapper {
+      .transform(translate3d(-50%, -50%, 0));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+    }
+
+    .title-page {
+      .font-l2;
+      .type-light;
+      color: @color-empty;
+      margin-bottom: 2.5rem;
+    }
+    .btn-wire {
+      width: 240px;
+    }
+  }
+  &[class*="home-who"] {
+    .col-left,
+    .col-right {
+      height: 400px;
+    }
+    .col-left p {
+      .std-xpadding;
+      .font-m2;
+    }
+    .col-right {
+      .inline-block-whitespace;
+
+      > * {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .bg-image-who-we-are {
+        width: 100%;
+        height: 66.66%;
+      }
+      .bg-image-who-we-are-2,
+      .bg-image-who-we-are-3 {
+
+        width: 50%;
+        height: 33.33%;
+      }
+    }
+  }
   &[class*="home-what"] {}
 }

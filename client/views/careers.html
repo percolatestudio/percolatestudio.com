@@ -1,5 +1,5 @@
 <template name="careers">
-  <header>
+  <header class="grid-2">
     <div class="col-left">
       <h1 class="title-page">Join us</h1>
       <p class="description-page">Great projects. Nice people. We’ll push you to do the best work of your career, we ask that you push us to do the same.</p>
@@ -9,54 +9,52 @@
 
   <section class="section-lookfor">
     <h2 class="title-section">What we look for</h2>
-    <div class="subsection">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-      </svg>
-      <h3 class="subtitle-section">Nimble</h3>
-      <p>Small interdisciplinary teams that design, prototype, and build products from the ground up.</p>
-    </div>
-    <div class="subsection">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-      </svg>
-      <h3 class="subtitle-section">Curious</h3>
-      <p>Experimentation in service of innovation. Never ask to cut corners; always ask if there is a better way. </p>
-    </div>
-    <div class="subsection">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-      </svg>
-      <h3 class="subtitle-section">People-first</h3>
-      <p>Be greater than the sum of parts. Engineering and design aligned to improve peoples lives.</p>
+    <div class="grid-3">
+      <div class="subsection">
+        <img src="img/logo.svg"/>
+        <h3 class="subtitle-section">Nimble</h3>
+        <p>Small interdisciplinary teams design, prototype, and build products from the ground up.</p>
+      </div>
+      <div class="subsection">
+        <img src="img/logo.svg"/>
+        <h3 class="subtitle-section">Curious</h3>
+        <p>Experimentation in service of innovation. Never ask to cut corners; always ask if there is a better way. </p>
+      </div>
+      <div class="subsection">
+        <img src="img/logo.svg"/>
+        <h3 class="subtitle-section">People-first</h3>
+        <p>Be greater than the sum of parts. Engineering and design aligned to improve people's lives.</p>
+      </div>
     </div>
   </section>
 
   <section class="section-openings">
     <h2 class="title-section">Openings</h2>
-    <div class="openings col-left">
-      <p><b>Team members</b> are dreamers and doers. They are creative, motivated, and invested in each others growth.</p>
-      {{#each jobs}}
-        <!-- job openings -->
-      {{/each}}
-      <div class="opening">
-        <a class="title-opening">Full-Stack Engineer</a> <span class="location-opening">(SFO, MEL, Remote)</span>
-        <p class="description-opening">We’re looking for a full-stack Meteor engineer to build impactful features across client and internal products. Remote OK.</p>
-      </div>
-      <div class="opening">
-        <a class="title-opening">Product Designer</a> <span class="location-opening">(SFO, MEL, Remote)</span>
-        <p class="description-opening">We’re looking for a full-stack Meteor engineer to build impactful features across client and internal products. Remote OK.</p>
-      </div>
-    </div>"
-    <div class="internships col-right">
-      <p><b>Interns</b> are valued contributors. They get real experience on client and internal projects.</p>
-      <div class="internship">
-        <a class="title-opening">Design</a> <span class="location-opening">(SFO)</span>
-        <p class="description-opening">Work with our design team to help research, design, and prototype new user experiences.</p>
-      </div>
-      <div class="internship">
-        <a class="title-opening">Engineering</a> <span class="location-opening">(SFO, MEL)</span>
-        <p class="description-opening">Work with our engineering team to help conceive and build the latest realtime technology.</p>
+    <div class="grid-2">
+      <div class="openings">
+        <p class="subtitle-openings"><b>Team members</b> are dreamers and doers. They care about projects and each other.</p>
+        {{#each jobs}}
+          <!-- job openings -->
+        {{/each}}
+        <div class="opening">
+          <a class="title-opening">Full-Stack Engineer</a> <span class="location-opening">(SFO, MEL, Remote)</span>
+          <p class="description-opening">We’re looking for a full-stack Meteor engineer to build impactful features across client and internal products. Remote OK.</p>
+        </div>
+        <div class="opening">
+          <a class="title-opening">Product Designer</a> <span class="location-opening">(SFO, MEL, Remote)</span>
+          <p class="description-opening">We’re looking for a full-stack Meteor engineer to build impactful features across client and internal products. Remote OK.</p>
+        </div>
+      </div>"
+      <div class="openings">
+        <p class="subtitle-openings"><b>Interns</b> are valued contributors. They get real experience on client and internal projects.</p>
+        <div class="opening">
+          <a class="title-opening">Design</a> <span class="location-opening">(SFO)</span>
+          <p class="description-opening">Work with our design team to help research, design, and prototype new user experiences.</p>
+        </div>
+        <div class="opening">
+          <a class="title-opening">Engineering</a> <span class="location-opening">(SFO, MEL)</span>
+          <p class="description-opening">Work with our engineering team to help conceive and build the latest realtime technology.</p>
+        </div>
       </div>
     </div>
   </section>

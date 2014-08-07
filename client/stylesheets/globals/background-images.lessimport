@@ -3,11 +3,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  overflow: hidden;
+  .filter(grayscale(70%));
 
-  &[class*="how"] { }
-  &[class*="what"] { background-image: url('https://farm4.staticflickr.com/3770/13820513543_b5e11b52ba_z_d.jpg'); }
-  &[class*="careers"] {}
-  &[class*="who-we-are"] {}
-  &[class*="who-we-are-2"] {}
-  &[class*="who-we-are-3"] {}
+  &[class*="how"] { background-image: url('https://farm4.staticflickr.com/3770/13820513543_b5e11b52ba_z_d.jpg'); }
+
+  &[class*="what"] {
+    background: @color-raw;
+    &:before {
+      .type-semibold;
+      content: 'WorkCraft ObservePlay ExperimentReconstruct PushDiscover Deconstruct ChallengeEnjoy';
+      .position(absolute, -5%, auto, auto, -5%);
+      color: @color-raw-alt;
+      font-size: 775%;
+      line-height: .80em;
+      z-index: 0;
+      letter-spacing: -.05em;
+    }
+  }
+  &[class*="careers"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/IbJK5etSN6dH6jAF4U0U_DSC_0280-1.jpg'); }
+  &[class*="who-we-are"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg'); }
+  &[class*="who-we-are-2"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/xIsiRLngSRWN02yA2BbK_submission-photo-7.jpg'); }
+  &[class*="who-we-are-3"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/IAG5tj7gThy5rOupZ5FK_IMG_3906.jpg'); }
 }

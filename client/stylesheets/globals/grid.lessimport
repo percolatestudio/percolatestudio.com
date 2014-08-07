@@ -1,0 +1,18 @@
+[class^="grid-"], [class*=" grid-"] {
+  .inline-block-whitespace;
+
+  > * {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+
+    > img {
+      display: block;
+      height: auto;
+      width: 100%;
+    } //ensures direct descendent images take up space like block elements
+  }
+  &[class*="2"] > * { width: 50%; }
+  &[class*="3"] > * { width: 33%; }
+  &[class*="5"] > * { width: 20%; }
+}

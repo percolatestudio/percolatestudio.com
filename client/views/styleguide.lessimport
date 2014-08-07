@@ -57,6 +57,7 @@
     h6 {
       clear: both;
       display: inline-block;
+      font-size: 11px;
       margin-right: 40px;
       text-align: left;
       text-transform: uppercase;
@@ -146,6 +147,9 @@
     .color-youtube:after { background: @color-youtube ; }
   }
   #forms {
+    fieldset {
+      margin-right: 2.5em;
+    }
   }
   #buttons {
   }
@@ -179,6 +183,19 @@
     }
   }//icons
   #lists {}//lists
-
   #tables {}//tables
+  #backgrounds {
+    .backgrounds-wrapper {
+      .inline-block-whitespace;
+
+      > div {
+        display: inline-block;
+        height: 400px;
+        position: relative;
+        vertical-align: top;
+        width: 50%;
+      }
+    }
+
+  }//backgrounds
 }

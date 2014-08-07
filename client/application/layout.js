@@ -3,6 +3,10 @@ var MENU_KEY = 'menuOverlayOpen';
 
 Session.setDefault(CONTACT_KEY, false);
 Template.layout.helpers({
+  templateClass: function() {
+    return Router._layout.region('main').template();
+  },
+  
   contactOpenClass: function() {
     return Session.equals(CONTACT_KEY, true) && 'contact-open';
   },

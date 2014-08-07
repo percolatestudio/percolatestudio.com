@@ -4,7 +4,7 @@
   .type-bold;
 
   /* Sizing */
-  font-size: 12px !important;
+  font-size: 13px !important;
   line-height: 20px !important; //override line-height always so we can use em's to size.
   padding: .65em 1.25em; //more compact buttons 8 15 yields 36px button
 
@@ -93,89 +93,16 @@
       margin-right: 0;
     }
   }
-  &[class*="loading"] {
-    cursor: progress;
-    &[class*="primary"] { //color for primary
-      background: lighten(@color-primary, 10%);
-      &:before {
-        .animation(spin 1s infinite linear);
-        display: inline-block;
-        margin-right: 6px;
-
-        letter-spacing: 0;//overrides .caps text-indent
-        text-indent: 0;//overrides .caps text-indent
-        margin-left:-.3em; //overrides .caps text-indent
-
-
-        /* Icon for nochrome, taken straight from icon.lessimport */
-        font-family: 'percolate';
-      	speak: none;
-      	font-style: normal;
-      	font-weight: normal;
-      	font-variant: normal;
-      	text-transform: none;
-      	line-height: 1;
-
-      	/* Better Font Rendering =========== */
-      	-webkit-font-smoothing: antialiased;
-      	-moz-osx-font-smoothing: grayscale;
-
-      	/* Down arrow */
-        content: "\e60e";
-      }
-    }
-  }
-  &[class*="progress"] {
-    .rest,
-    .active { .transition( all 700ms cubic-bezier(0.175, 0.885, 0.335, 1.05) ); }
-
-    .rest { display: inline-block; }
-    .active { display: none; }
-    .progress {
-      .position(absolute, 0, auto, auto, 0, auto, 3px);
-      .transition( opacity 100ms cubic-bezier(0.175, 0.885, 0.335, 1.05) );
-      background: rgba(0,0,0,.2);
-      opacity: 0;
-      z-index: 1;
-    }
-
-    &[disabled] {
-      cursor: progress;
-      opacity: 1; //reset disabled master style
-      .rest { display: none; }
-      .active {
-        opacity: .8;
-        display: inline-block;
-      }
-      @-webkit-keyframes pulsate {
-        0% { opacity: .5;}
-        50% { opacity: 1.0;}
-        100% { opacity: .5;}
-      }
-      .progress {
-        opacity: 1;
-        -webkit-animation: pulsate 2s cubic-bezier(0.175, 0.885, 0.335, 1.05);
-        -webkit-animation-iteration-count: infinite;
-      }
-      &[class*="primary"] { //color for primary
-        background: lighten(@color-primary, 10%);
-        .progress { background: darken(@color-primary, 5%); }
-      }
-      //color for secondary & tertiary follow the same pattern if required
-    }
-  }
   &[class*="toggle"] {
-    .background-image(linear-gradient(to bottom, rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 100%));
-    background-color: rgba(241, 241, 241, 0.5);
-    color: @color-full;
-    padding-left: .5em;
-    padding-right: .5em;
+    box-shadow: @color-primary 0 0 0 1px inset;
+    color: @color-primary;
+    .transition( box-shadow 100ms ease-in-out, color 300ms ease-in );
     &:hover{
-      color: @color-primary;
+      box-shadow: darken(@color-primary, 10%) 0 0 0 1px inset;
+      color: darken(@color-primary, 10%);
     }
     &:active, &.active {
-      box-shadow: rgba(0,0,0,.1) 0 0 0 1px inset;
-      background: rgba(0,0,0,.4);
+      box-shadow: @color-primary 0 0 0 3em inset;
       color: @color-empty;
     }
   }
@@ -215,7 +142,6 @@
 
     & + [class*="btn-toggle"] {
       margin-left: -1px;
-      border-left: 1px solid @color-well;
     }
     &:first-of-type {
       border-radius: 3px 0 0 3px;

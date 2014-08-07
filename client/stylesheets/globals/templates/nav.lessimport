@@ -1,3 +1,39 @@
 nav {
-  //background: @color-well;
+  background: @color-full;
+  overflow: hidden;
+  position: relative;
+  .logo {
+    display: block;
+    height: 1.25em;
+    width: 1.25em;
+    margin: .5em auto;
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .nav-group {
+    .position(absolute, 8px, auto, auto, 2em);
+    &.right {
+      left: auto;
+      right: 2em;
+    }
+    a {
+      .font-s1;
+      .type-semibold;
+      color: @color-medium;
+      display: inline-block;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      vertical-align: top;
+
+      &:hover { color: @color-empty; }
+      &:active { color: @color-well; }
+      & + a {
+        margin-left: 3em;
+      }
+    }
+  }
 }

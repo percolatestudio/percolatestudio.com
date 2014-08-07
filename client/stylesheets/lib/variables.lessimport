@@ -19,12 +19,12 @@
 /* Greyscale */
 @color-empty: white;
 @color-raw: #f8f8f8;
-@color-raw-alt: darken(@color-raw, 3%);
+@color-raw-alt: #f5f5f5;
 @color-rare: #EEE;
 @color-medium-rare: #ddd;
-@color-medium: #999;
+@color-medium: #808080;
 @color-medium-well: #666;
-@color-well: #444;
+@color-well: #555;
 @color-full: #333;
 
 /* Graphs */

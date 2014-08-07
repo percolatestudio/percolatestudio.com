@@ -1,5 +1,4 @@
-// Open Sans, downloaded from Google webfonts
-// Imported into 'FontPrep' osx app, added to 'export group', then exported
+/* Webfont */
 @font-face {
   font-family: 'DINWeb';
   src: url('/fonts/DINWeb.eot'); /* IE9 Compat Modes */
@@ -53,3 +52,4 @@
   font-style:   normal;
   font-weight:  700;
 }
+

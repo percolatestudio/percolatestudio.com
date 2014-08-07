@@ -1,4 +1,17 @@
 footer {
   color: @color-empty;
-  //background: @color-well;
+  padding: 2em;
+  text-align: center;
+  .copyright {
+    .font-s1;
+    .section-subtitle(@color-medium-well);
+    display: block;
+    margin: .75em 0;
+  }
+  a {
+    color: @color-medium-well;
+    text-decoration: none;
+    &:hover { color: @color-empty; }
+    &:active { color: @color-well; }
+  }
 }

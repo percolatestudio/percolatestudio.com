@@ -3,10 +3,10 @@
 fieldset,
 .fieldset {
   .clearfix;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  //padding-top: 1.5em;
+  //padding-bottom: 1.5em;
+  //padding-left: 1.25em;
+  //padding-right: 1.25em;
 
   //spacing between fieldsets (can't use margins because of border)
   & + fieldset,
@@ -64,7 +64,7 @@ fieldset,
 
 /* Generic */
 legend {
-  .font-s1;
+  .font-s2;
   .section-subtitle(@color-well);
   float: left;
   margin-bottom: 1em;
@@ -134,7 +134,7 @@ textarea {
   .placeholder(@color-medium-well);
   //do not add a transition; it causes a focus bug in iOS
 
-  .font-s2;
+  .font-s3;
   padding: .65em .75em; //total height 36px
 
   background: @color-empty;

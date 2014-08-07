@@ -1,4 +1,361 @@
 <template name="styleguide">
-  Styleguide
-  <a class="btn-primary">Test</a>
+  <header>
+    <div class="col-left">
+      <h1 class="title-page">Styleguide</h1>
+      <p class="description-page">The digital styleguide. Contains base styles, code patterns, and formatting.</p>
+    </div>
+    <div class="col-right bg-image-what"></div>
+  </header>
+
+  <div class="styleguide-base">
+    <div id="typography" class="module">
+      <a name="typography"></a>
+      <h5 class="subtitle">Typography</h5>
+      <ul class="two-up">
+        <li><h6>Typeface</h6><div class="font-m1">FF DIN</div></li>
+      </ul>
+      <ul class="two-up horiz">
+        <li>
+          <h6>Weights</h6>
+          <div class="font-m1 light">300 &nbsp;&nbsp;</div>
+          <div class="font-m1 regular">400 &nbsp;&nbsp;</div>
+          <div class="font-m1 italic">400i &nbsp;&nbsp;</div>
+          <div class="font-m1 semibold">500 &nbsp;&nbsp;</div>
+          <div class="font-m1 bold">700</div>
+        </li>
+      </ul>
+      <hr>
+      <ul class="two-up">
+        <li><h6>l3 - 56/64 </h6><div class="font-l3">It's time</div></li>
+        <li><h6>l2 - 48/56</h6><div class="font-l2">For the</div></li>
+        <li><h6>l1 - 36/44</h6><div class="font-l1">Percolator</div></li>
+        <li><h6>m3 - 28/32</h6><div class="font-m3">It's time</div></li>
+        <li><h6>m2 - 24/28</h6><div class="font-m2">For the</div></li>
+        <li><h6>m1 - 20/24 </h6><div class="font-m1">Percolator</div></li>
+        <li><h6>s3 - 16/22</h6><div class="font-s3">Boop</div></li>
+        <li><h6>s2 - 13/20</h6><div class="font-s2">Boop</div></li>
+        <li><h6>s1 - 12/18</h6><div class="font-s1">Boop</div></li>
+      </ul>
+      <ul class="two-up">
+        <br>
+        <li>
+          <h6>16/22</h6>
+          <div class="font-s3"><b>Body</b> {{> _dummyText}}</div>
+        </li>
+        <li>
+          <h6>13/20</h6>
+          <div class="font-s2"><b>Subtext</b> {{> _dummyText}}</div>
+        </li>
+        <li>
+          <h6>12/18</h6>
+          <div class="font-s1"><b>Fineprint</b> {{> _dummyText}}</div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="colors" class="module">
+      <a name="colors"></a>
+      <h5 class="subtitle">Colors</h5>
+      <ul class="two-up">
+        <li class="color-primary">#5586DF</li>
+        <li class="color-secondary">#000</li>
+        <li class="color-tertiary">#000</li>
+
+      </ul>
+      <ul class="two-up">
+        <li class="color-complementary">#EDFAFA</li>
+        <li class="color-negative">#ff4800</li>
+      </ul>
+      <hr>
+      <ul class="two-up">
+        <li class="color-empty">#FFFFFF</li>
+        <li class="color-raw">#F8F8F8</li>
+        <li class="color-raw-alt">#F0F0F0</li>
+        <li class="color-rare">#EEEEEE</li>
+        <li class="color-medium-rare">#DDDDDD</li>
+        <li class="color-medium">#999999</li>
+        <li class="color-medium-well">#666666</li>
+        <li class="color-well">#444444</li>
+        <li class="color-full">#333333</li>
+      </ul>
+      <ul class="two-up">
+        <li class="color-facebook">#3b5998</li>
+        <li class="color-google">#58586d</li>
+        <li class="color-yahoo">#9238ab</li>
+        <li class="color-twitter">#46c8f5</li>
+        <li class="color-stumble">#e2451c</li>
+        <li class="color-pinterest">#cc2127</li>
+        <li class="color-youtube">#da4337</li>
+      </ul>
+    </div>
+
+    <div id="buttons" class="module">
+      <a name="buttons"></a>
+      <h5 class="subtitle">Buttons</h5>
+      <a class="btn-primary caps">Primary</a>
+      <a class="btn-secondary caps">Secondary</a>
+      <a class="btn-tertiary caps">Tertiary</a>
+      <br/>
+      <a class="btn-primary-small caps">Primary-small</a>
+      <a class="btn-secondary-small caps">Secondary-small</a>
+      <a class="btn-tertiary-small caps">Tertiary-small</a>
+      <br/>
+      <button class="btn-primary upload caps"><input type="file"/>Upload</button>
+      <br/>
+      <div class="btns-group">
+        <a class="btn-toggle active">Active</a>
+        <a class="btn-toggle">Toggle</a>
+      </div>
+      <div class="btns-group">
+        <a class="btn-toggle active">Active</a>
+        <a class="btn-toggle">Toggle</a>
+        <a class="btn-toggle">Toggle</a>
+      </div>
+    </div>
+
+    <div id="icons" class="module">
+      <h5 class="subtitle">Icons</h5>
+      <span class="icon-percolate"></span>
+      <span class="icon-user"></span>
+      <span class="icon-cross"></span>
+      <span class="icon-sync"></span>
+      <span class="icon-search"></span>
+      <span class="icon-question"></span>
+      <span class="icon-paperclip"></span>
+      <span class="icon-share"></span>
+      <span class="icon-reply"></span>
+      <span class="icon-email"></span>
+      <span class="icon-menu"></span>
+      <span class="icon-arrow-up"></span>
+      <span class="icon-arrow-right"></span>
+      <span class="icon-arrow-left"></span>
+      <span class="icon-arrow-down"></span>
+      <span class="icon-ellipsis"></span>
+      <span class="icon-chevron-down"></span>
+      <span class="icon-arrow-right-alt"></span>
+      <span class="icon-arrow-left-alt"></span>
+      <span class="icon-play"></span>
+      <span class="icon-twitter"></span>
+      <span class="icon-github"></span>
+      <span class="icon-facebook"></span>
+    </div>
+
+    <div id="forms" class="module">
+      <a name="forms"></a>
+      <h5 class="subtitle">Forms</h5>
+
+      <form class="two-up">
+        <fieldset>
+          <legend>Legend</legend>
+          <input name="default-input" type="text" size="20" value="" placeholder="Standard input"/>
+          <label for="default-input3"><span class="alert">Alert Input</span></label>
+          <input name="default-input3" type="text" size="20" value="" class="alert" placeholder="Invalid values"/>
+          <div class="input-symbol left">
+            <span class="icon-percolate"></span>
+            <input type="text" placeholder="First Name"/>
+          </div>
+          <div class="input-symbol right">
+            <span class="icon-percolate"></span>
+            <input type="text" placeholder="Submit form"/>
+          </div>
+          <div class="input-symbol center">
+            <span class="icon-percolate"></span>
+            <input type="text" placeholder="Copy text" value="Copy Text"/>
+          </div>
+          <div class="input-symbol left">
+            <span class="icon-email inverse"></span>
+            <input class="inverse" type="text" placeholder="Email"/>
+          </div>
+        </fieldset>
+        <fieldset>
+          <textarea name="description" rows="4" cols="20" placeholder="Nostalgic futurist"></textarea>
+          <span class="a-select">
+            <select id="aviators" name="aviators">
+              <option selected value="1">Amelia Earhart</option>
+              <option value="2">Charles Lindbergh</option>
+            </select>
+          </span>
+          <span class="a-select small">
+            <select id="aviators" name="aviators">
+              <option selected value="1">Amelia Earhart</option>
+              <option value="2">Charles Lindbergh</option>
+            </select>
+          </span>
+          <span class="a-select inverse">
+            <select id="aviators" name="aviators">
+              <option selected value="1">Neil Armstrong</option>
+              <option value="2">Yuri Gagarin</option>
+              <option value="3">Buzz Aldrin</option>
+            </select>
+          </span>
+          <span class="a-select nochrome">
+            <select id="stuff" name="timerange">
+              <option selected value="1">Today</option>
+              <option value="2">This Week</option>
+              <option value="2">This Month</option>
+              <option value="2">This Year</option>
+            </select>
+          </span>
+          <span class="a-select nochrome small">
+            <select id="stuff" name="timerange">
+              <option selected value="1">Today</option>
+              <option value="2">This Week</option>
+              <option value="2">This Month</option>
+              <option value="2">This Year</option>
+            </select>
+          </span>
+        </fieldset>
+        <fieldset>
+          <label class="checkbox">
+            <input type="checkbox" value=""/> <span>Unchecked</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="" checked/> <span>Checked</span>
+          </label>
+          <label class="checkbox empty">
+            <input type="checkbox" checked>
+            <span></span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="group1" value=""/> <span>Radio</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="group1" value=""/> <span>Radio</span>
+          </label>
+        </fieldset>
+      </form>
+
+      <form class="two-up">
+        <fieldset>
+          <legend>Misc</legend>
+          <div class="fieldset-group">
+            <div class="input-upload right">
+              <span class="icon-percolate" data-title="Clear"></span>
+              <span class="pseudo-input"><span> roster-melbourne-secondary.csv</span></span>
+            </div>
+            <span class="confirm-upload"><span class="icon-check"></span> 20 teachers</span>
+          </div>
+          <div class="fieldset-group">
+            <div class="input-upload right alert">
+              <span class="icon-percolate" data-title="Clear"></span>
+              <span class="pseudo-input"><span> roster-melbourne-secondary.csv</span></span>
+            </div>
+          </div>
+          <textarea name="body" placeholder="Enter your response"></textarea>
+          <span class="character-count"><span class="count">500</span> characters remaining</span>
+
+          <label for="" class="checkbox-sliding-wrapper">
+            <div class="checkbox-sliding">
+              <input type="checkbox" class="needsclick" name="profile.emailFlaggedItems" id="profile.emailFlaggedItems">
+              <div></div>
+            </div>
+            Lorem ipsum dolor sit amet
+          </label>
+
+          <label for="" class="checkbox-sliding-wrapper">
+            <div class="checkbox-sliding">
+              <input type="checkbox" class="needsclick" name="open" id="">
+              <div></div>
+            </div>
+            Lorem ipsum dolor sit amet consectatur vestibulum dit secatur
+          </label>
+        </fieldset>
+      </form>
+
+    </div>
+
+    <div id="links" class="module">
+      <a name="links"></a>
+      <h5 class="subtitle">Links</h5>
+      <div class="links-wrapper">
+        <a>Standard link</a>
+        <a class="inverse">Inverse link</a>
+        <a class="nochrome">Nochrome link</a>
+      </div>
+    </div>
+
+    <div id="lists" class="module">
+      <a name="lists"></a>
+      <h5 class="subtitle">Lists</h5>
+      <ul class="two-up">
+        <li>
+          <div class="list-horiz">
+            <a>list-horiz</a>
+            <a>Item 1</a>
+            <a>Item 2</a>
+          </div>
+        </li>
+        <br/>
+        <li>
+          <div class="list-vertical">
+            <a>list-vertical</a>
+            <a>Item 1</a>
+            <a>Item 2</a>
+            <a>Item 3</a>
+            <a>Item 4</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="tables" class="module">
+      <a name="tables"></a>
+      <h5 class="subtitle">Tables</h5>
+
+      <table class="table-view">
+        <thead>
+          {{> _tableHeadingStyleguide}}
+        </thead>
+        <tbody>
+          {{> _tableRowStyleguide}}
+          {{> _tableRowStyleguide}}
+          {{> _tableRowStyleguide}}
+          {{> _tableRowStyleguide}}
+          {{> _tableRowStyleguide}}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </template>
+
+
+<template name="_dummyText">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+</template>
+
+
+
+<!-- Table dummy templates -->
+<template name="_tableHeadingStyleguide">
+  <tr>
+    <th class="title">Table Title</th>
+    <th>Heading</th>
+    <th>Heading</th>
+    <th>Heading</th>
+  </tr>
+</template>
+
+<template name="_tableRowStyleguide">
+  <tr>
+    <td><a href="#" class="name nochrome">Lorem Ipsum Dolor Sit Amet</a></td>
+    <td>2.1</td>
+    <td>1.3</td>
+    <td>0.8</td>
+  </tr>
+</template>
+
+
+<template name="_tableHeadingErrorStyleguide">
+  <tr>
+    <th class="title">3 Errors <span class="subtitle">Please ensure that your CSV matches the template and try again</span></th>
+  </tr>
+</template>
+
+
+<template name="_tableRowErrorStyleguide">
+  <tr>
+    <td>Row 14: Name not specified</td>
+  </tr>
+</template>
+

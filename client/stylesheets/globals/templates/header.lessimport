@@ -5,11 +5,15 @@ header {
   .col-right {
     display: inline-block;
     height: 400px;
+    position: relative;
     vertical-align: top;
     width: 50%;
   }
   .col-left {
+    padding: 2.5em;
+    .title-page {
 
+    }
   }
   .col-right {
 
@@ -17,5 +21,10 @@ header {
   .title-page {
     .font-l3;
     .type-light;
+  }
+  .description-page {
+    .font-m2;
+    .position(absolute, auto, auto, 2.5rem, 2.5rem);
+    color: @color-well;
   }
 }

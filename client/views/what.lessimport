@@ -1,3 +1,5 @@
-body.what {
+.layout.what {
+  .section-clients {
 
+  }
 }

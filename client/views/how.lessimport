@@ -1,3 +1,158 @@
-body.how {
+.layout.how {
+  .section-services {
+    background: @color-raw;
 
+    .subsection {
+      .std-xpadding;
+      padding-bottom: 2.5em;
+
+      @media screen and (min-width: 50em) {
+        padding: 3em 5% 6em;
+        text-align: center;
+      }
+      img {
+        height: 5em;
+        width: 5em;
+        float: left;
+        margin-right: 1.5em;
+
+        @media screen and (min-width: 50em) {
+          float: none;
+          height: 10em;
+          margin: 0 auto 3.5em;
+          width: 10em;
+        }
+      }
+      .meta {
+        overflow: hidden;
+      }
+    }
+  }
+
+  .section-process {
+    .title-section {
+      background: @color-empty; //accounts for vertical line on small screens
+    }
+
+    &:after {
+     .position(absolute, 0, auto, 0, 5em, 2px);
+     .transform(translateX(-50%));
+
+     @media screen and (min-width: 50em) {
+      left: 50%;
+    }
+
+     background: @color-raw;
+     content: '';
+     z-index: 0;
+    }
+
+    ol.process {
+      .std-xpadding;
+      counter-reset: ol-counter;
+      list-style-type: none;
+      position: relative;
+      z-index: 1;
+
+
+      @media screen and (min-width: 50em) {
+        margin: 3em auto;
+        max-width: 600px;
+        text-align: center;
+      }
+
+
+      li.subsection {
+        margin-bottom: 5em;
+        //& + .subsection { margin-top: 3em; }
+
+        position: relative;
+        &:before {
+          .font-m2;
+          background: @color-empty;
+          color: @color-primary;
+          content: counter(ol-counter);
+          counter-increment: ol-counter;
+          display: inline-block;
+          padding-top: .12em; //vertical offset for baseline alignment due to all caps
+          text-align: center;
+
+          //layout
+          float: left;
+          width: 5rem;
+          margin-right: 1.5rem;
+
+          @media screen and (min-width: 50em) {
+            .position(absolute, -2.25em, auto, auto, 50%);
+            .transform(translateX(-50%));
+          }
+        }
+        &:not(:first-child):after {
+          @media screen and (min-width: 50em) { content: ''; } //show on large screens
+          .position(absolute, -3.75em, auto, auto, 50%);
+          .transform(translateX(-50%));
+
+          border-top: 7px solid @color-raw;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+        }
+        .meta {
+          overflow: hidden;
+        }
+      }
+    }
+  }//section-process
+  .section-team {
+    background: @color-raw;
+    .grid-5 {
+      background: @color-medium-rare;
+      .avatar {
+        img {
+          height: auto;
+          width: 100%;
+        }
+        .name {
+          .font-m1;
+          .transition( all 1s ease-in );
+          .position(absolute, auto, 1.25rem, 1.25rem, 1.25rem);
+          line-height: 1;
+          color: @color-empty;
+          overflow: hidden;
+          z-index: 1;
+          max-height: 20px;
+          .detail {
+            display: block;
+          }
+        }
+        &:after {
+          .transition( all 300ms ease-in );
+          .position(absolute, 0, 0, 0, 0);
+          background: black;
+          content: '';
+          opacity: 0;
+          z-index: 0;
+        }
+        &:hover {
+          &:after {
+            opacity: .5;
+          }
+          .name {
+            max-height: 300px;
+          }
+        }
+      }//avatar
+
+    }
+  }
+  .section-technology {
+    .tech {
+      height: 160px;
+      @media screen and (min-width: 60em) { height: 240px; }
+      img {
+        .position(absolute, 35%, auto, auto, 50%, auto, 48px);
+        .transform(translate3d(-50%, -50%, 0));
+        @media screen and (min-width: 60em) { height: 56px; }
+      }
+    }
+  }
 }

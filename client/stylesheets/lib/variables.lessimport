@@ -19,7 +19,7 @@
 /* Greyscale */
 @color-empty: white;
 @color-raw: #f8f8f8;
-@color-raw-alt: #f5f5f5;
+@color-raw-alt: #f3f3f3;
 @color-rare: #EEE;
 @color-medium-rare: #ccc;
 @color-medium: #808080;

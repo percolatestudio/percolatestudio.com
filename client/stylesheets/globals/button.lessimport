@@ -6,7 +6,7 @@
   /* Sizing */
   font-size: 16px !important;
   line-height: 20px !important; //override line-height always so we can use em's to size.
-  padding: 1.05em 1.25em .95em; //more compact buttons 8 15 yields 48px button
+  padding: 1.1em 1.25em .9em; //more compact buttons 8 15 yields 48px button
 
   display: inline-block;
   position: relative;
@@ -17,7 +17,7 @@
 
   &.caps {
     .section-subtitle(@color-empty);
-    text-indent:.3em; //reqiured to balance out the extra right spacing from letter-spacing
+    text-indent:.3em; //required to balance out the extra right spacing from letter-spacing
     [class^="icon-"],
     [class*=" icon-"] {
       text-indent: 0;

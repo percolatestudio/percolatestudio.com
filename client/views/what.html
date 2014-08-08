@@ -1,5 +1,5 @@
 <template name="what">
-  <header>
+  <header class="grid-2">
     <div class="col-left">
       <h1 class="title-page">What</h1>
       <p class="description-page">Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human. </p>
@@ -15,27 +15,21 @@
       </div>
     {{/each}}
   </section>
-  <section class="section-clients">
+  <section class="section-logo">
     <h2 class="title-section">Selected Clients</h2>
     <div class="grid-5">
-      <div class="tech">
+      <a class="logo" href="http://apple.com">
+        <img title="Apple Computer" src="img/logo-apple.svg">
+      </a>
+      <a class="logo" href="http://yummly.com">
+        <img title="Yummly" src="img/logo-yummly.svg">
+      </a>
+      <a class="logo" href="http://meteor.com">
+        <img title="MeteorJS" src="img/logo-meteor.svg">
+      </a>
+      <a class="logo">
         <img src="http://placehold.it/240x300">
-      </div>
-      <div class="tech">
-        <img src="http://placehold.it/240x300">
-      </div>
-      <div class="tech">
-        <img src="http://placehold.it/240x300">
-      </div>
-      <div class="tech">
-        <img src="http://placehold.it/240x300">
-      </div>
-      <div class="tech">
-        <img src="http://placehold.it/240x300">
-      </div>
-      <div class="tech">
-        <img src="http://placehold.it/240x300">
-      </div>
+      </a>
     </div>
   </section>
 </template>

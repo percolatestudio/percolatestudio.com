@@ -1,6 +1,7 @@
 body {
-  background: @color-well;
+  background: @color-full;
 }
 .content {
   background: @color-empty;
+  position: relative;
 }

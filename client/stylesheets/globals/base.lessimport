@@ -15,6 +15,7 @@ body {
   .font-s3();
   .type-regular;
   color: @color-full;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Default type layout */

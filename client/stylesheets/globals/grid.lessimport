@@ -8,11 +8,20 @@
 
     > img {
       display: block;
-      height: auto;
-      width: 100%;
-    } //ensures direct descendent images take up space like block elements
+    }
   }
-  &[class*="2"] > * { width: 50%; }
-  &[class*="3"] > * { width: 33%; }
-  &[class*="5"] > * { width: 20%; }
+  &[class*="2"] > * {
+    width: 100%;
+    @media screen and (min-width: 50em) { width: 50%; }
+  }
+  &[class*="3"] > * { //results in 3up at desktop size
+    width: 100%;
+    @media screen and (min-width: 50em) { width: 33.33%; }
+  }
+  &[class*="5"] > * { //results in 5up at desktop size
+    width: 50%;
+    @media screen and (min-width: 40em) { width: 33.33%; }
+    @media screen and (min-width: 60em) { width: 25%; }
+    @media screen and (min-width: 70em) { width: 20%; }
+  }
 }

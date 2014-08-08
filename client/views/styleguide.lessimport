@@ -61,11 +61,12 @@
       margin-right: 40px;
       text-align: left;
       text-transform: uppercase;
-      vertical-align: bottom;
+      vertical-align: baseline;
       width: 60px;
     }
     [class^="font-"] {
       display: inline-block;
+      vertical-align: baseline;
     }
     .light { .type-light; }
     .regular { .type-regular; }

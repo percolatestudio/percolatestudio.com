@@ -144,15 +144,5 @@
 
     }
   }
-  .section-technology {
-    .tech {
-      height: 160px;
-      @media screen and (min-width: 60em) { height: 240px; }
-      img {
-        .position(absolute, 35%, auto, auto, 50%, auto, 48px);
-        .transform(translate3d(-50%, -50%, 0));
-        @media screen and (min-width: 60em) { height: 56px; }
-      }
-    }
-  }
+
 }

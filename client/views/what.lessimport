@@ -1,5 +1,69 @@
 .layout.what {
-  .section-clients {
+  header .col-right {
+    //hide the negative space when small
+    display: none;
+    @media screen and (min-width: 50em) { display: inline-block; }
+  }
+  .section-what {
+    .inline-block-whitespace;
 
+    .item {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      .meta {
+        .std-xpadding;
+        .position(absolute, auto, 0, 0, 0, 100%);
+
+        background-image: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, .99) 40%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        .title-item {
+          .font-m2;
+          .type-semibold;
+
+          a { color: @color-full; }
+        }
+        .subtitle-item {
+          .section-subtitle(@color-primary);
+        }
+
+      }
+
+      width: 100%;
+      height: 480px;
+
+      @media screen and (min-width: 40em) {
+        height: 600px;
+      }
+      @media screen and (min-width: 60em) {
+        &:nth-child(5n + 1) {
+          height: 600px;
+          width: 100%;
+        }
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 3),
+        &:nth-child(5n + 4),
+        &:nth-child(5n + 5) {
+          height: 600px;
+          width: 50%;
+        }
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 5) {
+          .meta {
+            background-image: linear-gradient(to bottom,
+              rgba(238, 238, 238, 0.95) 0%,
+              rgba(238, 238, 238, .99) 40%,
+              rgba(238, 238, 238, 1) 100%
+            );
+          }
+        }
+      }//media query for 50em – 960px
+    }
   }
 }

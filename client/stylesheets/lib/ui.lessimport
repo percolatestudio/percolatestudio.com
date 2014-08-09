@@ -18,8 +18,12 @@
 }
 
 .std-xpadding() {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  @media screen and (min-width: 50em) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 .inline-block-whitespace() {

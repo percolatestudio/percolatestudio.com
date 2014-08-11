@@ -1,6 +1,6 @@
 <template name="layout">
   <div class="layout {{templateClass}} {{menuOpenClass}} {{contactOpenClass}}">
-    <div class="content-wrapper">
+    <div class="content">
       <nav>
         <div class="nav-group">
           <a href="{{pathFor 'why'}}">Why</a>
@@ -12,15 +12,13 @@
         <a data-menu style="display:none"><span class="icon-percolate"></span></a>
 
         <div class="nav-group right">
-          <a href="{{pathFor 'careers'}}">Careers</a>
+          <a href="{{pathFor 'careers'}}">Join</a>
           <a href="http://blog.percolatestudio.com">Blog</a>
           <a data-contact>Contact</a>
         </div>
       </nav>
 
-      <div class="content">
-        {{> yield}}
-      </div>
+      {{> yield}}
 
     </div>
 

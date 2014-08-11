@@ -132,10 +132,11 @@ input:not([type="checkbox"]):not([type="radio"]) {
 input:not([type="checkbox"]):not([type="radio"]),
 textarea {
   .placeholder(@color-medium);
+  .font-s2;
+  @media screen and (min-width: 40em) { .font-s3; }
   //do not add a transition; it causes a focus bug in iOS
 
-  font-size: 18px;
-  padding: .58em 0; //total height ~48
+  padding: .75em 0; //total height ~48
 
   background: transparent;
   box-shadow: rgba(0,0,0,.2) 0 -1px 0 0 inset;

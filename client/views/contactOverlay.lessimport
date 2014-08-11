@@ -3,9 +3,12 @@
     .page-margins;
 
     .title-overlay {
-      .type-light;
 
-      .font-l2;
+      .font-m3;
+      @media screen and (min-width: 30em) {
+        .type-light;
+        .font-l2;
+      }
       @media screen and (min-width: 50em) { .font-l3; }
 
       letter-spacing: -.05em;
@@ -18,19 +21,28 @@
     }
     .fieldset-group {
       margin-bottom: 2rem;
+      overflow: hidden; //fixes float
       &:last-of-type {
         margin-bottom: 3rem;
       }
       &.services {
-        .inline-block-whitespace;
         .btn-toggle {
           display: inline-block;
-          width: 24%;
-          & + .btn-toggle { margin-left: 4/3%; }
+
+          width: 49.25%;
+          margin-bottom: 1.5%;
+          &:nth-of-type(even) {
+            margin-left: 1.5%;
+          }
+          @media screen and (min-width: 40em) {
+            width: 24%;
+            & + .btn-toggle { margin-left: 4/3%; }
+          }
         }
       }
       .btns-group {
         max-width: 100%;
+
       }
     }
     .fieldset-group-title {
@@ -58,10 +70,32 @@
       .wrapper-visit {
         display: inline-block;
         vertical-align: top;
+        margin-bottom: 2em;
       }
 
-      .wrapper-connect { width:33.33%; }
-      .wrapper-visit { width: 66.66%; }
+      .wrapper-connect {
+        width: 100%;
+        @media screen and (min-width: 40em) {
+          width:33.33%;
+        }
+
+        .list {
+          > a {
+            float: left;
+            margin-right: 1em;
+            @media screen and (min-width: 40em) {
+              clear: both;
+            }
+          }
+        }
+      }
+      .wrapper-visit {
+        width: 100%;
+        @media screen and (min-width: 40em) {
+          width: 66.66%;
+        }
+
+      }
 
       .wrapper-connect {
         a {

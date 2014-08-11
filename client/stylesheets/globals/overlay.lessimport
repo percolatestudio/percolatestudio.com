@@ -33,7 +33,7 @@
     z-index: 1;
     .icon-cross {
       .font-s3;
-      @media screen and (min-width: 50em) { .font-m2; }
+      @media screen and (min-width: 40em) { .font-m2; }
 
       color: @color-medium-well;
       line-height: 36px; //aligns to the 48px tap area

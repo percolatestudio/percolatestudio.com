@@ -5,11 +5,10 @@
     .title-overlay {
 
       .font-m3;
-      @media screen and (min-width: 30em) {
+      @media screen and (min-width: 40em) {
         .type-light;
-        .font-l2;
+        .font-l3;
       }
-      @media screen and (min-width: 50em) { .font-l3; }
 
       letter-spacing: -.05em;
       line-height: 1;
@@ -61,16 +60,17 @@
 
       padding-top: 1.5rem;
 
-      .title-ancillary {
-        .section-subtitle(@color-medium);
-        margin-bottom: .25em;
-      }
-
       .wrapper-connect,
       .wrapper-visit {
         display: inline-block;
         vertical-align: top;
         margin-bottom: 2em;
+
+        .title-ancillary {
+          .font-s2;
+          .section-subtitle(@color-medium);
+          margin-bottom: .25em;
+        }
       }
 
       .wrapper-connect {
@@ -97,15 +97,17 @@
 
       }
 
-      .wrapper-connect {
-        a {
-          .font-s3;
-        }
+      .wrapper-connect a {
+        .font-s2;
+        @media screen and (min-width: 40em) { .font-s3; }
       }
 
       .wrapper-visit {
         .inline-block-whitespace;
         > .location-wrapper {
+          .font-s2;
+          @media screen and (min-width: 40em) { .font-s3; }
+
           color: @color-medium;
           display: inline-block;
           width: 50%;

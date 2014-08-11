@@ -8,7 +8,11 @@ a, .pseudo-link {
     text-decoration: underline;
   }
   &:active { color: @color-well; }
+
+  //links that look like standard text
   &.nochrome { color: @color-well; }
+  //links that are monocrhome
+  &.monochrome { color: @color-medium; }
 }
 
 a.inverse {

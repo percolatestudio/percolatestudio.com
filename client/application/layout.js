@@ -27,3 +27,17 @@ Template.layout.events({
     Session.set(CONTACT_KEY, false);
   }
 });
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) { // esc closes everything
+    if ( $('input, textarea').is(':focus')) {
+      return ; // input or textarea is focused, ignore other part of function
+    }
+    var key = e.which;
+
+    if (Session.get(MENU_KEY, true) || Session.get(CONTACT_KEY, true)) {
+      Session.set(MENU_KEY, false);
+      Session.set(CONTACT_KEY, false);
+    }
+  }
+});

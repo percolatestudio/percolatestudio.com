@@ -4,7 +4,6 @@
   margin: 0;
   @media screen and (min-width: 30em) { margin: 0 2*@column; }
   @media screen and (min-width: 60em) { margin: 0 4*@column; }
-  @media screen and (min-width: 80em) { margin: 0 6*@column; }
 }
 
 .std-ypadding() {

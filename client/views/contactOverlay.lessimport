@@ -69,7 +69,7 @@
         .title-ancillary {
           .font-s2;
           .section-subtitle(@color-medium);
-          margin-bottom: .25em;
+          margin-bottom: .5rem;
         }
       }
 

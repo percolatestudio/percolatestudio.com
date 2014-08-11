@@ -6,14 +6,12 @@
   .title-section {
     .font-m1;
     .std-xpadding;
+    .std-ypadding;
     .section-subtitle(@color-well);
 
     display: inline-block;
-    height: 1em;
     line-height: 1em;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    padding-top: .12em; //vertical offset for baseline alignment due to all caps
+
     position: relative;
     text-decoration: none;
     z-index: 1;
@@ -29,22 +27,6 @@
     color: @color-medium-well;
   }
 
-  &[class*="lookfor"] {
-    background: @color-raw;
-
-
-    .subsection {
-      padding-left: 2.5em;
-      margin-bottom: 4.5em;
-
-      img {
-        width: auto;
-        height: 2em;
-        margin-bottom: 2em;
-        background: #eee;
-      }
-    }
-  }
   &[class*="openings"] {
     .openings {
       .std-xpadding;

@@ -1,35 +1,30 @@
 <template name="layout">
   <div class="layout {{templateClass}} {{menuOpenClass}} {{contactOpenClass}}">
+    <div class="content-wrapper">
+      <nav>
+        <div class="nav-group">
+          <a href="{{pathFor 'why'}}">Why</a>
+          <a href="{{pathFor 'how'}}">How</a>
+          <a href="{{pathFor 'what'}}">What</a>
+        </div>
 
-    <nav>
-      <div class="nav-group">
-        <a href="{{pathFor 'why'}}">Why</a>
-        <a href="{{pathFor 'how'}}">How</a>
-        <a href="{{pathFor 'what'}}">What</a>
+        <a href="{{pathFor 'home'}}" class="logo"><img src="img/logo.svg"/></a>
+        <a data-menu style="display:none"><span class="icon-percolate"></span></a>
+
+        <div class="nav-group right">
+          <a href="{{pathFor 'careers'}}">Careers</a>
+          <a href="http://blog.percolatestudio.com">Blog</a>
+          <a data-contact>Contact</a>
+        </div>
+      </nav>
+
+      <div class="content">
+        {{> yield}}
       </div>
 
-      <a href="{{pathFor 'home'}}" class="logo"><img src="img/logo.svg"/></a>
-      <a data-menu style="display:none"><span class="icon-percolate"></span></a>
-
-      <div class="nav-group right">
-        <a href="{{pathFor 'careers'}}">Careers</a>
-        <a href="http://blog.percolatestudio.com">Blog</a>
-        <a data-contact>Contact</a>
-      </div>
-    </nav>
-
-    <div class="content">
-      {{> yield}}
     </div>
 
-    <footer>
-     <div class="tagline">Build Dreams.</div>
-     <span class="copyright">&copy; 2014 Percolate Studio PTY LTD</span>
-     <a href="http://twitter.com/percolatestudio"><span class="icon-twitter"></span></a>
-    </footer>
-
+    {{> contactOverlay}}
+    {{> menuOverlay}}
   </div>
-
-  {{> contactOverlay}}
-  {{> menuOverlay}}
 </template>

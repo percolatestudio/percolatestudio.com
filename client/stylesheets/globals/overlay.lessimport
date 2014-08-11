@@ -1,6 +1,6 @@
 [class^="overlay-screen"] {
   .position(absolute, 0,0,0,0);
-  background: rgba(241, 241, 241, 0.96);
+  background: rgba(237, 243, 245, 0.97);
 
   padding: 1em 0;
   @media screen and (min-width: 30em) { padding: 2em 0; }
@@ -10,6 +10,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: -1;
+  -webkit-overflow-scrolling: touch;
 
   > .overlay-close {
     .position(absolute, .75em, .75em, auto, auto, 3em, 3em);
@@ -22,12 +23,4 @@
       color: @color-well;
     }
   }
-}
-
-.overlayVisible() {
-  .position(absolute, 0, 0, 0, 0);
-  z-index: 9;
-  opacity: 1;
-  overflow-y: scroll; // do not move, hijacks scroll from content if moved
-  overflow-x: hidden;
 }

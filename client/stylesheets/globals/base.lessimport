@@ -11,6 +11,10 @@ html, button, input, textarea, select {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  .transform(translate3d(0,0,0)); //background-cover performance hack
+}
+
 body {
   .font-s3();
   .type-regular;

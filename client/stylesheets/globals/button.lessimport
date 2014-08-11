@@ -92,16 +92,19 @@
     }
   }
   &[class*="toggle"] {
-    box-shadow: @color-primary 0 0 0 1px inset;
-    color: @color-primary;
-    .transition( box-shadow 100ms ease-in-out, color 300ms ease-in );
+    .type-regular;
+    .transition( all 100ms ease-in-out, color 300ms ease-in );
+
+    background: rgba(255,255,255,.5);
+    color: @color-medium;
+
     &:hover{
-      box-shadow: darken(@color-primary, 10%) 0 0 0 1px inset;
-      color: darken(@color-primary, 10%);
+      color: @color-primary;
     }
     &:active, &.active {
-      box-shadow: @color-primary 0 0 0 3em inset;
-      color: @color-empty;
+      .type-semibold;
+      background: @color-empty;
+      color: @color-primary;
     }
   }
   //overlays
@@ -135,17 +138,10 @@
   [class*="btn-toggle"] {
     .ellipsized;
     .flex(1);
-    border-radius: 0;
     float: left;
 
     & + [class*="btn-toggle"] {
-      margin-left: -1px;
-    }
-    &:first-of-type {
-      border-radius: 3px 0 0 3px;
-    }
-    &:last-of-type {
-      border-radius: 0 3px 3px 0;
+      margin-left: 2px;
     }
   }
 }

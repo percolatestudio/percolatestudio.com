@@ -1,3 +1,17 @@
 .layout.careers {
+  .section-lookfor {
+    background: @color-raw;
 
+    .subsection {
+      .std-xpadding;
+      margin-bottom: 4.5em;
+
+      img {
+        width: auto;
+        height: 2em;
+        margin-bottom: 2em;
+        background: #eee;
+      }
+    }
+  }
 }

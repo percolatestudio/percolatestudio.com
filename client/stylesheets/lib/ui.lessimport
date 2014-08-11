@@ -2,27 +2,26 @@
 
 .page-margins() {
   margin: 0;
-  @media screen and (min-width: 30em) { margin: 0 @column; }
+  @media screen and (min-width: 30em) { margin: 0 2*@column; }
   @media screen and (min-width: 60em) { margin: 0 2*@column; }
-  @media screen and (min-width: 80em) { margin: 0 4*@column; }
+  @media screen and (min-width: 80em) { margin: 0 6*@column; }
 }
 
 .std-ypadding() {
-  padding-top: 1.5em;
-  @media screen and (min-width: 30em) { padding-top: 2em; }
-  @media screen and (min-width: 40em) { padding-top: 3em; }
-
-  padding-bottom: 1em;
-  @media screen and (min-width: 30em) { padding-bottom: 3em; }
-  @media screen and (min-width: 40em) { padding-bottom: 5em; }
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  @media screen and (min-width: 40em) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 .std-xpadding() {
   padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  @media screen and (min-width: 50em) {
+  padding-right: 1.25rem; //20
+  @media screen and (min-width: 40em) {
     padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-right: 2.5rem; //40
   }
 }
 

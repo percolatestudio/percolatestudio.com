@@ -15,6 +15,10 @@ nav {
   }
   .nav-group {
     .position(absolute, 8px, auto, auto, 2em);
+
+    display: none;
+    @media screen and (min-width: 50em) { display:block; }
+
     &.right {
       left: auto;
       right: 2em;

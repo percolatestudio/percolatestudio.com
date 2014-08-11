@@ -5,17 +5,21 @@ header {
     @media screen and (min-width: 50em) { height: 400px; }
   }
   .title-page {
-    .font-l3;
+    .font-l2;
+    @media screen and (min-width: 50em) { .font-l3; }
+
     .type-light;
     .std-xpadding;
-    padding-top: 2.5rem;
+    .std-ypadding;
     letter-spacing: -.05em;
     line-height: 1;
   }
   .description-page {
-    .font-m2;
+    .font-m1;
+    @media screen and (min-width: 50em) { .font-m2; }
     .std-xpadding;
-    .position(absolute, auto, 0, 2.5rem, 0);
+    .std-ypadding;
+    .position(absolute, auto, 0, 0, 0);
 
     color: @color-well;
   }

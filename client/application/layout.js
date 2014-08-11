@@ -6,7 +6,7 @@ Template.layout.helpers({
   templateClass: function() {
     return Router._layout.region('main').template();
   },
-  
+
   contactOpenClass: function() {
     return Session.equals(CONTACT_KEY, true) && 'contact-open';
   },
@@ -21,5 +21,9 @@ Template.layout.events({
   },
   'click [data-menu]': function() {
     Session.set(MENU_KEY, true);
+  },
+  'click .overlay-close': function() {
+    Session.set(MENU_KEY, false);
+    Session.set(CONTACT_KEY, false);
   }
 });

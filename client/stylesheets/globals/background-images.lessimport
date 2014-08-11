@@ -20,12 +20,12 @@
       letter-spacing: -.05em;
     }
   }
-  &[class*="careers"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/IbJK5etSN6dH6jAF4U0U_DSC_0280-1.jpg'); }
-  &[class*="who-we-are"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg'); }
-  &[class*="who-we-are-2"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/xIsiRLngSRWN02yA2BbK_submission-photo-7.jpg'); }
-  &[class*="who-we-are-3"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/IAG5tj7gThy5rOupZ5FK_IMG_3906.jpg'); }
+  &[class*="careers"] { background-image: url('img/test/1.jpg'); }
+  &[class*="who-we-are"] { background-image: url('img/test/2.jpg'); }
+  &[class*="who-we-are-2"] { background-image: url('img/test/3.jpg'); }
+  &[class*="who-we-are-3"] { background-image: url('img/test/4.jpg'); }
 
-  &[class*="test-1"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg'); }
-  &[class*="test-2"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/xIsiRLngSRWN02yA2BbK_submission-photo-7.jpg'); }
-  &[class*="test-3"] { background-image: url('https://s3.amazonaws.com/ooomf-com-files/IAG5tj7gThy5rOupZ5FK_IMG_3906.jpg'); }
+  &[class*="test-1"] { background-image: url('img/test/5.jpg'); }
+  &[class*="test-2"] { background-image: url('img/test/6.jpg'); }
+  &[class*="test-3"] { background-image: url('img/test/7.jpg'); }
 }

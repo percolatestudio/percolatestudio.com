@@ -23,7 +23,7 @@ fieldset,
   > .input-symbol {
     // direct descendents only, custom layouts are wrapped in .fieldset-group
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     width: 100%;
 
     &:last-child { margin-bottom: 0; }
@@ -131,15 +131,15 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
 input:not([type="checkbox"]):not([type="radio"]),
 textarea {
-  .placeholder(@color-medium-well);
+  .placeholder(@color-medium);
   //do not add a transition; it causes a focus bug in iOS
 
-  .font-s3;
-  padding: .65em .75em; //total height 36px
+  font-size: 18px;
+  padding: .58em 0; //total height ~48
 
-  background: @color-empty;
-  border: none;
-  border-radius: 3px;
+  background: transparent;
+  box-shadow: rgba(0,0,0,.2) 0 -1px 0 0 inset;
+  border:none;
   box-sizing: border-box;
   outline: none;
 
@@ -149,12 +149,11 @@ textarea {
 
   &:active,
   &:focus {
-    border-color: lighten(@color-primary, 50%);
-    box-shadow: @color-primary 0 0px 3px 0;
+    box-shadow: rgba(0,0,0,.5) 0 -1px 0 0 inset;
   }
   /* Alerts */
   &.alert {
-    box-shadow: @color-negative 0 0 0 1px inset;
+    box-shadow: @color-negative 0 -1px 0 0 inset;
   }
   /* Inverted colorway */
   &.inverse {

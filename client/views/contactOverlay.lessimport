@@ -1,3 +1,86 @@
 .overlay-screen-contact {
+  .contact-form-wrapper {
+    .page-margins;
 
+    .title-overlay {
+      .type-light;
+
+      .font-l2;
+      @media screen and (min-width: 50em) { .font-l3; }
+
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    textarea {
+      margin-bottom: 2rem;
+      line-height: 1.625em;
+    }
+    .fieldset-group {
+      margin-bottom: 2rem;
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+      &.services {
+        .inline-block-whitespace;
+        .btn-toggle {
+          display: inline-block;
+          width: 24%;
+          & + .btn-toggle { margin-left: 4/3%; }
+        }
+      }
+      .btns-group {
+        max-width: 100%;
+      }
+    }
+    .fieldset-group-title {
+      .font-s2;
+      .section-subtitle(@color-medium);
+      margin-bottom: .75rem;
+
+      .subtext {
+        .type-regular;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+    }
+    .ancillary-contact {
+      .inline-block-whitespace;
+
+      padding-top: 1.5rem;
+
+      .title-ancillary {
+        .section-subtitle(@color-medium);
+        margin-bottom: .25em;
+      }
+
+      .wrapper-connect,
+      .wrapper-visit {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .wrapper-connect { width:33.33%; }
+      .wrapper-visit { width: 66.66%; }
+
+      .wrapper-connect {
+        a {
+          .font-s3;
+        }
+      }
+
+      .wrapper-visit {
+        .inline-block-whitespace;
+        > .location-wrapper {
+          color: @color-medium;
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          & + .location-wrapper { padding-left: 1.25em; }
+        }
+      }
+    }
+
+
+  }
 }

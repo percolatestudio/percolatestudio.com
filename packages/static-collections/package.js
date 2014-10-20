@@ -1,6 +1,7 @@
 Package.describe({
+  name: 'static-collections',
   summary: "Static data collections from markdown",
-  version: "0.0.0"
+  version: "1.0.0"
 });
 
 Package._transitional_registerBuildPlugin({

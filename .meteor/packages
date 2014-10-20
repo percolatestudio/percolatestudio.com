@@ -6,7 +6,7 @@
 standard-app-packages
 autopublish
 insecure
-iron-router
 static-collections
 fastclick
 less
+iron:router@1.0.0-pre4

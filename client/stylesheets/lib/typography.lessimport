@@ -16,19 +16,19 @@
 }
 
 .type-light() {
-  font-family: 'DinWeb-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: 'DinWeb-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
 }
 
 .type-semibold() {
-  font-family: 'DINWeb-Medium', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: 'DINWeb-Medium', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
 
 .type-bold() {
-  font-family: 'DINWeb-Bold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: 'DINWeb-Bold', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
 }

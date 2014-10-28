@@ -1,4 +1,4 @@
-.layout.how {
+.layout.How {
   .section-services {
     background: @color-raw;
 

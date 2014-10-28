@@ -1,4 +1,4 @@
-.layout.what {
+.layout.What {
   header .col-right {
     //hide the negative space when small
     display: none;

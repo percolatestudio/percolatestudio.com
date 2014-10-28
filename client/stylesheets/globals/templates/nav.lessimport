@@ -2,6 +2,7 @@ nav {
   background: @color-full;
   overflow: hidden;
   position: relative;
+  z-index: 1;
   .logo {
     display: block;
     height: 1.25em;

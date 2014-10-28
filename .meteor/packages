@@ -10,3 +10,6 @@ static-collections
 fastclick
 less
 iron:router@1.0.0-pre4
+http
+aldeed:simple-schema
+

@@ -1,0 +1,69 @@
+[class^="section-"],
+[class*=" section-"] {
+  overflow: hidden;
+  position: relative;
+
+  .title-section {
+    .std-xpadding;
+    .std-ypadding;
+    .section-subtitle(@color-well);
+
+    .font-s2;
+    @media screen and (min-width: 40em) { .font-m1;}
+
+    display: inline-block;
+    line-height: 1em;
+
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  .subtitle-section {
+    .font-m2;
+    .type-semibold;
+    //line-height: 1;
+  }
+  .subtitle-section + p {
+    .font-m1;
+    color: @color-medium-well;
+  }
+
+  &[class*="openings"] {
+    .openings {
+      .std-xpadding;
+      margin-bottom: 4.5em;
+
+      .subtitle-openings {
+        .font-m1;
+        margin-bottom: 2rem;
+      }
+
+      .opening {
+        margin-bottom: 1.5rem;
+        .title-opening {
+          .type-bold;
+        }
+        .location-opening {
+          color: @color-medium;
+        }
+      }
+    }
+  }
+
+  &[class*="what"] {}
+  &[class*="clients"] {}
+
+}
+
+.section-logo {
+  .logo {
+    height: 160px;
+    @media screen and (min-width: 60em) { height: 240px; }
+    img {
+      .position(absolute, 35%, auto, auto, 50%, auto, 48px);
+      .transform(translate3d(-50%, -50%, 0));
+      @media screen and (min-width: 60em) { height: 56px; }
+    }
+  }
+}

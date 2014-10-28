@@ -12,9 +12,20 @@ var schema = new SimpleSchema({
   name: { type: String, min: 3, max: 100 },
   email: { type: String, regEx: SimpleSchema.RegEx.Email },
   about: { type: String, min: 10, max: 10000 },
-  services: { type: [String] },
-  timing: { type: String },
-  budget: { type: String, optional: true, custom: validateBudget }
+  services: { 
+    type: [String], 
+    allowedValues: ["strategy", "design", "engineering", "consulting"]
+  },
+  timing: { 
+    type: String, 
+    allowedValues: ["today", "quarter", "year"] 
+  },
+  budget: { 
+    type: String,
+    optional: true,
+    allowedValues: ["25k", "50k", "100k", "notsure"],
+    custom: validateBudget
+  }
 });
 
 var ssContext = schema.newContext();
@@ -31,9 +42,21 @@ Template.contactOverlay.helpers({
   }
 });
 
-window.readForm = function(form) {
+// Returns a serialized form element as an Object corresponding to the
+// document. Pushes fields that have multiple values into an array.
+var readForm = function(form) {
   var r = _.reduce($(form).serializeArray(), function(memo, field) {
-    return memo[field.name] = field.value;
+    var stored = memo[field.name];
+
+    // gather values from fields that share the same name into an array
+    if (stored) {
+      if (! _.isArray(stored))
+        memo[field.name] = [stored];
+
+      memo[field.name].push(field.value);
+    } else {
+      memo[field.name] = field.value;
+    }
     return memo;
   }, {});
   
@@ -44,23 +67,22 @@ window.readForm = function(form) {
 Template.contactOverlay.events({
   'submit form': function(event) {
     event.preventDefault();
-    
-    var doc = {
-      name: $(event.target).find('[name=name]').val(),
-      email: $(event.target).find('[name=email]').val(),
-      about: $(event.target).find('[name=about]').val(),
-      services: Template.toggle.gather('Strategy', 'Design', 'Engineering', 'Consulting'),
-      timing: Template.toggle.gather('Today', 'This Quarter', 'This Year'),
-      budget: Template.toggle.gather('25k–50k', '50k–100k', '+100k', 'Not sure')
-    };
 
-    debugger;
+    var doc = readForm(event.target);
+    schema.clean(doc);
+
+    if (! _.isArray(doc.services))
+      doc.services = [doc.services];
+
+    if (ssContext.validate(doc))
+      send(doc);
     
-    // ssContext.validate({services: ['strategy']});
+    debugger;
   }
 });
 
-function send(form) {
+function send(doc) {
+  return alert(doc);
   var to = 'us@percolatestudio.com';
   var subject = 'Work with us';
   var body = 'foobar';

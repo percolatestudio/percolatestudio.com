@@ -6,33 +6,63 @@
     <form class="contact-form-wrapper">
       <div class="title-overlay">Work with us</div>
       <fieldset>
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email Address">
-        <textarea name="about" placeholder="About your company and project"></textarea>
+        <input type="text" name="name" class="{{alertClass 'name'}}"  placeholder="Name" title="{{errorFor 'name'}}">
+        <input type="email" name="email" class="{{alertClass 'email'}}" placeholder="Email Address" title="{{errorFor 'email'}}">
+        <textarea name="about" class="{{alertClass 'about'}}" placeholder="About your company and project" title="{{errorFor 'about'}}"></textarea>
 
         <div class="fieldset-group services">
-          <div class="fieldset-group-title">Services <span class="subtext">Select all that apply</span><span class="error"> What can we offer you?</span></div><!-- need to comment out whitespace
+          <div class="fieldset-group-title">Services {{#if hasError 'services'}}<span class="error">{{errorFor 'services'}}</span>{{else}}<span class="subtext">Select all that apply</span>{{/if}}</div><!-- need to comment out whitespace
           --><a class="btn-toggle active">Strategy</a><!--
           --><a class="btn-toggle">Design</a><!--
           --><a class="btn-toggle">Engineering</a><!--
           --><a class="btn-toggle">Consulting</a><!--
         --></div>
+          <br>
+          <input type="checkbox" name="services" value="strategy" id="strategy">
+          <label for="strategy">Strategy</label>
+          <input type="checkbox" name="services" value="design" id="design">
+          <label for="design">Design</label>
+          <input type="checkbox" name="services" value="engineering" id="engineering">
+          <label for="engineering">Engineering</label>
+          <input type="checkbox" name="services" value="consulting" id="consulting">
+          <label for="consulting">Consulting</label>
         <div class="fieldset-group">
-          <div class="fieldset-group-title">Timing<span class="error"> When's the deadline?</span></div>
+          <div class="fieldset-group-title">Timing {{#if hasError 'timing'}}<span class="error">{{errorFor 'timing'}}</span>{{/if}}</div>
           <div class="btns-group">
             <a class="btn-toggle">Today</a>
             <a class="btn-toggle">This Quarter</a>
             <a class="btn-toggle">This Year</a>
           </div>
+          <br>
+          <input type="radio" name="timing" value="today" id="today">
+          <label for="today">Today</label>
+          
+          <input type="radio" name="timing" value="quarter" id="quarter">
+          <label for="quarter">Quarter</label>
+
+          <input type="radio" name="timing" value="year" id="year">
+          <label for="year">This Year</label>
         </div>
         <div class="fieldset-group">
-          <div class="fieldset-group-title">Budget<span class="error"> Is there a budget?</span></div>
+          <div class="fieldset-group-title">Budget {{#if hasError 'budget'}}<span class="error">{{errorFor 'budget'}}</span>{{/if}}</div>
           <div class="btns-group">
             <a class="btn-toggle">25k–50k</a>
             <a class="btn-toggle">50k–100k</a>
             <a class="btn-toggle">+100k</a>
             <a class="btn-toggle">Not sure</a>
           </div>
+          <br>
+          <input type="radio" name="budget" value="25k" id="25k">
+          <label for="25k">25k–50k</label>
+          
+          <input type="radio" name="budget" value="50k" id="50k">
+          <label for="50k">50k–100k</label>
+
+          <input type="radio" name="budget" value="100k" id="100k">
+          <label for="100k">+100k</label>
+
+          <input type="radio" name="budget" value="notsure" id="notsure">
+          <label for="notsure">Not sure</label>
         </div>
         <button class="btn-primary caps" type="submit">Send Message</button>
       </fieldset>

@@ -1,9 +1,46 @@
 <template name="home">
   <section class="section-home-why">
     <div class="hero-wrapper">
-      <a href="{{pathFor 'home'}}" class="logo"><img src="img/logo.svg"/></a>
       <h1 class="title-page">Percolate Studio builds digital products to improve people's lives.</h1>
       <a class="btn-wire caps" data-contact>Contact us</a>
+    </div>
+  </section>
+
+  <section class="section-home-who">
+    <div class="grid-2">
+      <div class="col-left">
+        <h2 class="title-section">Who we are</h2>
+        <div class="col-content">
+          <p>We are an interdisciplinary team of product designers and software engineers. Clients hire us to improve the lives of their customers. We identify challenges, design solutions, and make technology human.</p>
+          <a class="btn-secondary caps" href="{{pathFor 'how'}}">See our approach</a>
+        </div>
+
+      </div>
+      <div class="col-right">
+        <div class="hero bg-image-who-we-are"></div>
+        <div class="bg-image-who-we-are-2"></div>
+        <div class="bg-image-who-we-are-3"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section-home-what">
+    <h2 class="title-section">What we do</h2>
+    <div class="grid-2">
+      <div class="col-content">
+        <p>We build software that spans consumer, education, technology and business organizations. We&#8217;ve helped Apple, Yummly, and new businesses achieve their goals.</p>
+      </div>
+      <div class="col-content">
+        <p>Our books, presentations, and articles help people understand the craft of building products. Our frequent contributions to open source help bring dreams to life.</p>
+      </div>
+    </div>
+    <div class="col-content">
+      <a class="btn-secondary caps"  href="{{pathFor 'what'}}">See our work</a>
+    </div>
+    <div class="example-screens">
+      <img class="desktop" src="http://placehold.it/780x536/eee">
+      <img class="phone" src="http://placehold.it/90x170/bbb">
+      <img class="laptop" src="http://placehold.it/520x390/ddd">
+      <img class="tablet" src="http://placehold.it/250x330/ccc">
     </div>
   </section>
 </template>

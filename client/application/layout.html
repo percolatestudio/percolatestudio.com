@@ -1,7 +1,25 @@
 <template name="layout">
   <div class="layout {{templateClass}} {{menuOpenClass}} {{contactOpenClass}}">
     <div class="content">
+      <nav>
+        <div class="nav-group">
+          <a href="{{pathFor 'why'}}">Why</a>
+          <a href="{{pathFor 'how'}}">How</a>
+          <a href="{{pathFor 'what'}}">What</a>
+        </div>
+
+        <a href="{{pathFor 'home'}}" class="logo"><img src="img/logo.svg"/></a>
+        <a data-menu style="display:none"><span class="icon-percolate"></span></a>
+
+        <div class="nav-group right">
+          <a href="{{pathFor 'careers'}}">Join Us</a>
+          <a href="http://blog.percolatestudio.com">Blog</a>
+          <a data-contact>Contact</a>
+        </div>
+      </nav>
+
       {{> yield}}
+
     </div>
 
     {{> contactOverlay}}

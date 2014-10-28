@@ -30,7 +30,8 @@
 
           width: 49.25%;
           margin-bottom: 1.5%;
-          &:nth-of-type(even) {
+          &:nth-of-type(even),
+          &:nth-of-type(3) {
             margin-left: 1.5%;
           }
           @media screen and (min-width: 40em) {

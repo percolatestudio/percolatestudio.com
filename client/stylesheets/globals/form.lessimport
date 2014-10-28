@@ -73,6 +73,7 @@ legend {
 
 input[type="checkbox"],
 input[type="radio"] {
+  cursor: pointer;
   font-size: 1em;
   margin-right: .25em;
   visibility: hidden;

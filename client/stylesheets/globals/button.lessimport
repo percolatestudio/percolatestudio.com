@@ -108,7 +108,7 @@
     &:hover{
       color: @color-primary;
     }
-    &:active, &.active {
+    &:active {
       .type-semibold;
       background: @color-empty;
       color: @color-primary;
@@ -156,12 +156,23 @@
       .flex(1);
     }
 
-    & + [class*="btn-toggle"] {
+    &:not(:first-of-type) {
       margin-top: 2px;
       @media screen and (min-width: 40em) {
         margin-left: 2px;
         margin-top: 0;
       }
     }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] { display: none; }
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label, {
+    // taken from btn-toggle:active
+    .type-semibold;
+    background: @color-empty;
+    color: @color-primary;
   }
 }

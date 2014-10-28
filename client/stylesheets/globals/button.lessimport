@@ -149,6 +149,8 @@
   width: 100%;
 
   [class*="btn-toggle"] {
+    .user-select(none);
+    cursor: pointer;
     float: left;
 
     @media screen and (min-width: 40em) {

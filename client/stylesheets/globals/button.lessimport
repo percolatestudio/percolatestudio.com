@@ -1,16 +1,12 @@
 [class^="btn-"],
 [class*=" btn-"] {
   .transition( all 200ms ease-in );
-  .type-bold;
-
-  /* Sizing */
-  .font-s2;
-  @media screen and (min-width: 40em) { .font-s3; }
+  .type-semibold;
 
   /* Sizing */
   .font-s2;
   line-height: 20px !important; //override line-height always so we can use em's to size.
-  padding: .57em .75em; //more compact buttons
+  padding: .57em 1.25em; //more compact buttons
   @media screen and (min-width: 40em) {
     .font-s3;
     line-height: 20px !important; //override line-height always so we can use em's to size.
@@ -120,6 +116,7 @@
   }
   //overlays
   &[class*="wire"] {
+    .type-semibold;
     background-color: transparent;
     box-shadow: rgba(255, 255, 255, .95) 0 0 0 2px inset;
     color: @color-empty;

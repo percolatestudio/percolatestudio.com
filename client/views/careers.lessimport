@@ -1,4 +1,4 @@
-.layout.careers {
+.layout.Careers {
   .section-lookfor {
     background: @color-raw;
 

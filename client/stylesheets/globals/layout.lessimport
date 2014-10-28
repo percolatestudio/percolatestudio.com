@@ -63,6 +63,10 @@ body {
   background: @color-full;
 }
 
+.layout {
+
+}
+
 .content {
   background: @color-empty;
 }

@@ -49,10 +49,15 @@
       .section-subtitle(@color-medium);
       margin-bottom: .75rem;
 
-      .subtext {
+      .subtext,
+      .error {
         .type-regular;
         text-transform: none;
         letter-spacing: 0;
+      }
+
+      .error {
+        color: @color-negative;
       }
     }
     .ancillary-contact {

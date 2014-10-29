@@ -3,7 +3,7 @@
 Meteor.refresh = function (notification) {
 };
 
-if (Meteor.isClient) {
+if (Meteor.isClient && Meteor.isDevel) {
   // By default, try to connect back to the same endpoint as the page
   // was served from.
   //

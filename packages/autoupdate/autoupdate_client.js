@@ -1,3 +1,6 @@
+if (! Meteor.isDevel)
+  return;
+
 // Subscribe to the `meteor_autoupdate_clientVersions` collection,
 // which contains the set of acceptable client versions.
 //

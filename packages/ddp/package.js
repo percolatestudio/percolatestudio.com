@@ -19,7 +19,7 @@ Npm.depends({
 
 Package.on_use(function (api) {
   api.use(['check', 'random', 'ejson', 'json', 'underscore', 'tracker',
-           'logging', 'retry'],
+           'logging', 'retry', 'devel'],
           ['client', 'server']);
 
   // It is OK to use this package on a server architecture without making a

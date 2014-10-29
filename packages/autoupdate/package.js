@@ -11,7 +11,7 @@ Cordova.depends({
 Package.on_use(function (api) {
   api.use('webapp', 'server');
   api.use(['tracker', 'retry'], 'client');
-  api.use(['ddp', 'mongo', 'underscore'], ['client', 'server']);
+  api.use(['ddp', 'mongo', 'underscore', 'devel'], ['client', 'server']);
   api.use('tracker', 'client');
   api.use('reload', 'client', {weak: true});
   api.use(['http', 'random'], 'web.cordova');

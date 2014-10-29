@@ -1,17 +1,17 @@
 // Budget is required unless consulting is the only service selected
 var validateBudget = function() {
-  if (this.field('services').isSet
-    && _.without(this.field('services').value, 'consulting').length > 0) {
+  var services = this.field('services').value;
+
+  if (services && services.length === 1 && services[0] === 'consulting')
     return undefined;
-  } else {
-    return 'required';
-  }
+
+  return 'required';
 }
 
 var schema = new SimpleSchema({
-  name: { type: String, min: 3, max: 100 },
-  email: { type: String, regEx: SimpleSchema.RegEx.Email },
-  about: { type: String, min: 10, max: 10000 },
+  name: { type: String, min: 3, max: 1000 },
+  email: { type: String, regEx: SimpleSchema.RegEx.Email, max: 1000 },
+  about: { type: String, min: 10, max: 100000 },
   services: { 
     type: [String], 
     allowedValues: ["strategy", "design", "engineering", "consulting"]

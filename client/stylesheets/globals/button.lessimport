@@ -134,7 +134,7 @@
     font-size: 1em;
     line-height: inherit;
     margin-right: .5em;
-    vertical-align: top; //alignment because line-height inherits the button lineheight /// prevents 1px vertical offset
+    vertical-align: top; // Alignment because line-height inherits the button lineheight /// prevents 1px vertical offset
     width: 1em;
   }
 }//end btn
@@ -152,6 +152,7 @@
     .user-select(none);
     cursor: pointer;
     float: left;
+    margin-bottom: 0; // Override label style
 
     @media screen and (min-width: 40em) {
       .ellipsized;

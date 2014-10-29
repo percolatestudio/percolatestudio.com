@@ -25,24 +25,39 @@
         margin-bottom: 3rem;
       }
       &.services {
+        //.btns-group { .inline-block-whitespace(); }
         .btn-toggle {
           display: inline-block;
-
+          clear: none;
           width: 49.25%;
           margin-bottom: 1.5%;
-          &:nth-of-type(even),
-          &:nth-of-type(3) {
+          margin-top: 0;
+
+          &:nth-of-type(even) {
             margin-left: 1.5%;
           }
+
+          &:nth-of-type(n+3) {
+            margin-bottom: 0;
+          }
+
           @media screen and (min-width: 40em) {
+            margin-bottom: 0%;
             width: 24%;
+
+            &:nth-of-type(even),
+            &:nth-of-type(3) {
+              margin-left: 1.5%;
+            }
+
             & + .btn-toggle { margin-left: 4/3%; }
+
           }
         }
       }
       .btns-group {
         max-width: 100%;
-
+        overflow: auto;
       }
     }
     .fieldset-group-title {

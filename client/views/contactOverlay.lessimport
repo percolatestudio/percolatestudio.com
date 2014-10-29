@@ -21,9 +21,11 @@
     .fieldset-group {
       margin-bottom: 2rem;
       overflow: hidden; //fixes float
+
       &:last-of-type {
         margin-bottom: 3rem;
       }
+
       &.services {
         //.btns-group { .inline-block-whitespace(); }
         .btn-toggle {
@@ -57,9 +59,26 @@
       }
       .btns-group {
         max-width: 100%;
-        overflow: auto;
+        overflow: hidden;
       }
     }
+
+    .fieldset-group.hidden {
+      .transition(all 300ms @easing);
+      .transform(scale3d(0,0,0));
+      max-height: 0;
+      margin-bottom: 0;
+      opacity: 0;
+
+      &.visible {
+        .transform(scale3d(1,1,1));
+        max-height: 30em;
+        opacity: 1;
+        &:last-of-type { margin-bottom: 3rem; }
+      }
+
+    }
+
     .fieldset-group-title {
       .font-s2;
       .section-subtitle(@color-medium);

@@ -24,15 +24,15 @@
 
 
   .section-home-why {
+    .position(relative, auto, auto, auto, auto, 100%, 95%);
     background: @color-full;
-    .position(relative, auto, auto, auto, auto, 100%, 100%);
+    margin-top: -36px; // nav offset
     text-align: center;
     z-index: 1;
 
     .hero-wrapper {
       .transform(translate3d(-50%, -50%, 0));
       .position(absolute, 50%, auto, auto, 50%, 80%);
-      margin-top: -36px; //accounts for nav offset
     }
 
     .logo {

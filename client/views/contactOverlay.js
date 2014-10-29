@@ -30,6 +30,15 @@ var schema = new SimpleSchema({
 
 var ssContext = schema.newContext();
 
+var prepare = function(doc) {
+  schema.clean(doc);
+
+  if (doc.services && ! _.isArray(doc.services))
+    doc.services = [doc.services];
+}
+
+var showBudget = new ReactiveVar(false);
+
 Template.contactOverlay.helpers({
   errorFor: function(key) {
     return ssContext.keyErrorMessage(key);
@@ -39,6 +48,9 @@ Template.contactOverlay.helpers({
   },
   alertClass: function(key) {
     return ssContext.keyIsInvalid(key) && 'alert';
+  },
+  budgetVisibleClass: function() {
+    return showBudget.get() && 'visible';
   }
 });
 
@@ -69,15 +81,21 @@ Template.contactOverlay.events({
     event.preventDefault();
 
     var doc = readForm(event.target);
-    schema.clean(doc);
-
-    if (! _.isArray(doc.services))
-      doc.services = [doc.services];
+    prepare(doc);
 
     if (ssContext.validate(doc))
       send(doc);
+  },
+  'change input[name=services]': function(event) {
+    var doc = readForm(event.target.form);
+    prepare(doc);
     
-    debugger;
+    console.log(doc);
+    
+    if (doc.services && _.without(doc.services, 'consulting').length > 0)
+      showBudget.set(true);
+    else
+      showBudget.set(false);
   }
 });
 

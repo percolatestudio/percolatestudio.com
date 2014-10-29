@@ -1,17 +1,20 @@
 // Budget is required unless consulting is the only service selected
 var validateBudget = function() {
   var services = this.field('services').value;
-
+  
   if (services && services.length === 1 && services[0] === 'consulting')
+    return undefined;
+  
+  if (this.isSet)
     return undefined;
 
   return 'required';
 }
 
 var schema = new SimpleSchema({
-  name: { type: String, min: 3, max: 1000 },
+  name: { type: String, max: 1000 },
   email: { type: String, regEx: SimpleSchema.RegEx.Email, max: 1000 },
-  about: { type: String, min: 10, max: 100000 },
+  about: { type: String, max: 100000 },
   services: { 
     type: [String], 
     allowedValues: ["strategy", "design", "engineering", "consulting"]
@@ -38,6 +41,7 @@ var prepare = function(doc) {
 }
 
 var showBudget = new ReactiveVar(false);
+var sending = new ReactiveVar(false);
 
 Template.contactOverlay.helpers({
   errorFor: function(key) {
@@ -59,6 +63,9 @@ Template.contactOverlay.helpers({
       placeholder: "About your company and project",
       title: ssContext.keyErrorMessage('alert')
     };
+  },
+  disabled: function() {
+    return sending.get() ? 'disabled' : '';
   }
 });
 
@@ -91,14 +98,14 @@ Template.contactOverlay.events({
     var doc = readForm(event.target);
     prepare(doc);
 
-    if (ssContext.validate(doc))
+    if (ssContext.validate(doc)) {
+      sending.set(true);
       send(doc);
+    }
   },
   'change input[name=services]': function(event) {
     var doc = readForm(event.target.form);
     prepare(doc);
-    
-    console.log(doc);
     
     if (doc.services && _.without(doc.services, 'consulting').length > 0)
       showBudget.set(true);
@@ -108,15 +115,14 @@ Template.contactOverlay.events({
 });
 
 function send(doc) {
-  return alert(doc);
   var to = 'us@percolatestudio.com';
   var subject = 'Work with us';
-  var body = 'foobar';
+  var body = JSON.stringify(doc);
   
   var data = {
-    'key': '-JqlbKb2ZHU7R5NEkCvnKw',
+    'key': '-JqlbKb2ZHU7R5NEkCvnKw', // changeme
     'message': {
-      'from_email': 'somelead@nowhere.com',
+      'from_email': doc.email,
       'to': [
           {
             'email': to,
@@ -124,20 +130,22 @@ function send(doc) {
             'type': 'to'
           },
           {
-            'email': 'zol@percolatestudio.com',
+            'email': 'zol@percolatestudio.com', // just in case us@ breaks
             'name': 'Zoltan Olah',
             'type': 'to'
           }
         ],
       'autotext': 'true',
-      'subject': body,
+      'subject': subject,
       'html': body
     }
   };
   
-  HTTP.post('https://ZOLmandrillapp.com/api/1.0/messages/send.json',
+  HTTP.post('https://mandrillapp.com/api/1.0/messages/send.json',
     { data: data },
     function(error, result) {
+      sending.set(false);
+
       if (result && result.statusCode === 200) {
         alert('Thank you. We will contact you shortly');
       } else {
@@ -145,5 +153,7 @@ function send(doc) {
           + '?subject=' + subject + ' (mailto)'
           + '&body=' + body);
       }
+
+      Template.layout.closeOverlay();
     });
 }

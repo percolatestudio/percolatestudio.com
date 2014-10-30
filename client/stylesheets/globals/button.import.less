@@ -23,8 +23,10 @@
   white-space: nowrap;
 
   &.caps {
-    .section-subtitle(@color-empty);
+    .title-caps;
+    color: @color-empty;
     text-indent:.3em; //required to balance out the extra right spacing from letter-spacing
+
     [class^="icon-"],
     [class*=" icon-"] {
       text-indent: 0;

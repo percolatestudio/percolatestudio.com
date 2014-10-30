@@ -1,0 +1,188 @@
+@breakpoint: 50em;
+
+.layout.StyleguideCaseStudy {
+  .bg-image-case-study-hero {
+    .position(relative, auto, auto, auto, auto, 100%, 90%);
+    margin-top: -36px; // nav offset
+    min-height: 25em;
+    max-height: 50em;
+    z-index: 1;
+  }
+
+  .wrapper-content {
+    .std-ypadding;
+    .std-xpadding;
+    .page-margins;
+    clear: both;
+    overflow: hidden;
+  }
+
+  header {
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 15%, @color-empty 100%));
+    margin-top: -6em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .subtitle-case-study {
+    .font-s2;
+    @media only screen and (min-width: @breakpoint) {
+      .font-m1;
+    }
+    .title-caps;
+    .type-bold;
+    color: @color-primary;
+    text-indent: 0;
+  }
+
+  .title-case-study {
+    .font-l1;
+    padding: .30em 0 0;
+    @media only screen and (min-width: @breakpoint) {
+      .font-l3;
+      padding: .20em 0 .1em;
+    }
+    .type-light;
+
+  }
+
+  .bg-image-case-study-full {
+    position: relative;
+    height: 50%;
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .full-up {
+    width: 75%;
+    max-width: 640px;
+
+  }
+
+  .caption {
+    .font-s2;
+    color: @color-medium-well;
+    display: block;
+    line-height: 1.5;
+
+    .title-caption {
+      .title-caps;
+      .type-bold;
+      text-indent: 0;
+    }
+  }
+
+  .media-inline-rightalign {
+    float: right;
+    width: 40%;
+    max-width: 280px;
+    margin-right: -40%;
+    margin-left: 3em;
+
+    img {
+      padding: 0;
+      margin-bottom: 1em;
+    }
+  }
+
+  .media-leftalign {
+    img {
+      float: left;
+      @media only screen and (min-width: @breakpoint) {
+        width: 75%;
+      }
+    }
+    .caption {
+      float: left;
+      padding: 1.25rem;
+      width: 20%;
+    }
+  }
+
+  .collage-text {
+    @media only screen and (min-width: @breakpoint) {
+      .two-up {
+        padding-right: 4%;
+      }
+      .two-up + .two-up {
+        padding-right: 0;
+        padding-left: 4%;
+      }
+    }
+
+    p {
+      line-height: 1.9em;
+      & + p {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .collage {
+    .clearfix;
+    height: 50%;
+    min-height: 400px;
+    position: relative;
+
+    [class^="two-up"],
+    [class*=" two-up"] {
+      height: 50% !important;
+      min-height: 0;
+
+      @media only screen and (max-width: @breakpoint) {
+        &:not(.bg-image),
+        &:not(.bg-image) + .bg-image, {
+          // if it's not a bg-image
+          // if it is the following bg-image sequentially
+          width: 100%;
+        }
+
+        &:not(.bg-image) {
+          height: auto !important;
+        }
+      }
+
+      &[class*="square"] {
+        @media only screen and (min-width: @breakpoint) {
+          height: 100% !important;
+        }
+      }
+
+      &[class*="rectangle"] {
+        height: 50% !important;
+        min-height: 0;
+      }
+    }
+
+    [class^="four-up"],
+    [class*=" four-up"] {
+      &[class*="square"] { height: 50%; }
+    }
+
+  }
+
+  [class^="two-up"],
+  [class*=" two-up"],
+  [class^="three-up"],
+  [class*=" three-up"] {
+    float: left;
+    width: 100%;
+  }
+
+  [class^="four-up"],
+  [class*=" four-up"] {
+    float: left;
+    width: 50%;
+  }
+
+  @media only screen and (min-width: @breakpoint) {
+  [class^="two-up"],
+  [class*=" two-up"] { width: 50%; }
+
+  [class^="three-up"],
+  [class*=" three-up"] { width: 33.3%; }
+
+  [class^="four-up"],
+  [class*=" four-up"] { width: 25%; }
+  }
+}

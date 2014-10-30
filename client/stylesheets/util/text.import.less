@@ -1,9 +1,7 @@
-// Subtitle styling used around the place, mainly in headers
-.section-subtitle (@color) {
-  .type-bold;
-  text-transform: uppercase;
+.title-caps() {
   letter-spacing: .3em;
-  color: @color;
+  text-indent: .3em;
+  text-transform: uppercase;
 }
 
 .ellipsized() {
@@ -13,12 +11,9 @@
 }
 
 .force-wrap() {
-  white-space: pre;           /* CSS 2.0 */
-  white-space: pre-wrap;      /* CSS 2.1 */
-  white-space: pre-line;      /* CSS 3.0 */
-  white-space: -pre-wrap;     /* Opera 4-6 */
-  white-space: -o-pre-wrap;   /* Opera 7 */
-  white-space: -moz-pre-wrap; /* Mozilla */
-  white-space: -hp-pre-wrap;  /* HP Printers */
-  word-wrap: break-word;      /* IE 5+ */
+  word-wrap: break-word;
+  word-break: break-all;
+ -ms-word-break: break-all;
+  word-break: break-word; // Non-standard for webkit
+  .hyphens(auto);
 }

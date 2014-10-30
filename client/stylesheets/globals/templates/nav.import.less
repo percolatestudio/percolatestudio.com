@@ -4,10 +4,16 @@ nav {
   position: relative;
   z-index: 2;
   .logo {
+    .transform(rotate(0deg));
+    .transition(all 700ms @easing);
     display: block;
     height: 1.25em;
     width: 1.25em;
     margin: .5em auto;
+
+    @media screen and (min-width: @breakpoint) {
+      .transform(rotate(720deg));
+    }
     img {
       display: block;
       height: 100%;
@@ -18,7 +24,7 @@ nav {
     .position(absolute, 8px, auto, auto, 2em);
 
     display: none;
-    @media screen and (min-width: 50em) { display:block; }
+    @media screen and (min-width: @breakpoint) { display:block; }
 
     &.right {
       left: auto;

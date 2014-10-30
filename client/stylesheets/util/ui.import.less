@@ -1,9 +1,15 @@
 @column: 5.55555%;
 
-.page-margins() {
+.page-margins-thin() {
   margin: 0;
   @media screen and (min-width: 30em) { margin: 0 2*@column; }
   @media screen and (min-width: 60em) { margin: 0 4*@column; }
+}
+
+.page-margins() {
+  margin: 0;
+  @media screen and (min-width: 30em) { margin: 0 1*@column; }
+  @media screen and (min-width: 60em) { margin: 0 2*@column; }
 }
 
 .std-ypadding() {

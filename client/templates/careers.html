@@ -34,8 +34,12 @@
       <div class="openings">
         <p class="subtitle-openings"><b>Team members</b> are the dreamers and doers who create the future of design & technology.</p>
         {{#each jobs}}
-          <!-- job openings -->
+          <div class="opening">
+            <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
+            <p class="description-opening">{{text}}</p>
+          </div>
         {{/each}}
+
         <div class="opening">
           <a class="title-opening">Full-Stack Engineer</a> <span class="location-opening">(SFO, MEL, Remote)</span>
           <p class="description-opening">We’re looking for a full-stack Meteor engineer to build impactful features across client and internal products. Remote OK.</p>

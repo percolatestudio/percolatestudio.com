@@ -1,3 +1,0 @@
-# Some content
-
-In here

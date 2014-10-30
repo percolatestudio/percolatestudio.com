@@ -8,6 +8,15 @@
   </header>
 
   <section class="section-what">
+    {{#each items}}
+      <a class="item" style="background: url('{{thumbnailUrl}}')" href="{{pathFor 'item'}}">
+        <span class="meta">
+          <p class="subtitle-item">{{title}}</p>
+          <!-- <h3 class="title-item"><a>Giving App Developers a HeadStart</a></h3> -->
+        </span>
+      </a>
+    {{/each}}
+    
     <a class="item bg-image-test-1">
       <span class="meta">
         <p class="subtitle-item">Meteor</p>
@@ -44,8 +53,6 @@
         <!-- <h3 class="title-item"><a>Interactive Learning for Software Engineers</a></h3> -->
       </span>
     </a>
-    {{#each items}}
-    {{/each}}
   </section>
   <section class="section-logo">
     <h2 class="title-section">Selected Clients</h2>

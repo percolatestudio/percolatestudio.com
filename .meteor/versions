@@ -36,6 +36,7 @@ launch-screen@1.0.0-rc.0
 less@1.0.11-rc.1
 livedata@1.0.11
 logging@1.0.5-rc.0
+markdown@1.0.2
 meteor-platform@1.2.0-rc.0
 meteor@1.1.3-rc.0
 minifiers@1.1.2-rc.0

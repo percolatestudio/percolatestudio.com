@@ -1,9 +1,15 @@
-# Some content
+---
+title: Verso
+featureUrl: /img/test/1.jpg
+thumbnailUrl: /img/test/1.jpg
+---
 
-In here
+# Verso
 
-Requirements:
---Featured Image (Wide)
---Regular Thumbnail (Square)
+What a great company
 
---Regular lockup
+- run
+- by
+- a
+- cool
+- team

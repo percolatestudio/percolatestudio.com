@@ -56,6 +56,12 @@
   .full-up {
     width: 75%;
     max-width: 640px;
+  }
+
+  .center-up {
+    margin: 0 auto;
+    max-width: 640px;
+    width: 75%;
 
   }
 
@@ -88,6 +94,8 @@
   .media-leftalign {
     img {
       float: left;
+      width: 100%;
+
       @media only screen and (min-width: @breakpoint) {
         width: 75%;
       }
@@ -95,7 +103,16 @@
     .caption {
       float: left;
       padding: 1.25rem;
-      width: 20%;
+      @media only screen and (min-width: @breakpoint) {
+        width: 20%;
+      }
+    }
+  }
+
+  p {
+    line-height: 1.9em;
+    & + p {
+      margin-top: 2em;
     }
   }
 
@@ -109,19 +126,13 @@
         padding-left: 4%;
       }
     }
-
-    p {
-      line-height: 1.9em;
-      & + p {
-        margin-top: 2em;
-      }
-    }
   }
 
   .pullquote {
     .page-margins;
     .std-xpadding;
     .std-ypadding;
+    overflow: hidden;
     text-align: center;
 
     .title-quote {
@@ -155,11 +166,131 @@
 
   }
 
+  .quote-collage:nth-of-type(odd) {
+      background: #ab4430;
+  }
+
+  // iphone5s dimensions used to calculate responsive sizes + screenshot placement
+  @width-iphone: 334px;
+  @height-iphone: 697px;
+
+  [class^="ss-"],
+  [class*=" ss-"] {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .ss-home { .at2x('img/test/ss-home-278x493.jpg'); }
+  .ss-categories { .at2x('img/test/ss-categories-278x493.jpg'); }
+  .ss-recipe { .at2x('img/test/ss-recipe-278x493.jpg'); }
+  .ss-summer { .at2x('img/test/ss-summer-278x493.jpg'); }
+  .ss-fall { .at2x('img/test/ss-fall-278x493.jpg'); }
+  .ss-winter { .at2x('img/test/ss-winter-278x493.jpg'); }
+
+  // iPhone5s chrome & screenshot
+  .bg-iphone5s {
+    .at2x('img/test/ss-iphone5s-chrome-334x697.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .bg-iphone5s {
+    display: inline-block;
+    position: relative;
+
+    height: @height-iphone * .75;
+    width: @width-iphone * .75;
+    @media screen and (min-width: 50em) {
+      height: @height-iphone;
+      width: @width-iphone;
+    }
+    [class^="ss-"],
+    [class*=" ss-"] {
+      .position(absolute, 50%, 50%);
+      .transform(translate3d(50%, -50%, 0));
+
+      width:  @width-iphone * .75 * .8323;
+      height: @height-iphone * .75 * .7073;
+      @media screen and (min-width: 50em) {
+        width:  @width-iphone * .8323;
+        height: @height-iphone * .7073;
+      }
+    }
+  }
+
+
+  .carousel {
+    .inline-block-whitespace;
+    white-space: nowrap;
+
+    overflow: hidden;
+    position: relative;
+    width: 125%;
+    left: -12.5%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    > .wrapper {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+      position: relative;
+
+      // Ensures that the screens overlap realistically
+      &:nth-child(1) { opacity: .8; }
+      &:nth-child(2) { z-index: 1; }
+      &:nth-child(3) { z-index: 2; }
+      &:nth-child(4) { z-index: 1; }
+      &:nth-child(5) { opacity: .8; }
+
+      //shadows on screenshots without iphone chrome
+      &:nth-child(-n+2),
+      &:nth-child(n+4) {
+        [class^="ss-"],
+        [class*=" ss-"] {
+          box-shadow: rgba(0,0,0,.15) 0 0 3px 0;
+        }
+      }
+
+      //screenshot positioning
+      > * {
+        display: inline-block;
+        position: relative;
+
+        &[class^="ss-"],
+        &[class*=" ss-"] {
+          .transform(translate3d(-50%, 0,0));
+          left: 50%;
+
+          width:  @width-iphone * .75 * .8323;
+          height: @height-iphone * .75 * .7073;
+          @media screen and (min-width: 50em) {
+            width:  @width-iphone * .8323;
+            height: @height-iphone * .7073;
+          }
+        }
+      }
+      // iphone positioning
+      .bg-iphone5s {
+        .transform(translateX(-50%));
+        left: 50%;
+      }
+      //horizontal offsets to ensure center alignment accounting for iphone chrome
+      &:nth-child(-n+2) > * { left: 42%; }
+      &:nth-child(n+4) > * { left: 58%; }
+    }
+  }
+
   .collage {
     .clearfix;
     height: 50%;
     min-height: 400px;
     position: relative;
+
+    &.short {
+      height: 25%;
+      min-height: 200px;
+    }
 
     .quote-collage {
       background: #344057;
@@ -168,12 +299,10 @@
       .wrapper-quote {
         .std-xpadding;
         .std-ypadding;
-        //.position(absolute, 50%,0,0,0);
-        //.transform(translate3d(0,-50%, 0));
       }
 
       .title-quote {
-        .font-m3;
+        .font-m2;
         .type-secondary;
         margin-bottom: 1em;
         padding-bottom: 1em;
@@ -188,14 +317,22 @@
 
       .attribution {
         .author {
-          .font-m2;
+          .font-s3;
+          .type-semibold;
         }
         .metadata {
-          .font-s2;
+          .font-s1;
           .title-caps;
-          color: rgba(255,255,255,.7);
+          .type-bold;
+          color: rgba(255,255,255,.5);
+          text-indent: 0;
         }
       }
+    }
+
+    .copy-collage {
+      .std-xpadding;
+      .std-ypadding;
     }
 
     .one-up { height: 100%; }
@@ -204,19 +341,6 @@
     [class*=" two-up"] {
       height: 50% !important;
       min-height: 0;
-
-      @media only screen and (max-width: @breakpoint) {
-        &:not(.bg-image),
-        &:not(.bg-image) + .bg-image, {
-          // if it's not a bg-image
-          // if it is the following bg-image sequentially
-          width: 100%;
-        }
-
-        &:not(.bg-image) {
-          height: auto !important;
-        }
-      }
 
       &[class*="square"] { height: 100% !important; }
     }
@@ -234,6 +358,20 @@
     float: left;
     position: relative;
     width: 100%;
+
+    @media only screen and (max-width: @breakpoint) {
+      &:not(.bg-image),
+      &:not(.bg-image) + .bg-image, {
+        // if it's not a bg-image
+        // if it is the following bg-image sequentially
+        width: 100%;
+      }
+
+      &:not(.bg-image) {
+        height: auto !important;
+      }
+    }
+
   }
 
   [class^="four-up"],
@@ -252,4 +390,27 @@
   [class^="four-up"],
   [class*=" four-up"] { width: 25%; }
   }
+
+  .conclusion {
+    .font-l1;
+    .type-light;
+    .std-ypadding;
+    color: @color-primary;
+    text-align: center;
+  }
+
+  .wrapper-cta-case-study {
+    text-align: center;
+    .std-ypadding;
+
+    .subtext-cta-case-study {
+      .font-s2;
+      color: @color-medium;
+      margin-top: 1em;
+    }
+  }
+
+
+
+  .section-featured-projects { background: @color-raw; }
 }

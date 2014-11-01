@@ -124,7 +124,16 @@
     color: @color-empty;
     &:hover {}
     &:active {}
+
+    &[class*="inverse"] {
+      box-shadow: @color-well 0 0 0 2px inset;
+      color: @color-full;
+      &:hover {}
+      &:active {}
+    }
   }
+
+
 
   &[disabled] {
     cursor: not-allowed;

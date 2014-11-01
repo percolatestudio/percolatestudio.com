@@ -1,0 +1,34 @@
+.item-project {
+  .transform(translate3d(0,0,0));
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  .meta {
+    .std-xpadding;
+    .std-ypadding;
+    .position(absolute, 0, 0, auto, 0, 100%);
+
+    line-height: 1;
+
+    a { color: @color-empty; }
+    .subtitle-item {
+      .font-m1;
+      .type-bold;
+      .title-caps;
+      color: @color-empty;
+      text-indent: 0;
+    }
+
+  }
+
+  width: 100%;
+  height: 480px;
+
+  @media screen and (min-width: 40em) {
+    height: 600px;
+  }
+  @media screen and (min-width: 60em) {
+    height: 600px;
+    width: 50%;
+  }//media query for 50em – 960px
+}

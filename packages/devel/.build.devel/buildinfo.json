@@ -1,0 +1,38 @@
+{
+  "builtBy": "meteor/14",
+  "buildDependencies": {
+    "os.json": {
+      "files": {
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/package.js": "0632becb9dd2e8f821e96d6c703a29e5ac1c22e7",
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/devel.js": "3943390f8fa70b503f900b07c616adb1c436de23"
+      },
+      "directories": []
+    },
+    "web.browser.json": {
+      "files": {
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/package.js": "0632becb9dd2e8f821e96d6c703a29e5ac1c22e7",
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/devel.js": "3943390f8fa70b503f900b07c616adb1c436de23"
+      },
+      "directories": []
+    },
+    "web.cordova.json": {
+      "files": {
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/package.js": "0632becb9dd2e8f821e96d6c703a29e5ac1c22e7",
+        "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/devel.js": "3943390f8fa70b503f900b07c616adb1c436de23"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel/package.js": "0632becb9dd2e8f821e96d6c703a29e5ac1c22e7"
+    },
+    "directories": []
+  },
+  "source": "/Users/dominicnguyen/Sites/site-percolatestudio/packages/devel",
+  "buildTimeDirectDependencies": {
+    "meteor": "1.1.3"
+  },
+  "buildTimePluginDependencies": {},
+  "cordovaDependencies": null
+}

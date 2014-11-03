@@ -1,0 +1,58 @@
+{
+  "format": "unipackage-unibuild-pre1",
+  "packageVariables": [
+    {
+      "name": "Autoupdate",
+      "export": true
+    },
+    {
+      "name": "ClientVersions"
+    }
+  ],
+  "uses": [
+    {
+      "package": "meteor"
+    },
+    {
+      "package": "tracker"
+    },
+    {
+      "package": "retry"
+    },
+    {
+      "package": "ddp"
+    },
+    {
+      "package": "mongo"
+    },
+    {
+      "package": "underscore"
+    },
+    {
+      "package": "devel"
+    },
+    {
+      "package": "tracker"
+    },
+    {
+      "package": "reload",
+      "weak": true
+    },
+    {
+      "package": "http"
+    },
+    {
+      "package": "random"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "web.cordova/packages/autoupdate.js",
+      "length": 37738,
+      "offset": 0,
+      "servePath": "/packages/autoupdate.js",
+      "sourceMap": "web.cordova/packages/autoupdate.js.map"
+    }
+  ]
+}

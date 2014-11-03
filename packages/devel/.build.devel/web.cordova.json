@@ -1,0 +1,19 @@
+{
+  "format": "unipackage-unibuild-pre1",
+  "packageVariables": [],
+  "uses": [
+    {
+      "package": "meteor"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "web.cordova/packages/devel.js",
+      "length": 610,
+      "offset": 0,
+      "servePath": "/packages/devel.js",
+      "sourceMap": "web.cordova/packages/devel.js.map"
+    }
+  ]
+}

@@ -117,7 +117,7 @@ Template.contactOverlay.events({
 function send(doc) {
   var to = 'us@percolatestudio.com';
   var subject = 'Work with us';
-  var body = JSON.stringify(doc);
+  var body = UI.toHTMLWithData(Template.contactEmailBody, doc);
   
   var data = {
     'key': '-JqlbKb2ZHU7R5NEkCvnKw', // changeme
@@ -151,7 +151,7 @@ function send(doc) {
       } else {
         window.open('mailto:' + to 
           + '?subject=' + subject + ' (mailto)'
-          + '&body=' + body);
+          + '&body=' + escape(body));
       }
 
       Template.layout.closeOverlay();

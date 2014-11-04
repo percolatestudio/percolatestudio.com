@@ -2,7 +2,7 @@
 //
 // The version in DM is server-side + published with permissions
 
-var SUFFIX = 'md';
+var SUFFIX = 'static';
 var WHERE = 'client';
 
 var ensureCollection = function(compileStep, collectionName) {
@@ -67,7 +67,7 @@ var handler = function(compileStep) {
   var properties = parseFrontMatter(contents);
   
   insertDocument(compileStep, collectionName, _.extend({
-    name: documentName.replace('.' + SUFFIX, ''),
+    name: documentName.split('.')[0],
   }, properties));
 }
 

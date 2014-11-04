@@ -1,5 +1,5 @@
 Template.what.helpers({
-  items: function() {
-    return Items.find();
+  products: function() {
+    return Products.find();
   }
 })

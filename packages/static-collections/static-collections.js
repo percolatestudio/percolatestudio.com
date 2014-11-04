@@ -5,15 +5,6 @@
 var SUFFIX = 'static';
 var WHERE = 'client';
 
-var ensureCollection = function(compileStep, collectionName) {
-  var createCollectionJS = collectionName + " = new Meteor.Collection(null);";
-  compileStep.addJavaScript({
-    data: createCollectionJS,
-    path: 'staticCollections/' + collectionName + '.js',
-    sourcePath: compileStep.inputPath
-  });
-}
-
 // this code is lifted from DM -- could probably be better -- JSON?
 var parseFrontMatter = function (contents) {
   // parse YAML frontmatter to build meta properties
@@ -43,9 +34,12 @@ var parseFrontMatter = function (contents) {
 }
 
 var insertDocument = function(compileStep, collectionName, object) {
-  var insertJS = collectionName + ".insert(" + EJSON.stringify(object) + ")";
+  var code =  "if (typeof(" + collectionName +") === 'undefined'){\n" + 
+    collectionName + " = new Meteor.Collection(null);\n}";
+  
+  code += "\n" + collectionName + ".insert(" + EJSON.stringify(object) + ")";
   compileStep.addJavaScript({
-    data: insertJS,
+    data: code,
     path: compileStep.inputPath.replace(SUFFIX, 'js'),
     sourcePath: compileStep.inputPath
   });
@@ -59,8 +53,6 @@ var handler = function(compileStep) {
   var collectionName = parts[0];
   var documentName = parts[1];
   collectionName = collectionName[0].toUpperCase() + collectionName.substring(1);
-  
-  ensureCollection(compileStep, collectionName);
   
   // ---------- Get file contents ----------
   var contents = compileStep.read().toString('utf8');

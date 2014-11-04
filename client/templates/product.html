@@ -1,3 +1,10 @@
 <template name="product">
   {{{text}}}
+  
+  {{#with previousProduct}}
+    <a href="{{pathFor 'product'}}">Previous</a>
+  {{/with}}
+  {{#with nextProduct}}
+    <a href="{{pathFor 'product'}}">Next</a>
+  {{/with}}
 </template>

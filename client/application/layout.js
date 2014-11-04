@@ -12,7 +12,15 @@ Template.layout.helpers({
   },
   menuOpenClass: function() {
     return Session.equals(MENU_KEY, true) && 'menu-open';
-  }
+  },
+  transition: function() { return function(from, to) {
+    // XXX: magic number
+    if (document.documentElement.clientWidth > 320) {
+      return 'fade';
+    } else {
+      return 'right-to-left';
+    }
+  }}
 });
 
 Template.layout.events({

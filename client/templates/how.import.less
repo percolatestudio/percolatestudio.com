@@ -1,4 +1,4 @@
-.layout.How {
+.page.how {
   .section-services {
     background: @color-raw;
 
@@ -11,10 +11,11 @@
         text-align: center;
       }
       img {
-        height: 5em;
-        width: 5em;
         float: left;
+        height: 4.5em;
         margin-right: 1.5em;
+        margin-left: .5em;
+        width: 4.5em;
 
         @media screen and (min-width: 50em) {
           float: none;
@@ -38,7 +39,7 @@
      .position(absolute, 0, auto, 0, 3.75em, 2px);
      .transform(translateX(-50%));
 
-     @media screen and (min-width: 50em) {
+     @media screen and (min-width: @breakpoint) {
       left: 50%;
     }
 
@@ -55,7 +56,7 @@
       z-index: 1;
 
 
-      @media screen and (min-width: 50em) {
+      @media screen and (min-width: @breakpoint) {
         margin: 3em auto;
         max-width: 600px;
         text-align: center;

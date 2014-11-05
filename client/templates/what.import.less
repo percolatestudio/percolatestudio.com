@@ -1,26 +1,17 @@
-.layout.What {
+.page.what {
   header .col-right {
     //hide the negative space when small
     display: none;
     @media screen and (min-width: 50em) { display: inline-block; }
   }
-  .section-what {
-    .inline-block-whitespace;
-  }
 
   .item-project {
-    @media screen and (min-width: 60em) {
-      &:nth-child(5n + 1) {
-        height: 600px;
+    @media screen and (min-width: @breakpoint) {
+      &:nth-of-type(5n + 1) {
+        height: 50%;
         width: 100%;
       }
-      &:nth-child(5n + 2),
-      &:nth-child(5n + 3),
-      &:nth-child(5n + 4),
-      &:nth-child(5n + 5) {
-        height: 600px;
-        width: 50%;
-      }
-    }//media query for 50em – 960px
+
+    }
   }
 }

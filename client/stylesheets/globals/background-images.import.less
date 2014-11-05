@@ -12,13 +12,15 @@
     background: @color-raw;
     &:before {
       .type-semibold;
-      content: 'WorkCraft ObservePlay ExperimentReconstruct PushDiscover Deconstruct ChallengeEnjoy';
       .position(absolute, -5%, auto, auto, -5%);
+      .force-wrap;
+      content: 'WorkCraftObservePlayExperimentReconstructPushDiscoverDeconstructChallengeEnjoy';
       color: @color-raw-alt;
       font-size: 775%;
       line-height: .80em;
       z-index: 0;
       letter-spacing: -.05em;
+
     }
   }
   &[class*="careers"] { background-image: url('img/test/1.jpg'); }

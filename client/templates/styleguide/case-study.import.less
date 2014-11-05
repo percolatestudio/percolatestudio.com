@@ -1,6 +1,6 @@
 @breakpoint: 50em;
 
-.layout.StyleguideCaseStudy {
+.page.styleguide-casestudy {
   .bg-image-case-study-hero {
     .position(relative, auto, auto, auto, auto, 100%, 90%);
     margin-top: -36px; // nav offset
@@ -392,7 +392,8 @@
   }
 
   .conclusion {
-    .font-l1;
+    .font-m2;
+    @media only screen and (min-width: @breakpoint) { .font-l1; }
     .type-light;
     .std-ypadding;
     color: @color-primary;
@@ -402,12 +403,6 @@
   .wrapper-cta-case-study {
     text-align: center;
     .std-ypadding;
-
-    .subtext-cta-case-study {
-      .font-s2;
-      color: @color-medium;
-      margin-top: 1em;
-    }
   }
 
 

@@ -1,11 +1,12 @@
 .overlay-screen-contact {
   .contact-form-wrapper {
     .page-margins-thin;
+    .std-xpadding;
 
     .title-overlay {
 
       .font-m3;
-      @media screen and (min-width: 40em) {
+      @media screen and (min-width: @breakpoint) {
         .type-light;
         .font-l3;
       }
@@ -27,7 +28,6 @@
       }
 
       &.services {
-        //.btns-group { .inline-block-whitespace(); }
         .btn-toggle {
           display: inline-block;
           clear: none;
@@ -43,7 +43,7 @@
             margin-bottom: 0;
           }
 
-          @media screen and (min-width: 40em) {
+          @media screen and (min-width: @breakpoint) {
             margin-bottom: 0%;
             width: 24%;
 
@@ -82,8 +82,10 @@
     .fieldset-group-title {
       .font-s2;
       .title-caps;
+      .type-bold;
       color: @color-medium;
       margin-bottom: .75rem;
+      text-indent: 0;
 
       .subtext,
       .error {
@@ -110,14 +112,16 @@
         .title-ancillary {
           .font-s2;
           .title-caps;
+          .type-bold;
           color: @color-medium;
           margin-bottom: .5rem;
+          text-indent: 0;
         }
       }
 
       .wrapper-connect {
         width: 100%;
-        @media screen and (min-width: 40em) {
+        @media screen and (min-width: @breakpoint) {
           width:33.33%;
         }
 
@@ -125,7 +129,7 @@
           > a {
             float: left;
             margin-right: 1em;
-            @media screen and (min-width: 40em) {
+            @media screen and (min-width: @breakpoint) {
               clear: both;
             }
           }
@@ -133,7 +137,7 @@
       }
       .wrapper-visit {
         width: 100%;
-        @media screen and (min-width: 40em) {
+        @media screen and (min-width: @breakpoint) {
           width: 66.66%;
         }
 
@@ -141,14 +145,14 @@
 
       .wrapper-connect a {
         .font-s2;
-        @media screen and (min-width: 40em) { .font-s3; }
+        @media screen and (min-width: @breakpoint) { .font-s3; }
       }
 
       .wrapper-visit {
         .inline-block-whitespace;
         > .location-wrapper {
           .font-s2;
-          @media screen and (min-width: 40em) { .font-s3; }
+          @media screen and (min-width: @breakpoint) { .font-s3; }
 
           color: @color-medium;
           display: inline-block;

@@ -1,0 +1,33 @@
+.page.not-found {
+  .section-not-found {
+    .position(relative, auto, auto, auto, auto, 100%, 100%);
+    background: @color-full;
+    text-align: center;
+
+    .hero-wrapper {
+      .transform(translate3d(-50%, -50%, 0));
+      .position(absolute, 50%, auto, auto, 50%, 80%);
+      margin-top: -36px; // nav offset
+    }
+
+    .title-page {
+      .font-m3;
+      @media screen and (min-width: @breakpoint) { .font-l2; }
+      .type-light;
+      color: @color-empty;
+      margin-bottom: .25em;
+    }
+
+    .description-page {
+      .font-s3;
+      @media screen and (min-width: @breakpoint) { .font-m2; }
+
+      color: @color-empty;
+      margin-bottom: 1em;
+    }
+
+    .btn-wire {
+      @media screen and (min-width: @breakpoint) { width: 240px; }
+    }
+  }
+}

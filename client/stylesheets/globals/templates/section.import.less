@@ -1,26 +1,8 @@
 [class^="section-"],
 [class*=" section-"] {
+  clear: both;
   overflow: hidden;
   position: relative;
-
-  .title-section {
-    .std-xpadding;
-    .std-ypadding;
-    .title-caps;
-    .type-bold;
-
-    .font-s3;
-    @media screen and (min-width: @breakpoint) { .font-m1;}
-
-    color: @color-well;
-    display: inline-block;
-    line-height: 1em;
-
-    position: relative;
-    text-decoration: none;
-    text-indent: 0;
-    z-index: 1;
-  }
 
   .subtitle-section {
     .font-m2;
@@ -53,20 +35,34 @@
       }
     }
   }
-
-  &[class*="what"] {}
-  &[class*="clients"] {}
-
 }
 
-.section-logo {
-  .logo {
-    height: 160px;
-    @media screen and (min-width: 60em) { height: 240px; }
-    img {
-      .position(absolute, 35%, auto, auto, 50%, auto, 48px);
-      .transform(translate3d(-50%, -50%, 0));
-      @media screen and (min-width: 60em) { height: 56px; }
-    }
+.title-section {
+  .std-xpadding;
+  .std-ypadding;
+  .title-caps;
+  .type-bold;
+
+  .font-s3;
+  @media screen and (min-width: @breakpoint) { .font-m1;}
+
+  clear: both;
+  color: @color-well;
+  display: block;
+  line-height: 1em;
+  position: relative;
+  text-decoration: none;
+  text-indent: 0;
+  z-index: 1;
+}
+
+
+.grid-5.logo {
+  height: 160px;
+  @media screen and (min-width: 60em) { height: 240px; }
+  img {
+    .position(absolute, 35%, auto, auto, 50%, auto, 48px);
+    .transform(translate3d(-50%, -50%, 0));
+    @media screen and (min-width: 60em) { height: 56px; }
   }
 }

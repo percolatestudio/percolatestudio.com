@@ -1,12 +1,14 @@
 header {
-  .col-left,
-  .col-right {
-    height: 300px;
-    @media screen and (min-width: 50em) { height: 400px; }
+  &.collage {
+    @media screen and (max-width: @breakpoint) {
+      height: auto !important;
+      min-height: 0 !important;
+    }
   }
+
   .title-page {
     .font-l2;
-    @media screen and (min-width: 50em) { .font-l3; }
+    @media screen and (min-width: @breakpoint) { .font-l3; }
 
     .type-light;
     .std-xpadding;
@@ -14,13 +16,18 @@ header {
     letter-spacing: -.05em;
     line-height: 1;
   }
+
   .description-page {
     .font-m1;
-    @media screen and (min-width: 50em) { .font-m2; }
     .std-xpadding;
     .std-ypadding;
-    .position(absolute, auto, 0, 0, 0);
-
     color: @color-well;
+
+    @media screen and (min-width: @breakpoint) {
+      .font-m2;
+      .position(absolute, auto, 0, 0, 0);
+    }
   }
+
+
 }

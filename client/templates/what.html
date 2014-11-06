@@ -1,11 +1,11 @@
 <template name="what">
   <div class="page what">
-    <header class="grid-2">
-      <div class="col-left">
+    <header class="collage medium">
+      <div class="grid-2-square">
         <h1 class="title-page">What</h1>
         <p class="description-page">Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human. </p>
       </div>
-      <div class="col-right bg-image-what"></div>
+      <div class="grid-2-square bg-image-what"></div>
     </header>
 
     {{#each products}}
@@ -19,20 +19,18 @@
 
     <section class="section-logo">
       <h2 class="title-section">Selected Clients</h2>
-      <div class="grid-5">
-        <a class="logo" href="http://apple.com" target="_blank">
-          <img title="Apple Computer" src="img/logo-apple.svg">
-        </a>
-        <a class="logo" href="http://yummly.com" target="_blank">
-          <img title="Yummly" src="img/logo-yummly.svg">
-        </a>
-        <a class="logo" href="http://meteor.com" target="_blank">
-          <img title="MeteorJS" src="img/logo-meteor.svg">
-        </a>
-        <a class="logo">
-          <img src="http://placehold.it/240x300">
-        </a>
-      </div>
+      <a class="grid-5 logo" href="http://apple.com" target="_blank">
+        <img title="Apple Computer" src="img/logo-apple.svg">
+      </a>
+      <a class="grid-5 logo" href="http://yummly.com" target="_blank">
+        <img title="Yummly" src="img/logo-yummly.svg">
+      </a>
+      <a class="grid-5 logo" href="http://meteor.com" target="_blank">
+        <img title="MeteorJS" src="img/logo-meteor.svg">
+      </a>
+      <a class="grid-5 logo">
+        <img src="http://placehold.it/240x300">
+      </a>
     </section>
   </div>
 </template>

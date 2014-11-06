@@ -1,27 +1,64 @@
-[class^="grid-"], [class*=" grid-"] {
-  .inline-block-whitespace;
+.collage {
+  .clearfix;
+  height: 50%;
+  min-height: 600px;
+  position: relative;
 
-  > * {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
+  &.short { // band-like collage, single row
+    height: 25%;
+    min-height: 300px;
+  }
 
-    > img {
-      display: block;
+  &.medium { // band-like collage, single row
+    height: 42%;
+    min-height: 450px;
+  }
+}
+
+[class*="grid"] {
+  float: left;
+  position: relative;
+}
+
+[class*="grid-1"] { height: 100%; }
+
+[class*="grid-2"] {
+  height: 50% !important;
+  min-height: 0;
+
+  &[class*="square"] { height: 100% !important; }
+
+  @media only screen and (max-width: @breakpoint) {
+    // this really just applies to grid-2
+
+    &:not([class*="bg-image"]),
+    &:not([class*="bg-image"]) + [class*="bg-image"], {
+      // if it's not a bg-image
+      // if it is the following bg-image sequentially
+      width: 100%;
+    }
+
+    &:not([class*="bg-image"]) {
+      height: auto !important;
     }
   }
-  &[class*="2"] > * {
-    width: 100%;
-    @media screen and (min-width: 50em) { width: 50%; }
-  }
-  &[class*="3"] > * { //results in 3up at desktop size
-    width: 100%;
-    @media screen and (min-width: 50em) { width: 33.33%; }
-  }
-  &[class*="5"] > * { //results in 5up at desktop size
-    width: 50%;
-    @media screen and (min-width: 40em) { width: 33.33%; }
-    @media screen and (min-width: 60em) { width: 25%; }
-    @media screen and (min-width: 70em) { width: 20%; }
-  }
+}
+
+.grid-3-square { height: 100%; }
+.grid-4-square { height: 50%; }
+
+[class*="grid-1"],
+[class*="grid-2"],
+[class*="grid-3"] {
+  width: 100%;
+}
+
+[class*="grid-4"],
+[class*="grid-5"] { width: 50%; }
+
+@media only screen and (min-width: @breakpoint) {
+  [class*="grid-2"] { width: 50%; }
+  [class*="grid-3"] { width: 33.3%; }
+  [class*="grid-4"] { width: 25%; }
+  [class*="grid-5"] { width: 20%; }
 }

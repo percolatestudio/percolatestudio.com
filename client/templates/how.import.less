@@ -4,7 +4,7 @@
 
     .subsection {
       .std-xpadding;
-      padding-bottom: 2.5em;
+      padding-bottom: 3em;
 
       @media screen and (min-width: 50em) {
         padding: 3em 5% 6em;
@@ -32,7 +32,10 @@
 
   .section-process {
     .title-section {
-      background: @color-empty; //accounts for vertical line on small screens
+      background: @color-empty;
+      @media screen and (min-width: @breakpoint) {
+        background: transparent; //accounts for vertical line on small screens
+      }
     }
 
     &:after {
@@ -64,8 +67,9 @@
 
 
       li.subsection {
-        margin-bottom: 5em;
-        //& + .subsection { margin-top: 3em; }
+        margin-bottom: 3em;
+        @media screen and (min-width: @breakpoint) { margin-bottom: 5em; }
+
 
         position: relative;
         &:before {
@@ -105,45 +109,43 @@
   }//section-process
   .section-team {
     background: @color-raw;
-    .grid-5 {
-      background: @color-medium-rare;
-      .avatar {
-        img {
-          height: auto;
-          width: 100%;
+
+    .avatar {
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+      .name {
+        .font-m1;
+        .transition( all 1s ease-in );
+        .position(absolute, auto, 1.25rem, 1.25rem, 1.25rem);
+        line-height: 1;
+        color: @color-empty;
+        overflow: hidden;
+        z-index: 1;
+        max-height: 20px;
+        .detail {
+          display: block;
+        }
+      }
+      &:after {
+        .transition( all 300ms ease-in );
+        .position(absolute, 0, 0, 0, 0);
+        background: black;
+        content: '';
+        opacity: 0;
+        z-index: 0;
+      }
+      &:hover {
+        &:after {
+          opacity: .5;
         }
         .name {
-          .font-m1;
-          .transition( all 1s ease-in );
-          .position(absolute, auto, 1.25rem, 1.25rem, 1.25rem);
-          line-height: 1;
-          color: @color-empty;
-          overflow: hidden;
-          z-index: 1;
-          max-height: 20px;
-          .detail {
-            display: block;
-          }
+          max-height: 300px;
         }
-        &:after {
-          .transition( all 300ms ease-in );
-          .position(absolute, 0, 0, 0, 0);
-          background: black;
-          content: '';
-          opacity: 0;
-          z-index: 0;
-        }
-        &:hover {
-          &:after {
-            opacity: .5;
-          }
-          .name {
-            max-height: 300px;
-          }
-        }
-      }//avatar
-
-    }
+      }
+    }//avatar
   }
 
 }

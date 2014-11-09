@@ -28,8 +28,9 @@
     text-align: center;
 
     .hero-wrapper {
-      .transform(translate3d(-50%, -50%, 0));
-      .position(absolute, 50%, auto, auto, 50%, 80%);
+      .transform(translate3d(0, -50%, 0));
+      .position(absolute, 50%, 0, auto, 0, 80%);
+      margin: 0 auto;
     }
 
     .title-page {
@@ -69,66 +70,77 @@
   }
   .section-home-what {
     background: @color-raw;
-    padding-bottom: 6em;
-    .example-screens {
-      .std-xpadding;
-      clear: both;
+    @media screen and (min-width: @breakpoint) {
+      padding-bottom: 6em;
+    }
+  }
+
+  .example-screens {
+    .std-xpadding;
+    clear: both;
+    position: relative;
+
+
+    @media screen and (min-width: 30em) { height: 340px; }
+    @media screen and (min-width: 50em) { height: 380px; }
+    @media screen and (min-width: 70em) { height: 480px; }
+    @media screen and (min-width: 80em) { height: 560px; }
+    @media screen and (min-width: 100em) {
+      height: 640px;
+      max-width: 100em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    img {
+      display: block;
       position: relative;
+    }
 
-      @media screen and (min-width: 30em) { height: 240px; }
-      @media screen and (min-width: 50em) { height: 360px; }
-      @media screen and (min-width: 70em) { height: 440px; }
-      @media screen and (min-width: 80em) {
-        max-width: 80em;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      img {
+    .desktop {
+      display: none;
+      width: 100%;
+      z-index: 1;
+      @media screen and (min-width: @breakpoint) {
+        .position(absolute, auto, -5%, 3%, auto, 50%, auto);
         display: block;
-        position: relative;
-      }
-
-      .desktop {
-        z-index: 1;
-        width: 100%;
-        @media screen and (min-width: 40em) {
-          .position(absolute, auto, -5%, 0, auto, 50%, auto);
-        }
-
-      }
-      .laptop {
-        z-index: 2;
-        margin-top: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        @media screen and (min-width: 40em) {
-          .position(absolute, auto, auto, 0, -5%, 40%, auto);
-          margin: 0;
-        }
-
-      }
-      .tablet {
-        z-index: 3;
-        margin-top: -330px;
-        margin-right: 20px;
-        float: right;
-        @media screen and (min-width: 40em) {
-          .position(absolute, auto, auto, 0, 27%, 20%, auto);
-          margin: 0;
-        }
-
-      }
-      .phone {
-        z-index: 4;
-        margin-top: -170px; //replace with actual height
-        margin-left: 20px;
-        @media screen and (min-width: 40em) {
-          .position(absolute, auto, 40%, 0, auto, 10%, auto);
-          margin: 0;
-        }
       }
 
     }
+    .laptop {
+      display: none;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      z-index: 2;
+      @media screen and (min-width: @breakpoint) {
+        .position(absolute, auto, auto, 0, -5%, 45%, auto);
+        display: block;
+        margin: 0;
+      }
+
+    }
+    .tablet {
+      .position(relative, auto, auto, 0, auto, 87%, auto);
+      z-index: 3;
+      @media screen and (min-width: @breakpoint) {
+        .position(absolute, auto, auto, -5%, 16%, 36%, auto);
+        margin: 0;
+      }
+
+    }
+    .phone {
+      z-index: 4;
+      .position(relative, auto, auto, 0, auto, 22%, auto);
+      .transform(translateY(-95%));
+      float: right;
+      @media screen and (min-width: @breakpoint) {
+        .position(absolute, auto, 40%, -7%, auto, 10%, auto);
+        .transform(translateY(0));
+        margin: 0;
+      }
+    }
   }
+
 }

@@ -8,7 +8,7 @@
       <fieldset>
         <input type="text" name="name" class="{{alertClass 'name'}}"  placeholder="Name" title="{{errorFor 'name'}}">
         <input type="email" name="email" class="{{alertClass 'email'}}" placeholder="Email Address" title="{{errorFor 'email'}}">
-        <textarea name="about" class="{{alertClass 'about'}}" placeholder="About your company and project" title="{{errorFor 'about'}}"></textarea>
+        {{> autosizedTextarea aboutAttrs}}
 
         <div class="fieldset-group services">
           <div class="fieldset-group-title">Services {{#if hasError 'services'}}<span class="error">{{errorFor 'services'}}</span>{{else}}<span class="subtext">Select all that apply</span>{{/if}}</div>

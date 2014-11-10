@@ -51,6 +51,14 @@ Template.contactOverlay.helpers({
   },
   budgetVisibleClass: function() {
     return showBudget.get() && 'visible';
+  },
+  aboutAttrs: function() {
+    return {
+      name: 'about',
+      class: ssContext.keyIsInvalid('about') ? 'alert' : '',
+      placeholder: "About your company and project",
+      title: ssContext.keyErrorMessage('alert')
+    };
   }
 });
 

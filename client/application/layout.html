@@ -5,16 +5,16 @@
     <div class="content">
       <nav class="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
         <div class="nav-group">
-          <a href="{{pathFor 'why'}}">Why</a>
-          <a href="{{pathFor 'how'}}">How</a>
-          <a href="{{pathFor 'what'}}">What</a>
+          <a href="{{pathFor 'why'}}" class="{{activeClass 'why'}}">Why</a>
+          <a href="{{pathFor 'how'}}" class="{{activeClass 'how'}}">How</a>
+          <a href="{{pathFor 'what'}}" class="{{activeClass 'what'}}">What</a>
         </div>
 
-        <a href="{{pathFor 'home'}}" class="logo"><img src="/img/logo.svg"/></a>
+        <a href="{{pathFor 'home'}}" class="logo {{activeClass 'home'}}"><img src="/img/logo.svg"/></a>
         <a data-menu style="display:none"><span class="icon-percolate"></span></a>
 
         <div class="nav-group right">
-          <a href="{{pathFor 'careers'}}">Join Us</a>
+          <a href="{{pathFor 'careers'}}" class="{{activeClass 'careers'}}">Join Us</a>
           <a href="http://blog.percolatestudio.com">Blog</a>
           <a data-contact>Contact</a>
         </div>

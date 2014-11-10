@@ -1,17 +1,31 @@
-var CONTACT_KEY = 'contactOverlayOpen';
-var MENU_KEY = 'menuOverlayOpen';
+var OVERLAY_OFFSET = 100;
 
-Session.setDefault(CONTACT_KEY, false);
+Template.layout.created = function() {
+  this.contactOpen = new ReactiveVar(false);
+  this.menuOpen = new ReactiveVar(false);
+  this.menuOverlaid = new ReactiveVar(false);
+}
+
+Template.layout.rendered = function() {
+  var self = this;
+  
+  // XXX: should we find a requestAnimationFrame version of _.throttle?
+  self.$('.content').scroll(_.throttle(function() {
+    var offset = self.find('.content').scrollTop;
+    
+    if (offset > OVERLAY_OFFSET) {
+      self.menuOverlaid.set(offset >= lastOffset ? 'down' : 'up');
+    } else {
+      self.menuOverlaid.set(false);
+    }
+    
+    lastOffset = offset;
+  }, 100));
+}
+
 Template.layout.helpers({
-  templateClass: function() {
-    return Router._layout.region('main').template();
-  },
-
-  contactOpenClass: function() {
-    return Session.equals(CONTACT_KEY, true) && 'contact-open';
-  },
-  menuOpenClass: function() {
-    return Session.equals(MENU_KEY, true) && 'menu-open';
+  template: function() {
+    return Template.instance();
   },
   transition: function() { return function(from, to) {
     // XXX: magic number
@@ -25,14 +39,14 @@ Template.layout.helpers({
 
 Template.layout.events({
   'click [data-contact]': function() {
-    Session.set(CONTACT_KEY, true);
+    Template.instance().contactOpen.set(true);
   },
   'click [data-menu]': function() {
-    Session.set(MENU_KEY, true);
+    Template.instance().menuOpen.set(true);
   },
   'click .overlay-close': function() {
-    Session.set(MENU_KEY, false);
-    Session.set(CONTACT_KEY, false);
+    Template.instance().contactOpen.set(false);
+    Template.instance().menuOpen.set(false);
   }
 });
 
@@ -43,9 +57,7 @@ $(document).keyup(function(e) {
     }
     var key = e.which;
 
-    if (Session.get(MENU_KEY, true) || Session.get(CONTACT_KEY, true)) {
-      Session.set(MENU_KEY, false);
-      Session.set(CONTACT_KEY, false);
-    }
+    Template.instance().contactOpen.set(false);
+    Template.instance().menuOpen.set(false);
   }
 });

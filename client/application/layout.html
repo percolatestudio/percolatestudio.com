@@ -1,7 +1,9 @@
 <template name="layout">
-  <div class="layout {{menuOpenClass}} {{contactOpenClass}}">
+  <div class="layout 
+    {{#if template.menuOpen.get}}menu-open{{/if}} 
+    {{#if template.contactOpen.get}}contact-open{{/if}}">
     <div class="content">
-      <nav>
+      <nav class="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
         <div class="nav-group">
           <a href="{{pathFor 'why'}}">Why</a>
           <a href="{{pathFor 'how'}}">How</a>

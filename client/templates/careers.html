@@ -35,7 +35,7 @@
         {{#each jobs}}
           <div class="opening">
             <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-            <p class="description-opening">{{text}}</p>
+            <p class="description-opening">{{#markdown}}{{text}}{{/markdown}}</p>
           </div>
         {{/each}}
       </div>
@@ -44,7 +44,7 @@
         {{#each interns}}
           <div class="opening">
             <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-            <p class="description-opening">{{text}}</p>
+            <p class="description-opening">{{#markdown}}{{text}}{{/markdown}}</p>
           </div>
         {{/each}}
         <div class="opening">

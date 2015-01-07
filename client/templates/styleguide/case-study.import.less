@@ -1,11 +1,11 @@
 @breakpoint: 50em;
 
-.page.styleguide-casestudy {
+.page.case-study {
   .bg-image-case-study-hero {
     .position(relative, auto, auto, auto, auto, 100%, 90%);
     margin-top: -36px; // nav offset
     min-height: 25em;
-    max-height: 50em;
+    max-height: 75em;
     z-index: 1;
   }
 
@@ -40,8 +40,8 @@
     .font-l1;
     padding: .30em 0 0;
     @media only screen and (min-width: @breakpoint) {
-      .font-l3;
-      padding: .20em 0 .1em;
+      .font-l2;
+      padding: .4em 0 .3em;
     }
     .type-light;
 
@@ -55,8 +55,11 @@
   }
 
   .full-up {
-    width: 75%;
-    max-width: 640px;
+    width: 100%;
+    @media only screen and (min-width: @breakpoint) {
+      width: 75%;
+      max-width: 640px;
+      }
   }
 
   .center-up {

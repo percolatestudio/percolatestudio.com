@@ -5,7 +5,7 @@
     .position(relative, auto, auto, auto, auto, 100%, 90%);
     margin-top: -36px; // nav offset
     min-height: 25em;
-    max-height: 75em;
+    max-height: 65em;
     z-index: 1;
   }
 
@@ -95,6 +95,12 @@
     }
   }
 
+  .media-centeralign {
+    img {
+      width: 100%;
+    }
+  }
+
   .media-leftalign {
     img {
       float: left;
@@ -117,6 +123,9 @@
     line-height: 1.9em;
     & + p {
       margin-top: 2em;
+    }
+    &:last-child {
+      margin-bottom: 2em;
     }
   }
 

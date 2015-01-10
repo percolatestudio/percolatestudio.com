@@ -1,13 +1,101 @@
 ---
-title: Meeting Hero
+title: MeetingHero
 index: 3
 featureUrl: /img/test/1.jpg
 thumbnailUrl: /img/test/1.jpg
 ---
 
-<h1>Meeting Hero</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="page case-study">
+  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg');"></div>
+  <header>
+    <div class="wrapper-content">
+      <div class="subtitle-case-study">MeetingHero</div>
+      <h1 class="title-case-study">How much is time worth?</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="collage-text formatting">
+        <div class="grid-2">
+          <p>We often think to make time by chasing efficiency. The thought process is increasing efficiency gives us more time to create bigger and better products. Too often we invest in tools that optimize our individual skills to get faster at design, engineering, and building widgets. However modern products are bigger than any individual. They are the result of interdisciplinary teams that reign in vast machine effort to solve high scale problems.</p>
+        </div>
+        <div class="grid-2">
+          <p>The time spent communicating with teammates is where just under one quarter of an individual’s productive time disappears. Whether this is collaborating on a new sales initiative or conceiving a feature, we encounter the symptoms of ineffective collaboration in all aspects of doing business. When we partnered with the folks at MeetingHero our objective was obvious: remedy inefficient collaboration starting with meetings.</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="collage">
+    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meeting-hero/ss-macbookpro-meetinghero-1200x600@2x.jpg');"></div>
+  </div>
+
+
+  <div class="wrapper-content">
+    <div class="full-up formatting">
+      <h2>The Definition of Soul-Crushing</h2>
+      <p>It’s an understatement that 50% of meetings fall into the category: soul-crushing. The average employee spends just under 25% of their working life in meetings. With some arithmetic it's easy to uncover that 1/10 of productive time is lost doing something no one likes. The path toward more effective meetings starts with discerning what makes them so effective.</p>
+      <ul>
+        <li><b>Shared Direction</b>: Why are we all here?</li>
+        <li><b>Agenda</b>: What are we talking about?</li>
+        <li><b>Action items</b>: Who's doing what when the meeting ends?</li>
+        <li><b>Documentation</b>: What did we just talk about?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="collage">
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-menu-600x600.jpg');"></div>
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/collage-meetinghero-calendar-600x600@2x.jpg');"></div>
+
+  </div>
+
+
+  <div class="wrapper-content">
+    <div class="full-up formatting">
+      <h2>Validating Ideas</h2>
+      <p>We prototyped and tested ideas to validate ideas quickly. Through collaborative effort with the MeetingHero product team we pushed the agile development process to it's limits. From start to finish there was an ongoing cycle of idea evaluation, prototyping, and user validation. New iterations were deployed near daily. Our continuous integration practice ensured that despite the pace our users could expect a solid user experience.</p>
+
+      <p>Web app development has evolved to the point that it's  possible to rapidly prototype via assemblage. That is, piece together  each feature as if they were Legos. We started by assembling raw user flows with ready-made components to check assumptions. Since the intimacy of in-person meetings contributes to it's success, we used realtime technology to enable attendees to instantly collaborate on a meeting 'dashboard'. A dashboard is living documentation of a meeting that records thoughts, decisions and action items.</p>
+
+      <h2>Hello Effective Meetings</h2>
+      <p>MeetingHero is a collaborative meeting dashboard that provides the right amount of structure to add value to any type of meeting. Attendees can work together to direct the meeting in realtime and summaries are emailed to all parties when the meeting ends. It is synced via the cloud and seamlessly integrates with Google accounts.
+</p>
+    </div>
+  </div>
+
+  <div class="collage">
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-dashboard-600x600.jpg');"></div>
+    <div class="grid-2-square quote-collage">
+        <div class="wrapper-quote">
+          <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
+          <div class="attribution">
+            <div class="author">Stuart Mitchell</div>
+            <div class="metadata">VP Mobile</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="wrapper-content">
+    <div class="conclusion">MeetingHero makes it easy for teams to have highly productive, engaging meetings.</div>
+
+    <div class="center-up formatting">
+      <p class="center">Our brief yet immersive engineering engagement resulted in a viable product that helped people create engaging meetings. MeetingHero soon after raised investment and joined notable incubator Y-Combinator. The time to market was under three months.</p>
+      <div class="wrapper-cta-case-study">
+        <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-section featured">Featured Projects</div>
+  <div class="collage">
+    <a class="grid-2-square item-project bg-image-test-1">
+      <span class="meta">
+        <p class="subtitle-item">Meteor</p>
+      </span>
+    </a>
+    <a class="grid-2-square item-project bg-image-test-2">
+      <span class="meta">
+        <p class="subtitle-item">Verso</p>
+      </span>
+    </a>
+  </div>
+</div>

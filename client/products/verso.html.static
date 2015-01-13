@@ -8,7 +8,7 @@ thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
 <div class="page case-study">
   <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/verso/feature-verso-1600x1000@2x.jpg');"></div>
   <header>
-    <div class="wrapper-content">
+
       <div class="subtitle-case-study">Verso</div>
       <h1 class="title-case-study">Activate Learning</h1>
 
@@ -20,7 +20,7 @@ thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
           <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classroom experience into a product that sparks curiosity.</p>
         </div>
       </div>
-    </div>
+
   </header>
 
   <div class="collage">

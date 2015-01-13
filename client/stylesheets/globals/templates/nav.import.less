@@ -4,6 +4,12 @@ nav {
   overflow: hidden;
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: 90em) {
+    margin: 0 2*@column;
+    max-width: 1600px;
+  }
+
   .logo {
     .transform(rotate(0deg));
     .transition(all 1200ms @easing);

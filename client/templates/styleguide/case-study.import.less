@@ -7,22 +7,36 @@
     min-height: 25em;
     max-height: 65em;
     z-index: 1;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+      width: auto;
+    }
   }
 
   .wrapper-content {
     .std-ypadding;
     .std-xpadding;
     .page-margins;
+    background: @color-empty;
     clear: both;
+    max-width: 1600px;
     overflow: hidden;
   }
 
   header {
+    .std-ypadding;
+    .std-xpadding;
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 15%, @color-empty 100%));
     .transform(translate3d(0,0,0));
     margin-top: -6em;
+    overflow: hidden;
     position: relative;
     z-index: 1;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
   }
 
   .subtitle-case-study {
@@ -83,15 +97,35 @@
   }
 
   .media-inline-rightalign {
-    float: right;
-    width: 40%;
-    max-width: 280px;
-    margin-right: -40%;
-    margin-left: 3em;
+    background: @color-raw;
+    margin: 0 auto 1em;
+    width: 100%;
+    padding: 1em;
+
+    @media only screen and (min-width: @breakpoint) {
+      background: transparent;
+      float: right;
+      max-width: 480px;
+      margin: 0 -40% 0 3em;
+      padding: 0;
+      width: 40%;
+    }
+
+    & + p {
+      //allowance for adding this element between a Heading and a P
+      margin-top: 0;
+    }
 
     img {
-      padding: 0;
-      margin-bottom: 1em;
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+
+      @media only screen and (min-width: @breakpoint) {
+        margin-bottom: 1em;
+        padding: 0;
+        width: 100%;
+      }
     }
   }
 
@@ -102,6 +136,12 @@
   }
 
   .media-leftalign {
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
+
+
     img {
       float: left;
       width: 100%;
@@ -130,6 +170,7 @@
   }
 
   .collage-text {
+    p:last-child { margin-bottom: 1em; } //resets global p:last-child
     @media only screen and (min-width: @breakpoint) {
       .grid-2 {
         padding-right: 4%;
@@ -292,6 +333,10 @@
   }
 
   .collage {
+    margin: 0 auto;
+    @media screen and (min-width: 90em) { margin: 0 2*@column; }
+    max-width: 1600px;
+
 
     .quote-collage { // pullquote
       background: #344057;

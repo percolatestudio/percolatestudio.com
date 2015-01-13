@@ -6,79 +6,64 @@ thumbnailUrl: /img/test/1.jpg
 ---
 
 <div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('https://unsplash.imgix.net/uploads/14120938606568dde6e2b/c9e42240?q=75&w=1080&h=1080&fit=max&fm=jpg&s=580f266cd8b2994d47fc7b656da3f074');"></div>
+  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000@2x.jpg');"></div>
   <header>
-    <div class="wrapper-content">
-      <div class="subtitle-case-study">Atmosphere</div>
-      <h1 class="title-case-study">Balancing Information &amp; Inspiration</h1>
+    <div class="subtitle-case-study">Atmosphere</div>
+    <h1 class="title-case-study">XXX</h1>
 
-      <div class="collage-text formatting">
-        <div class="grid-2">
-          <p>Every once in awhile a product emerges that shifts the way people understand the world. Whether it’s physical with the automobile or digital with graphical user interface and cloud computing. We think of these products as so revolutionary, so unique in concept and exquisite in execution that their humble beginnings are too often overlooked.
+    <div class="collage-text formatting">
+      <div class="grid-2">
+        <p>Every once in awhile a product emerges that shifts the way people understand the world. Whether it’s physical with the automobile or digital with graphical user interface and cloud computing. We think of these products as so revolutionary, so unique in concept and exquisite in execution that their humble beginnings are often overlooked.
 </p>
-        </div>
-        <div class="grid-2">
-          <p>Anyone who build products understands the shaky beginnings of now successful companies. The late nights toiling in a cold garage. The hurried napkin blueprint over lunch. Every nascent product begins as a delicate idea. Effort, practice, and failure are required to cultivate the idea into something more. Despite advances in technology  this process hasn’t changed much. The only difference is now the pace is swifter.</p>
-        </div>
+      </div>
+      <div class="grid-2">
+        <p>Folks that build products understand the shaky beginnings of successful companies. The late nights. The hurried napkin blueprints. Products begin as delicate ideas and evolve with effort, practice, and failure. Despite advances in technology the development process hasn’t changed much; it has only become faster.</p>
       </div>
     </div>
   </header>
 
+  <div class="collage">
+
+
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/iphone6-atmosphere-600x600.jpg');"></div>
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/ipadair-atmosphere-600x600.jpg');"></div>
+    <!-- <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/collage-atmosphere-range-600x600@2x.jpg');"></div> -->
+  </div>
+
   <div class="wrapper-content">
     <div class="full-up formatting">
       <h2>On the Shoulders of Giants</h2>
-      <p>Modern applications are a culmination of past knowledge. They are an assemblage of discrete pieces. The open source movement formalized the path for people to share and re-use these pieces &mdash;packages&mdash; with the goal of accelerating product development. Makers spend less time building boilerplate and instead dedicate themselves to creating real value, testing, and iterating. The result is mature software coming to market in less time.
+      <p>Modern applications are a culmination of past knowledge. They are an assemblage of discrete pieces. The open source movement formalized the path for people to share and re-use these pieces &mdash;packages&mdash; with the goal of accelerating product development. Makers spend less time re-building boilerplate and instead dedicate themselves to creating real value. Thus resulting in mature software coming to market in less time.
 </p>
 
-      <p>At scale open source looks like millions of engineers packaging discrete pieces of functionality for others and throwing it on the internet. However, to fully discover and re-use functionality this knowledge needs to be structured. Package managers seek to provide organization by indexing packages in an open source ecosystem. When we realized that a package management service didn’t exist for one of the frameworks we use to build products (Meteor) we created Atmosphere.</p>
+      <p>At scale, open source looks like millions of engineers & designers packaging discrete pieces of functionality and sharing it via the internet. In order to fully discover and re-use this shared knowledge it needs to be structured. Enter package managers, who seek to index the pieces of an open source ecosystem to facilitate discovery and growth of that ecosystem. When we realized that package management didn’t exist for one of the javascript frameworks we use to build products (Meteor) we created Atmosphere.</p>
     </div>
+  </div>
+
+  <div class="media-leftalign">
+    <img src="/img/case-study/atmosphere/ss-ipadairs-atmosphere-700x500@2x.jpg"/>
+    <span class="caption"><span class="title-caption">Blocks</span>Packages are the building blocks of great apps. Block UI encapsulates relevant package information in a consistent unified shape.</span>
   </div>
 
   <div class="wrapper-content">
     <div class="full-up formatting">
       <h2>Arranging Building Blocks</h2>
-      <p>Atmosphere is centered around the idea that sharing building blocks is mutually beneficial. To encourage re-use we needed to showcase packages in the best light possible. We started with typographic-heavy designs whose treatment embodied values of space, ease and brevity. The aesthetic simplicity served to humanize and contrast the density of information and number crunching done behind the scenes. </p>
-    </div>
-  </div>
+      <p>Atmosphere is centered around the idea that sharing is mutually beneficial. To encourage re-use we needed to showcase packages in the best light possible. We started with typographic layouts whose treatment contributed to the feeling of space, ease and brevity. The aesthetic simplicity served to humanize the content in contrast with the information density behind the scenes.</p>
 
-  <div class="wrapper-content">
-    <div class="full-up formatting">
       <h2>The Atmosphere Score</h2>
-      <p>Foundations aren't built with faulty bricks. When adding a package it’s essential to be confident in the code and trust the engineering methodology. Often this requires a combination of author research, social validation, and code review. It’s onerous for an individual to do this for every package. Atmosphere seeks to make this assessment easier by collecting and analyzing quantitative data to highlight packages that have the greatest chance of being ‘right’ for you.  The Atmosphere Score is used to compare and rank packages over time.</p>
+      <p>When building the foundation of a product it’s essential to be confident in the integrity of it's component pieces. Often this requires a combination of user research, social validation, and code review. It’s onerous for an individual to do this for every package. We created the Atmosphere Score to make this assessment easier by collecting, analyzing and synthesizing quantitative data to highlight packages that have the greatest chance of being ‘right’ for you.</p>
     </div>
   </div>
-
-  <div class="wrapper-content">
-    <div class="full-up formatting">
-      <h2>Search Instantly</h2>
-      <p>Search is a well-used yet unremarkable feature of many products. Since search is core to the Atmosphere experience, we reexamined how engineers search and how they browse. Atmosphere search persists the entire session and is always one key stroke away. Search is a persistent layer above the browse experience that is globally accessible and remembers the last query. You can dive into browsing without worrying about losing state.
-</p>
-    </div>
-  </div>
-
-
-  <div class="media-leftalign">
-    <img src="/img/case-study/meteor/collage-leaderboard-1200x836.jpg"/>
-    <span class="caption"><span class="title-caption">Blocks</span>Packages are the building blocks of great apps. The block UI encapsulates relevant package information in a  consistent unified shape.</span>
-  </div>
-
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meteor/collage-todos-ipad-1200x600.jpg');"></div>
+    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/atmosphere/ss-macbookpro-atmosphere-1200x600@2x.jpg');"></div>
   </div>
-  <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos2-600x600.jpg')">
-    </div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos-600x600.jpg')">
-    </div>
-  </div>
-
 
   <div class="wrapper-content">
     <div class="conclusion">Atmosphere is the catalog for Meteor packages, resources and tools.</div>
 
     <div class="center-up formatting">
-      <p class="center">We created Atmosphere to scratch our own itch and ensure speedy outcomes for our clients. What began as a small studio side project has steadily grown to be used daily by thousands of innovators building world-changing products.
+      <p class="center">Products of the future will be created with the help of open source packages. We created Atmosphere to index our own packages and ensure speedy outcomes for our clients. What began as a studio side project has steadily grown into an essential service used by thousands of innovators daily.
       </p>
       <div class="wrapper-cta-case-study">
         <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>

@@ -17,10 +17,13 @@
   .wrapper-content {
     .std-ypadding;
     .std-xpadding;
-    .page-margins;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+      width: auto;
+    }
     background: @color-empty;
     clear: both;
-    max-width: 1600px;
     overflow: hidden;
   }
 
@@ -136,6 +139,8 @@
   }
 
   .media-leftalign {
+    background: @color-empty;
+    overflow: auto;
     @media screen and (min-width: 90em) {
       margin: 0 2*@column;
       max-width: 1600px;
@@ -183,11 +188,17 @@
   }
 
   .pullquote {
-    .page-margins;
     .std-xpadding;
     .std-ypadding;
     overflow: hidden;
     text-align: center;
+
+    background: @color-empty;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
+
 
     .title-quote {
       .font-m3;

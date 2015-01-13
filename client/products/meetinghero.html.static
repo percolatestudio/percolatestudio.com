@@ -8,17 +8,15 @@ thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
 <div class="page case-study">
   <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg');"></div>
   <header>
-    <div class="wrapper-content">
-      <div class="subtitle-case-study">MeetingHero</div>
-      <h1 class="title-case-study">How much is time worth?</h1>
+    <div class="subtitle-case-study">MeetingHero</div>
+    <h1 class="title-case-study">How much is time worth?</h1>
 
-      <div class="collage-text formatting">
-        <div class="grid-2">
-          <p>We often think to make time by chasing efficiency. The thought process is increasing efficiency gives us more time to create bigger and better products. Too often we invest in tools that optimize our individual skills to get faster at design, engineering, and building widgets. However modern products are bigger than any individual. They are the result of interdisciplinary teams that reign in vast machine effort to solve high scale problems.</p>
-        </div>
-        <div class="grid-2">
-          <p>The time spent communicating with teammates is where just under one quarter of an individual’s productive time disappears. Whether this is collaborating on a new sales initiative or conceiving a feature, we encounter the symptoms of ineffective collaboration in all aspects of doing business. When we partnered with the folks at MeetingHero our objective was obvious: remedy inefficient collaboration starting with meetings.</p>
-        </div>
+    <div class="collage-text formatting">
+      <div class="grid-2">
+        <p>We often think to make time by chasing efficiency. The thought process is increasing efficiency gives us more time to create bigger and better products. Too often we invest in tools that optimize our individual skills to get faster at design, engineering, and building widgets. However modern products are bigger than any individual. They are the result of interdisciplinary teams that reign in vast machine effort to solve high scale problems.</p>
+      </div>
+      <div class="grid-2">
+        <p>The time spent communicating with teammates is where just under one quarter of an individual’s productive time disappears. Whether this is collaborating on a new sales initiative or conceiving a feature, we encounter the symptoms of ineffective collaboration in all aspects of doing business. When we partnered with the folks at MeetingHero our objective was obvious: remedy inefficient collaboration starting with meetings.</p>
       </div>
     </div>
   </header>

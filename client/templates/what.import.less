@@ -5,13 +5,56 @@
     @media screen and (min-width: 50em) { display: inline-block; }
   }
 
+  .collage {
+    background: @color-empty;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
+  }
+
   .item-project {
     @media screen and (min-width: @breakpoint) {
       &:nth-of-type(5n + 1) {
         height: 50%;
         width: 100%;
       }
-
     }
   }
+
+  .item-project {
+    .clearfix;
+    .transform(translate3d(0,0,0));
+    float: left;
+    position: relative;
+
+    .meta {
+      .position(absolute, 0, 0, auto, 0, 100%);
+      .std-xpadding;
+      .std-ypadding;
+      line-height: 1;
+
+      a { color: @color-empty; }
+
+      .subtitle-item {
+        .font-s3;
+        @media screen and (min-width: @breakpoint) { .font-m1; }
+
+        .type-bold;
+        .title-caps;
+        color: @color-empty;
+        text-indent: 0;
+      }
+
+    }
+
+    min-height: 450px;
+    width: 100%;
+
+    @media screen and (min-width: @breakpoint) {
+      height: 50%;
+      width: 50%;
+    }
+  }
+
 }

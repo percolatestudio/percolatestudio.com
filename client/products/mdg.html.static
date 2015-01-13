@@ -8,18 +8,16 @@ thumbnailUrl: /img/case-study/meteor/collage-localmarket1-600x600.jpg
 <div class="page case-study">
   <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meteor/feature-iphone6ipadairmacbookpro-meteor-1600x1000@2x.jpg');"></div>
   <header>
-    <div class="wrapper-content">
-      <div class="subtitle-case-study">Meteor</div>
-      <h1 class="title-case-study">Balancing Information &amp; Inspiration</h1>
+    <div class="subtitle-case-study">Meteor</div>
+    <h1 class="title-case-study">Balancing Information &amp; Inspiration</h1>
 
-      <div class="collage-text formatting">
-        <div class="grid-2">
-          <p>We are on the cusp of a momentous shift in web technology. The web&#8217;s barrelling evolution from documents to applications is awe inspiring. So to is people&#8217;s dexterity in applying new technologies to engage with each other. If the web is just a communication medium –a pale stand-in for face-to-face interactions– its natural evolution is to mirror the palpable presence of in-person interactions. Modern web frameworks help achieve this by <em>reacting</em> to changes from system and users in <em>realtime</em>.
+    <div class="collage-text formatting">
+      <div class="grid-2">
+        <p>We are on the cusp of a momentous shift in web technology. The web&#8217;s barrelling evolution from documents to applications is awe inspiring. So to is people&#8217;s dexterity in applying new technologies to engage with each other. If the web is just a communication medium –a pale stand-in for face-to-face interactions– its natural evolution is to mirror the palpable presence of in-person interactions. Modern web frameworks help achieve this by <em>reacting</em> to changes from system and users in <em>realtime</em>.
 </p>
-        </div>
-        <div class="grid-2">
-          <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit modern user experiences because technical complexity.</p>
-        </div>
+      </div>
+      <div class="grid-2">
+        <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit modern user experiences because technical complexity.</p>
       </div>
     </div>
   </header>

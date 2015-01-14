@@ -1,12 +1,12 @@
 ---
 title: MeetingHero
 index: 3
-featureUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
+featureUrl: /img/case-study/meeting-hero/feature-macbookproiphone6-meetinghero-1600x1000@2x.jpg
+thumbnailUrl: /img/case-study/meeting-hero/iphone6perspective-meetinghero-600x600@2x.jpg
 ---
 
 <div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg');"></div>
+  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meeting-hero/feature-macbookproiphone6-meetinghero-1600x1000@2x.jpg');"></div>
   <header>
     <div class="subtitle-case-study">MeetingHero</div>
     <h1 class="title-case-study">How much is time worth?</h1>
@@ -22,14 +22,14 @@ thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
   </header>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meeting-hero/ss-macbookpro-meetinghero-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meeting-hero/collage-meetinghero-1200x600@2x.jpg');"></div>
   </div>
 
 
   <div class="wrapper-content">
     <div class="full-up formatting">
       <h2>The Definition of Soul-Crushing</h2>
-      <p>It’s an understatement that 50% of meetings fall into the category: soul-crushing. The average employee spends just under 25% of their working life in meetings. With some arithmetic it's easy to uncover that 1/10 of productive time is lost doing something no one likes. The path toward more effective meetings starts with discerning what makes them so effective.</p>
+      <p>It’s an understatement that 50% of meetings fall into the category: soul-crushing. The average employee spends just under 25% of their working life in meetings. With some arithmetic it's easy to uncover that 1/10 of productive time is lost doing something no one likes. The path to changing this statistic starts with discerning the characteristics of effective meetings.</p>
       <ul>
         <li><b>Shared Direction</b>: Why are we all here?</li>
         <li><b>Agenda</b>: What are we talking about?</li>
@@ -48,10 +48,11 @@ thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
 
   <div class="wrapper-content">
     <div class="full-up formatting">
-      <h2>Validating Ideas</h2>
-      <p>We prototyped and tested ideas to validate ideas quickly. Through collaborative effort with the MeetingHero product team we pushed the agile development process to it's limits. From start to finish there was an ongoing cycle of idea evaluation, prototyping, and user validation. New iterations were deployed near daily. Our continuous integration practice ensured that despite the pace our users could expect a solid user experience.</p>
+      <h2>Validate Ideas</h2>
+      <p>Perhaps the most important phase in a products lifecycle is validating the idea. Not only is the ratio of resources vs. company size unfavorable but decisions made in this phase tend to have a compounding effect later on. To define MeetingHero's trajectory we relied on rapid prototyping process. Our deep collaboration with the MeetingHero team pushed rapid prototyping to the limit. We helped test ideas quickly while also working towards a larger full featured proof-of-concept. Our deep collaboration with the MeetingHero product team pushed the agile development process to the limit.
+      From start to finish there was a constant cycle of idea evaluation, testing, and validation. New iterations were deployed near daily. Disciplined continuous integration ensured that despite the pace users could expect a solid user experience.</p>
 
-      <p>Web app development has evolved to the point that it's  possible to rapidly prototype via assemblage. That is, piece together  each feature as if they were Legos. We started by assembling raw user flows with ready-made components to check assumptions. Since the intimacy of in-person meetings contributes to it's success, we used realtime technology to enable attendees to instantly collaborate on a meeting 'dashboard'. A dashboard is living documentation of a meeting that records thoughts, decisions and action items.</p>
+      <p>Web app development has evolved to the point where rapid prototyping via assemblage is possible. To accelerate the initial product validation phase it was important to move as fast as possible. We relied on existing API's and frameworks to assemble each feature as if they were Legos. We started by assembling raw user flows with ready-made components to check assumptions. Since the intimacy of in-person meetings contributes to it's success, we used realtime technology to enable attendees to instantly collaborate on a meeting 'dashboard'. A dashboard is living documentation of a meeting that records thoughts, decisions and action items.</p>
 
       <h2>Hello Effective Meetings</h2>
       <p>MeetingHero is a collaborative meeting dashboard that provides the right amount of structure to add value to any type of meeting. Attendees can work together to direct the meeting in realtime and summaries are emailed to all parties when the meeting ends. It is synced via the cloud and seamlessly integrates with Google accounts.
@@ -60,23 +61,23 @@ thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-dashboard-600x600.jpg');"></div>
     <div class="grid-2-square quote-collage">
         <div class="wrapper-quote">
           <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
           <div class="attribution">
-            <div class="author">Stuart Mitchell</div>
+            <div class="author">Val Agostino</div>
             <div class="metadata">VP Mobile</div>
           </div>
         </div>
       </div>
+      <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-dashboard-600x600.jpg');"></div>
   </div>
 
   <div class="wrapper-content">
     <div class="conclusion">MeetingHero makes it easy for teams to have highly productive, engaging meetings.</div>
 
     <div class="center-up formatting">
-      <p class="center">Our brief yet immersive engineering engagement resulted in a viable product that helped people create engaging meetings. MeetingHero soon after raised investment and joined notable incubator Y-Combinator. The time to market was under three months.</p>
+      <p class="center">Our immersive engineering engagement resulted in a viable product that helps people create engaging meetings. MeetingHero has gone on to raise investment and join notable incubator Y-Combinator. Their time to market was three months.</p>
       <div class="wrapper-cta-case-study">
         <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
       </div>
@@ -85,11 +86,12 @@ thumbnailUrl: /img/case-study/meeting-hero/feature-meetinghero-1600x1000@2x.jpg
 
   <div class="title-section featured">Featured Projects</div>
   <div class="collage">
-    <a class="grid-2-square item-project bg-image-test-1">
+    <a class="grid-2-square item-project bg-image-test-1" >
       <span class="meta">
         <p class="subtitle-item">Meteor</p>
       </span>
     </a>
+
     <a class="grid-2-square item-project bg-image-test-2">
       <span class="meta">
         <p class="subtitle-item">Verso</p>

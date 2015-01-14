@@ -1,12 +1,12 @@
 ---
 title: Verso
 index: 1
-featureUrl: /img/case-study/verso/feature-verso-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
+featureUrl: /img/case-study/verso/feature-iphone6ipadair-verso-classes-1600x1000@2x.jpg
+thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
 ---
 
 <div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/verso/feature-verso-1600x1000@2x.jpg');"></div>
+  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/verso/feature-iphone6ipadair-verso-classes-1600x1000@2x.jpg');"></div>
   <header>
 
       <div class="subtitle-case-study">Verso</div>
@@ -24,9 +24,9 @@ thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
   </header>
 
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/collage-verso-child-600x600.jpg')">
-    </div>
     <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/iphone6-verso-flip-600x600.jpg')">
+    </div>
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/collage-verso-child-600x600.jpg')">
     </div>
   </div>
 
@@ -51,7 +51,7 @@ thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/verso/ss-iphone6ipadair-class-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/verso/collage-verso-1200x600@2x.jpg');"></div>
   </div>
 
   <div class="wrapper-content">
@@ -105,10 +105,10 @@ thumbnailUrl: /img/case-study/verso/collage-verso-child-600x600.jpg
   </div>
 
   <div class="wrapper-content">
-    <div class="conclusion">Our holistic process helped students become lifelong learners.</div>
+    <div class="conclusion">Verso helps students become lifelong learners.</div>
 
     <div class="center-up formatting">
-      <p class="center">We delivered an app that has a significant & measurable impact on class participation. In the span of less than two years adoption has grown to over 3,000 schools and 50,000 students. It has been subject of conference keynotes and received accolades such as ELearning Victoria.</p>
+      <p class="center">Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years adoption has grown to over 3,000 schools and 50,000 students. It has been subject of conference keynotes and received accolades such as ELearning Victoria.</p>
       <div class="wrapper-cta-case-study">
         <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
       </div>

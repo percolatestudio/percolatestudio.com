@@ -2,7 +2,7 @@
 title: Meteor
 index: 1
 featureUrl: /img/case-study/meteor/feature-iphone6ipadairmacbookpro-meteor-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/meteor/collage-localmarket1-600x600.jpg
+thumbnailUrl: /img/case-study/meteor/collage-todos2-ipad-1200x600@2x.jpg
 ---
 
 <div class="page case-study">
@@ -22,40 +22,28 @@ thumbnailUrl: /img/case-study/meteor/collage-localmarket1-600x600.jpg
     </div>
   </header>
 
-  <div class="pullquote">
-    <div class="title-quote">
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </div>
-    <div class="attribution">
-      <div class="author">Matt Debergalis</div>
-      <div class="metadata">Head of Product, Founder</div>
-    </div>
-  </div>
-
   <div class="wrapper-content">
+    <div class="media-centeralign">
+      <img class="media" src="/img/case-study/meteor/collage-icons-meteor-200x200.svg"/>
+    </div>
     <div class="full-up formatting">
       <h2>Engineered Learning</h2>
-
-      <div class="media-inline-rightalign">
-        <img class="media" src="/img/case-study/meteor/collage-icons-meteor-200x200.svg"/>
-      </div>
-
       <p>It’s rare when a company whose product we use approaches us to collaborate. You can imagine our excitement when Meteor wanted us to design & engineer their learning materials. We were tasked with conceiving example applications that would pique curiosity and serve as reference material.</p>
 
       <p>Example apps exist at the junction between acquisition and engagement. Once users express interest in Meteor we further engage them with examples that address their real-life use cases and illuminate common development patterns. We started with concrete requirements: illuminate essential framework concepts, showcase layout patterns, and define best practices for app structure. Next we identified use cases where Meteor could add tremendous value like social engagement, list-keeping, and game scoring. It was important to balance information and inspiration to show that great experiences were easily achievable with Meteor.</p>
-
-      <h2>Meteor Fundamentals</h2>
-      <p>People are often incredulous when discovering how intuitively Meteor solves common challenges. One such challenge is ensuring that all connected users see the latest data. For example, a score page of game should always reflect the current score and not need to update data via a page reload. In the request-response world of Rails and PHP building realtime functionality is not trivial. With Meteor's leaderboard example we not only prove it can be done elegantly.</p>
     </div>
   </div>
 
   <div class="media-leftalign">
-    <img src="/img/case-study/meteor/collage-leaderboard-1200x836.jpg"/>
+    <img src="/img/case-study/meteor/collage-leaderboard.jpg"/>
     <span class="caption"><span class="title-caption">Leaderboard</span>Add points to your favorite scientists and watch as the list is autoupdated in every connected browser.</span>
   </div>
 
   <div class="wrapper-content">
     <div class="full-up formatting">
+      <h2>Meteor Fundamentals</h2>
+      <p>People are often incredulous when discovering how intuitively Meteor solves common challenges. One such challenge is ensuring that all connected users see the latest data. For example, a score page of game should always reflect the current score and not need to update data via a page reload. In the request-response world of Rails and PHP building realtime functionality is not trivial. With Meteor's leaderboard example we not only prove it can be done elegantly.</p>
+
       <h2>Assembling an App</h2>
       <p>Todo apps are classic coding exercises. It was important to combine the simple patterns from the leaderboard example into a cohesive whole. Our objective was to illustrate the ease of assembling a real web app by combining basic features.</p>
 
@@ -65,13 +53,22 @@ thumbnailUrl: /img/case-study/meteor/collage-localmarket1-600x600.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meteor/collage-todos-ipad-1200x600.jpg');"></div>
+    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meteor/collage-todos2-ipad-1200x600@2x.jpg');"></div>
+  </div>
+  <div class="pullquote">
+    <div class="title-quote">
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    </div>
+    <div class="attribution">
+      <div class="author">Matt Debergalis</div>
+      <div class="metadata">Head of Product, Founder</div>
+    </div>
   </div>
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos2-600x600.jpg')">
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos-signin-600x600.jpg')">
     </div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos-600x600.jpg')">
-    </div>
+    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-todos-home-600x600.jpg')">
+  </div>
     <!--
 <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/collage-todos-logo-600x600.jpg')">
     </div>
@@ -89,18 +86,21 @@ thumbnailUrl: /img/case-study/meteor/collage-localmarket1-600x600.jpg
   <div class="collage">
     <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/collage-localmarket-logo-600x600.jpg')">
     </div>
-<div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/collage-localmarket1-600x600.jpg')">
+<div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-localmarket-home-600x600.jpg')">
       </div>
   </div>
   <div class="collage">
-      <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/collage-localmarket2-600x600.jpg')">
+      <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meteor/iphone5s-localmarket-item-600x600.jpg')">
       </div>
-      <div class="grid-2 copy-collage">
-        <span class="caption"><span class="title-caption">Figure 2</span>Delectable recipe photography is combined with minimal design. The pairing of high contrast imagery and a reductive palette created space for the content to shine.</span>
-        <br/>
-        <span class="caption"><span class="title-caption">Figure 3</span>The recipes vary in dimension to add visual interest & dynamism to the simple item list. Featured recipes have larger photos.</span>
+      <div class="grid-2 quote-collage">
+        <div class="wrapper-quote">
+          <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
+          <div class="attribution">
+            <div class="author">Val Agostino</div>
+            <div class="metadata">VP Mobile</div>
+          </div>
+        </div>
       </div>
-
       <div class="grid-4-square bg-image" style="background-image: url('/img/case-study/meteor/collage-localmarket-icon-300x300.png')">
       </div>
       <div class="grid-4-square bg-image" style="background-image: url('/img/case-study/meteor/collage-localmarket-image-300x300.jpg')">

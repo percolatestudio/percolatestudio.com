@@ -5,14 +5,6 @@
     @media screen and (min-width: 50em) { display: inline-block; }
   }
 
-  .collage {
-    background: @color-empty;
-    @media screen and (min-width: 90em) {
-      margin: 0 2*@column;
-      max-width: 1600px;
-    }
-  }
-
   .item-project {
     @media screen and (min-width: @breakpoint) {
       &:nth-of-type(5n + 1) {
@@ -21,4 +13,15 @@
       }
     }
   }
+  .title-section {
+    background: @color-rare;
+  }
 }
+
+.collage {
+    background: @color-empty;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
+  }

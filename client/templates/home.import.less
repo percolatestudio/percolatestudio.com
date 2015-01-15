@@ -1,4 +1,7 @@
 .page.home {
+  .title-section {
+    padding-bottom: 1.25em;
+  }
   .col-content {
     .std-xpadding;
 
@@ -10,10 +13,6 @@
 
       margin-bottom: 2rem;
 
-
-      @media screen and (min-width: @breakpoint) {
-        margin-top: -1.25rem;
-      }
     }
     .btn-secondary {
       margin-bottom: 3rem;
@@ -22,7 +21,7 @@
 
 
   .section-home-why {
-    .position(relative, auto, auto, auto, auto, 100%, 95%);
+    .position(relative, auto, auto, auto, auto, auto, 95%);
     background: @color-full;
     margin-top: -36px; // nav offset
     text-align: center;
@@ -32,6 +31,8 @@
       .position(absolute, 50%, 0, auto, 0, 80%);
       margin: 0 auto;
     }
+
+
 
     .title-page {
       .font-m3;
@@ -44,34 +45,20 @@
       @media screen and (min-width: @breakpoint) { width: 240px; }
     }
   }
-  .section-home-who {
-    .col-right {
-      height: 600px;
-    }
 
-    .col-right {
-      .inline-block-whitespace;
-
-      > * {
-        display: inline-block;
-        vertical-align: top;
-      }
-      .bg-image-who-we-are {
-        width: 100%;
-        height: 66.66%;
-      }
-      .bg-image-who-we-are-2,
-      .bg-image-who-we-are-3 {
-
-        width: 50%;
-        height: 33.33%;
-      }
+  .section-home-how {
+    .title-section {
+      margin: 0;
     }
   }
   .section-home-what {
-    background: @color-raw;
+    .title-section,
+    .wrapper-section {
+      background: @color-raw-alt;
+    }
+
     @media screen and (min-width: @breakpoint) {
-      padding-bottom: 6em;
+      //padding-bottom: 6em;
     }
   }
 
@@ -84,12 +71,16 @@
     @media screen and (min-width: 30em) { height: 340px; }
     @media screen and (min-width: 50em) { height: 380px; }
     @media screen and (min-width: 70em) { height: 480px; }
-    @media screen and (min-width: 80em) { height: 560px; }
+    @media screen and (min-width: 80em) {
+      height: 580px;
+      margin-bottom: 6em;
+    }
     @media screen and (min-width: 100em) {
-      height: 720px;
+      height: 540px;
       max-width: 110em;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 6em;
     }
 
     img {

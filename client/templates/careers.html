@@ -8,8 +8,9 @@
       <div class="grid-2-square bg-image-careers"></div>
     </header>
 
-    <section class="section-lookfor">
-      <h2 class="title-section">What we look for</h2>
+  <section class="section-lookfor">
+    <h2 class="title-section">What we look for</h2>
+    <div class="wrapper-section">
       <div class="grid-3 subsection">
         <img src="img/logo.svg"/>
         <h3 class="subtitle-section">Nimble</h3>
@@ -25,13 +26,13 @@
         <h3 class="subtitle-section">People-first</h3>
         <p>Be greater than the sum of parts. Engineering and design aligned to improve people's lives.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section-openings">
-      <h2 class="title-section">Openings</h2>
-
+    <h2 class="title-section">Openings</h2>
+    <section class="section-openings wrapper-section">
       <div class="grid-2 openings">
-        <p class="subtitle-openings"><b>Team members</b> create the future of design & technology. They're dreamers and doers.</p>
+        <p class="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
         {{#each jobs}}
           <div class="opening">
             <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
@@ -40,7 +41,7 @@
         {{/each}}
       </div>
       <div class="grid-2 openings">
-        <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products. They're driven to push boundaries.</p>
+        <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products.</p>
         {{#each interns}}
           <div class="opening">
             <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
@@ -56,7 +57,6 @@
           <p class="description-opening">Work with our engineering team to conceive and build realtime products in San Francisco or Melbourne.</p>
         </div>
       </div>
-
     </section>
   </div>
 </template>

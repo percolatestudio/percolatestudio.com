@@ -2,9 +2,13 @@
 
 .page.case-study {
   .bg-image-case-study-hero {
-    .position(relative, auto, auto, auto, auto, 100%, 90%);
-    margin-top: -36px; // nav offset
-    min-height: 25em;
+    .position(relative, auto, auto, auto, auto, 100%, auto);
+    height: 40%;
+    @media only screen and (min-width: @breakpoint) {
+      margin-top: -36px; // nav offset
+      height: 90%;
+    }
+    min-height: 20em;
     max-height: 65em;
     z-index: 1;
     @media screen and (min-width: 90em) {
@@ -32,7 +36,10 @@
     .std-xpadding;
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 15%, @color-empty 100%));
     .transform(translate3d(0,0,0));
-    margin-top: -6em;
+
+    @media only screen and (min-width: @breakpoint) {
+      margin-top: -6em;
+    }
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -54,7 +61,7 @@
   }
 
   .title-case-study {
-    .font-l1;
+    .font-m3;
     padding: .30em 0 0;
     @media only screen and (min-width: @breakpoint) {
       .font-l2;
@@ -204,10 +211,9 @@
       .font-m3;
       .type-light;
       color: @color-primary;
-
-      margin-bottom: 1em;
-      padding-bottom: 1em;
-      padding-top: 1em;
+      padding-top: 1rem;
+      margin-bottom: .5em;
+      padding-bottom: .5em;
       position: relative;
 
       &:after {
@@ -218,9 +224,9 @@
       }
     }
     .attribution {
-      .author {
-        .font-m2;
-      }
+      padding-bottom: 1rem;
+      .author { .font-m2; }
+
       .metadata {
         .font-s2;
         .title-caps;

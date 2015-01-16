@@ -1,12 +1,12 @@
 ---
 title: Verso
 index: 1
-featureUrl: /img/case-study/verso/feature-iphone6ipadair-verso-classes-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
+featureUrl: /img/case-study/verso/verso-class-iphone6ipadair-1200x600.jpg
+thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
 ---
 
-<div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/verso/feature-iphone6ipadair-verso-classes-1600x1000@2x.jpg');"></div>
+<div class="page case-study verso">
+  <div class="bg-image-case-study-hero"></div>
   <header>
 
       <div class="subtitle-case-study">Verso</div>
@@ -24,10 +24,8 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
   </header>
 
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/iphone6-verso-flip-600x600.jpg')">
-    </div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/collage-verso-child-600x600.jpg')">
-    </div>
+    <div class="grid-2-square bg-image-flip"></div>
+    <div class="grid-2-square bg-image-child"></div>
   </div>
 
   <div class="wrapper-content">
@@ -38,7 +36,7 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/verso/collage-verso-inclass-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image-texture-inclass"></div>
   </div>
 
   <div class="wrapper-content">
@@ -51,7 +49,7 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/verso/collage-verso-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image-devices"></div>
   </div>
 
   <div class="wrapper-content">
@@ -65,8 +63,7 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
   </div>
 
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/iphone6-verso-class-600x600.jpg')">
-    </div>
+    <div class="grid-2-square bg-image-class"></div>
     <div class="grid-2 quote-collage">
       <div class="wrapper-quote">
         <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
@@ -79,14 +76,11 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
     <div class="grid-4-square copy-collage">
       Custom templates for rich media like photo and video ensures that content is always engaging. The app appeals to both student and teacher alike.
     </div>
-    <div class="grid-4-square bg-image" style="background-image: url('/img/case-study/verso/collage-verso-logo-600x600.jpg')">
-    </div>
+    <div class="grid-4-square bg-image-logo"></div>
   </div>
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/collage-verso-pencils-600x600@2x.jpg')">
-    </div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/verso/iphone6-verso-responses-600x600.jpg')">
-    </div>
+    <div class="grid-2-square bg-image-texture-pencils"></div>
+    <div class="grid-2-square bg-image-responses"></div>
   </div>
 
 
@@ -101,7 +95,7 @@ thumbnailUrl: /img/case-study/verso/iphone6-verso-classes-600x600.jpg
   </div>
 
   <div class="collage">
-      <div class="grid-1 bg-image" style="background-image: url('/img/case-study/verso/ss-macbookpro-campus-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image-campus"></div>
   </div>
 
   <div class="wrapper-content">

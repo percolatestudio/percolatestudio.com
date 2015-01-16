@@ -1,12 +1,12 @@
 ---
 title: MeetingHero
 index: 3
-featureUrl: /img/case-study/meeting-hero/feature-macbookproiphone6-meetinghero-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/meeting-hero/iphone6perspective-meetinghero-600x600@2x.jpg
+featureUrl: /img/case-study/meetinghero/meetinghero-macbookproiphone6-1600x1000.jpg
+thumbnailUrl: /img/case-study/meetinghero/meetinghero-iphone6perspective-600x600.jpg
 ---
 
-<div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/meeting-hero/feature-macbookproiphone6-meetinghero-1600x1000@2x.jpg');"></div>
+<div class="page case-study meetinghero">
+  <div class="bg-image-case-study-hero"></div>
   <header>
     <div class="subtitle-case-study">MeetingHero</div>
     <h1 class="title-case-study">How much is time worth?</h1>
@@ -22,7 +22,7 @@ thumbnailUrl: /img/case-study/meeting-hero/iphone6perspective-meetinghero-600x60
   </header>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/meeting-hero/collage-meetinghero-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image-texture-meeting"></div>
   </div>
 
 
@@ -40,9 +40,8 @@ thumbnailUrl: /img/case-study/meeting-hero/iphone6perspective-meetinghero-600x60
   </div>
 
   <div class="collage">
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-menu-600x600.jpg');"></div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/collage-meetinghero-calendar-600x600@2x.jpg');"></div>
-
+    <div class="grid-2-square bg-image-iphone6-menu"></div>
+    <div class="grid-2-square bg-image-texture-calendar" ></div>
   </div>
 
 
@@ -70,7 +69,7 @@ thumbnailUrl: /img/case-study/meeting-hero/iphone6perspective-meetinghero-600x60
           </div>
         </div>
       </div>
-      <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/meeting-hero/iphone6-meetinghero-dashboard-600x600.jpg');"></div>
+      <div class="grid-2-square bg-image-iphone6-dashboard"></div>
   </div>
 
   <div class="wrapper-content">

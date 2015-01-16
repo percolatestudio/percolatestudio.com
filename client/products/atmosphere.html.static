@@ -1,12 +1,12 @@
 ---
 title: Atmosphere
 index: 1
-featureUrl: /img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000@2x.jpg
-thumbnailUrl: /img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000@2x.jpg
+featureUrl: /img/case-study/atmosphere/atmosphere-home-macbookpro-1200x600.jpg
+thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
 ---
 
-<div class="page case-study">
-  <div class="bg-image-case-study-hero" style="background-image: url('/img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000@2x.jpg');"></div>
+<div class="page case-study atmosphere">
+  <div class="bg-image-case-study-hero"></div>
   <header>
     <div class="subtitle-case-study">Atmosphere</div>
     <h1 class="title-case-study">XXX</h1>
@@ -23,11 +23,8 @@ thumbnailUrl: /img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000
   </header>
 
   <div class="collage">
-
-
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/iphone6-atmosphere-600x600.jpg');"></div>
-    <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/ipadair-atmosphere-600x600.jpg');"></div>
-    <!-- <div class="grid-2-square bg-image" style="background-image: url('/img/case-study/atmosphere/collage-atmosphere-range-600x600@2x.jpg');"></div> -->
+    <div class="grid-2-square bg-image-iphone"></div>
+    <div class="grid-2-square bg-image-ipad"></div>
   </div>
 
   <div class="wrapper-content">
@@ -41,7 +38,7 @@ thumbnailUrl: /img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000
   </div>
 
   <div class="media-leftalign">
-    <img src="/img/case-study/atmosphere/ss-ipadairs-atmosphere-700x500@2x.jpg"/>
+    <img src="/img/case-study/atmosphere/atmosphere-ipadair-700x500.jpg" srcset="/img/case-study/atmosphere/atmosphere-ipadair-700x500@2x.jpg 1000w" alt="Atmosphere Search">
     <span class="caption"><span class="title-caption">Blocks</span>Packages are the building blocks of great apps. Block UI encapsulates relevant package information in a consistent unified shape.</span>
   </div>
 
@@ -56,7 +53,7 @@ thumbnailUrl: /img/case-study/atmosphere/feature-macbookpro-atmosphere-1600x1000
   </div>
 
   <div class="collage">
-    <div class="grid-1 bg-image" style="background-image: url('/img/case-study/atmosphere/ss-macbookpro-atmosphere-1200x600@2x.jpg');"></div>
+    <div class="grid-1 bg-image-macbookpro"></div>
   </div>
 
   <div class="wrapper-content">

@@ -1,3 +1,36 @@
 .overlay-screen-menu {
+  .wrapper-menu {
+    .page-margins;
+    .std-xpadding;
+    .transform(translateY(-50%));
 
+    position: absolute;
+    top: 50%;
+  }
+
+  .level-top a {
+    color: @color-full;
+    display: block;
+    margin-bottom: 3em;
+    text-decoration: none;
+
+    &:hover { color: @color-primary; }
+
+    .title-link {
+      .font-l3;
+      display: block;
+    }
+    .subtitle-link { color: @color-medium; }
+  }
+
+  .level-bottom a {
+    .font-s2;
+    .title-caps;
+    .type-semibold;
+    display: inline-block;
+    margin-right: 1.25em;
+    text-decoration: none;
+
+    &:last-child { margin-right: 0; }
+  }
 }

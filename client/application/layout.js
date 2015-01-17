@@ -8,17 +8,17 @@ Template.layout.created = function() {
 
 Template.layout.rendered = function() {
   var self = this;
-  
+
   // XXX: should we find a requestAnimationFrame version of _.throttle?
   self.$('.content').scroll(_.throttle(function() {
     var offset = self.find('.content').scrollTop;
-    
+
     if (offset > OVERLAY_OFFSET) {
       self.menuOverlaid.set(offset >= lastOffset ? 'down' : 'up');
     } else {
       self.menuOverlaid.set(false);
     }
-    
+
     lastOffset = offset;
   }, 100));
 }
@@ -42,6 +42,7 @@ Template.layout.helpers({
 
 Template.layout.events({
   'click [data-contact]': function() {
+    Template.instance().menuOpen.set(false); //a user can access contact from the menu so we need to dismiss the overlay
     Template.instance().contactOpen.set(true);
   },
   'click [data-menu]': function() {
@@ -49,6 +50,9 @@ Template.layout.events({
   },
   'click .overlay-close': function() {
     Template.instance().contactOpen.set(false);
+    Template.instance().menuOpen.set(false);
+  },
+  'click .wrapper-menu a': function() {
     Template.instance().menuOpen.set(false);
   }
 });

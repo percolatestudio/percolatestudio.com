@@ -1,6 +1,6 @@
 <template name="layout">
-  <div class="layout 
-    {{#if template.menuOpen.get}}menu-open{{/if}} 
+  <div class="layout
+    {{#if template.menuOpen.get}}menu-open{{/if}}
     {{#if template.contactOpen.get}}contact-open{{/if}}">
     <div class="content">
       <nav class="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
@@ -8,10 +8,10 @@
           <a href="{{pathFor 'why'}}" class="{{activeClass 'why'}}">Why</a>
           <a href="{{pathFor 'how'}}" class="{{activeClass 'how'}}">How</a>
           <a href="{{pathFor 'what'}}" class="{{activeClass 'what'}}">What</a>
+          <a data-menu>Menu</a>
         </div>
 
         <a href="{{pathFor 'home'}}" class="logo {{activeClass 'home'}}"><img src="/img/logo.svg"/></a>
-        <a data-menu style="display:none"><span class="icon-percolate"></span></a>
 
         <div class="nav-group right">
           <a href="{{pathFor 'careers'}}" class="{{activeClass 'careers'}}">Join Us</a>

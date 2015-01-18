@@ -1,13 +1,23 @@
 [class^="section-"],
 [class*=" section-"] {
+  background: @color-empty;
   clear: both;
+  overflow: hidden;
   position: relative;
+
+  @media screen and (min-width: 90em) {
+    margin: 0 2*@column;
+    max-width: 1600px;
+    width: auto;
+  }
+
+  .title-section { margin: 0; } //reset title-section's margins
 
   .subtitle-section {
     .font-m2;
     .type-semibold;
-    //line-height: 1;
   }
+
   .subtitle-section + p {
     .font-m1;
     color: @color-medium-well;
@@ -68,22 +78,5 @@
     .position(absolute, 50%, auto, auto, 50%, auto, 48px);
     .transform(translate3d(-50%, -50%, 0));
     @media screen and (min-width: 60em) { height: 20%; }
-  }
-}
-
-
-
-.wrapper-section {
-  @media screen and (min-width: 90em) {
-    margin: 0 2*@column;
-    max-width: 1600px;
-    width: auto;
-  }
-  background: @color-empty;
-  clear: both;
-  overflow: hidden;
-
-  .title-section {
-    margin: 0;
   }
 }

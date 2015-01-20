@@ -2,9 +2,11 @@
   {{{text}}}
 
   {{#with previousProduct}}
-    <a href="{{pathFor 'product'}}">Previous</a>
+    <a href="{{pathFor 'product'}}">Previous - {{title}}</a>
+    <img src="{{thumbnailUrl}}">
   {{/with}}
   {{#with nextProduct}}
-    <a href="{{pathFor 'product'}}">Next</a>
+    <a href="{{pathFor 'product'}}">Next - {{title}}</a>
+    <img src="{{thumbnailUrl}}">
   {{/with}}
 </template>

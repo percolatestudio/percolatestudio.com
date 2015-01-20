@@ -21,6 +21,17 @@ Template.layout.rendered = function() {
 
     lastOffset = offset;
   }, 100));
+  
+  // need to bind this at a higher level
+  $(document).keydown(function(event) {
+    if (event.which == 27) { // esc closes everything
+      if ( $('input, textarea').is(':focus')) {
+        return ; // input or textarea is focused, ignore other part of function
+      }
+      self.contactOpen.set(false);
+      self.menuOpen.set(false);
+    }
+  });
 }
 
 Template.layout.helpers({
@@ -53,18 +64,6 @@ Template.layout.events({
     Template.instance().menuOpen.set(false);
   },
   'click .wrapper-menu a': function() {
-    Template.instance().menuOpen.set(false);
-  }
-});
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) { // esc closes everything
-    if ( $('input, textarea').is(':focus')) {
-      return ; // input or textarea is focused, ignore other part of function
-    }
-    var key = e.which;
-
-    Template.instance().contactOpen.set(false);
     Template.instance().menuOpen.set(false);
   }
 });

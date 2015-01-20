@@ -32,6 +32,17 @@ Template.layout.rendered = function() {
       self.menuOpen.set(false);
     }
   });
+  
+  // Wire up the contact form "route". Perhaps it's better to do it
+  //   with IR as in atmosphere but this is a pretty simple approach.
+  self.autorun(function() {
+    if (Iron.Location.get().hash === '#contact')
+      self.contactOpen.set(true);
+  });
+
+  self.autorun(function() {
+    location.hash = self.contactOpen.get() ? 'contact' : '';
+  });
 }
 
 Template.layout.helpers({

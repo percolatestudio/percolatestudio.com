@@ -1,5 +1,8 @@
 Template.what.helpers({
-  products: function() {
-    return Products.find({}, {sort: {index: 1}});
+  firstProduct: function() {
+    return Products.findOne({}, {sort: {index: 1}});
+  },
+  restProducts: function() {
+    return Products.find({}, {sort: {index: 1}, skip: 1});
   }
 })

@@ -5,121 +5,119 @@ featureUrl: /img/case-study/verso/verso-class-iphone6ipadair-1200x600.jpg
 thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
 ---
 
-<div class="page case-study verso">
-  <div class="bg-image-case-study-hero"></div>
-  <header>
+<div class="bg-image-case-study-hero"></div>
+<header>
 
-      <div class="subtitle-case-study">Verso</div>
-      <h1 class="title-case-study">Activate Learning</h1>
+    <div class="subtitle-case-study">Verso</div>
+    <h1 class="title-case-study">Activate Learning</h1>
 
-      <div class="collage-text formatting">
-        <div class="grid-2">
-          <p>The reality of education technology never quite lives up to expectations. Devices in classrooms may lead to savvier pupils, but do these tools actually improve learning ability? Technology so often can focus on the rather unambitious path of incremental changes to already established practice. However, being dedicated to improving tools ignores key factors to meaningful change: teacher's pedagogy and student curiosity.</p>
-        </div>
-        <div class="grid-2">
-          <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classroom experience into a product that sparks curiosity.</p>
-        </div>
+    <div class="collage-text formatting">
+      <div class="grid-2">
+        <p>The reality of education technology never quite lives up to expectations. Devices in classrooms may lead to savvier pupils, but do these tools actually improve learning ability? Technology so often can focus on the rather unambitious path of incremental changes to already established practice. However, being dedicated to improving tools ignores key factors to meaningful change: teacher's pedagogy and student curiosity.</p>
       </div>
-
-  </header>
-
-  <div class="collage">
-    <div class="grid-2-square bg-image-flip"></div>
-    <div class="grid-2-square bg-image-child"></div>
-  </div>
-
-  <div class="wrapper-content">
-    <div class="full-up formatting">
-      <h2>Lifelong Learners</h2>
-      <p>Whenever curiosity is piqued, so to is an enthusiasm to learn. The key trait of a lifelong learner is curiosity. Cultivating this trait begins with questions that evoke further thinking. Most questions begin and end with fact. What is the sum of this? Who invented that? Deep questioning challenges students to understand context and prompts them to consider <em>why</em>. Verso trains teachers to ask deep questions by providing an instant feedback loop to immediately measure and respond to how their students understand activities.</p>
-    </div>
-  </div>
-
-  <div class="collage">
-    <div class="grid-1 bg-image-texture-inclass"></div>
-  </div>
-
-  <div class="wrapper-content">
-    <div class="full-up formatting">
-      <h2>Inverted Learning</h2>
-      <p>Verso builds upon the flipped classroom learning model which inverts traditional teaching methods. Instruction is delivered through the app outside of class while ‘homework’ is done inside the classroom. Concept mastery therefore happens in class with the guidance of peers and teachers.</p>
-      <p>Impacting learning necessitates an inclusive product development strategy. Since it’s impossible to foretell the devices accessible to schools and families, we used the same robust web codebase to launch the Verso experience on all major platforms and devices. Doing so reduced the total scope of the engineering while accelerating time to market.</p>
-
-    </div>
-  </div>
-
-  <div class="collage">
-    <div class="grid-1 bg-image-devices"></div>
-  </div>
-
-  <div class="wrapper-content">
-    <div class="full-up formatting">
-      <h2>Boundless Classrooms</h2>
-
-      <p>Humans never stop learning, so why are there constraints on the time and place students learn? We had to divorce the idea of a classroom from physical space in order to move it to the digital realm. A digital classroom is boundless, it persists wherever there are curious people and is only a push notification away.</p>
-
-      <p>A digital classroom must mirror the buzz of its physical counterpart. We imbued this sense of activity by surfacing student feedback the instant it happened. The adoption of student anonymity created a peer-pressure free social dynamic where students could express themselves without fear of being judged. We created feedback mechanisms like ‘helpfuls’ and ‘grouping’ to help identify the strongest student responses to be used as future discussion points. Combined, the features created to a vibrant communication system that showcased meritorious ideas while also activating the voice of even the meekest students.</p>
-    </div>
-  </div>
-
-  <div class="collage">
-    <div class="grid-2-square bg-image-class"></div>
-    <div class="grid-2 quote-collage">
-      <div class="wrapper-quote">
-        <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
-        <div class="attribution">
-          <div class="author">Stuart Mitchell</div>
-          <div class="metadata">VP Mobile</div>
-        </div>
+      <div class="grid-2">
+        <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classroom experience into a product that sparks curiosity.</p>
       </div>
     </div>
-    <div class="grid-4-square copy-collage">
-      Custom templates for rich media like photo and video ensures that content is always engaging. The app appeals to both student and teacher alike.
-    </div>
-    <div class="grid-4-square bg-image-logo"></div>
+
+</header>
+
+<div class="collage">
+  <div class="grid-2-square bg-image-flip"></div>
+  <div class="grid-2-square bg-image-child"></div>
+</div>
+
+<div class="wrapper-content">
+  <div class="full-up formatting">
+    <h2>Lifelong Learners</h2>
+    <p>Whenever curiosity is piqued, so to is an enthusiasm to learn. The key trait of a lifelong learner is curiosity. Cultivating this trait begins with questions that evoke further thinking. Most questions begin and end with fact. What is the sum of this? Who invented that? Deep questioning challenges students to understand context and prompts them to consider <em>why</em>. Verso trains teachers to ask deep questions by providing an instant feedback loop to immediately measure and respond to how their students understand activities.</p>
   </div>
-  <div class="collage">
-    <div class="grid-2-square bg-image-texture-pencils"></div>
-    <div class="grid-2-square bg-image-responses"></div>
+</div>
+
+<div class="collage">
+  <div class="grid-1 bg-image-texture-inclass"></div>
+</div>
+
+<div class="wrapper-content">
+  <div class="full-up formatting">
+    <h2>Inverted Learning</h2>
+    <p>Verso builds upon the flipped classroom learning model which inverts traditional teaching methods. Instruction is delivered through the app outside of class while ‘homework’ is done inside the classroom. Concept mastery therefore happens in class with the guidance of peers and teachers.</p>
+    <p>Impacting learning necessitates an inclusive product development strategy. Since it’s impossible to foretell the devices accessible to schools and families, we used the same robust web codebase to launch the Verso experience on all major platforms and devices. Doing so reduced the total scope of the engineering while accelerating time to market.</p>
+
   </div>
+</div>
 
+<div class="collage">
+  <div class="grid-1 bg-image-devices"></div>
+</div>
 
+<div class="wrapper-content">
+  <div class="full-up formatting">
+    <h2>Boundless Classrooms</h2>
 
-  <div class="wrapper-content">
-    <div class="full-up formatting">
-      <h2>Classroom IQ</h2>
-      <p>None of this would be possible without buy-in from teachers. Verso’s interpretation of the flipped classroom model builds upon extensive research. Our challenge was to translate research-backed strategies into a action.</p>
+    <p>Humans never stop learning, so why are there constraints on the time and place students learn? We had to divorce the idea of a classroom from physical space in order to move it to the digital realm. A digital classroom is boundless, it persists wherever there are curious people and is only a push notification away.</p>
 
-      <p>Verso organically generates a wealth of usage data. We needed to be intelligent about shaping this data into actionable insights and  communicating it just-in-time. Teachers get realtime feedback on the lesson and can benchmark against past performance. Data-driven principals or department heads finally have a measurable way to identify what works.</p>
-    </div>
+    <p>A digital classroom must mirror the buzz of its physical counterpart. We imbued this sense of activity by surfacing student feedback the instant it happened. The adoption of student anonymity created a peer-pressure free social dynamic where students could express themselves without fear of being judged. We created feedback mechanisms like ‘helpfuls’ and ‘grouping’ to help identify the strongest student responses to be used as future discussion points. Combined, the features created to a vibrant communication system that showcased meritorious ideas while also activating the voice of even the meekest students.</p>
   </div>
+</div>
 
-  <div class="collage">
-    <div class="grid-1 bg-image-campus"></div>
-  </div>
-
-  <div class="wrapper-content">
-    <div class="conclusion">Verso helps students become lifelong learners.</div>
-
-    <div class="center-up formatting">
-      <p class="center">Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years adoption has grown to over 3,000 schools and 50,000 students. It has been subject of conference keynotes and received accolades such as ELearning Victoria.</p>
-      <div class="wrapper-cta-case-study">
-        <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
+<div class="collage">
+  <div class="grid-2-square bg-image-class"></div>
+  <div class="grid-2 quote-collage">
+    <div class="wrapper-quote">
+      <div class="title-quote">Morbi pilvinar frementum turpis ullam corper commodo dui consequat a. Mauris vilae orci phaetra, mollis maetra massa vel, adipiscing</div>
+      <div class="attribution">
+        <div class="author">Stuart Mitchell</div>
+        <div class="metadata">VP Mobile</div>
       </div>
     </div>
   </div>
-
-  <div class="title-section featured">Featured Projects</div>
-  <div class="collage">
-    <a class="grid-2-square item-project bg-image-test-1">
-      <span class="meta">
-        <p class="subtitle-item">Meteor</p>
-      </span>
-    </a>
-    <a class="grid-2-square item-project bg-image-test-2">
-      <span class="meta">
-        <p class="subtitle-item">Verso</p>
-      </span>
-    </a>
+  <div class="grid-4-square copy-collage">
+    Custom templates for rich media like photo and video ensures that content is always engaging. The app appeals to both student and teacher alike.
   </div>
+  <div class="grid-4-square bg-image-logo"></div>
+</div>
+<div class="collage">
+  <div class="grid-2-square bg-image-texture-pencils"></div>
+  <div class="grid-2-square bg-image-responses"></div>
+</div>
+
+
+
+<div class="wrapper-content">
+  <div class="full-up formatting">
+    <h2>Classroom IQ</h2>
+    <p>None of this would be possible without buy-in from teachers. Verso’s interpretation of the flipped classroom model builds upon extensive research. Our challenge was to translate research-backed strategies into a action.</p>
+
+    <p>Verso organically generates a wealth of usage data. We needed to be intelligent about shaping this data into actionable insights and  communicating it just-in-time. Teachers get realtime feedback on the lesson and can benchmark against past performance. Data-driven principals or department heads finally have a measurable way to identify what works.</p>
+  </div>
+</div>
+
+<div class="collage">
+  <div class="grid-1 bg-image-campus"></div>
+</div>
+
+<div class="wrapper-content">
+  <div class="conclusion">Verso helps students become lifelong learners.</div>
+
+  <div class="center-up formatting">
+    <p class="center">Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years adoption has grown to over 3,000 schools and 50,000 students. It has been subject of conference keynotes and received accolades such as ELearning Victoria.</p>
+    <div class="wrapper-cta-case-study">
+      <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
+    </div>
+  </div>
+</div>
+
+<div class="title-section featured">Featured Projects</div>
+<div class="collage">
+  <a class="grid-2-square item-project bg-image-test-1">
+    <span class="meta">
+      <p class="subtitle-item">Meteor</p>
+    </span>
+  </a>
+  <a class="grid-2-square item-project bg-image-test-2">
+    <span class="meta">
+      <p class="subtitle-item">Verso</p>
+    </span>
+  </a>
 </div>

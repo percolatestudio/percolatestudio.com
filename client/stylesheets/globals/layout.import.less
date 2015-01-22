@@ -1,52 +1,80 @@
 @transition-time: 400ms;
 
-body {
-  background: @color-raw;
-}
-
 html {
   overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  //Fixes choppy scrolling in safari
-  //https://github.com/Prinzhorn/skrollr/issues/342#issuecomment-27512033
-  .backface-visibility( hidden );
 }
 
 .layout {
-  &.menu-open .overlay-screen-menu,
-  &.contact-open .overlay-screen-contact {
-    opacity: 1;
-    overflow-y: auto; // do not move, hijacks scroll from content if moved
-    overflow-x: hidden;
-    z-index: 9;
-    -webkit-overflow-scrolling: touch;
-  }
+  .position(absolute, 0, 0, 0, 0);
+  overflow: hidden;//prevents the scale in and out transitions from causing flickering scrollbars
+
+
+  &.menu-open .overlay-screen-menu { .overlay-visible; }
+  &.contact-open .overlay-screen-contact { .overlay-visible; }
 
   &.menu-open,
   &.contact-open {
-    .page {
+    .content {
       opacity: 1;
-      overflow: hidden;
-      .transform( scale3d(0.85, 0.85, 1) );
+      position: fixed;
+      .transform( scale3d(~"0.85, 0.85, 1") );
       .transition( all @transition-time * 3 cubic-bezier(0.175, 0.885, 0.335, 1.050));
     }
-    nav { .transform(translateY(-100%)); }
+    nav {
+      .transform(translateY(-100%));
+    }
   }
 }
 
 .overlay-screen-menu,
 .overlay-screen-contact {
-  //do not add backface to this, scrolling will not register on the overlay
   .position(fixed, 0, 0, 0, 0);
-  .transition(all 250ms ease-in-out);
   opacity: 0;
-  overflow: hidden;
+  .transition(all 250ms ease-in-out);
   z-index: -1;
+  -webkit-overflow-scrolling: touch;
+  //do not add backface to this, scrolling will not register on the overlay
 }
 
-.page {
-  .position(absolute, 36px, 0, 0, 0);
+
+.content {
+  .position(absolute, 0, 0, 0, 0);
   .transform( scale3d(1,1,1) );
   .transition( all @transition-time cubic-bezier(0.175, 0.885, 0.335, 1.050) );
+
+  box-shadow: rgba(0,0,0,.3) 0 0 10px 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  //Fixes choppy scrolling in safari
+  //https://github.com/Prinzhorn/skrollr/issues/342#issuecomment-27512033
+  .backface-visibility( hidden );
+
+  .page {
+    .position(absolute, 36px, 0, 0, 0);
+  }
+}
+
+
+
+.overlay-visible() {
+  .position(absolute, 0, 0, 0, 0);
+  z-index: 9;
+  opacity: 1;
+  overflow-y: scroll; // do not move, hijacks scroll from content if moved
+  overflow-x: hidden;
+}
+
+
+body {
+  background: @color-full;
+}
+
+.layout {
+
+}
+
+.content {
+  background: @color-raw;
 }

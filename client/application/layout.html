@@ -20,11 +20,11 @@
       </div>
     </nav>
 
-    <div class="content">
-      {{#momentum plugin='iron-router' options=transition}}
-        {{> yield}}
-      {{/momentum}}
-    </div>
+
+    {{#momentum plugin='iron-router' options=transition}}
+      {{> yield}}
+    {{/momentum}}
+
 
     {{> contactOverlay}}
     {{> menuOverlay}}

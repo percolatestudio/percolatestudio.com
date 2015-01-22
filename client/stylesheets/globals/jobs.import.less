@@ -1,0 +1,100 @@
+.page.jobs {
+  .wrapper-hero {
+    .position(absolute, 50%, 0, auto, 0);
+    .transform(translateY(-50%));
+
+  }
+  .hero {
+    margin-bottom: 2rem;
+  }
+
+  .title-page {
+    .font-l2;
+    margin-bottom: 1rem;
+  }
+  .description-page {
+    .font-m1;
+    margin: 0 auto 3rem;
+    max-width: 640px;
+    width: 75%;
+
+
+  }
+  .subtitle-jobs {
+    .title-caps;
+    .type-bold;
+    text-indent: 0;
+    color: @color-medium;
+  }
+
+
+  .header {
+
+    .std-ypadding;
+    .std-xpadding;
+
+    background: @color-empty;
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+    z-index: 1;
+    text-align: center;
+    @media screen and (min-width: 90em) {
+      margin: 0 2*@column;
+      max-width: 1600px;
+    }
+  }
+
+
+  .about {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 640px;
+    width: 75%;
+
+  }
+
+  ol {
+
+    counter-reset: ol-counter;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      position: relative;
+      &:before {
+        .font-s2;
+        .type-bold;
+        background: @color-medium-rare;
+        border-radius: 3em;
+        color: @color-empty;
+        content: counter(ol-counter);
+        counter-increment: ol-counter;
+        display: inline-block;
+        text-align: center;
+
+        //layout
+        float: left;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1rem;
+        margin-right: .75rem;
+
+
+      }
+      &:not(:first-child):after {
+
+        .position(absolute, -3.75em, auto, auto, 50%);
+        .transform(translateX(-50%));
+
+        border-top: 7px solid @color-raw;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+      }
+      .meta {
+        overflow: hidden;
+      }
+    }
+  }
+
+}

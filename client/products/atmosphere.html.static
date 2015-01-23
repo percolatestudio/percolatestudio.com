@@ -59,7 +59,7 @@ thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
   <div class="conclusion">Atmosphere is the catalog for Meteor packages, resources and tools.</div>
 
   <div class="center-up formatting">
-    <p class="center">Products of the future will be created with the help of open source packages. We created Atmosphere to index our own packages and ensure speedy outcomes for our clients. What began as a studio side project has steadily grown into an essential service used by thousands of innovators daily.
+    <p class="center">Products of the future will be created with the help of open source packages. We created <a href="https://atmospherejs.com" target="_blank">Atmosphere</a> to index our own packages and ensure speedy outcomes for our clients. What began as a studio side project has steadily grown into an essential service used by thousands of innovators daily.
     </p>
     <div class="wrapper-cta-case-study">
       <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>

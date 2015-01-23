@@ -1,5 +1,6 @@
 ---
 title: Atmosphere
+description: Percolate Studio designed and engineered a package manager for Meteor
 index: 1
 featureUrl: /img/case-study/atmosphere/atmosphere-home-macbookpro-1200x600.jpg
 thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
@@ -8,7 +9,7 @@ thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
 <div class="bg-image-case-study-hero"></div>
 <header>
   <div class="subtitle-case-study">Atmosphere</div>
-  <h1 class="title-case-study">XXX</h1>
+  <h1 class="title-case-study">The Building Blocks of Apps</h1>
 
   <div class="collage-text formatting">
     <div class="grid-2">
@@ -16,7 +17,7 @@ thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
 </p>
     </div>
     <div class="grid-2">
-      <p>Folks that build products understand the shaky beginnings of successful companies. The late nights. The hurried napkin blueprints. Products begin as delicate ideas and evolve with effort, practice, and failure. Despite advances in technology the development process hasn’t changed much; it has only become faster.</p>
+      <p>Folks that build products understand the shaky beginnings of successful companies. The late nights. The hurried napkin blueprints. Products begin as delicate ideas and evolve with effort and practice. Despite advances in technology the development process hasn’t changed much; it has only become faster.</p>
     </div>
   </div>
 </header>

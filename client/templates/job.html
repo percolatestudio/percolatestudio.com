@@ -1,3 +1,8 @@
 <template name="job">
-  {{{text}}}
+  {{#metaTitle}}{{{title}}} Case Study | Percolate Studio {{/metaTitle}}
+  {{#metaDescription}}{{description}}{{/metaDescription}}
+
+  <div class="page job {{name}}">
+    {{{text}}}
+  </div>
 </template>

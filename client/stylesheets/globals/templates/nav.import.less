@@ -1,19 +1,8 @@
 nav {
-  .transform(translateY(0%));
   background: @color-full;
   overflow: hidden;
   position: relative;
   z-index: 2;
-
-
-  .transition(all 300ms ease-out);
-
-  &.overlaid-down {
-    .transform(translateY(-100%));
-  }
-  &.overlaid-up {
-    background: rgba(51,51,51,.95);
-  }
 
   @media screen and (min-width: 90em) {
     margin: 0 2*@column;

@@ -4,17 +4,15 @@ description: We're looking for a talented software engineer to help our full-sta
 locations: SFO, MEL
 ---
 
-<div class="page jobs engineering">
-  <h1>Software Engineer</h1>
-  <p class="description">You're a full-stack engineer that builds impactful features across client and internal products. You're at home in an agile product development cycle and able to adapt to changes in stride. You'll be working with our product team to prototype, design, and craft software that people love.</p>
+<h1>Software Engineer</h1>
+<p class="description">You're a full-stack engineer that builds impactful features across client and internal products. You're at home in an agile product development cycle and able to adapt to changes in stride. You'll be working with our product team to prototype, design, and craft software that people love.</p>
 
 
-  <div class="subtitle-jobs">About you</div>
-  <ol>
-    <li>You want to create world-class digital products and love the craft of engineering</li>
-    <li>Motivated to learn the latest web and mobile technologies</li>
-    <li>Deep understanding of client & server javascript to interface with design and operations alike</li>
-    <li>Created things that people use and love</li>
-    <li>Curious about discovering how technology impacts people's lives</li>
-  </ol>
-</div>
+<div class="subtitle-jobs">About you</div>
+<ol>
+  <li>You want to create world-class digital products and love the craft of engineering</li>
+  <li>Motivated to learn the latest web and mobile technologies</li>
+  <li>Deep understanding of client & server javascript to interface with design and operations alike</li>
+  <li>Created things that people use and love</li>
+  <li>Curious about discovering how technology impacts people's lives</li>
+</ol>

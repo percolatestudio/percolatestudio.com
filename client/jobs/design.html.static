@@ -4,24 +4,21 @@ description: We’re looking for a product designer to research, design, and bui
 locations: SFO
 ---
 
-<div class="page jobs design">
+<div class="header">
+  <div class="wrapper-hero">
+    <img title="Design Services" class="hero" src="/img/services-design-160x160.svg"/>
+    <h1 class="title-page">Product Designer</h1>
+    <p class="description-page center-up">We’re looking for a product designer to craft experiences across client and internal products. You're experienced in the product development process and able to adapt to changes. You'll be working with our product team to prototype, design, and build software that people love.</p>
 
-  <div class="header">
-    <div class="wrapper-hero">
-      <img title="Design Services" class="hero" src="/img/services-design-160x160.svg"/>
-      <h1 class="title-page">Product Designer</h1>
-      <p class="description-page center-up">We’re looking for a product designer to craft experiences across client and internal products. You're experienced in the product development process and able to adapt to changes. You'll be working with our product team to prototype, design, and build software that people love.</p>
-
-      <div class="about">
-        <div class="subtitle-jobs">About you</div>
-        <ol>
-          <li class="grid-2">You want to design world-class digital products</li>
-          <li class="grid-2">Build things you design (HTML, CSS, JS)</li>
-          <li class="grid-2">Understand the constraints of digital and are able to surpass them</li>
-          <li class="grid-2">Transition between brand, visual design, user experience and code</li>
-          <li class="grid-2">Possess the drive to pursue design goals and the practical skills to get 'em done</li>
-        </ol>
-      </div>
+    <div class="about">
+      <div class="subtitle-jobs">About you</div>
+      <ol>
+        <li class="grid-2">You want to design world-class digital products</li>
+        <li class="grid-2">Build things you design (HTML, CSS, JS)</li>
+        <li class="grid-2">Understand the constraints of digital and are able to surpass them</li>
+        <li class="grid-2">Transition between brand, visual design, user experience and code</li>
+        <li class="grid-2">Possess the drive to pursue design goals and the practical skills to get 'em done</li>
+      </ol>
     </div>
   </div>
 </div>

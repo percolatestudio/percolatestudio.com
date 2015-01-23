@@ -4,37 +4,35 @@ description: Work with our engineering team to conceive and build realtime produ
 locations: MEL
 ---
 
-<div class="page internships engineering">
-  <h1>Engineering Intern</h1>
-  <p class="description">We’re looking for an engineering intern to build experiences people love. Prototype solutions to real challenges and stay abreast of cutting-edge technologies.</p>
 
+<h1>Engineering Intern</h1>
+<p class="description">We’re looking for an engineering intern to build experiences people love. Prototype solutions to real challenges and stay abreast of cutting-edge technologies.</p>
 
-  <div class="subtitle-internships">What you should know</div>
+<div class="subtitle-internships">What you should know</div>
 
-  <ol>
-    <li>The intern program is designed for current students or recent graduates. The intent is not job placement.</li>
-    <li>Our programs last about 3 months (one quarter)</li>
-    <li>The internship is a minimum 40hr/week commitment</li>
-    <li>Interns are provided a weekly stipend</li>
-    <li>Interns get in-person experience with our product process so they must be on location. (We don't offer relocation or visas at this time)</li>
-  </ol>
+<ol>
+  <li>The intern program is designed for current students or recent graduates. The intent is not job placement.</li>
+  <li>Our programs last about 3 months (one quarter)</li>
+  <li>The internship is a minimum 40hr/week commitment</li>
+  <li>Interns are provided a weekly stipend</li>
+  <li>Interns get in-person experience with our product process so they must be on location. (We don't offer relocation or visas at this time)</li>
+</ol>
 
-  <div class="subtitle-internships">About you</div>
-  <ol>
-    <li>You have an understanding about how well-built software can improve lives</li>
-    <li>Built interactive projects whose code is viewable on Github</li>
-    <li>Knowledge of foundational computer science and practical coding practices required. Design tools like Photoshop & Sketch a bonus.</li>
-    <li>Love to prototype and care about quality code</li>
-  </ol>
+<div class="subtitle-internships">About you</div>
+<ol>
+  <li>You have an understanding about how well-built software can improve lives</li>
+  <li>Built interactive projects whose code is viewable on Github</li>
+  <li>Knowledge of foundational computer science and practical coding practices required. Design tools like Photoshop & Sketch a bonus.</li>
+  <li>Love to prototype and care about quality code</li>
+</ol>
 
-  <div class="subtitle-internships">How to apply</div>
+<div class="subtitle-internships">How to apply</div>
 
-  <div class="subtitle-internships">How to apply</div>
-  <ol>
-    <li>Why do you want to intern at Percolate Studio?</li>
-    <li>Describe your interests in one sentence.</li>
-    <li>How will your skills add value to a design & engineering studio?</li>
-    <li>What are your start and end dates?</li>
-    <li>Link to Github.</li>
-  </ol>
-</div>
+<div class="subtitle-internships">How to apply</div>
+<ol>
+  <li>Why do you want to intern at Percolate Studio?</li>
+  <li>Describe your interests in one sentence.</li>
+  <li>How will your skills add value to a design & engineering studio?</li>
+  <li>What are your start and end dates?</li>
+  <li>Link to Github.</li>
+</ol>

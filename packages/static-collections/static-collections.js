@@ -19,7 +19,7 @@ var parseFrontMatter = function (contents) {
       var key = itemArray[0].trim();
       var property = _.rest(itemArray).join(':').trim();
       // if property is an int, parse it as such
-      property = !!parseFloat(property) ? parseFloat(property) : property;
+      property = ! isNaN(parseFloat(property)) ? parseFloat(property) : property;
       // if property is a boolean, parse it as such
       property = (property == "true") ? true : property;
       property = (property == "false") ? false : property;

@@ -10,14 +10,14 @@
 
     <div class="collage">
       {{#with firstProduct}}
-        <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{featureUrl}}')" href="{{pathFor 'product'}}">
+        <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{imgSrc featureUrl}}')" href="{{pathFor 'product'}}">
           <span class="meta">
             <p class="subtitle-item">{{title}}</p>
           </span>
         </a>
       {{/with}}
       {{#each restProducts}}
-        <a class="grid-2-square item-project bg-image" style="background-image: url('{{thumbnailUrl}}')" href="{{pathFor 'product'}}">
+        <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
           <span class="meta">
             <p class="subtitle-item">{{title}}</p>
           </span>

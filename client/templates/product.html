@@ -6,7 +6,7 @@
     {{{text}}}
 
     <div class="title-section featured">Selected Projects</div>
-    <div class="collage">
+    <div class="collage {{#if single}}single{{/if}}">
 
       {{#with previousProduct}}
         <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">

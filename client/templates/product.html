@@ -1,12 +1,14 @@
 <template name="product">
-  {{{text}}}
+  <div class="page case-study {{casestudyname}}">
+    {{{text}}}
 
-  {{#with previousProduct}}
-    <a href="{{pathFor 'product'}}">Previous - {{title}}</a>
-    <img src="{{thumbnailUrl}}">
-  {{/with}}
-  {{#with nextProduct}}
-    <a href="{{pathFor 'product'}}">Next - {{title}}</a>
-    <img src="{{thumbnailUrl}}">
-  {{/with}}
+    {{#with previousProduct}}
+      <a href="{{pathFor 'product'}}">Previous - {{title}}</a>
+      <img src="{{thumbnailUrl}}">
+    {{/with}}
+    {{#with nextProduct}}
+      <a href="{{pathFor 'product'}}">Next - {{title}}</a>
+      <img src="{{thumbnailUrl}}">
+    {{/with}}
+  </div>
 </template>

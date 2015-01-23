@@ -107,17 +107,3 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
     </div>
   </div>
 </div>
-
-<div class="title-section featured">Featured Projects</div>
-<div class="collage">
-  <a class="grid-2-square item-project bg-image-test-1">
-    <span class="meta">
-      <p class="subtitle-item">Meteor</p>
-    </span>
-  </a>
-  <a class="grid-2-square item-project bg-image-test-2">
-    <span class="meta">
-      <p class="subtitle-item">Verso</p>
-    </span>
-  </a>
-</div>

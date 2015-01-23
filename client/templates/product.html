@@ -2,13 +2,23 @@
   <div class="page case-study {{name}}">
     {{{text}}}
 
-    {{#with previousProduct}}
-      <a href="{{pathFor 'product'}}">Previous - {{title}}</a>
-      <img src="{{thumbnailUrl}}">
-    {{/with}}
-    {{#with nextProduct}}
-      <a href="{{pathFor 'product'}}">Next - {{title}}</a>
-      <img src="{{thumbnailUrl}}">
-    {{/with}}
+    <div class="title-section featured">Selected Projects</div>
+    <div class="collage">
+
+      {{#with previousProduct}}
+        <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+          <span class="meta">
+            <p class="subtitle-item">{{title}}</p>
+          </span>
+        </a>
+      {{/with}}
+      {{#with nextProduct}}
+        <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+          <span class="meta">
+            <p class="subtitle-item">{{title}}</p>
+          </span>
+        </a>
+      {{/with}}
+    </div>
   </div>
 </template>

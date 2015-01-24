@@ -1,15 +1,10 @@
 [class^="section-"],
 [class*=" section-"] {
+  .page-margins;
   background: @color-empty;
   clear: both;
   overflow: hidden;
   position: relative;
-
-  @media screen and (min-width: 90em) {
-    margin: 0 2*@column;
-    max-width: 1600px;
-    width: auto;
-  }
 
   .title-section { margin: 0; } //reset title-section's margins
 
@@ -47,6 +42,7 @@
 }
 
 .title-section {
+  .page-margins;
   .std-xpadding;
   .std-ypadding;
   .title-caps;
@@ -54,11 +50,6 @@
 
   .font-s3;
   @media screen and (min-width: @breakpoint) { .font-m1;}
-  @media screen and (min-width: 90em) {
-    margin: 0 2*@column;
-    max-width: 1600px;
-    width: auto;
-  }
 
   clear: both;
   color: @color-well;

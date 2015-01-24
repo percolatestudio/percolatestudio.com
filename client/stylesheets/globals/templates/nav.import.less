@@ -1,13 +1,9 @@
 nav {
+  .page-margins;
   background: @color-full;
   overflow: hidden;
   position: relative;
   z-index: 2;
-
-  @media screen and (min-width: 90em) {
-    margin: 0 2*@column;
-    max-width: 1600px;
-  }
 
   .logo {
     .transform(rotate(0deg));
@@ -20,11 +16,13 @@ nav {
     @media screen and (min-width: @breakpoint) {
       .transform(rotate(720deg));
     }
+
     img {
       display: block;
       height: 100%;
       width: 100%;
     }
+
   }
   .nav-group {
     .position(absolute, 8px, auto, auto, auto);

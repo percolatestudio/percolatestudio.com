@@ -7,9 +7,11 @@
 }
 
 .page-margins() {
-  margin: 0;
-  @media screen and (min-width: 30em) { margin: 0 1*@column; }
-  @media screen and (min-width: 60em) { margin: 0 2*@column; }
+  @media screen and (min-width: 110em) {
+    margin: 0 2*@column;
+    max-width: 1600px;
+    width: auto;
+  }
 }
 
 .std-ypadding() {

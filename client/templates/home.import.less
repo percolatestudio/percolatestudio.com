@@ -15,15 +15,13 @@
 
   .col-content {
     .std-xpadding;
+    z-index: 1;
 
     p {
       .font-s3;
       @media screen and (min-width: @breakpoint) { .font-m2; }
-
       line-height: 1.9 !important;
-
       margin-bottom: 2rem;
-
     }
     .btn-secondary {
       margin-bottom: 3rem;
@@ -65,78 +63,15 @@
   }
   .section-home-what {
     background: @color-raw-alt;
+    overflow: visible; //do not remove, this allows collage to overflow
   }
 
-  .example-screens {
-    .std-xpadding;
-    clear: both;
-    position: relative;
+  .home-collage img {
+    display: inline-block;
+    width: 100%;
 
-
-    @media screen and (min-width: 30em) { height: 340px; }
-    @media screen and (min-width: 50em) { height: 380px; }
-    @media screen and (min-width: 70em) { height: 480px; }
-    @media screen and (min-width: 80em) {
-      height: 580px;
-      margin-bottom: 6em;
-    }
-    @media screen and (min-width: 100em) {
-      height: 540px;
-      max-width: 110em;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 6em;
-    }
-
-    img {
-      display: block;
-      position: relative;
-    }
-
-    .desktop {
-      display: none;
-      width: 100%;
-      z-index: 1;
-      @media screen and (min-width: @breakpoint) {
-        .position(absolute, auto, -5%, 3%, auto, 50%, auto);
-        display: block;
-      }
-
-    }
-    .laptop {
-      display: none;
-      margin-top: 2rem;
-      margin-left: auto;
-      margin-right: auto;
-      width: 90%;
-      z-index: 2;
-      @media screen and (min-width: @breakpoint) {
-        .position(absolute, auto, auto, 0, -5%, 45%, auto);
-        display: block;
-        margin: 0;
-      }
-
-    }
-    .tablet {
-      .position(relative, auto, auto, 0, auto, 87%, auto);
-      z-index: 3;
-      @media screen and (min-width: @breakpoint) {
-        .position(absolute, auto, auto, -5%, 16%, 36%, auto);
-        margin: 0;
-      }
-
-    }
-    .phone {
-      z-index: 4;
-      .position(relative, auto, auto, 0, auto, 22%, auto);
-      .transform(translateY(-95%));
-      float: right;
-      @media screen and (min-width: @breakpoint) {
-        .position(absolute, auto, 40%, -7%, auto, 10%, auto);
-        .transform(translateY(0));
-        margin: 0;
-      }
-    }
+    margin-top: -1.5em;
+    @media screen and (min-width: @breakpoint) { margin-top: -5em; }
+    @media screen and (min-width: 80em ) { margin-top: -3em; }
   }
-
 }

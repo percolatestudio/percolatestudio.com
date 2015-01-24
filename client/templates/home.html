@@ -35,16 +35,25 @@
       <div class="grid-2 col-content">
         <p>Our books, presentations, and articles help people understand the craft of creating products. Our frequent contributions to open source help bring ideas to life.</p>
       </div>
+    <div class="grid-1 col-content">
+      <a class="btn-secondary caps"  href="{{pathFor 'what'}}">See our work</a>
+    </div>
 
-      <div class="grid-1 col-content">
-        <a class="btn-secondary caps"  href="{{pathFor 'what'}}">See our work</a>
-      </div>
-      <div class="example-screens">
-        <img class="desktop" src="/img/ss-browserchrome-meetinghero-meeting.png">
-        <img class="laptop" src="/img/ss-browserchrome-atmosphere-home.png">
-        <img class="tablet" src="/img/ss-ipadchrome-verso-classes.png">
-        <img class="phone" src="/img/ss-iphonechrome-localmarket-home.png">
-      </div>
+    <picture class="home-collage">
+       <source media="(min-width: 80em)"
+          srcset="/img/home-collage-1400x650@2x.jpg 2x,
+          /img/home-collage-1400x650.jpg 1x"
+          sizes="100vw" />
+
+       <source media="(min-width: 50em)"
+          srcset="/img/home-collage-mobile-1000x625@2x.jpg 2x,
+          /img/home-collage-mobile-1000x625.jpg 1x"
+          sizes="100vw" />
+
+       <source srcset="/img/home-collage-mobile2-600x480@2x.jpg 2x,
+             /img/home-collage-mobile2-600x480.jpg 1x" />
+       <img src="/img/home-collage-mobile-1000x625.jpg" alt="Desktop & Mobile Apps" />
+    </picture>
 
     </section>
   </div>

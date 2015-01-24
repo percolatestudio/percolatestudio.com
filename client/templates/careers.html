@@ -2,14 +2,13 @@
   {{#metaTitle}}Join Us | Percolate Studio {{/metaTitle}}
   {{#metaDescription}}Join our team to solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.{{/metaDescription}}
 
-  <div class="page careers">
-    <header class="collage medium">
-      <div class="grid-2-square">
-        <h1 class="title-page">Join us</h1>
-        <p class="description-page">Solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.</p>
-      </div>
-      <div class="grid-2-square bg-image-careers"></div>
-    </header>
+  <header class="collage medium">
+    <div class="grid-2-square">
+      <h1 class="title-page">Join us</h1>
+      <p class="description-page">Solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.</p>
+    </div>
+    <div class="grid-2-square bg-image-careers"></div>
+  </header>
 
   <section class="section-lookfor">
     <h2 class="title-section">Our DNA</h2>
@@ -33,28 +32,28 @@
         <h3 class="subtitle-section">People-first</h3>
         <p>We understand that great products begin with motivated, collaborative, and happy people.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section-openings">
-      <h2 class="title-section">Openings</h2>
-      <div class="grid-2 openings">
-        <p class="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
-        {{#each jobs}}
-          <div class="opening">
-            <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-            <p class="description-opening">{{description}}</p>
-          </div>
-        {{/each}}
-      </div>
-      <div class="grid-2 openings">
-        <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products.</p>
-        {{#each interns}}
-          <div class="opening">
-            <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-            <p class="description-opening">{{description}}</p>
-          </div>
-        {{/each}}
-      </div>
-    </section>
-  </div>
+  <section class="section-openings">
+    <h2 class="title-section">Openings</h2>
+    <div class="grid-2 openings">
+      <p class="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
+      {{#each jobs}}
+        <div class="opening">
+          <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
+          <p class="description-opening">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+    <div class="grid-2 openings">
+      <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products.</p>
+      {{#each interns}}
+        <div class="opening">
+          <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
+          <p class="description-opening">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 </template>

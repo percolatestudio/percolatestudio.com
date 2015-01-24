@@ -20,7 +20,7 @@ html {
 
   &.menu-open,
   &.contact-open {
-    .content {
+    .page {
       opacity: 1;
       position: fixed;
       .transform( scale3d(~"0.85, 0.85, 1") );
@@ -40,11 +40,12 @@ html {
 }
 
 
-.content {
+.page {
   .position(absolute, 0, 0, 0, 0);
   .transform( scale3d(1,1,1) );
   .transition( all @transition-time cubic-bezier(0.175, 0.885, 0.335, 1.050) );
 
+  background: @color-raw;
   box-shadow: rgba(0,0,0,.3) 0 0 10px 3px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -54,15 +55,11 @@ html {
   //https://github.com/Prinzhorn/skrollr/issues/342#issuecomment-27512033
   .backface-visibility( hidden );
 
-  .page {
+  [data-momentum] {
     .position(absolute, 36px, 0, 0, 0);
   }
 }
 
 body {
   background: @color-full;
-}
-
-.content {
-  background: @color-raw;
 }

@@ -3,7 +3,7 @@
     {{#if template.menuOpen.get}}menu-open{{/if}}
     {{#if template.contactOpen.get}}contact-open{{/if}}">
 
-    <div class="content">
+    <div class="page careers {{name}}">
       <nav class="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
         <div class="nav-group">
           <a href="{{pathFor 'why'}}" class="{{activeClass 'why'}}">Why</a>
@@ -20,6 +20,7 @@
           <a data-contact>Contact</a>
         </div>
       </nav>
+
       {{#momentum plugin='iron-router' options=transition}}
         {{> yield}}
       {{/momentum}}

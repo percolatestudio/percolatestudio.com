@@ -1,44 +1,44 @@
 <template name="what">
   {{#metaTitle}}What | Percolate Studio {{/metaTitle}}
   {{#metaDescription}}Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human.{{/metaDescription}}
-  <div class="page what">
-    <header class="collage medium">
-      <div class="grid-2-square">
-        <h1 class="title-page">What</h1>
-        <p class="description-page">Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human.</p>
-      </div>
-      <div class="grid-2-square bg-image-what"></div>
-    </header>
 
-    <div class="collage">
-      {{#with firstProduct}}
-        <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{imgSrc featureUrl}}')" href="{{pathFor 'product'}}">
-          <span class="meta">
-            <p class="subtitle-item">{{title}}</p>
-          </span>
-        </a>
-      {{/with}}
-      {{#each restProducts}}
-        <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-          <span class="meta">
-            <p class="subtitle-item">{{title}}</p>
-          </span>
-        </a>
-      {{/each}}
+  <header class="collage medium">
+    <div class="grid-2-square">
+      <h1 class="title-page">What</h1>
+      <p class="description-page">Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human.</p>
     </div>
+    <div class="grid-2-square bg-image-what"></div>
+  </header>
 
-    <h2 class="title-section">Selected Clients</h2>
-
-    <div class="collage short">
-      <a class="grid-5 logo" href="http://apple.com" target="_blank">
-        <img title="Apple Computer" src="img/logo-apple.svg">
+  <div class="collage">
+    {{#with firstProduct}}
+      <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{imgSrc featureUrl}}')" href="{{pathFor 'product'}}">
+        <span class="meta">
+          <p class="subtitle-item">{{title}}</p>
+        </span>
       </a>
-      <a class="grid-5 logo" href="http://yummly.com" target="_blank">
-        <img title="Yummly" src="img/logo-yummly.svg">
+    {{/with}}
+    {{#each restProducts}}
+      <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+        <span class="meta">
+          <p class="subtitle-item">{{title}}</p>
+        </span>
       </a>
-      <a class="grid-5 logo" href="http://meteor.com" target="_blank">
-        <img title="MeteorJS" src="img/logo-meteor.svg">
-      </a>
-    </div>
+    {{/each}}
   </div>
+
+  <h2 class="title-section">Selected Clients</h2>
+
+  <div class="collage short">
+    <a class="grid-5 logo" href="http://apple.com" target="_blank">
+      <img title="Apple Computer" src="img/logo-apple.svg">
+    </a>
+    <a class="grid-5 logo" href="http://yummly.com" target="_blank">
+      <img title="Yummly" src="img/logo-yummly.svg">
+    </a>
+    <a class="grid-5 logo" href="http://meteor.com" target="_blank">
+      <img title="MeteorJS" src="img/logo-meteor.svg">
+    </a>
+  </div>
+
 </template>

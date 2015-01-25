@@ -1,33 +1,4 @@
 .page.job {
-  .wrapper-hero {
-    .position(absolute, 50%, 0, auto, 0);
-    .transform(translateY(-50%));
-
-  }
-  .hero {
-    margin-bottom: 2rem;
-  }
-
-  .title-page {
-    .font-l2;
-    margin-bottom: 1rem;
-  }
-  .description-page {
-    .font-m1;
-    margin: 0 auto 3rem;
-    max-width: 640px;
-    width: 75%;
-
-
-  }
-  .subtitle-jobs {
-    .title-caps;
-    .type-bold;
-    text-indent: 0;
-    color: @color-medium;
-  }
-
-
   .header {
     .page-margins;
     .std-ypadding;
@@ -36,30 +7,78 @@
     background: @color-empty;
     overflow: hidden;
     position: relative;
-    min-height: 100%;
+    @media screen and (min-width: @breakpoint) {
+      height: 90%;
+      min-height: 600px;
+    }
+
     z-index: 1;
     text-align: center;
   }
 
+  .wrapper-hero {
+    @media screen and (min-width: @breakpoint) {
+      .position(absolute, 50%, 0, auto, 0);
+      .transform(translateY(-50%));
+    }
+  }
+  .hero {
+    margin-bottom: 1rem;
+    width: 96px;
+    @media screen and (min-width: @breakpoint) {
+      margin-bottom: 2rem;
+      width: 192px;
+    }
+  }
 
-  .about {
-    text-align: left;
-    margin: 0 auto;
+  .title-page {
+    .font-m3;
+    margin-bottom: .5rem;
+    @media screen and (min-width: @breakpoint) {
+      .font-l2;
+      margin-bottom: 1.5rem;
+    }
+
+  }
+  .description-page {
+    .font-s3;
+    margin: 0 auto 1.5rem;
+
+    @media screen and (min-width: @breakpoint) {
+      .font-m1;
+      margin: 0 auto 3rem;
+    }
+
+
     max-width: 640px;
     width: 75%;
+  }
 
+  .section-about {
+    background: @color-raw-alt;
+  }
+
+  .details-about {
+    .std-xpadding;
+    margin-bottom: 4.5rem;
   }
 
   ol {
-
+    .inline-block-whitespace;
     counter-reset: ol-counter;
     list-style-type: none;
+    overflow: hidden;
+
 
     li {
+      .font-s3;
+      @media screen and (min-width: @breakpoint) { .font-m1; }
       display: inline-block;
-      position: relative;
+      float: none !important; //removes float from grid-2
+      vertical-align: top;
+      margin-bottom: 1em;
       &:before {
-        .font-s2;
+        .font-s1;
         .type-bold;
         background: @color-medium-rare;
         border-radius: 3em;
@@ -73,24 +92,22 @@
         float: left;
         width: 1rem;
         height: 1rem;
-        line-height: 1rem;
+        line-height: 1.125rem; //offset for caps x-height
         margin-right: .75rem;
-
-
-      }
-      &:not(:first-child):after {
-
-        .position(absolute, -3.75em, auto, auto, 50%);
-        .transform(translateX(-50%));
-
-        border-top: 7px solid @color-raw;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
+        margin-top: 6px;
       }
       .meta {
+        display: block;
         overflow: hidden;
+        @media screen and (min-width: @breakpoint) { padding-right: 1.25rem; }
       }
     }
+  }
+  .section-button {
+    .std-xpadding;
+    .std-ypadding;
+    .page-margins;
+    text-align: center;
   }
 
 }

@@ -4,15 +4,25 @@ description: We're looking for a talented software engineer to help our full-sta
 locations: SFO, MEL
 ---
 
-<h1>Software Engineer</h1>
-<p class="description">You're a full-stack engineer that builds impactful features across client and internal products. You're at home in an agile product development cycle and able to adapt to changes in stride. You'll be working with our product team to prototype, design, and craft software that people love.</p>
+<div class="header">
+  <div class="wrapper-hero">
+    <img title="Engineering" class="hero" src="/img/services-engineering-160x160.svg"/>
+    <h1 class="title-page">Software Engineer</h1>
+    <p class="description-page">You're a full-stack engineer that builds impactful features across client and internal products. You're at home in an agile product development cycle and able to adapt to changes in stride. You'll be working with our engineering team to prototype, build, and test software that people love.</p>
+  </div>
+</div>
 
+<section class="section-about">
+  <div class="title-section">About you</div>
+  <ol class="details-about">
+    <li class="grid-2"><span class="meta">You want to create world-class digital products and love the craft of engineering</span></li>
+    <li class="grid-2"><span class="meta">Motivated to learn the latest web and mobile technologies</span></li>
+    <li class="grid-2"><span class="meta">Deep understanding of client & server javascript to interface with design and operations alike</span></li>
+    <li class="grid-2"><span class="meta">Created things that people use and love</span></li>
+    <li class="grid-2"><span class="meta">Curious about discovering how technology impacts people's lives</span></li>
+  </ol>
+</section>
 
-<div class="subtitle-jobs">About you</div>
-<ol>
-  <li>You want to create world-class digital products and love the craft of engineering</li>
-  <li>Motivated to learn the latest web and mobile technologies</li>
-  <li>Deep understanding of client & server javascript to interface with design and operations alike</li>
-  <li>Created things that people use and love</li>
-  <li>Curious about discovering how technology impacts people's lives</li>
-</ol>
+<section class="section-button">
+  <a class="btn-primary caps" href="mailto:careers@percolatestudio.com?subject=Hello%20Percolate">Join Percolate Studio</a>
+</section>

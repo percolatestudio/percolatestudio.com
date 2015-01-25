@@ -6,19 +6,23 @@ locations: SFO
 
 <div class="header">
   <div class="wrapper-hero">
-    <img title="Design Services" class="hero" src="/img/services-design-160x160.svg"/>
+    <img title="Design" class="hero" src="/img/services-design-160x160.svg"/>
     <h1 class="title-page">Product Designer</h1>
-    <p class="description-page center-up">We’re looking for a product designer to craft experiences across client and internal products. You're experienced in the product development process and able to adapt to changes. You'll be working with our product team to prototype, design, and build software that people love.</p>
-
-    <div class="about">
-      <div class="subtitle-jobs">About you</div>
-      <ol>
-        <li class="grid-2">You want to design world-class digital products</li>
-        <li class="grid-2">Build things you design (HTML, CSS, JS)</li>
-        <li class="grid-2">Understand the constraints of digital and are able to surpass them</li>
-        <li class="grid-2">Transition between brand, visual design, user experience and code</li>
-        <li class="grid-2">Possess the drive to pursue design goals and the practical skills to get 'em done</li>
-      </ol>
-    </div>
+    <p class="description-page">We’re looking for a product designer to craft experiences across client and internal products. Your experience in the product cycle allows you to adapt to changes with ease. You'll be working with our global family to prototype, design, and build software that people love.</p>
   </div>
 </div>
+
+<section class="section-about">
+  <div class="title-section">About you</div>
+  <ol class="details-about">
+    <li class="grid-2"><span class="meta">You want to design world-class digital products</span></li>
+    <li class="grid-2"><span class="meta">You build what you design (HTML, CSS, JS)</span></li>
+    <li class="grid-2"><span class="meta">You understand the constraints of the digital medium and are able to surpass them</span></li>
+    <li class="grid-2"><span class="meta">You transition between brand, visual design, user experience and code with ease.</span></li>
+    <li class="grid-2"><span class="meta"> You possess the drive to pursue design goals and the practical skills to get 'em done</span></li>
+  </ol>
+</section>
+
+<section class="section-button">
+  <a class="btn-primary caps" href="mailto:careers@percolatestudio.com?subject=Hello%20Percolate">Join Percolate Studio</a>
+</section>

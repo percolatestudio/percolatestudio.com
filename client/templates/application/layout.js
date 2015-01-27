@@ -51,7 +51,7 @@ Template.layout.helpers({
   },
   transition: function() { return function(from, to) {
     // XXX: magic number
-    if (document.documentElement.clientWidth > 320) {
+    if (document.documentElement.clientWidth > 800) {
       return 'fade';
     } else {
       return {with:'right-to-left', duration: 500};

@@ -1,27 +1,28 @@
 <template name="product">
-  {{#metaTitle}}{{{title}}} Case Study | Percolate Studio {{/metaTitle}}
+  {{#metaTitle}}{{title}} Case Study | Percolate Studio {{/metaTitle}}
   {{#metaDescription}}{{description}}{{/metaDescription}}
 
+  {{#Layout template='pageLayout'}}
 
-  {{{text}}}
+    {{{text}}}
 
-  <div class="title-section featured">Selected Projects</div>
-  <div class="collage {{#if single}}single{{/if}}">
+    <div class="title-section featured">Selected Projects</div>
+    <div class="collage {{#if single}}single{{/if}}">
 
-    {{#with previousProduct}}
-      <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-        <span class="meta">
-          <p class="subtitle-item">{{title}}</p>
-        </span>
-      </a>
-    {{/with}}
-    {{#with nextProduct}}
-      <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-        <span class="meta">
-          <p class="subtitle-item">{{title}}</p>
-        </span>
-      </a>
-    {{/with}}
-  </div>
-
+      {{#with previousProduct}}
+        <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+          <span class="meta">
+            <p class="subtitle-item">{{title}}</p>
+          </span>
+        </a>
+      {{/with}}
+      {{#with nextProduct}}
+        <a class="grid-2-square item-project bg-image-test-1" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+          <span class="meta">
+            <p class="subtitle-item">{{title}}</p>
+          </span>
+        </a>
+      {{/with}}
+    </div>
+  {{/Layout}}
 </template>

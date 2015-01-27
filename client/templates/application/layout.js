@@ -49,9 +49,6 @@ Template.layout.helpers({
   template: function() {
     return Template.instance();
   },
-  activeClass: function(name) {
-    return (Router.current().route.getName() === name) && 'active';
-  },
   transition: function() { return function(from, to) {
     // XXX: magic number
     if (document.documentElement.clientWidth > 320) {

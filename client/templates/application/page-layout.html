@@ -1,0 +1,22 @@
+<template name="pageLayout">
+  <div class="page {{routeName}} {{routeSubName}}">
+    <nav class="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
+      <div class="nav-group">
+        <a href="{{pathFor 'why'}}" class="{{activeClass 'why'}}">Why</a>
+        <a href="{{pathFor 'how'}}" class="{{activeClass 'how'}}">How</a>
+        <a href="{{pathFor 'what'}}" class="{{activeClass 'what'}}">What</a>
+        <a data-menu>Menu</a>
+      </div>
+
+      <a href="{{pathFor 'home'}}" class="logo {{activeClass 'home'}}"><img src="/img/logo.svg"/></a>
+
+      <div class="nav-group right">
+        <a href="{{pathFor 'careers'}}" class="{{activeClass 'careers'}}">Join Us</a>
+        <a href="http://blog.percolatestudio.com">Blog</a>
+        <a data-contact>Contact</a>
+      </div>
+    </nav>
+    
+    {{> yield}}
+  </div>
+</template>

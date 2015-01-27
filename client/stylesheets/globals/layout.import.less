@@ -43,7 +43,8 @@ html {
 .page {
   .position(absolute, 0, 0, 0, 0);
   .transform( scale3d(1,1,1) );
-  .transition( all @transition-time cubic-bezier(0.175, 0.885, 0.335, 1.050) );
+  // XXX: do we need this for overlay opening/closing?
+  // .transition( all @transition-time cubic-bezier(0.175, 0.885, 0.335, 1.050) );
 
   background: @color-raw;
   box-shadow: rgba(0,0,0,.3) 0 0 10px 3px;

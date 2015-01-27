@@ -54,7 +54,7 @@ Template.layout.helpers({
     if (document.documentElement.clientWidth > 320) {
       return 'fade';
     } else {
-      return 'right-to-left';
+      return {with:'right-to-left', duration: 500};
     }
   }}
 });

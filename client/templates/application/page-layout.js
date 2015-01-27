@@ -11,7 +11,10 @@ Template.pageLayout.rendered = function() {
   
   var state = Iron.Location.get().options.historyState;
   if (state && state.lastScrollTop) {
-    self.$(SCROLLABLE).scrollTop(state.lastScrollTop);
+    // wait until it's on the screen (not sure why afterFlush doesn't work)
+    Meteor.setTimeout(function() {
+      self.$(SCROLLABLE).scrollTop(state.lastScrollTop);
+    }, 0);
   }
   
   // XXX: should we find a requestAnimationFrame version of _.throttle?

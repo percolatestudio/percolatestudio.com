@@ -1,5 +1,4 @@
 Template.autosizedTextarea.rendered = function() {
-  console.log(this.$('textarea').length);
   this.$('textarea').autosize();
 };
 

@@ -2,58 +2,61 @@
   {{#metaTitle}}Join Us | Percolate Studio {{/metaTitle}}
   {{#metaDescription}}Join our team to solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.{{/metaDescription}}
 
-  <header class="collage medium">
-    <div class="grid-2-square">
-      <h1 class="title-page">Join us</h1>
-      <p class="description-page">Solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.</p>
-    </div>
-    <div class="grid-2-square bg-image-careers"></div>
-  </header>
+  {{#Layout template='pageLayout'}}
 
-  <section class="section-lookfor">
-    <h2 class="title-section">Our DNA</h2>
-    <div class="grid-3 subsection">
-      <img alt="Nimble" src="img/characteristics-nimble-160x160.svg"/>
-      <div class="meta">
-        <h3 class="subtitle-section">Nimble</h3>
-        <p>We believe in small teams with the agency to imagine and build products from the ground up.</p>
+    <header class="collage medium">
+      <div class="grid-2-square">
+        <h1 class="title-page">Join us</h1>
+        <p class="description-page">Solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.</p>
       </div>
-    </div>
-    <div class="grid-3 subsection">
-      <img alt="Curious" src="img/characteristics-curious-160x160.svg"/>
-      <div class="meta">
-        <h3 class="subtitle-section">Curious</h3>
-        <p>We're ever curious about discovering new ways to improve people's lives with technology.</p>
-      </div>
-    </div>
-    <div class="grid-3 subsection">
-      <img alt="People-first" src="img/characteristics-people-160x160.svg"/>
-      <div class="meta">
-        <h3 class="subtitle-section">Collaborative</h3>
-        <p>We understand that great products begin with motivated, collaborative, and happy teams.</p>
-      </div>
-    </div>
-  </section>
+      <div class="grid-2-square bg-image-careers"></div>
+    </header>
 
-  <section class="section-openings">
-    <h2 class="title-section">Openings</h2>
-    <div class="grid-2 openings">
-      <p class="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
-      {{#each jobs}}
-        <div class="opening">
-          <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-          <p class="description-opening">{{description}}</p>
+    <section class="section-lookfor">
+      <h2 class="title-section">Our DNA</h2>
+      <div class="grid-3 subsection">
+        <img alt="Nimble" src="img/characteristics-nimble-160x160.svg"/>
+        <div class="meta">
+          <h3 class="subtitle-section">Nimble</h3>
+          <p>We believe in small teams that can imagine and build products from the ground up.</p>
         </div>
-      {{/each}}
-    </div>
-    <div class="grid-2 openings">
-      <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products.</p>
-      {{#each interns}}
-        <div class="opening">
-          <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
-          <p class="description-opening">{{description}}</p>
+      </div>
+      <div class="grid-3 subsection">
+        <img alt="Curious" src="img/characteristics-curious-160x160.svg"/>
+        <div class="meta">
+          <h3 class="subtitle-section">Curious</h3>
+          <p>We're ever curious about discovering new ways to improve people's lives with technology.</p>
         </div>
-      {{/each}}
-    </div>
-  </section>
+      </div>
+      <div class="grid-3 subsection">
+        <img alt="People-first" src="img/characteristics-people-160x160.svg"/>
+        <div class="meta">
+          <h3 class="subtitle-section">Collaborative</h3>
+          <p>We understand that great products begin with motivated, collaborative, and happy teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-openings">
+      <h2 class="title-section">Openings</h2>
+      <div class="grid-2 openings">
+        <p class="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
+        {{#each jobs}}
+          <div class="opening">
+            <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
+            <p class="description-opening">{{description}}</p>
+          </div>
+        {{/each}}
+      </div>
+      <div class="grid-2 openings">
+        <p class="subtitle-openings"><b>Interns</b> get hands-on experience launching products.</p>
+        {{#each interns}}
+          <div class="opening">
+            <a class="title-opening" href="{{pathFor 'job'}}">{{title}}</a> <span class="location-opening">({{locations}})</span>
+            <p class="description-opening">{{description}}</p>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/Layout}}
 </template>

@@ -1,0 +1,13 @@
+<template name="layout">
+  <div class="layout
+    {{#if template.menuOpen.get}}menu-open{{/if}}
+    {{#if template.contactOpen.get}}contact-open{{/if}}">
+
+    {{#momentum plugin='iron-router' options=transition}}
+      {{> yield}}
+    {{/momentum}}
+
+    {{> contactOverlay}}
+    {{> menuOverlay}}
+  </div>
+</template>

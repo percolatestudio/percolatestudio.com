@@ -26,7 +26,7 @@ Template.pageLayout.rendered = function() {
 
 Template.pageLayout.helpers({
   routeName: function() {
-    return Router.current().route.getName();
+    return Router.current().route.getName().replace('.', '-');
   },
   routeSubName: function() {
     var controller = Router.current();

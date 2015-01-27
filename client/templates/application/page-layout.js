@@ -1,3 +1,26 @@
+var SCROLLABLE = '.page';
+
+var setHistoryState = function (ourState) {
+  var state = Iron.Location.get().options.historyState;
+  var newState  = _.extend({}, state, ourState);
+  Iron.Location.go(Iron.Location.get().path, {historyState: newState, replaceState: true});
+}
+
+Template.pageLayout.rendered = function() {
+  var self = this;
+  
+  var state = Iron.Location.get().options.historyState;
+  if (state && state.lastScrollTop) {
+    self.$(SCROLLABLE).scrollTop(state.lastScrollTop);
+  }
+  
+  // XXX: should we find a requestAnimationFrame version of _.throttle?
+  self.$(SCROLLABLE).scroll(_.throttle(function() {
+    var offset = self.find(SCROLLABLE).scrollTop;
+    setHistoryState({lastScrollTop: offset})
+  }, 500));
+}
+
 Template.pageLayout.helpers({
   routeName: function() {
     return Router.current().route.getName();

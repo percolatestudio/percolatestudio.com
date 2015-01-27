@@ -10,8 +10,8 @@ Template.layout.rendered = function() {
   var self = this;
 
   // XXX: should we find a requestAnimationFrame version of _.throttle?
-  self.$('.content').scroll(_.throttle(function() {
-    var offset = self.find('.content').scrollTop;
+  self.$('.page').scroll(_.throttle(function() {
+    var offset = self.find('.page').scrollTop;
 
     if (offset > OVERLAY_OFFSET) {
       self.menuOverlaid.set(offset >= lastOffset ? 'down' : 'up');

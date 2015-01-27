@@ -39,6 +39,15 @@ html {
   //do not add backface to this, scrolling will not register on the overlay
 }
 
+[data-momentum] {
+  .position(absolute, 0, 0, 0, 0);
+  background: @color-empty;
+  &:after {
+    content: '';
+    .position(absolute, 0, 0, auto, 0, auto, 36px);
+    background: @color-full;
+  }
+}
 
 .page {
   .position(absolute, 0, 0, 0, 0);
@@ -50,15 +59,12 @@ html {
   box-shadow: rgba(0,0,0,.3) 0 0 10px 3px;
   overflow-x: hidden;
   overflow-y: auto;
+  z-index: 1;
   -webkit-overflow-scrolling: touch;
 
   //Fixes choppy scrolling in safari
   //https://github.com/Prinzhorn/skrollr/issues/342#issuecomment-27512033
   .backface-visibility( hidden );
-
-  [data-momentum] {
-    .position(absolute, 36px, 0, 0, 0);
-  }
 }
 
 body {

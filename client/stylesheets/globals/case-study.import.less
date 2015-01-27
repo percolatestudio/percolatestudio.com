@@ -6,7 +6,6 @@
     .position(relative, auto, auto, auto, auto, 100%, auto);
     height: 40%;
     @media only screen and (min-width: @breakpoint) {
-      margin-top: -36px; // nav offset
       height: 90%;
     }
     min-height: 20em;
@@ -16,13 +15,10 @@
   }
 
   .wrapper-content {
+    .page-margins;
     .std-ypadding;
     .std-xpadding;
-    @media screen and (min-width: 90em) {
-      margin: 0 2*@column;
-      max-width: 1600px;
-      width: auto;
-    }
+
     background: @color-empty;
     clear: both;
     overflow: hidden;
@@ -31,6 +27,7 @@
   header {
     .std-ypadding;
     .std-xpadding;
+    .page-margins;
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 15%, @color-empty 100%));
     .transform(translate3d(0,0,0));
 
@@ -40,10 +37,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-    @media screen and (min-width: 90em) {
-      margin: 0 2*@column;
-      max-width: 1600px;
-    }
+
   }
 
   .subtitle-case-study {
@@ -143,13 +137,9 @@
   }
 
   .media-leftalign {
+    .page-margins;
     background: @color-empty;
     overflow: auto;
-    @media screen and (min-width: 90em) {
-      margin: 0 2*@column;
-      max-width: 1600px;
-    }
-
 
     img {
       float: left;
@@ -192,17 +182,13 @@
   }
 
   .pullquote {
+    .page-margins;
     .std-xpadding;
     .std-ypadding;
-    overflow: hidden;
-    text-align: center;
 
     background: @color-empty;
-    @media screen and (min-width: 90em) {
-      margin: 0 2*@column;
-      max-width: 1600px;
-    }
-
+    overflow: hidden;
+    text-align: center;
 
     .title-quote {
       .font-m3;
@@ -347,10 +333,7 @@
   }
 
   .collage {
-    margin: 0 auto;
-    @media screen and (min-width: 90em) { margin: 0 2*@column; }
-    max-width: 1600px;
-
+    .page-margins;
 
     .quote-collage { // pullquote
       background: #344057;

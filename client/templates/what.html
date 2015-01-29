@@ -3,7 +3,7 @@
   {{#metaDescription}}Percolate creates digital products to improve people's lives. We identify challenges, design solutions, and make technology human.{{/metaDescription}}
 
   {{#Layout template='pageLayout'}}
-  
+
     <header class="collage medium">
       <div class="grid-2-square">
         <h1 class="title-page">What</h1>
@@ -15,16 +15,12 @@
     <div class="collage">
       {{#with firstProduct}}
         <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{imgSrc featureUrl}}')" href="{{pathFor 'product'}}">
-          <span class="meta">
-            <p class="subtitle-item">{{title}}</p>
-          </span>
+          <span class="subtitle-item">{{title}}</span>
         </a>
       {{/with}}
       {{#each restProducts}}
         <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-          <span class="meta">
-            <p class="subtitle-item">{{title}}</p>
-          </span>
+          <span class="subtitle-item">{{title}}</span>
         </a>
       {{/each}}
     </div>

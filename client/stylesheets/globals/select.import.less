@@ -92,7 +92,7 @@
   	-moz-osx-font-smoothing: grayscale;
 
   	/* Down arrow */
-    content: "\e626";
+    &:extend(.icon-arrow-down:before);
   }
   &:before {
     content: none; //hide this altogether
@@ -140,14 +140,11 @@
 
   }
   &:before, &:after {
-		content: "";
 		position: absolute;
 		z-index: 1;
 		pointer-events: none;
 	}
 	&:after {
-  	content: "";
-
     //position the icon-font
     font-size: .75em;
     height: 5px;
@@ -170,11 +167,11 @@
   	-moz-osx-font-smoothing: grayscale;
 
   	/* Down arrow */
-    content: "\e626";
+    &:extend(.icon-arrow-down:before);
 
 	}
 	&:before {
-	  //border-left: 1px solid @color-rare; this is a border on the select 'button' rhs
+  	content: "";
 	  border-radius: 0 3px 3px 0;
 	  bottom: 0;
 		right: 0;

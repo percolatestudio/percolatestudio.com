@@ -6,8 +6,14 @@
     <form class="contact-form-wrapper">
       <div class="title-overlay">Work with us</div>
       <fieldset>
-        <input type="text" name="name" class="{{alertClass 'name'}}"  placeholder="Name" title="{{errorFor 'name'}}">
-        <input type="email" name="email" class="{{alertClass 'email'}}" placeholder="Email Address" title="{{errorFor 'email'}}">
+        <div class="input-symbol left">
+					<input type="text" name="name" class="{{alertClass 'name'}}"  placeholder="Name" title="{{errorFor 'name'}}">
+					<span class="icon-user"></span>
+			  </div>
+        <div class="input-symbol left">
+          <input type="email" name="email" class="{{alertClass 'email'}}" placeholder="Email Address" title="{{errorFor 'email'}}">
+          <span class="icon-email"></span>
+        </div>
         {{> autosizedTextarea aboutAttrs}}
 
         <div class="fieldset-group services">

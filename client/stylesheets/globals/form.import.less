@@ -144,6 +144,7 @@ textarea {
   border:none;
   border-radius: 0;
   box-sizing: border-box;
+  color: @color-full;
   outline: none;
   -webkit-appearance: none;
 
@@ -168,6 +169,11 @@ textarea {
   }
 }
 
+textarea {
+  //we'll have to change this to adjust for different forms later
+  margin-bottom: 2rem;
+}
+
 /* Styles for inputs with icons inside of them, see styleguide for markup */
 .input-symbol {
   display: inline-block;
@@ -179,12 +185,16 @@ textarea {
 
   //icon position and padding for input
   &.left {
-    > [class^="icon-"], > [class*=" icon-"] {
-      left: 1.4em/2;
+    > [class^="icon-"],
+    > [class*=" icon-"] {
+      left: -1.5em;
+      opacity: 0;
+      .transform(translateX(-100%));
+      .transition( all 200ms @easing );
     }
-    > input,
-    > .pseudo-input {
-      padding-left: 2.5em !important;
+    > input:focus + [class*="icon-"] {
+      .transform(translateX(0));
+      opacity: 1;
     }
   }
   &.right {
@@ -195,17 +205,9 @@ textarea {
       padding-right: 2.5em  !important;
     }
   }
-  &.center { //centered but the icon is still left aligned
-    > [class^="icon-"], > [class*=" icon-"] {
-      left: 1em/2;
-    }
-    > input, > .pseudo-input {
-      padding-left: 2.5em  !important;
-      text-align: center;
-      text-indent: -2.5em;
-    }
-  }
-  > input, > button, > .pseudo-input {
+  > input,
+  > button,
+  > .pseudo-input {
     width: 100%;
 
     /* highlight submit button when input focussed */
@@ -217,16 +219,16 @@ textarea {
 
   }
   > [class^="icon-"], > [class*=" icon-"] {
+    .transition( all 100ms ease-in );
     background: transparent;
     color: @color-medium;
     font-size: 1.125em;
     height: 1em;
     position: absolute;
     top: 50%;
-
+    margin-top: -.5em;
     width: 1em;
-    .transform(translateY(-50%));
-    .transition( all 100ms ease-in );
+
     &.inverse {
       color: @color-medium-rare;
     }
@@ -329,5 +331,4 @@ textarea {
       box-shadow: none;
     }
   }
-
 }

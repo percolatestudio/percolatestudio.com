@@ -2,9 +2,9 @@
 @breakpoint: 50em;
 
 .page-margins-thin() {
-  margin: 0;
-  @media screen and (min-width: 30em) { margin: 0 2*@column; }
-  @media screen and (min-width: 60em) { margin: 0 4*@column; }
+  margin: @column * .5;
+  @media screen and (min-width: (@breakpoint / 2)) { margin: 0 2*@column; }
+  @media screen and (min-width: @breakpoint) { margin: 0 4*@column; }
 }
 
 .page-margins() {
@@ -36,15 +36,4 @@
 .inline-block-whitespace() {
   font-size: 0;
   > * { .font-s3; }
-}
-
-.clearfix {
-  //http://nicolasgallagher.com/micro-clearfix-hack/
-  &:before,
-  &:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-  }
-
-  &:after { clear: both; }
 }

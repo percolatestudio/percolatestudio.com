@@ -1,10 +1,21 @@
 .collage {
-  .clearfix;
   background: @color-empty;
   clear: both;
   height: 50%;
   min-height: 600px;
   position: relative;
+
+  &:after {
+    background: @color-empty;
+    clear: both;
+    content: '';
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    position: relative;
+    z-index: -1;
+  }
 
   &.short { // band-like collage, single row
     height: 25%;

@@ -14,7 +14,7 @@
 
     <div class="collage">
       {{#with firstProduct}}
-        <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{imgSrc featureUrl}}')" href="{{pathFor 'product'}}">
+        <a class="featured grid-2-square item-project bg-image" style="background-image: url('{{responsiveImgSrc thumbnailUrl featureUrl}}')" href="{{pathFor 'product'}}">
           <span class="subtitle-item">{{title}}</span>
         </a>
       {{/with}}

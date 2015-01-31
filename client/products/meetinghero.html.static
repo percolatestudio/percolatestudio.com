@@ -21,7 +21,7 @@ thumbnailUrl: /img/case-study/meetinghero/meetinghero-iphone6perspective-600x600
   </div>
 </header>
 
-<div class="collage">
+<div class="collage responsive">
   <div class="grid-1 bg-image-texture-meeting"></div>
 </div>
 

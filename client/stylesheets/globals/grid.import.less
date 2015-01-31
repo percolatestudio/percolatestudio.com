@@ -17,6 +17,13 @@
     z-index: -1;
   }
 
+  &.responsive {
+    @media only screen and (max-width: @breakpoint) {
+      height: 25%;
+      min-height: 300px;
+    }
+  }
+
   &.short { // band-like collage, single row
     height: 25%;
     min-height: 300px;

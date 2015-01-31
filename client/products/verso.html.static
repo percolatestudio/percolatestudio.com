@@ -35,7 +35,7 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
   </div>
 </div>
 
-<div class="collage">
+<div class="collage responsive">
   <div class="grid-1 bg-image-texture-inclass"></div>
 </div>
 
@@ -48,7 +48,7 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
   </div>
 </div>
 
-<div class="collage">
+<div class="collage responsive">
   <div class="grid-1 bg-image-devices"></div>
 </div>
 
@@ -94,7 +94,7 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
   </div>
 </div>
 
-<div class="collage">
+<div class="collage responsive">
   <div class="grid-1 bg-image-campus"></div>
 </div>
 

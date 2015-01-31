@@ -52,7 +52,7 @@ thumbnailUrl: /img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg
   </div>
 </div>
 
-<div class="collage">
+<div class="collage responsive">
   <div class="grid-1 bg-image-macbookpro"></div>
 </div>
 

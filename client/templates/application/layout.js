@@ -49,6 +49,9 @@ Template.layout.helpers({
   template: function() {
     return Template.instance();
   },
+  thisArray: function() { // see todos for why
+    return [this];
+  },
   transition: function() { return function(from, to) {
     // XXX: magic number
     if (document.documentElement.clientWidth > 800) {

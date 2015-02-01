@@ -4,7 +4,9 @@
     {{#if template.contactOpen.get}}contact-open{{/if}}">
 
     {{#momentum plugin='iron-router' options=transition}}
-      {{> yield}}
+      {{#each thisArray}}
+        {{> yield}}
+      {{/each}}
     {{/momentum}}
 
     {{> contactOverlay}}

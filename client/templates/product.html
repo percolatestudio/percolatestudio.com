@@ -6,19 +6,32 @@
 
     {{{text}}}
 
-    <div class="title-section featured">Selected Projects</div>
-    <div class="collage {{#if single}}single{{/if}}">
+    <div class="title-section featured">More Projects</div>
+    <div class="collage">
+      {{#if single}}
+        {{#with previousProduct}}
+          <a class="grid-1 item-project bg-image" style="background-image: url('{{responsiveImgSrc thumbnailUrl featureUrl}}')" href="{{pathFor 'product'}}">
+            <span class="subtitle-item">{{title}}</span>
+          </a>
+        {{/with}}
+        {{#with nextProduct}}
+          <a class="grid-1 item-project bg-image" style="background-image: url('{{responsiveImgSrc thumbnailUrl featureUrl}}')" href="{{pathFor 'product'}}">
+            <span class="subtitle-item">{{title}}</span>
+          </a>
+        {{/with}}
+      {{else}}
+        {{#with previousProduct}}
+          <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+            <span class="subtitle-item">{{title}}</span>
+          </a>
+        {{/with}}
+        {{#with nextProduct}}
+          <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
+            <span class="subtitle-item">{{title}}</span>
+          </a>
+        {{/with}}
+      {{/if}}
 
-      {{#with previousProduct}}
-        <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-          <span class="subtitle-item">{{title}}</span>
-        </a>
-      {{/with}}
-      {{#with nextProduct}}
-        <a class="grid-2-square item-project bg-image" style="background-image: url('{{imgSrc thumbnailUrl}}')" href="{{pathFor 'product'}}">
-          <span class="subtitle-item">{{title}}</span>
-        </a>
-      {{/with}}
     </div>
   {{/Layout}}
 </template>

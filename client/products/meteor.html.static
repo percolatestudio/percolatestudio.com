@@ -17,7 +17,7 @@ thumbnailUrl: /img/case-study/meteor/meteor-todos-ipad-600x600.jpg
 </p>
     </div>
     <div class="grid-2">
-      <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted to create shining examples of their technology for their official launch, they reached out to us to design and build it.</p>
+      <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted  shining examples of their technology to accompany the official launch, they reached out to us to design and build it.</p>
     </div>
   </div>
 </header>
@@ -28,7 +28,7 @@ thumbnailUrl: /img/case-study/meteor/meteor-todos-ipad-600x600.jpg
   </div>
   <div class="full-up formatting">
     <h2>Engineered Learning</h2>
-    <p>It’s rare when a company whose product we use approaches us to collaborate; you can imagine our excitement when Meteor tasked us with conceiving example applications that would pique developer curiosity and serve as reference material.</p>
+    <p>It’s rare when a company whose product we use approaches us to collaborate; you can imagine our excitement when Meteor tasked us with conceiving open source example applications that would pique developer curiosity and serve as reference material.</p>
 
     <p>In an engineering user funnel, example apps are the junction between acquisition and engagement. That is they sit between folks who've expressed interest and folks that are using the product. As soon as users expressed interest in Meteor we wanted to further engage them with simple examples that would illuminate common development patterns and address real-life use cases. We started with concrete requirements: document essential framework concepts, showcase practical engineering patterns, and define best practices for app structure. Next we identified use cases where Meteor adds tremendous value like social engagement, list-keeping, and game scoring. It was important to balance instruction and inspiration to show that great experiences were easily achievable with Meteor.</p>
   </div>
@@ -68,9 +68,10 @@ thumbnailUrl: /img/case-study/meteor/meteor-todos-ipad-600x600.jpg
 
 <div class="wrapper-content">
   <div class="full-up formatting">
-    <h2>Apps that Cross Platforms</h2>
-    <p>A Meteor developer can launch cross-platform mobile apps with a common language. We brought this idea to life by crafting a plausible use-case and delivering content-first design & elegant engineering. Our objective was to showcase functionality while also communicating a relatable narrative.</p>
-    <p>We started with "Local Market", a mock grocery store in search of deeper customer engagement. Stores that sell ingredients can further engage customers in the adjacent steps of making food like discovery or preparation. We focussed on recipe discovery because the aspirational aspects of cooking easily segue into social sharing. The Local Market app features curated recipes made with ingredients found at the grocer. These   handsome recipes can be the topic of conversation with other customers in the app or on Twitter.</p>
+    <h2>Cross Platform Apps</h2>
+    <p>A Meteor developer can launch cross-platform mobile apps with a single unified codebase. To bring this idea to life we started by defining a use-case. <b>Local Market</b> is a successful grocer in search of new ways to reach out to their customers. As a stockist for fresh local produce they can engage patrons by showing what dishes to make with the available harvest. In other words showcase recipes in a way that inspires customers to engage with the business no matter where they are. Since customers come from all walks of life, <b>Local Market</b> must reach the widest audience possible on the budget of a small/medium sized business.</p>
+
+    <p><b>Local Market App</b> uses recipes to connect the business and its customers. It features curated dishes made with ingredients found in store. These handsome recipes can prompt lively conversation in the app and on Twitter. Our content-first design seeks to remove barriers from the recipe browsing experience. It's engineered using Meteor's cross platform technology to provide the same great experience on web, iOS, and Android all within a palatable budget.</p>
   </div>
 </div>
 
@@ -95,13 +96,12 @@ thumbnailUrl: /img/case-study/meteor/meteor-todos-ipad-600x600.jpg
 
 
 <div class="wrapper-content">
-  <div class="conclusion">Months of collaboration resulted in a suite of examples that were functionally rich yet strikingly simple.</div>
+  <div class="conclusion">Months of collaboration resulted in a suite of functionally rich yet strikingly simple examples.</div>
 
   <div class="center-up formatting">
-    <p>Our engineers and designers worked in tandem with Meteor's in-house team to create canonical examples that inform & inspire developers. The apps have since been installed by tens of thousands of developers and deployed to both the Google Play and App Store.
-    </p>
+    <p>Our engineers and designers worked in tandem with Meteor's in-house team to create canonical open source apps that inform & inspire developers. <b>Leaderboard</b>, <b>Todos</b>, and <b>Local Market</b> have since been installed by tens of thousands of developers and deployed to both the Google Play and App Store.</p>
     <div class="wrapper-cta-case-study">
-      <p>Are you interested in palpable realtime experiences?</p>
+      <p>Are you interested in realtime experiences?</p>
       <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
     </div>
   </div>

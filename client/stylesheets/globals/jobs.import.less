@@ -49,7 +49,6 @@
       margin: 0 auto 3rem;
     }
 
-    line-height: 1.75em !important;
     max-width: 640px;
     width: 75%;
   }
@@ -69,7 +68,9 @@
 
   .details-about {
     .std-xpadding;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2rem;
+    @media screen and (min-width: @breakpoint) { margin-bottom: 3rem; }
+
   }
 
   ol {

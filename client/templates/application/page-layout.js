@@ -35,5 +35,8 @@ Template.pageLayout.helpers({
   },
   activeClass: function(name) {
     return (Router.current().route.getName() === name) && 'active';
+  },
+  thisArray: function() { // see todos for why
+    return [this];
   }
 });

@@ -26,15 +26,16 @@ locations: MEL
 <section class="section-about">
   <div class="title-section">About you</div>
   <ol class="details-about">
-    <li class="grid-2"><span class="meta">You have an understanding about how well-built software can improve lives</span></li>
-    <li class="grid-2"><span class="meta">Built interactive projects whose code is viewable on Github</span></li>
-    <li class="grid-2"><span class="meta">Knowledge of foundational computer science and practical coding practices required. Design tools like Photoshop & Sketch a bonus.</span></li>
-    <li class="grid-2"><span class="meta">Love to prototype and care about quality code</span></li>
+    <li class="grid-2"><span class="meta">You have an understanding of the structure of well-built software</span></li>
+    <li class="grid-2"><span class="meta">You have interactive projects whose code is viewable on Github</span></li>
+    <li class="grid-2"><span class="meta">You have a knowledge of computer science and practical coding practices. Design tools like Photoshop & Sketch a bonus.</span></li>
+    <li class="grid-2"><span class="meta">You love to see your ideas come to life in prototypes.</span></li>
   </ol>
 </section>
 
 <section class="section-about">
   <div class="title-section">How to apply</div>
+  <p class="description-about">Apply via email with brief responses to the prompts below.</p>
   <ol class="details-about">
     <li class="grid-2"><span class="meta">Why do you want to intern at Percolate Studio?</span></li>
     <li class="grid-2"><span class="meta">Describe your interests in one sentence.</span></li>
@@ -45,5 +46,5 @@ locations: MEL
 </section>
 
 <section class="section-button">
-  <a class="btn-primary caps" href="mailto:careers@percolatestudio.com?subject=Hello%20Percolate">Join Percolate Studio</a>
+  <a class="btn-primary caps" href="mailto:careers@percolatestudio.com?subject=Hello%20Percolate">Apply for Intership</a>
 </section>

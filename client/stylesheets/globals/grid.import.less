@@ -6,18 +6,6 @@
   min-height: 600px;
   position: relative;
 
-  &:after {
-    background: @color-empty;
-    clear: both;
-    content: '';
-    display: table;
-    height: 100%;
-    width: 100%;
-    top: -100%;
-    position: relative;
-    z-index: -1;
-  }
-
   &.responsive {
     @media only screen and (max-width: @breakpoint) {
       height: 25%;
@@ -63,6 +51,21 @@
     &:not([class*="bg-image"]) {
       height: auto !important;
     }
+  }
+}
+
+.grid-2-square.item-project.bg-image:last-child, //this ensures it's a grid item with bg-image
+.grid-5.logo:last-child { //this ensures it's a logo
+  overflow: visible;
+  &:after {
+    background: @color-empty;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    position: absolute;
+    z-index: -1;
   }
 }
 

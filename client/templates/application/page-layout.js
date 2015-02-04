@@ -26,15 +26,19 @@ Template.pageLayout.rendered = function() {
 
 Template.pageLayout.helpers({
   routeName: function() {
-    return Router.current().route.getName().replace('.', '-');
+    var route = Router.current().route;
+    return route ? route.getName().replace('.', '-') : 'not-found';
   },
   routeSubName: function() {
     var controller = Router.current();
-    var routeName = controller.route.options.routeName;
-    return routeName && routeName.call(controller);
+    if (controller.route) {
+      var routeName = controller.route.options.routeName;
+      return routeName && routeName.call(controller);
+    }
   },
   activeClass: function(name) {
-    return (Router.current().route.getName() === name) && 'active';
+    var route = Router.current().route;
+    return (route && route.getName() === name) && 'active';
   },
   thisArray: function() { // see todos for why
     return [this];

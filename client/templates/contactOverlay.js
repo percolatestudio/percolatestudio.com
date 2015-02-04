@@ -114,6 +114,10 @@ Template.contactOverlay.events({
   }
 });
 
+function closeOverlay() {
+  $('.overlay-close').click();
+}
+
 function send(doc) {
   var to = 'us@percolatestudio.com';
   var subject = 'Work with us';
@@ -154,6 +158,6 @@ function send(doc) {
           + '&body=' + escape(body));
       }
 
-      Template.layout.closeOverlay();
+      closeOverlay();
     });
 }

@@ -43,7 +43,7 @@ mobile-status-bar@1.0.2
 mongo@1.0.11
 observe-sequence@1.0.4
 ordered-dict@1.0.2
-percolate:momentum@0.7.1
+percolate:momentum@0.7.2
 percolate:momentum-iron-router@0.7.0
 percolate:velocityjs@1.1.0
 picturefill@2.2.0

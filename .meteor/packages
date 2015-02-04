@@ -14,7 +14,7 @@ http
 aldeed:simple-schema
 reactive-var
 markdown
-percolate:momentum@0.7.1
+percolate:momentum@0.7.2
 percolate:momentum-iron-router
 
 picturefill

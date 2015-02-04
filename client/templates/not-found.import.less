@@ -1,33 +1,57 @@
 .page.not-found {
-  .section-not-found {
-    .position(relative, auto, auto, auto, auto, auto, 100%);
-    background: @color-full;
+  //copied from jobs with minor tweaks
+  .header {
+    .page-margins;
+    .std-ypadding;
+    .std-xpadding;
+
+    background: @color-empty;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: @breakpoint) {
+      height: 100%;
+      min-height: 600px;
+      margin-top: -36px;
+    }
+
+    z-index: 1;
     text-align: center;
+  }
 
-    .hero-wrapper {
-      .transform(translate3d(-50%, -50%, 0));
-      .position(absolute, 50%, auto, auto, 50%, 80%);
-      margin-top: -36px; // nav offset
+  .wrapper-hero {
+    @media screen and (min-width: @breakpoint) {
+      .position(absolute, 50%, 0, auto, 0);
+      .transform(translateY(-50%));
+    }
+  }
+  .hero {
+    margin-bottom: 1rem;
+    width: 96px;
+    @media screen and (min-width: @breakpoint) {
+      margin-bottom: 2rem;
+      width: 192px;
+    }
+  }
+
+  .title-page {
+    .font-m3;
+    margin-bottom: .5em;
+    line-height: 1em !important;
+    @media screen and (min-width: @breakpoint) {
+      .font-l2;
+    }
+  }
+  .description-page {
+    .font-s3;
+    margin: 0 auto 1.5rem;
+
+    @media screen and (min-width: @breakpoint) {
+      .font-m2;
+      margin: 0 auto 3rem;
     }
 
-    .title-page {
-      .font-m3;
-      @media screen and (min-width: @breakpoint) { .font-l2; }
-      .type-light;
-      color: @color-empty;
-      margin-bottom: .25em;
-    }
-
-    .description-page {
-      .font-s3;
-      @media screen and (min-width: @breakpoint) { .font-m2; }
-
-      color: @color-empty;
-      margin-bottom: 1em;
-    }
-
-    .btn-wire {
-      @media screen and (min-width: @breakpoint) { width: 240px; }
-    }
+    max-width: 640px;
+    margin-bottom: 3em;
+    width: 75%;
   }
 }

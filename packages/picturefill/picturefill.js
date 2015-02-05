@@ -1,3 +1,5 @@
 Router.onAfterAction(function() {
-  picturefill();
+  Meteor.setTimeout(function() {
+    picturefill();
+  }, 0)
 });

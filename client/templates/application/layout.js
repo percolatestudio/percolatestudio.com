@@ -6,6 +6,16 @@ Template.layout.created = function() {
   this.menuOverlaid = new ReactiveVar(false);
 }
 
+var lastInitiator = null, nextGo = false;
+Iron.Location.onPopState(function() {
+  lastInitiator = 'history';
+});
+Iron.Location.onGo(function() {
+  lastInitiator = nextGo || 'click';
+  nextGo = false;
+});
+
+
 Template.layout.rendered = function() {
   var self = this;
 
@@ -49,11 +59,17 @@ Template.layout.helpers({
     return Template.instance();
   },
   transition: function() { return function(from, to) {
+    if (lastInitiator === 'menu')
+      return 'none';
+    
     // XXX: magic number
     if (document.documentElement.clientWidth > 800) {
       return 'fade';
     } else {
-      return {with:'right-to-left', duration: 500};
+      if (lastInitiator === 'history')
+        return {with:'left-to-right', duration: 500};
+      else
+        return {with:'right-to-left', duration: 500};
     }
   }}
 });
@@ -71,6 +87,7 @@ Template.layout.events({
     Template.instance().menuOpen.set(false);
   },
   'click .wrapper-menu a': function() {
+    nextGo = 'menu';
     Template.instance().menuOpen.set(false);
   }
 });

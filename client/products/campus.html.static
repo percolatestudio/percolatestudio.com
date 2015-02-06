@@ -1,7 +1,7 @@
 ---
-title: Verso
-description: Percolate Studio designed, engineered, and strategized Verso Learning's entry into the education app market
-index: 2
+title: Campus
+description:XXX
+index: 6
 featureUrl: /img/case-study/verso/verso-class-iphone6ipadair-1200x600.jpg
 thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
 ---
@@ -9,8 +9,8 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
 <div class="bg-image-case-study-hero"></div>
 <header>
 
-    <div class="subtitle-case-study">Verso</div>
-    <h1 class="title-case-study">Activate Learning</h1>
+    <div class="subtitle-case-study">Campus</div>
+    <h1 class="title-case-study">Cultivating Classroom IQ</h1>
 
     <div class="collage-text formatting">
       <div class="grid-2">
@@ -83,7 +83,16 @@ thumbnailUrl: /img/case-study/verso/verso-classes-iphone6-600x600.jpg
 </div>
 
 <div class="wrapper-content">
-  <div class="conclusion">Verso helps students become lifelong learners.</div>
+  <div class="full-up formatting">
+    <h2>Classroom IQ</h2>
+    <p>None of this would be possible without buy-in from teachers. Verso’s interpretation of the flipped classroom model builds upon extensive research. Our challenge was to translate research-backed strategies into a action.</p>
+
+    <p>Verso organically generates a wealth of usage data. We needed to be intelligent about shaping this data into actionable insights and  communicating it just-in-time. Teachers get realtime feedback on the lesson and can benchmark against past performance. Data-driven principals or department heads finally have a measurable way to identify what works.</p>
+  </div>
+</div>
+
+<div class="wrapper-content">
+  <div class="conclusion">Campus helps teachers become XX.</div>
 
   <div class="center-up formatting">
     <p>Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years adoption has grown to over 3,000 schools and 50,000 students. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>

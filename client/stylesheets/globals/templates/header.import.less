@@ -1,6 +1,6 @@
 header {
   &.collage {
-    @media screen and (max-width: @breakpoint) {
+    @media only screen and (max-width: (@breakpoint - 1px)) {
       height: auto !important;
       min-height: 0 !important;
     }

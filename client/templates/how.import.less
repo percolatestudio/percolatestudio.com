@@ -9,7 +9,7 @@
       .std-xpadding;
       padding-bottom: 3em;
 
-      @media screen and (min-width: 50em) {
+      @media screen and (min-width: @breakpoint) {
         padding: 3em 5% 6em;
         text-align: center;
       }
@@ -20,7 +20,7 @@
         margin-left: .5em;
         width: 4.5em;
 
-        @media screen and (min-width: 50em) {
+        @media screen and (min-width: @breakpoint) {
           float: none;
           height: 10em;
           margin: 0 auto 1.5em;
@@ -90,13 +90,13 @@
           width: 5rem;
           margin-right: 1.5rem;
 
-          @media screen and (min-width: 50em) {
+          @media screen and (min-width: @breakpoint) {
             .position(absolute, -2.25em, auto, auto, 50%);
             .transform(translateX(-50%));
           }
         }
         &:not(:first-child):after {
-          @media screen and (min-width: 50em) { content: ''; } //show on large screens
+          @media screen and (min-width: @breakpoint) { content: ''; } //show on large screens
           .position(absolute, -3.75em, auto, auto, 50%);
           .transform(translateX(-50%));
 

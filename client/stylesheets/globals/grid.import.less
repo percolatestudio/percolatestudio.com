@@ -7,7 +7,7 @@
   position: relative;
 
   &.responsive {
-    @media only screen and (max-width: @breakpoint) {
+    @media only screen and (max-width: (@breakpoint - 1px)) {
       height: 25%;
       min-height: 280px;
     }
@@ -38,7 +38,7 @@
 
   &[class*="square"] { height: 100% !important; }
 
-  @media only screen and (max-width: @breakpoint) {
+  @media only screen and (max-width: (@breakpoint - 1px )) {
     // this really just applies to grid-2
 
     &:not([class*="bg-image"]),
@@ -81,7 +81,7 @@
 [class*="grid-4"],
 [class*="grid-5"] { width: 50%; }
 
-@media only screen and (min-width: @breakpoint) {
+@media screen and (min-width: @breakpoint) {
   [class*="grid-2"] { width: 50%; }
   [class*="grid-3"] { width: 33.3%; }
   [class*="grid-4"] { width: 25%; }

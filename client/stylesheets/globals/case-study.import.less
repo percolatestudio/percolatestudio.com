@@ -1,3 +1,4 @@
+.page.styleguide-case-study,
 .page.product {
   .bg-image-case-study-hero {
     .page-margins;
@@ -57,8 +58,9 @@
       .font-l2;
       padding: .4em 0 .3em;
     }
-    .type-light;
 
+    .type-light;
+    line-height: 1.20em !important; //adjust line height
   }
 
   .bg-image-case-study-full {
@@ -132,9 +134,25 @@
   }
 
   .media-centeralign {
+    background: @color-empty;
+    margin-bottom: 2em;
     img {
+      display: block;
+      padding: 0;
       width: 100%;
     }
+    .caption {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+  }
+
+  >.media-centeralign {
+    //ensures direct descendents of page get max-width
+    //ex: campus case study
+    .page-margins;
+    margin-bottom: 0;
+    .caption { text-align: center; }
   }
 
   .media-leftalign {
@@ -193,12 +211,15 @@
 
     .title-quote {
       .font-m3;
+      @media only screen and (min-width: @breakpoint) { .font-l1; }
       .type-light;
       color: @color-primary;
+      line-height: 1.5 !important;
+      margin: 0 auto .5em;
       padding-top: 1rem;
-      margin-bottom: .5em;
       padding-bottom: .5em;
       position: relative;
+      width: 75%;
 
       &:after {
         .position(absolute, auto, auto, 0, 50%, 10%, 2px);
@@ -208,11 +229,15 @@
       }
     }
     .attribution {
-      padding-bottom: 1rem;
-      .author { .font-m2; }
+      margin-bottom: 1em;
+      .author {
+        .font-m1;
+        @media only screen and (min-width: @breakpoint) { .font-m2; }
+      }
 
       .metadata {
-        .font-s2;
+        .font-s1;
+        @media only screen and (min-width: @breakpoint) { .font-s2; }
         .title-caps;
         .type-bold;
         color: @color-medium-rare;
@@ -255,7 +280,7 @@
 
     height: @height-iphone * .75;
     width: @width-iphone * .75;
-    @media screen and (min-width: 50em) {
+    @media screen and (min-width: @breakpoint) {
       height: @height-iphone;
       width: @width-iphone;
     }
@@ -266,7 +291,7 @@
 
       width:  @width-iphone * .75 * .8323;
       height: @height-iphone * .75 * .7073;
-      @media screen and (min-width: 50em) {
+      @media screen and (min-width: @breakpoint) {
         width:  @width-iphone * .8323;
         height: @height-iphone * .7073;
       }
@@ -316,7 +341,7 @@
           left: 50%;
           height: @height-iphone * .75 * .7073;
           width:  @width-iphone * .75 * .8323;
-          @media screen and (min-width: 50em) {
+          @media screen and (min-width: @breakpoint) {
             height: @height-iphone * .7073;
             width:  @width-iphone * .8323;
           }
@@ -379,6 +404,9 @@
     @media only screen and (min-width: @breakpoint) { .font-l1; }
     .type-light;
     color: @color-primary;
+    line-height: 1.5 !important;
+    width: 75%;
+    margin: 0 auto;
     padding: 1em 0;
     text-align: center;
   }
@@ -386,7 +414,11 @@
   .wrapper-cta-case-study {
     text-align: center;
     .std-ypadding;
-    p { .type-italic; }
+    p {
+      .type-italic;
+      color: @color-medium;
+      margin-bottom: .5em;
+    }
   }
 
   .title-section.featured { background: @color-raw; }

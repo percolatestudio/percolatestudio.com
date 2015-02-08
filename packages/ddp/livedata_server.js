@@ -420,6 +420,10 @@ _.extend(Session.prototype, {
     if (! self.inQueue)
       return;
 
+    // Drop the merge box data immediately.
+    self.inQueue = null;
+    self.collectionViews = {};
+
     if (self.heartbeat) {
       self.heartbeat.stop();
       self.heartbeat = null;
@@ -429,10 +433,6 @@ _.extend(Session.prototype, {
       self.socket.close();
       self.socket._meteorSession = null;
     }
-
-    // Drop the merge box data immediately.
-    self.collectionViews = {};
-    self.inQueue = null;
 
     Package.facts && Package.facts.Facts.incrementServerFact(
       "livedata", "sessions", -1);
@@ -901,7 +901,7 @@ var Subscription = function (
   self._ready = false;
 
   // Part of the public API: the user of this sub.
-  
+
   /**
    * @summary Access inside the publish function. The id of the logged-in user, or `null` if no user is logged in.
    * @locus Server
@@ -1082,7 +1082,7 @@ _.extend(Subscription.prototype, {
   // server (and clean up its _subscriptions table) we don't actually provide a
   // mechanism for an app to notice this (the subscribe onError callback only
   // triggers if there is an error).
-  
+
   /**
    * @summary Call inside the publish function.  Stops this client's subscription; the `onError` callback is *not* invoked on the client.
    * @locus Server
@@ -1364,7 +1364,7 @@ _.extend(Server.prototype, {
    *    (it lets us determine whether to print a warning suggesting
    *    that you turn off autopublish.)
    */
-  
+
   /**
    * @summary Publish a record set.
    * @memberOf Meteor

@@ -14,10 +14,10 @@ thumbnailUrl: /img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg
 
     <div class="collage-text formatting">
       <div class="grid-2">
-        <p>It has never been an easier to instrument, collect, and store vast quantities of information. Despite the clear business case for collecting this data, folks still wonder how best to apply it. What does it mean? How can it give decision-makers the information needed to be more effective? The big challenge in analytics is no longer the logistics of data collection, but rather translating immense data into actionable recommendations.</p>
+        <p>It has never been an easier time to instrument, collect, and store vast quantities of information. Despite the clear business case for collecting this data, folks still wonder how best to apply it. What does it mean? How can it give decision-makers the information needed to be more effective? The big challenge in analytics is no longer the logistics of data collection, but rather translating immense data into actionable recommendations.</p>
       </div>
       <div class="grid-2">
-        <p>Following the success of <a href="{{pathFor 'what'}}/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classroom data to respond to their students needs. We saw an opportunity to promote effective teaching beyond individual classrooms using the breadth of Verso's engagement metrics. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
+        <p>Following the success of <a href="/what/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classroom data to respond to their students' needs. We saw an opportunity to promote effective teaching beyond individual classrooms using the breadth of Verso's engagement metrics. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
       </div>
     </div>
 </header>
@@ -29,7 +29,7 @@ thumbnailUrl: /img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg
 <div class="wrapper-content">
   <div class="full-up formatting">
     <h2>Visualizing School Change</h2>
-    <p>Effective teaching is the result of daily practice and regular professional development. With Verso, teachers could easily evaluate their students thinking in minute detail. Data was gathered for each activity to pinpoint where instruction was most needed. Campus unifies engagement statistics for the entire school. So instead of peering through the narrow scope of individual activities, Campus' expanded perspective allows schools to pinpoint areas for improvement.</p>
+    <p>Effective teaching is the result of daily practice and regular professional development. With Verso, teachers can easily evaluate their students thinking in minute detail. Data is gathered for each activity to pinpoint where instruction is most needed. Campus unifies engagement statistics for the entire school. So instead of peering through the narrow scope of individual activities, Campus' expanded perspective allows schools to pinpoint areas for improvement.</p>
 
     <div class="media-centeralign">
       <img src="/img/case-study/campus/verso-campus-activetime-v2.svg" alt="Time of day most active">

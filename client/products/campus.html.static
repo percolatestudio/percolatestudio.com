@@ -14,10 +14,10 @@ thumbnailUrl: /img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg
 
     <div class="collage-text formatting">
       <div class="grid-2">
-        <p>It has never been an easier to instrument, collect, and store vast quantities of information. Despite the clear business value of collecting this data, folks still wonder how best to apply it. What does it mean? Can it give decision-makers and users the information they need to be more effective? The challenge in analytics is no longer the logistics of data collection, but rather translating data into actionable recommendations.</p>
+        <p>It has never been an easier to instrument, collect, and store vast quantities of information. Despite the clear business case for collecting this data, folks still wonder how best to apply it. What does it mean? Can it give decision-makers the information needed to be more effective? The challenge in analytics is no longer the logistics of data collection, but rather translating immense data into actionable recommendations.</p>
       </div>
       <div class="grid-2">
-        <p>Following the success of <a href="{{pathFor 'what'}}/verso">Verso</a>, we reconvened with our education partners to tackle a new challenge. While Verso app helped students become lifelong learners by sparking their curiosity, we saw that the breadth and depth of our engagement data could revolutionize teaching school-wide. Campus made use of our integrated design, engineering, and strategy practice to help schools identify & replicate successful teaching.</p>
+        <p>Following the success of <a href="{{pathFor 'what'}}/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classroom data to respond to individual student learning needs. We saw an opportunity to promote effective teaching beyond individual classroom using the breadth of our engagement data. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
       </div>
     </div>
 </header>
@@ -29,19 +29,23 @@ thumbnailUrl: /img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg
 <div class="wrapper-content">
   <div class="full-up formatting">
     <h2>Visualizing School Change</h2>
-    <p>Effective teaching is the result of daily practice in front of students and regular professional development. With Verso, teachers could easily evaluate student thinking in minute detail. Data was gathered for each activity to help teachers pinpoint where help was most needed. Campus unifies engagement statistics for an entire school. So instead of peering through the narrow scope of individual activities, the expanded perspective of Campus helps identify school-wide challenges.</p>
+    <p>Effective teaching is the result of daily practice and regular professional development. With Verso, teachers could easily evaluate student thinking in minute detail. Data was gathered for each activity to pinpoint where instruction was most needed. Campus unifies engagement statistics for an entire school. Instead of peering through the narrow scope of individual activities, Campus' expanded perspective helps schools pinpoint areas for improvement.</p>
 
     <div class="media-centeralign">
       <img src="/img/case-study/campus/verso-campus-activetime-v2.svg" alt="Time of day most active">
-      <span class="caption">Teachers can better facilitate learning by knowing when students engage with activities.</span>
+      <span class="caption">Knowing when students engage helps teachers understand when they can be the most impactful.</span>
     </div>
 
     <h2>Actionable Insights</h2>
-    <p>We see analytics as an opportunity to start constructive conversations. Our process began with researching teacher, department and administrator objectives to discover how to frame data in a way that would address real user needs.</p>
+    <p>Analytics are an opportunity to start constructive conversations. Our process began with researching teacher, department and administrator objectives to discover how the dataset could address real needs. Three primary goals emerged:</p>
 
-    <p>We engineered an insight engine that processed data in realtime to identify high-level patterns and highlight outliers based on research. We surfaced these findings to users in the form of natural language insights paired with prompts to act. For instance, <em>"Tom's engagement time dipped slightly, keep an eye out"</em>. Our faceted analytics experience further enabled users to easily filter & segment engagement by class, teacher, subject, or grade level.</p>
+      <ol>
+        <li>Effective pedagogy begins with identifying what works; Campus should reveal proven teaching strategies.</li>
+        <li>Change is difficult to visualize and track; Campus should be proactive about highlighting success and areas that need attention.</li>
+        <li>Ensuring smooth operation means keeping abreast of the school's pulse; Campus should surface timely news & recommendations for continued success.</li>
+      </ol>
 
-    <p style="margin-bottom:0;">Our integrated product development process yielded Campus, a education product that reveals proven teaching strategies, highlights areas for improvement, and delivers recommendations for continued success.</p>
+    <p style="margin-bottom:0;">We engineered an insight engine to identify high-level patterns and highlight outliers in realtime. Data was graphed and compared to school-wide averages to indicate progress at a glance. We designed a faceted analytics experience to make it easy to compare users by class, teacher, subject, or grade level. We surfaced timely insights in the form of natural language recommendations paired with prompts to act. For instance, <em>"Dominic had a great response rate today, kudos are in order"</em>. Our guiding principle was to present the right amount of information at the right time.</p>
   </div>
 </div>
 
@@ -64,10 +68,10 @@ thumbnailUrl: /img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg
 </div>
 
 <div class="wrapper-content">
-  <div class="conclusion">Support classroom success by giving insight into the quantity & quality of student engagement.</div>
+  <div class="conclusion">Campus gives schools the tools to promote successful teaching.</div>
 
   <div class="center-up formatting">
-    <p>Campus gives teachers and principals the tools to support each other. Leverage the wealth of classroom insights to visualize change, reveal teaching strategies, and activate professional development. We were conscious of delivering the right amount of information, just in time. </p>
+    <p>Support classroom success with insights into the quantity & quality of student engagement. Campus visualizes school progress, reveals teaching strategies, and activates professional development. Paired with Verso, Campus helps schools enact change that starts with students.</p>
     <div class="wrapper-cta-case-study">
       <p>Are you interested in new ways to action your data?</p>
       <a class="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>

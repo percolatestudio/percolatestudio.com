@@ -106,6 +106,9 @@
         margin-right: .75rem;
         margin-top: 6px;
       }
+      &:nth-child(even) {
+        @media screen and (min-width: @breakpoint) { .std-xpadding; }
+      }
       .meta {
         display: block;
         overflow: hidden;

@@ -31,6 +31,11 @@
     margin-bottom: .125rem;
   }
 
+  a:not([class*="btn"]) {
+    .link-underline(@color-medium-well, @color-primary, @active: @color-well, @weight: 18%);
+    .type-semibold;
+  }
+
   p {
     margin-bottom: 1rem;
     margin-top: 1rem;

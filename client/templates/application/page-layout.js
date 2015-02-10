@@ -36,9 +36,9 @@ Template.pageLayout.helpers({
       return routeName && routeName.call(controller);
     }
   },
-  activeClass: function(name) {
+  activeClass: function(/* names */) {
     var route = Router.current().route;
-    return (route && route.getName() === name) && 'active';
+    return (route && _.include(arguments, route.getName())) && 'active';
   },
   thisArray: function() { // see todos for why
     return [this];

@@ -15,12 +15,14 @@ Layout = React.createClass({
       'contact-open': this.state.contactOpen
     });
     
-    var classMap = {
-      'page': true
-    };
-    var route = this.getRoutes().pop();
-    classMap[route.name] = true;
-    // TODO: add routeSubName -- not sure the best way to do this
+    // grab the name from each route + optionally a "routeName" static defined
+    //   on the handler.
+    var classMap = { 'page': true };
+    this.getRoutes().forEach(function(route) {
+      classMap[route.name] = true;
+      if (route.handler.routeName)
+        classMap[route.handler.routeName(this.getParams())] = true;
+    }.bind(this));
     var pageClasses = React.addons.classSet(classMap);
     
     return (

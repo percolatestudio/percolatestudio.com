@@ -7,6 +7,6 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.2.1');
-  api.use('iron:router');
+  // api.use('iron:router');
   api.addFiles(['picturefill-2.2.0.js', 'picturefill.js'], 'client');
 });

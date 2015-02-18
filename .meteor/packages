@@ -9,11 +9,11 @@ insecure
 static-collections
 fastclick
 less
-iron:router@1.0.0
 http
 aldeed:simple-schema
 reactive-var
 markdown
-percolate:momentum-iron-router
 
 picturefill
+hipertracker:reactjs
+react-router

@@ -1,5 +1,5 @@
-Router.onAfterAction(function() {
-  Meteor.setTimeout(function() {
-    picturefill();
-  }, 0)
-});
+// Router.onAfterAction(function() {
+//   Meteor.setTimeout(function() {
+//     picturefill();
+//   }, 0)
+// });

@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "react": {
+      "version": "0.12.2",
+      "dependencies": {
+        "envify": {
+          "version": "3.2.0",
+          "dependencies": {
+            "through": {
+              "version": "2.3.6"
+            },
+            "jstransform": {
+              "version": "7.0.0",
+              "dependencies": {
+                "base62": {
+                  "version": "0.1.1"
+                },
+                "esprima-fb": {
+                  "version": "7001.1.0-dev-harmony-fb"
+                },
+                "source-map": {
+                  "version": "0.1.31",
+                  "dependencies": {
+                    "amdefine": {
+                      "version": "0.1.0"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "react-router": {
+      "version": "0.11.6",
+      "dependencies": {
+        "qs": {
+          "version": "2.2.2"
+        },
+        "when": {
+          "version": "3.4.6"
+        }
+      }
+    }
+  }
+}

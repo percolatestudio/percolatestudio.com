@@ -1,4 +1,6 @@
 Layout = React.createClass({
+  mixins: [Router.State],
+  
   getInitialState: function() {
     return {
       menuOpen: false,
@@ -13,10 +15,13 @@ Layout = React.createClass({
       'contact-open': this.state.contactOpen
     });
     
-    // TODO: add routeName and routeSubName
-    var pageClasses = React.addons.classSet({
+    var classMap = {
       'page': true
-    });
+    };
+    var route = this.getRoutes().pop();
+    classMap[route.name] = true;
+    // TODO: add routeSubName -- not sure the best way to do this
+    var pageClasses = React.addons.classSet(classMap);
     
     return (
       <div className={layoutClasses}>

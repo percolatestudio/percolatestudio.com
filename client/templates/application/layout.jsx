@@ -35,23 +35,22 @@ Layout = React.createClass({
 
 // XXX: menu-overlaid ..?
 var Nav = React.createClass({
-  mixins: [Router.State, Router.Navigation],
-  
   render: function() {
     return (
       <nav className="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
         <div className="nav-group">
-          <Router.Link to='home' className={this.isActive('home') && 'active'}>Home</Router.Link>
-          <Router.Link to='how' className={this.isActive('how') && 'active'}>How</Router.Link>
-          <Router.Link to='what' className={this.isActive('what') || this.isActive('product') && 'active'}>What</Router.Link>
+          <NavLink to='home'>Home</NavLink>
+          <NavLink to='how'>How</NavLink>
+          <NavLink to={['what','product']}>What</NavLink>
           <a data-menu>Menu</a>
 
         </div>
 
-        <Router.Link to='home' className={this.isActive('home') ? 'active logo' : 'logo'}><img src="/img/logo.svg"/></Router.Link>
+          
+        <NavLink to='home' className='logo'><img src="/img/logo.svg"/></NavLink>
 
         <div className="nav-group right">
-          <Router.Link to='careers' className={this.isActive('careers') && 'active'}>Join</Router.Link>
+          <NavLink to='careers'>Join</NavLink>
           <a href="http://blog.percolatestudio.com">Blog</a>
           <a data-contact>Contact</a>
         </div>
@@ -60,3 +59,15 @@ var Nav = React.createClass({
   }
 })
 
+var NavLink = React.createClass({
+  mixins: [Router.State],
+  
+  render: function() {
+    var {to, className, ...other} = this.props;
+    var names = [].concat(this.props.to); // ensure array
+    var isActive = _.any(names, () => this.isActive(name));
+    
+    var className = (isActive ? 'active ' : '') + (this.props.className || '');
+    return <Router.Link to={names[0]} className={className} {...other}/>;
+  }
+})

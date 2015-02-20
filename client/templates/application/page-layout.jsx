@@ -15,7 +15,8 @@ PageLayout = React.createClass({
     var pageClasses = React.addons.classSet(classMap);
     
     // plus any passed in classes
-    pageClasses += ' ' + this.props.className;
+    if (this.props.className)
+      pageClasses += ' ' + this.props.className;
 
     return (
       <div className={pageClasses}>

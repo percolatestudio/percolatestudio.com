@@ -16,7 +16,7 @@ Layout = React.createClass({
     return (
       <div className={layoutClasses}>
 
-        <Router.RouteHandler/>
+        <Router.RouteHandler {...this.props}/>
 
         <ContactOverlay/>
         <MenuOverlay/>

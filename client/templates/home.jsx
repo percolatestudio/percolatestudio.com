@@ -1,10 +1,12 @@
 Home = React.createClass({
+  mixins: [MetaTagsMixin],
+  
+  componentWillMount: function() {
+    this.setTitle("Percolate Studio: We build software that improves people's lives");
+    this.setDescription("Percolate Studio is an interdisciplinary team of designers and engineers that help companies achieve their goals. We identify challenges, design solutions, and make technology human.");
+  },
+  
   render: function() {
-    // TODO: set meta
-    // {{#metaTitle}}Percolate Studio: We build software that improves people's lives{{/metaTitle}}
-//     {{#metaDescription}}Percolate Studio is an interdisciplinary team of designers and engineers that help companies achieve their goals. We identify challenges, design solutions, and make technology human.{{/metaDescription}}
-//
-
     return (
       <PageLayout>
         <section className="section-home-why">

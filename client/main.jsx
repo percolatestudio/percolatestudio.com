@@ -16,12 +16,13 @@ var collections = {
 // });
 
 Meteor.startup(function() {
-  Router.run(routes, Router.HistoryLocation, function (Handler) {
+  Router.run(routes, Router.HistoryLocation, function (Handler, state) {
     // TODO: refactor to not be tracker-ish
     Tracker.autorun(function() {
       var small = Measurement.getWindowSize().width <= RESPONSIVE_BREAKPOINT;
       
-      React.render(<Handler collections={collections} small={small}/>, document.body);
+      React.render(<Handler params={state.params} 
+        collections={collections} small={small}/>, document.body);
     });
   });
 });

@@ -15,10 +15,8 @@ routes = (
     <Route name="what" path="what" handler={What}/>
     <Route name="product" path="what/:name" handler={Product}/>
 
-    <Route path="careers">
-      <Route name="job" path=":name" handler={Job}/>
-      <DefaultRoute name="careers" handler={Careers}/>
-    </Route>
+    <Route name="careers" path="careers" handler={Careers}/>
+    <Route name="job" path="careers/:name" handler={Job}/>
 
     <Route path="styleguide/base" handler={StyleguideBase}/>
     <Route path="styleguide/case-study" handler={StyleguideCaseStudy}/>

@@ -2,7 +2,8 @@ var RESPONSIVE_BREAKPOINT = 800;
 
 var collections = {
   Products: Products,
-  Jobs: Jobs
+  Jobs: Jobs,
+  Interns: Interns
 };
 
 // when this changes, re-render

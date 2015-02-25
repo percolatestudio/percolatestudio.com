@@ -6,12 +6,31 @@ Layout = React.createClass({
     }
   },
   
+  componentDidMount: function() {
+    // need to bind this at a higher level
+    $(document).on('keydown', this.handleKeyDown);
+  },
+  
+  componentWillUnmount: function() {
+    $(document).off('keydown', this.handleKeyDown);
+  },
+  
   openMenu: function(state) {
     this.setState({menuOpen: state});
   },
   
-  openContact: function() {
-    this.setState({contactOpen: true});
+  openContact: function(state) {
+    this.setState({contactOpen: state});
+  },
+  
+  handleKeyDown: function(event) {
+    if (event.which == 27) { // esc closes everything
+      if ( $('input, textarea').is(':focus')) {
+        return ; // input or textarea is focused, ignore other part of function
+      }
+      this.openContact(false);
+      this.openMenu(false);
+    }
   },
   
   render: function() {

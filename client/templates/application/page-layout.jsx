@@ -51,7 +51,7 @@ var Nav = React.createClass({
         <div className="nav-group right">
           <NavLink to='careers'>Join</NavLink>
           <a href="http://blog.percolatestudio.com">Blog</a>
-          <a className="contact-link" onClick={this.props.openContact}>Contact</a>
+          <a className="contact-link" onClick={this.props.openContact.bind(null, true)}>Contact</a>
         </div>
       </nav>
     );

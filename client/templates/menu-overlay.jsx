@@ -37,7 +37,7 @@ MenuOverlay = React.createClass({
             {/* <Router.Link to='home' className="monochrome">Home</Router.Link> */}
             <Router.Link to='careers' className="monochrome">Join Us</Router.Link>
             <a href="http://blog.percolatestudio.com" className="monochrome">Blog</a>
-            <a onClick={this.props.openContact} className="monochrome">Contact</a>
+            <a onClick={this.props.openContact.bind(null, true)} className="monochrome">Contact</a>
             <br/>
             <a href="http://twitter.com/percolatestudio" className="monochrome" target="_blank"><span className="icon-twitter"></span></a>
             <a href="http://github.com/percolatestudio" className="monochrome" target="_blank"><span className="icon-github"></span></a>

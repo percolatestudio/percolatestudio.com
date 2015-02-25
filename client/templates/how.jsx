@@ -8,7 +8,7 @@ How = React.createClass({
 
   render: function() {
     return (
-      <PageLayout>
+      <PageLayout {...this.props}>
 
         <header className="collage medium">
           <div className="grid-2-square">

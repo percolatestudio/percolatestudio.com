@@ -16,7 +16,7 @@ Job = React.createClass({
   render: function() {
     var job = this.job();
     return (
-      <PageLayout className="job-{job.name}">
+      <PageLayout className="job-{job.name}" {...this.props}>
         <div dangerouslySetInnerHTML={{__html: job.text}} />
       </PageLayout>
     )

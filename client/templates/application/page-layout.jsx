@@ -20,7 +20,7 @@ PageLayout = React.createClass({
 
     return (
       <div className={pageClasses}>
-        <Nav/>
+        <Nav {...this.props}/>
         {this.props.children}
       </div>
     );
@@ -30,6 +30,11 @@ PageLayout = React.createClass({
 
 // XXX: menu-overlaid ..?
 var Nav = React.createClass({
+  propTypes: {
+    openMenu: React.PropTypes.func.isRequired,
+    openContact: React.PropTypes.func.isRequired
+  },
+  
   render: function() {
     return (
       <nav className="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
@@ -37,8 +42,7 @@ var Nav = React.createClass({
           <NavLink to='home'>Home</NavLink>
           <NavLink to='how'>How</NavLink>
           <NavLink to={['what','product']}>What</NavLink>
-          <a data-menu>Menu</a>
-
+          <a className="menu-link" onClick={this.props.openMenu.bind(null, true)}>Menu</a>
         </div>
 
           
@@ -47,7 +51,7 @@ var Nav = React.createClass({
         <div className="nav-group right">
           <NavLink to='careers'>Join</NavLink>
           <a href="http://blog.percolatestudio.com">Blog</a>
-          <a data-contact>Contact</a>
+          <a className="contact-link" onClick={this.props.openContact}>Contact</a>
         </div>
       </nav>
     );

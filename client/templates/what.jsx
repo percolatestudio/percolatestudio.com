@@ -21,7 +21,7 @@ What = React.createClass({
 
     var restProductLinks = products.map(function(product) {
       return (
-        <Router.Link to="product" params={product}
+        <Router.Link to="product" params={product} key={product._id}
           className="grid-2-square item-project bg-image"
           style={{backgroundImage: "url('" + this.imageSource(product.thumbnailUrl) + "')"}}>
           <span className="subtitle-item">{product.title}</span>
@@ -30,7 +30,7 @@ What = React.createClass({
     }.bind(this));
     
     return (
-      <PageLayout>
+      <PageLayout  {...this.props}>
 
         <header className="collage medium">
           <div className="grid-2-square">

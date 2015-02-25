@@ -8,15 +8,15 @@ Careers = React.createClass({
 
   render: function() {
     var jobLinks = this.props.collections.Jobs.find().map(function(job) {
-      return <Opening job={job}/>;
+      return <Opening job={job} key={job._id}/>;
     });
 
     var internLinks = this.props.collections.Interns.find().map(function(intern) {
-      return <Opening job={intern}/>;
+      return <Opening job={intern} key={intern._id}/>;
     });
 
     return (
-      <PageLayout>
+      <PageLayout {...this.props}>
         <header className="collage medium">
           <div className="grid-2-square">
             <h1 className="title-page">Join us</h1>

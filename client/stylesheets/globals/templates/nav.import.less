@@ -57,12 +57,12 @@ nav {
       &:active { color: @color-well; }
       & + a { margin-left: 2.5em; }
 
-      &:not([data-menu]):not([data-contact]) { display: none; } //hide everything not menu or contact
-      &[data-menu] { margin-left: 0; } //reset margin left for menu
+      &:not(.menu-link):not(.contact-link) { display: none; } //hide everything not menu or contact
+      &.menu-link { margin-left: 0; } //reset margin left for menu
 
       @media screen and (min-width: @breakpoint) {
-        &:not([data-menu]):not([data-contact]) { display: inline-block; } //show everything
-        &[data-menu] { display: none; } //hide menu on large screens
+        &:not(.menu-link):not(.contact-link) { display: inline-block; } //show everything
+        &.menu-link { display: none; } //hide menu on large screens
       }
     }
   }

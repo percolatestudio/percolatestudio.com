@@ -6,6 +6,14 @@ Layout = React.createClass({
     }
   },
   
+  openMenu: function(state) {
+    this.setState({menuOpen: state});
+  },
+  
+  openContact: function() {
+    this.setState({contactOpen: true});
+  },
+  
   render: function() {
     var layoutClasses = React.addons.classSet({
       'layout': true,
@@ -13,13 +21,18 @@ Layout = React.createClass({
       'contact-open': this.state.contactOpen
     });
     
+    var childProps = _.extend({}, this.props, {
+      openContact: this.openContact,
+      openMenu: this.openMenu
+    })
+    
     return (
       <div className={layoutClasses}>
 
-        <Router.RouteHandler {...this.props}/>
+        <Router.RouteHandler {...childProps}/>
 
         <ContactOverlay/>
-        <MenuOverlay/>
+        <MenuOverlay {...childProps}/>
       </div>
     )
   }

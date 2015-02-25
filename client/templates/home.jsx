@@ -8,7 +8,7 @@ Home = React.createClass({
   
   render: function() {
     return (
-      <PageLayout>
+      <PageLayout  {...this.props}>
         <section className="section-home-why">
           <div className="hero-wrapper">
             <h1 className="title-page">Percolate Studio builds digital products to improve people's lives.</h1>

@@ -25,7 +25,7 @@ Product = React.createClass({
     if (nextProduct)
       nextLink = <ProductLink product={nextProduct} className={linkClassName}/>;
     return (
-      <PageLayout className={'product-' + product.name}>
+      <PageLayout className={'product-' + product.name} {...this.props}>
         <div dangerouslySetInnerHTML={{__html: product.text}} />
 
         <div className="title-section featured">More Projects</div>

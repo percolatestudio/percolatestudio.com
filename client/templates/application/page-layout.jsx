@@ -1,5 +1,32 @@
+// update the current page state with ourState, if history.replaceState
+//   is defined. If not, don't bother.
+var setHistoryState = function (ourState) {
+  if (! history.replaceState)
+    return;
+  
+  var newState = _.extend({}, history.state, ourState);
+  history.replaceState(newState);
+}
+
 PageLayout = React.createClass({
   mixins: [Router.State],
+  
+  componentDidMount: function() {
+    var state = history.state;
+    if (state && state.lastScrollTop) {
+      console.log(state.lastScrollTop);
+      var page = this.refs.page.getDOMNode();
+      page.scrollTop = state.lastScrollTop;
+    }
+  },
+  
+  handleScroll: _.throttle(function() {
+    // NOTE: for some reason the event argument gets munged by the _.throttle.
+    //  (something to do with the synthetic event being cleaned up before the 
+    //   throttle fires it? Not sure). Else we'd use event.target, not this.refs
+    var page = this.refs.page.getDOMNode();
+    setHistoryState({lastScrollTop: page.scrollTop});
+  }, 500),
   
   render: function() {
     
@@ -19,7 +46,7 @@ PageLayout = React.createClass({
       pageClasses += ' ' + this.props.className;
 
     return (
-      <div className={pageClasses}>
+      <div ref="page" className={pageClasses} onScroll={this.handleScroll}>
         <Nav {...this.props}/>
         {this.props.children}
       </div>
@@ -28,7 +55,6 @@ PageLayout = React.createClass({
 });
 
 
-// XXX: menu-overlaid ..?
 var Nav = React.createClass({
   propTypes: {
     openMenu: React.PropTypes.func.isRequired,
@@ -37,7 +63,7 @@ var Nav = React.createClass({
   
   render: function() {
     return (
-      <nav className="{{#if template.menuOverlaid.get}}overlaid-{{template.menuOverlaid.get}}{{/if}}">
+      <nav>
         <div className="nav-group">
           <NavLink to='home'>Home</NavLink>
           <NavLink to='how'>How</NavLink>

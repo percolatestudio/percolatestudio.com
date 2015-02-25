@@ -18,8 +18,8 @@ routes = (
     <Route name="careers" path="careers" handler={Careers}/>
     <Route name="job" path="careers/:name" handler={Job}/>
 
-    <Route path="styleguide/base" handler={StyleguideBase}/>
-    <Route path="styleguide/case-study" handler={StyleguideCaseStudy}/>
+    <Route path="styleguide/base" name="styleguide-base" handler={StyleguideBase}/>
+    <Route path="styleguide/case-study" name="styleguide-case-study" handler={StyleguideCaseStudy}/>
 
     {/* TODO: make this a server-side route */}
     <Redirect from="case-studies/verso" to="what" params={{name: 'verso'}}/>

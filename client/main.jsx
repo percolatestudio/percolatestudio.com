@@ -6,16 +6,6 @@ var collections = {
   Interns: Interns
 };
 
-// when this changes, re-render
-//
-//
-// Template.registerHelper('responsiveImgSrc', function(smallSrc, largeSrc) {
-//     return imgSrc(smallSrc);
-//   } else {
-//     return imgSrc(largeSrc);
-//   }
-// });
-
 Meteor.startup(function() {
   Router.run(routes, Router.HistoryLocation, function (Handler, state) {
     

@@ -1,5 +1,2 @@
-// Router.onAfterAction(function() {
-//   Meteor.setTimeout(function() {
-//     picturefill();
-//   }, 0)
-// });
+// export that bad boy
+Picturefill = picturefill;

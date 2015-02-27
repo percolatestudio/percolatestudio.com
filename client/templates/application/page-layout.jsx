@@ -14,7 +14,6 @@ PageLayout = React.createClass({
   componentDidMount: function() {
     var state = history.state;
     if (state && state.lastScrollTop) {
-      console.log(state.lastScrollTop);
       var page = this.refs.page.getDOMNode();
       page.scrollTop = state.lastScrollTop;
     }

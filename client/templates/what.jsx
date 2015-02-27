@@ -7,7 +7,7 @@ What = React.createClass({
   },
     
   render: function() {
-    var products = this.props.collections.Products.find({}, {sort: {index: 1}}).fetch();
+    var products = _.sortBy(this.props.collections.Products, function(p) { return p.index; });
     
     var firstProduct = products.shift();
     var firstProductImageSrc = this.imageSource(this.props.small ? firstProduct.thumbnailUrl : firstProduct.featureUrl);
@@ -21,7 +21,7 @@ What = React.createClass({
 
     var restProductLinks = products.map(function(product) {
       return (
-        <Router.Link to="product" params={product} key={product._id}
+        <Router.Link to="product" params={product} key={product.name}
           className="grid-2-square item-project bg-image"
           style={{backgroundImage: "url('" + this.imageSource(product.thumbnailUrl) + "')"}}>
           <span className="subtitle-item">{product.title}</span>

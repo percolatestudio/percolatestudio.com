@@ -6,7 +6,6 @@
 standard-app-packages
 autopublish
 insecure
-static-collections
 fastclick
 less
 http

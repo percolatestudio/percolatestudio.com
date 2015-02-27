@@ -2,8 +2,7 @@ var RESPONSIVE_BREAKPOINT = 800;
 
 var collections = {
   Products: Products,
-  Jobs: Jobs,
-  Interns: Interns
+  Jobs: Jobs
 };
 
 Meteor.startup(function() {

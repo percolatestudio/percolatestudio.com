@@ -3,22 +3,20 @@ Job = React.createClass({
   
   job: function() {
     var name = this.props.params.name;
-    return this.props.collections.Jobs.findOne({name: name}) ||
-      this.props.collections.Interns.findOne({name: name});
+    return _.find(this.props.collections.Jobs, function(j) {
+      return j.name === name;
+    });
   },
   
   componentWillMount: function() {
     var job = this.job();
-    this.setTitle(job.title + '| Percolate Studio');
+    this.setTitle(job.title + ' | Percolate Studio');
     this.setDescription(job.description);
   },
   
   render: function() {
+    var {params, ...other} = this.props;
     var job = this.job();
-    return (
-      <PageLayout className="job-{job.name}" {...this.props}>
-        <div dangerouslySetInnerHTML={{__html: job.text}} />
-      </PageLayout>
-    )
+    return React.createElement(job.component, _.extend({}, this.props, {job: job}));
   }
 });

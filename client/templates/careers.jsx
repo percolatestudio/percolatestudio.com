@@ -7,12 +7,14 @@ Careers = React.createClass({
   },
 
   render: function() {
-    var jobLinks = this.props.collections.Jobs.find().map(function(job) {
-      return <Opening job={job} key={job._id}/>;
+    var jobs = _.filter(this.props.collections.Jobs, function(j) { return j.type === 'job'; });
+    var jobLinks = jobs.map(function(job) {
+      return <Opening job={job} key={job.name}/>;
     });
 
-    var internLinks = this.props.collections.Interns.find().map(function(intern) {
-      return <Opening job={intern} key={intern._id}/>;
+    var interns = _.filter(this.props.collections.Jobs, function(j) { return j.type === 'intern'; });
+    var internLinks = interns.map(function(intern) {
+      return <Opening job={intern} key={intern.name}/>;
     });
 
     return (

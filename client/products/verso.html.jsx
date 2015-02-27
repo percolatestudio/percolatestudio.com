@@ -19,10 +19,10 @@ product.component = React.createClass({
 
             <div className="collage-text formatting">
               <div className="grid-2">
-                <p>The reality of education technology never quite lived up to expectations. Putting devices in classNamerooms may have lead to savvier pupils, but have these tools actually improved learning ability? Edtech often takes path of incremental changes to the status quo rather than re-examining technologies potential impact on teaching. It seems that companies dedicated to improving classNameroom tools often ignore key factors to meaningful change: pedagogy and student curiosity.</p>
+                <p>The reality of education technology never quite lived up to expectations. Putting devices in classrooms may have lead to savvier pupils, but have these tools actually improved learning ability? Edtech often takes path of incremental changes to the status quo rather than re-examining technologies potential impact on teaching. It seems that companies dedicated to improving classroom tools often ignore key factors to meaningful change: pedagogy and student curiosity.</p>
               </div>
               <div className="grid-2">
-                <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a singular vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classNameroom experience into a product that sparks student curiosity. We applied our disciplined design, engineering, and strategy process to bring their idea to market.</p>
+                <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a singular vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classroom experience into a product that sparks student curiosity. We applied our disciplined design, engineering, and strategy process to bring their idea to market.</p>
               </div>
             </div>
 
@@ -41,7 +41,7 @@ product.component = React.createClass({
         </div>
 
         <div className="collage responsive">
-          <div className="grid-1 bg-image-texture-inclassName"></div>
+          <div className="grid-1 bg-image-texture-inclass"></div>
         </div>
 
         <div className="wrapper-content">
@@ -58,16 +58,16 @@ product.component = React.createClass({
 
         <div className="wrapper-content">
           <div className="full-up formatting">
-            <h2>Boundless classNamerooms</h2>
+            <h2>Boundless classrooms</h2>
 
-            <p>Humans never stop learning, so why are there constraints on the time and place students learn? We had to divorce the idea of a classNameroom from physical space in order to move it to the digital realm. A digital classNameroom is boundless, it persists wherever there are curious people and is only a push notification away.</p>
+            <p>Humans never stop learning, so why are there constraints on the time and place students learn? We had to divorce the idea of a classroom from physical space in order to move it to the digital realm. A digital classroom is boundless, it persists wherever there are curious people and is only a push notification away.</p>
 
-            <p>A digital classNameroom must mirror the <em>buzz</em> of its physical counterpart. We cultivated a sense of dynamism and activity by surfacing student feedback the instant it happened. The adoption of student anonymity created a peer-pressure free dynamic where students could express themselves without the anxiety of being judged. We created feedback mechanisms like &lsquo;helpfuls&rsquo; and &lsquo;grouping&rsquo; to help teachers identify patterns in student responses that could be used as future discussion points. Combined, the features created to a vibrant communication system that showcased strong ideas while also activating the voice of even the meekest students.</p>
+            <p>A digital classroom must mirror the <em>buzz</em> of its physical counterpart. We cultivated a sense of dynamism and activity by surfacing student feedback the instant it happened. The adoption of student anonymity created a peer-pressure free dynamic where students could express themselves without the anxiety of being judged. We created feedback mechanisms like &lsquo;helpfuls&rsquo; and &lsquo;grouping&rsquo; to help teachers identify patterns in student responses that could be used as future discussion points. Combined, the features created to a vibrant communication system that showcased strong ideas while also activating the voice of even the meekest students.</p>
           </div>
         </div>
 
         <div className="collage">
-          <div className="grid-2-square bg-image-className"></div>
+          <div className="grid-2-square bg-image-class"></div>
           <div className="grid-2 quote-collage">
             <div className="wrapper-quote">
               <div className="title-quote">&ldquo;Percolate Studio provides a rare blend of technical rigour, aesthetic elegance and lucid comms. These guys add value to every stage of the product lifecycle.&rdquo;</div>
@@ -91,7 +91,7 @@ product.component = React.createClass({
           <div className="conclusion">Verso helps students become lifelong learners.</div>
 
           <div className="center-up formatting">
-            <p>Our holistic process yielded a product that has a significant & measurable impact on className participation. In the span of less than two years Verso has spread to thousands of schools. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>
+            <p>Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years Verso has spread to thousands of schools. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>
             <div className="wrapper-cta-case-study">
               <p>Are you interested in education technology?</p>
               <a className="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>

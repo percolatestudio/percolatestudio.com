@@ -22,13 +22,13 @@ product.component = React.createClass({
                 <p>It has never been easier to instrument, collect, and store vast quantities of information. Despite the clear business case for collecting this data, folks still wonder how best to apply it. What does it mean? How can it give decision-makers the information needed to be more effective? The big challenge in analytics is no longer the logistics of data collection, but rather translating immense data into actionable recommendations.</p>
               </div>
               <div className="grid-2">
-                <p>Following the success of <a href="/what/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classNameroom data to respond to their students' needs. We saw an opportunity to promote effective teaching beyond individual classNamerooms using the breadth of Verso's engagement metrics. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
+                <p>Following the success of <a href="/what/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classroom data to respond to their students' needs. We saw an opportunity to promote effective teaching beyond individual classrooms using the breadth of Verso's engagement metrics. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
               </div>
             </div>
         </header>
 
         <div className="media-centeralign">
-          <img src="/img/case-study/campus/verso-campus-texture-engagementgraph.svg" alt="classNameroom Engagement Graph"/>
+          <img src="/img/case-study/campus/verso-campus-texture-engagementgraph.svg" alt="classroom Engagement Graph"/>
         </div>
 
         <div className="wrapper-content">
@@ -50,7 +50,7 @@ product.component = React.createClass({
                 <li>Ensuring smooth operation means keeping abreast of the school's pulse; Campus should surface timely news & recommendations for continued success.</li>
               </ol>
 
-            <p style={{marginBottom:0}}>We engineered an insight engine to identify patterns and highlight outliers in realtime. Data was graphed and compared to school-wide averages to indicate progress at a glance. We designed a faceted analytics experience to make it easy to compare users by className, teacher, subject, or grade level. Timely insights were surfaced in natural language with prompts to act. For instance, <em>"Dominic had a great response rate today, kudos are in order"</em>. Our guiding principle was to present the right amount of information at the right time.</p>
+            <p style={{marginBottom:0}}>We engineered an insight engine to identify patterns and highlight outliers in realtime. Data was graphed and compared to school-wide averages to indicate progress at a glance. We designed a faceted analytics experience to make it easy to compare users by class, teacher, subject, or grade level. Timely insights were surfaced in natural language with prompts to act. For instance, <em>"Dominic had a great response rate today, kudos are in order"</em>. Our guiding principle was to present the right amount of information at the right time.</p>
           </div>
         </div>
 

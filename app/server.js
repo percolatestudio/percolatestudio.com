@@ -5,14 +5,10 @@ var HtmlComponent = React.createFactory(require('./components/Html.jsx'));
 var Router = require('react-router');
 
 var express = require('express');
-// var favicon = require('serve-favicon');
-// var serialize = require('serialize-javascript');
 var routes = require('./components/Routes.jsx');
 
 var server = express();
-// server.use(favicon(__dirname + '/../favicon.ico'));
 server.use('/js', express.static(__dirname + '/../build/js'));
-
 server.use(express.static(__dirname + '/assets'));
 
 server.use(function (req, res, next) {

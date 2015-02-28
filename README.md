@@ -1,10 +1,14 @@
 ## Usage
 
+To install dependencies
+
 ```bash
 $ npm install
 ```
 
 ### Development
+
+Running the development node server
 
 ```bash
 $ grunt

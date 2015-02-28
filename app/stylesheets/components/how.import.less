@@ -1,0 +1,143 @@
+.page.how {
+  .bg-image-how {
+    .at2x('/img/how-ipadair-600x450.jpg');
+  }
+  .section-services {
+    background: @color-raw-alt;
+
+    .subsection {
+      .std-xpadding;
+      padding-bottom: 3em;
+
+      @media screen and (min-width: @breakpoint) {
+        padding: 3em 5% 6em;
+        text-align: center;
+      }
+      img {
+        float: left;
+        height: 4.5em;
+        margin-right: 1.5em;
+        margin-left: .5em;
+        width: 4.5em;
+
+        @media screen and (min-width: @breakpoint) {
+          float: none;
+          height: 10em;
+          margin: 0 auto 1.5em;
+          width: 10em;
+        }
+      }
+      .meta {
+        overflow: hidden;
+      }
+    }
+  }
+
+  .section-process {
+    .title-section {
+      background: @color-empty;
+      @media screen and (min-width: @breakpoint) {
+        background: transparent; //accounts for vertical line on small screens
+      }
+    }
+
+    &:after {
+     .position(absolute, 0, auto, 0, 3.75em, 2px);
+     .transform(translateX(-50%));
+
+     @media screen and (min-width: @breakpoint) {
+        left: 50%;
+      }
+
+     background: @color-raw;
+     content: '';
+     z-index: 0;
+    }
+
+    ol.process {
+      .std-xpadding;
+      counter-reset: ol-counter;
+      list-style-type: none;
+      position: relative;
+      z-index: 1;
+
+
+      @media screen and (min-width: @breakpoint) {
+        margin: 2.5em auto 6em;
+        max-width: 600px;
+        text-align: center;
+      }
+
+
+      li.subsection {
+        margin-bottom: 3em;
+        @media screen and (min-width: @breakpoint) { margin-bottom: 5em; }
+
+
+        position: relative;
+        &:before {
+          .font-m2;
+          background: @color-empty;
+          color: @color-primary;
+          content: counter(ol-counter);
+          counter-increment: ol-counter;
+          display: inline-block;
+          padding-top: .12em; //vertical offset for baseline alignment due to all caps
+          text-align: center;
+
+          //layout
+          float: left;
+          width: 5rem;
+          margin-right: 1.5rem;
+
+          @media screen and (min-width: @breakpoint) {
+            .position(absolute, -2.25em, auto, auto, 50%);
+            .transform(translateX(-50%));
+          }
+        }
+        &:not(:first-child):after {
+          @media screen and (min-width: @breakpoint) { content: ''; } //show on large screens
+          .position(absolute, -3.75em, auto, auto, 50%);
+          .transform(translateX(-50%));
+
+          border-top: 7px solid @color-raw;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+        }
+        .meta {
+          overflow: hidden;
+        }
+      }
+    }
+  }//section-process
+  .section-team {
+    .title-section { background: @color-rare; }
+
+    .avatar {
+      &:before {
+        .position(absolute, 0,0,0,0);
+        .background-image(linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0) 70%, rgba(0,0,0,.5) 100%));
+        content: '';
+
+      }
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+      .name {
+        .font-m1;
+        .type-semibold;
+        .position(absolute, auto, 1.25rem, 1.25rem, 1.25rem);
+        line-height: 1 !important;
+        color: @color-empty;
+        overflow: hidden;
+        z-index: 1;
+      }
+    }//avatar
+  }
+  .section-logo {
+    background: @color-rare;
+  }
+
+}

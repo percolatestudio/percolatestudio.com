@@ -1,0 +1,185 @@
+[class^="btn-"],
+[class*=" btn-"] {
+  .transition( all 200ms ease-in );
+  .type-bold;
+
+  /* Sizing */
+  .font-s2;
+  line-height: 20px !important; //override line-height always so we can use em's to size.
+  padding: .6em 1.25em .54em; //more compact buttons
+  @media screen and (min-width: @breakpoint) {
+    .font-s3;
+    line-height: 20px !important; //override line-height always so we can use em's to size.
+    padding: .975em 1.25em .775em; //more compact buttons 8 15 yields 48px button
+  }
+
+
+
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important; //prevents global link styles from applying
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.caps {
+    .title-caps;
+    color: @color-empty;
+    text-indent:.3em; //required to balance out the extra right spacing from letter-spacing
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      text-indent: 0;
+    }
+  }
+  &.upload {
+    position: relative;
+    input[type="file"] {
+      opacity: 0;
+      .position(absolute, 0,0,0,0);
+    }
+  }
+  &[class*="small"] {
+    padding: .35em 1em;
+  }
+  &[class*="primary"] {
+    background-color: @color-primary;
+    color: @color-empty;
+
+    &:hover{ background-color: darken(@color-primary, 5%); }
+    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+  }
+  &[class*="secondary"] {
+    background: darken(@color-rare, 3%);
+    color: @color-full;
+
+    &:hover{ background-color: darken(@color-rare, 5%); }
+    &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+  }
+  &[class*="tertiary"] {
+    background-color: darken(@color-rare, 5%);
+    color: @color-full;
+    &:hover{
+      background-color: darken(@color-rare, 10%);
+    }
+    &:active{
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+  }
+  &[class*="pagination"] {
+    color: @color-well;
+    padding: .65em 1em;
+    &:first-of-type { //beginning cap
+      border-radius: 3px 0 0 3px;
+      background: @color-rare;
+    }
+    &:last-of-type { //end cap
+      border-radius: 0 3px 3px 0;
+      background: @color-medium-rare;
+    }
+    &:hover{
+      background-color: darken(@color-medium-rare, 10%) !important;
+      >[class^="icon-"],
+      >[class*=" icon-"] {
+        color: @color-full;
+      }
+    }
+    &:active{
+      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+    }
+    >[class^="icon-"],
+    >[class*=" icon-"] {
+      color: @color-well;
+      font-size: 1rem;
+      margin-right: 0;
+    }
+  }
+  &[class*="toggle"] {
+    .type-regular;
+    .transition( all 100ms ease-in-out, color 300ms ease-in );
+
+    background: rgba(255,255,255,.5);
+    color: @color-medium;
+
+    &:hover{
+      color: @color-primary;
+    }
+    &:active {
+      .type-semibold;
+      background: @color-empty;
+      color: @color-primary;
+    }
+  }
+  //overlays
+  &[class*="wire"] {
+    background-color: transparent;
+    box-shadow: rgba(255, 255, 255, .95) 0 0 0 2px inset;
+    color: @color-empty;
+    &:hover {}
+    &:active {}
+
+    &[class*="inverse"] {
+      box-shadow: @color-well 0 0 0 2px inset;
+      color: @color-full;
+      &:hover {}
+      &:active {}
+    }
+  }
+
+
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+  >[class^="icon-"],
+  >[class*=" icon-"] {
+    display: inline-block;
+    font-size: 1em;
+    line-height: inherit;
+    margin-right: .5em;
+    vertical-align: top; // Alignment because line-height inherits the button lineheight /// prevents 1px vertical offset
+    width: 1em;
+  }
+}//end btn
+
+.btns-group {
+  @media screen and (min-width: @breakpoint) {
+    .display(flex);
+    .flex-wrap(wrap);
+  }
+
+  max-width: 400px;
+  width: 100%;
+
+  [class*="btn-toggle"] {
+    .user-select(none);
+    cursor: pointer;
+    float: left;
+    margin-bottom: 0; // Override label style
+
+    @media screen and (min-width: @breakpoint) {
+      .ellipsized;
+      .flex(1);
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 2px;
+      @media screen and (min-width: @breakpoint) {
+        margin-left: 2px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] { display: none; }
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label, {
+    // taken from btn-toggle:active
+    .type-semibold;
+    background: @color-empty;
+    color: @color-primary;
+  }
+}

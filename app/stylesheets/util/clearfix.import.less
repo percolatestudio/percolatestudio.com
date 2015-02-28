@@ -1,0 +1,13 @@
+/**
+ * Modified clearfix (don't need something so heavy)
+ */
+
+.clearfix() {
+  *zoom: 1;
+
+  &:after {
+    clear: both;
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+}

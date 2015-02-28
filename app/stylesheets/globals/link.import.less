@@ -1,0 +1,22 @@
+a, .pseudo-link {
+  .transition( all 200ms ease-in );
+  color: @color-primary;
+  cursor: pointer;
+  outline: none !important;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(@color-primary, 10%);
+    text-decoration: underline;
+  }
+  &:active { color: @color-well; }
+
+  //links that look like standard text
+  &.nochrome { color: @color-well; }
+  //links that are monocrhome
+  &.monochrome { color: @color-medium; }
+}
+
+a.inverse {
+  .link-inverse;
+}

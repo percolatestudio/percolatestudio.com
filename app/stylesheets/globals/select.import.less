@@ -1,0 +1,192 @@
+.a-select{
+  display: inline-block;
+  select {
+    .font-s2;
+    border: none;
+    color: @color-full;
+  	margin: 0;
+  	outline: none;
+
+  	&[disabled] {
+    	opacity: .5;
+  	}
+  }
+}
+
+//Note: pointer events may not be supported in ie10, may need to reassess
+
+/* standard colors */
+.a-select {
+  &:after {
+    //change color of down arrow here
+  }
+  &:before {
+    background-color: @color-empty;
+  }
+  select {
+    background-color: @color-empty;
+  }
+}
+
+
+
+/* inverse colors */
+.a-select.inverse {
+  &:after {
+    //change color of down arrow here
+    color: @color-empty;
+  }
+  &:before {
+    background-color: @color-well;
+  }
+  select {
+    background-color: @color-full;
+    color: @color-empty !important;
+  }
+}
+
+
+
+/* size */
+.a-select.small {
+  height: 36px;
+  &:before {
+    width: 1.5em;
+  }
+  &:after {
+    right: 8px;
+  }
+  select {
+    font-size: 12px !important;
+    padding: 8px 2.5em 8px 8px;
+  }
+}
+/* FF styling/hack */
+@-moz-document url-prefix() {
+.a-select.small	select {
+		padding-right: .75em;
+		padding-top: 9px; /* off by 1px */
+	}
+}
+
+.a-select.nochrome {
+  &:after {
+    //clear default down arrows
+    border: none;
+
+    //style the icon-font
+    font-size: .75em;
+    margin-top: -.5em;
+
+    /* Icon for nochrome, taken straight from icon.lessimport */
+    font-family: 'percolate';
+  	speak: none;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-variant: normal;
+  	text-transform: none;
+  	line-height: 1;
+
+  	/* Better Font Rendering =========== */
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+
+  	/* Down arrow */
+    &:extend(.icon-arrow-down:before);
+  }
+  &:before {
+    content: none; //hide this altogether
+  }
+  select {
+    .type-semibold;
+    background-color: transparent;
+    text-decoration: none;
+
+  }
+}
+/* FF styling/hack for nochrome */
+@-moz-document url-prefix() {
+.a-select.nochrome	select {
+		-moz-appearance: none;
+		padding-right: .75em;
+		padding-top: 9px; /* off by 1px */
+    text-indent: 0.01px;
+    text-overflow: '';
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+	}
+}
+
+
+.a-select{
+  display: inline-block;
+  height: 40px;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  select {
+    -webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		border: 0;
+		border-radius: 3px;
+		//line-height: 15px !important; /* forces supported browsers to respect line-height */
+		padding: 10px 3em 10px 8px;
+		position: relative;
+		outline: none;
+
+  }
+  &:before, &:after {
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;
+	}
+	&:after {
+    //position the icon-font
+    font-size: .75em;
+    height: 5px;
+    margin-top: -.5em;
+		right: 12px;
+		top: 50%;
+
+
+    /* Icon for nochrome, taken straight from icon.lessimport */
+    font-family: 'percolate';
+  	speak: none;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-variant: normal;
+  	text-transform: none;
+  	line-height: 1;
+
+  	/* Better Font Rendering =========== */
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+
+  	/* Down arrow */
+    &:extend(.icon-arrow-down:before);
+
+	}
+	&:before {
+  	content: "";
+	  border-radius: 0 3px 3px 0;
+	  bottom: 0;
+		right: 0;
+		top: 0;
+		width: 2em;
+	}
+}
+/* FF styling/hack */
+@-moz-document url-prefix() {
+	.a-select select {
+		padding-right: 1.25em;
+		padding-top: 10px; /* off by 1px */
+		&:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+	}
+}

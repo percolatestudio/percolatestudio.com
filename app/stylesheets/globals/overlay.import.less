@@ -1,0 +1,41 @@
+[class^="overlay-screen"] {
+  .position(fixed, 0, 0, 0, 0);
+
+  background: rgba(237, 243, 245, 0.98);
+
+  padding-top: 1.75em;
+  padding-bottom: 1.75em;
+  @media screen and (min-width: 30em) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  @media screen and (min-width: 40em) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  @media screen and (min-width: 50em) {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+
+  opacity: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: -1;
+  -webkit-overflow-scrolling: touch;
+
+  > .overlay-close {
+    .position(absolute, .75em, .75em, auto, auto, 3em, 3em);
+    padding-top: .75em;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+    .icon-cross {
+      .font-s3;
+      @media screen and (min-width: 40em) { .font-m2; }
+
+      color: @color-medium-well;
+      line-height: 36px; //aligns to the 48px tap area
+    }
+  }
+}

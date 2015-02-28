@@ -1,0 +1,33 @@
+header {
+  &.collage {
+    @media only screen and (max-width: (@breakpoint - 1px)) {
+      height: auto !important;
+      min-height: 0 !important;
+    }
+  }
+
+  .title-page {
+    .font-l2;
+    @media screen and (min-width: @breakpoint) { .font-l3; }
+
+    .type-light;
+    .std-xpadding;
+    .std-ypadding;
+    letter-spacing: -.05em;
+    line-height: 1 !important;
+  }
+
+  .description-page {
+    .font-m1;
+    .std-xpadding;
+    .std-ypadding;
+    color: @color-well;
+
+    @media screen and (min-width: @breakpoint) {
+      .font-m2;
+      .position(absolute, auto, 0, 0, 0);
+    }
+  }
+
+
+}

@@ -1,0 +1,126 @@
+.page.job {
+  .header {
+    .page-margins;
+    .std-ypadding;
+    .std-xpadding;
+
+    background: @color-empty;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: @breakpoint) {
+      height: 85%;
+      min-height: 600px;
+    }
+
+    z-index: 1;
+    text-align: center;
+  }
+
+  .wrapper-hero {
+    @media screen and (min-width: @breakpoint) {
+      .position(absolute, 50%, 0, auto, 0);
+      .transform(translateY(-50%));
+    }
+  }
+  .hero {
+    margin-bottom: 1rem;
+    width: 96px;
+    @media screen and (min-width: @breakpoint) {
+      margin-bottom: 2rem;
+      width: 192px;
+    }
+  }
+
+  .title-page {
+    .font-m3;
+    margin-bottom: .5em;
+    line-height: 1em !important;
+    @media screen and (min-width: @breakpoint) {
+      .font-l2;
+    }
+
+  }
+  .description-page {
+    .font-s3;
+    margin: 0 auto 1.5rem;
+
+    @media screen and (min-width: @breakpoint) {
+      .font-m2;
+      margin: 0 auto 3rem;
+    }
+
+    max-width: 640px;
+    width: 75%;
+  }
+
+  .section-about {
+    background: @color-raw-alt;
+    &:nth-child(even) { background: @color-empty; }
+  }
+
+  .description-about {
+    .std-xpadding;
+    .font-s3;
+    @media screen and (min-width: @breakpoint) { .font-m1; }
+    margin-bottom: 1.5em;
+    margin-top: -1em;
+  }
+
+  .details-about {
+    .std-xpadding;
+    margin-bottom: 2rem;
+    @media screen and (min-width: @breakpoint) { margin-bottom: 3rem; }
+
+  }
+
+  ol {
+    .inline-block-whitespace;
+    counter-reset: ol-counter;
+    list-style-type: none;
+    overflow: hidden;
+
+
+    li {
+      .font-s3;
+      @media screen and (min-width: @breakpoint) { .font-m1; }
+      display: inline-block;
+      float: none !important; //removes float from grid-2
+      vertical-align: top;
+      margin-bottom: 1em;
+      &:before {
+        .font-s1;
+        .type-bold;
+        background: @color-medium-rare;
+        border-radius: 3em;
+        color: @color-empty;
+        content: counter(ol-counter);
+        counter-increment: ol-counter;
+        display: inline-block;
+        text-align: center;
+
+        //layout
+        float: left;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1.125rem; //offset for caps x-height
+        margin-right: .75rem;
+        margin-top: 6px;
+      }
+      &:nth-child(even) {
+        @media screen and (min-width: @breakpoint) { .std-xpadding; }
+      }
+      .meta {
+        display: block;
+        overflow: hidden;
+        @media screen and (min-width: @breakpoint) { padding-right: 1.25rem; }
+      }
+    }
+  }
+  .section-button {
+    .std-xpadding;
+    .std-ypadding;
+    .page-margins;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,26 @@
+.link-underline(@rest: @color-primary, @hover: @color-primary, @active: @color-well, @weight: 14%) {
+  // Custom underlined links
+  // A variation on this approach:
+  // https://medium.com/p/7c03a9274f9
+
+  // @weight note: LESS doesn't support conditionals, bummer
+  // 16% is a mid-weight, 14% is light-weight, 18% if heavy-weight on a standard link inside of a <p>
+
+  text-decoration: none;
+  color: @rest;
+  .background-image(linear-gradient(to top, transparent 11%, @rest 11%, @rest @weight, transparent @weight));
+  &:hover {
+    color: @hover;
+    .background-image(linear-gradient(to top, transparent 11%, @hover 11%, @hover @weight, transparent @weight));
+  }
+  &:active {
+    color: @active;
+    .background-image(linear-gradient(to top, transparent 11%, @active 11%, @active @weight, transparent @weight));
+  }
+}
+
+.link-inverse() {
+  color: @color-empty;
+  &:hover { color: @color-rare; }
+  &:active { color: @color-medium-rare; }
+}

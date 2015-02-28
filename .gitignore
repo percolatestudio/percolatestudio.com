@@ -1,0 +1,5 @@
+node_modules
+build
+.DS_Store
+static
+s3.config.json

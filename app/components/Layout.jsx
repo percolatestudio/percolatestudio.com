@@ -1,16 +1,23 @@
 'use strict';
 var _ = require('lodash');
+var $ = require('jquery');
 var React = require('react/addons');
 var Router = require('react-router');
 
 var ContactOverlay = require('./ContactOverlay');
 var MenuOverlay = require('./MenuOverlay');
+var Collections = require('./Collections');
+
+var RESPONSIVE_BREAKPOINT = 800;
+
+// FIXME: Implement Picturefill() as before in main.jsx
 
 var Layout = React.createClass({
   getInitialState: function() {
     return {
       menuOpen: false,
-      contactOpen: false
+      contactOpen: false,
+      small: false
     }
   },
   
@@ -24,6 +31,12 @@ var Layout = React.createClass({
   componentDidMount: function() {
     // need to bind this at a higher level
     $(document).on('keydown', this.handleKeyDown);
+    
+    // FIXME: Hook into the $( window ).resize event handler and set state
+    // appropriately as window resizes
+    this.setState({
+      small: $(window).width() <= RESPONSIVE_BREAKPOINT
+    });
   },
   
   componentWillUnmount: function() {
@@ -58,7 +71,9 @@ var Layout = React.createClass({
     
     var childProps = _.extend({}, this.props, {
       openContact: this.openContact,
-      openMenu: this.openMenu
+      openMenu: this.openMenu,
+      collections: Collections,
+      small: this.state.small
     })
     
     return (

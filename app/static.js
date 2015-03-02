@@ -22,8 +22,9 @@ var pages = ['/', '/about'];
 pages.forEach(function(page) {
   Router.run(routes, page, function (Handler, state) {
     var html = React.renderToStaticMarkup(HtmlComponent({
-      title: 'Example',
-      markup: React.renderToString(React.createFactory(Handler)())
+      // FIXME: hook this in
+      title: 'Percolate Studio: Product Design & Software Engineering',
+      markup: React.renderToString(React.createFactory(Handler)({ params: state.params }))
     }));
 
     writePage(page, html);

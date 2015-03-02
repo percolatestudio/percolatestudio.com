@@ -1,8 +1,11 @@
 'use strict';
 
+// FIXME: Check that window isomorphic handling makes sense
+
 var ImageSourceMixin = {
   imageSource: function(original) {
-    if (! window.devicePixelRatio || window.devicePixelRatio <= 1)
+    if (typeof window === 'undefined' 
+        || ! window.devicePixelRatio || window.devicePixelRatio <= 1)
       return original;
   
     return original.replace(/\.[^\.]*$/, '@2x$&');

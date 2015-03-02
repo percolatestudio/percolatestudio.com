@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('lodash')
 var React = require('react');
 var MetaTagsMixin = require('../lib/MetaTagsMixin');
 

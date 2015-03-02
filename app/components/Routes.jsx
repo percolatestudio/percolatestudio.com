@@ -8,31 +8,14 @@ var What = require('./What');
 var Product = require('./Product');
 var Careers = require('./Careers');
 var Job = require('./Job');
+var NotFound = require('./NotFound');
 var StyleguideBase = require('./styleguide/Base');
 var StyleguideCaseStudy = require('./styleguide/CaseStudy');
-var NotFound = require('./NotFound');
 
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;
 var Redirect = Router.Redirect;
-
-// var Application = require('./Application.jsx');
-// var Home = require('./Home.jsx');
-// var About = require('./About.jsx');
-//
-// var routes = (
-//   <Route name="app" path="/" handler={Application}>
-//     <Route name="about" handler={About}/>
-//     <DefaultRoute name="home" handler={Home}/>
-//   </Route>
-// );
-
-// var routes = (
-//   <Route name="appBody" path="/" handler={Layout}>
-//     <DefaultRoute name="home" handler={Home}/>
-//   </Route>
-// );
 
 var routes = (
   <Route name="appBody" path="/" handler={Layout}>

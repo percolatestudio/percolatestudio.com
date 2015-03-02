@@ -1,11 +1,11 @@
 require('node-jsx').install({ extension: '.jsx' });
 
 var React = require('react');
-var HtmlComponent = React.createFactory(require('./components/Html.jsx'));
+var HtmlComponent = React.createFactory(require('./components/Html'));
 var Router = require('react-router');
 
 var express = require('express');
-var routes = require('./components/Routes.jsx');
+var routes = require('./components/Routes');
 
 var server = express();
 server.use('/js', express.static(__dirname + '/../build/js'));

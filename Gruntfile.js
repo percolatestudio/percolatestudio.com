@@ -53,7 +53,7 @@ module.exports = function (grunt) {
           loaders: [
             { test: /\.css$/, loader: 'style!css' },
             { test: /\.less$/,loader: "style-loader!css-loader!less-loader" },
-            { test: /\.jsx$/, loader: 'jsx-loader' }
+            { test: /\.jsx$/, loader: 'jsx-loader?harmony' }
           ]
         },
         stats: {

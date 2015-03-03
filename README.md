@@ -3,6 +3,7 @@
 To install dependencies
 
 ```bash
+$ npm install -g grunt-cli
 $ npm install
 ```
 

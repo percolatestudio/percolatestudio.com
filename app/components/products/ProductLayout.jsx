@@ -50,7 +50,7 @@ var ProductLink = React.createClass({
     
     return (
       <Router.Link to="product" params={this.props.product} 
-        className={this.props.className}
+        className={className}
         style={{backgroundImage: "url('" + imageUrl + "')"}} {...other}>
         <span className="subtitle-item">{product.title}</span>
       </Router.Link>

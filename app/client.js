@@ -12,10 +12,8 @@ var routes = require('./components/Routes');
 
 window.React = React; // For chrome dev tool support
 
-var mountNode = document.getElementById('app');
-
 Router.run(routes, Router.HistoryLocation, function (Handler, state) {
-  React.render(React.createFactory(Handler)({ params: state.params }), mountNode);
+  React.render(React.createFactory(Handler)({ params: state.params }), document.body);
   console.log('Client Rendered');
 });
 

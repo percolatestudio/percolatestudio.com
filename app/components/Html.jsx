@@ -8,23 +8,21 @@ var Html = React.createClass({
     
     return (
       <html>
-      <head>
-        <title>{this.props.title}</title>
+        <head>
+          <title>{this.props.title}</title>
 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="description" content="Percolate Studio builds digital products that improve people's lives" />
-        <meta name="robots" />
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width" />
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <meta name="description" content="Percolate Studio builds digital products that improve people's lives" />
+          <meta name="robots" />
+          <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width" />
 
-        <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
+          <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
 
-        <script dangerouslySetInnerHTML={{__html: gaScript}}></script>
-      </head>
-      <body>
-        <div id="app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
-      </body>
-      <script src="/js/client.js"></script>
+          <script dangerouslySetInnerHTML={{__html: gaScript}}></script>
+        </head>
+        <body dangerouslySetInnerHTML={{__html: this.props.markup}} />
+        <script src="/js/client.js"></script>
       </html>
     );
   }

@@ -13,10 +13,12 @@ server.use(express.static(__dirname + '/assets'));
 
 server.use(function (req, res, next) {
   Router.run(routes, req.path, function (Handler, state) {
+    var bodyElement = React.createFactory(Handler)({ params: state.params });
+    
     var html = React.renderToStaticMarkup(HtmlComponent({
       // FIXME: hook this in
       title: 'Percolate Studio: Product Design & Software Engineering',
-      markup: React.renderToString(React.createFactory(Handler)({ params: state.params }))
+      markup: React.renderToString(bodyElement)
     }));
 
     console.log('Rendering ' + req.path);

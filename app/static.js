@@ -42,8 +42,12 @@ paths.forEach(function(page) {
 
 // converts a page into a filepath relative to cwd and writes contents there
 function writePage(page, contents) {
-  if (page === '/')
-    page = '/index';
+  function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+  }
+
+  if (endsWith(page, '/'))
+    page += 'index';
 
   var filePath = path.join(cwd, page + '.html');
 

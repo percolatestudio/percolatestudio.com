@@ -23,10 +23,10 @@ var routes = (
 
     <Route name="how" path="how" handler={How}/>
 
-    <Route name="what" path="what" handler={What}/>
+    <Route name="what" path="what/" handler={What}/>
     <Route name="product" path="what/:name" handler={Product}/>
 
-    <Route name="careers" path="careers" handler={Careers}/>
+    <Route name="careers" path="careers/" handler={Careers}/>
     <Route name="job" path="careers/:name" handler={Job}/>
 
     <Route path="styleguide/base" name="styleguide-base" handler={StyleguideBase}/>

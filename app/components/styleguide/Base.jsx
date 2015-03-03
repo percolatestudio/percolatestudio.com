@@ -225,7 +225,7 @@ var StyleguideBase = React.createClass({
             <fieldset>
               <legend>Legend</legend>
               <input name="default-input" type="text" size="20" value="" placeholder="Standard input"/>
-              <label for="default-input3"><span className="alert">Alert Input</span></label>
+              <label forName="default-input3"><span className="alert">Alert Input</span></label>
               <input name="default-input3" type="text" size="20" value="" className="alert" placeholder="Invalid values"/>
               <div className="input-symbol left">
                 <input type="text" placeholder="First Name"/>
@@ -244,34 +244,34 @@ var StyleguideBase = React.createClass({
               <textarea name="description" rows="4" cols="20" placeholder="Nostalgic futurist"></textarea>
               <span className="a-select">
                 <select id="aviators" name="aviators">
-                  <option selected value="1">Amelia Earhart</option>
+                  <option value="1">Amelia Earhart</option>
                   <option value="2">Charles Lindbergh</option>
                 </select>
               </span>
               <span className="a-select small">
-                <select id="aviators" name="aviators">
-                  <option selected value="1">Amelia Earhart</option>
+                <select id="aviators" name="aviators" defaultValue="1">
+                  <option value="1">Amelia Earhart</option>
                   <option value="2">Charles Lindbergh</option>
                 </select>
               </span>
               <span className="a-select inverse">
-                <select id="aviators" name="aviators">
-                  <option selected value="1">Neil Armstrong</option>
+                <select id="aviators" name="aviators" defaultValue="1">
+                  <option value="1">Neil Armstrong</option>
                   <option value="2">Yuri Gagarin</option>
                   <option value="3">Buzz Aldrin</option>
                 </select>
               </span>
               <span className="a-select nochrome">
-                <select id="stuff" name="timerange">
-                  <option selected value="1">Today</option>
+                <select id="stuff" name="timerange" defaultValue="1">
+                  <option value="1">Today</option>
                   <option value="2">This Week</option>
                   <option value="2">This Month</option>
                   <option value="2">This Year</option>
                 </select>
               </span>
               <span className="a-select nochrome small">
-                <select id="stuff" name="timerange">
-                  <option selected value="1">Today</option>
+                <select id="stuff" name="timerange" defaultValue="1">
+                  <option value="1">Today</option>
                   <option value="2">This Week</option>
                   <option value="2">This Month</option>
                   <option value="2">This Year</option>
@@ -283,10 +283,10 @@ var StyleguideBase = React.createClass({
                 <input type="checkbox" value=""/> <span>Unchecked</span>
               </label>
               <label className="checkbox">
-                <input type="checkbox" value="" checked/> <span>Checked</span>
+                <input type="checkbox" value="" defaultChecked/> <span>Checked</span>
               </label>
               <label className="checkbox empty">
-                <input type="checkbox" checked/>
+                <input type="checkbox" defaultChecked/>
                 <span></span>
               </label>
               <label className="radio">
@@ -381,7 +381,7 @@ var TableHeading = React.createClass({
   render: function() {
     return (
       <tr>
-        <th class="title">Table Title</th>
+        <th className="title">Table Title</th>
         <th>Heading</th>
         <th>Heading</th>
         <th>Heading</th>
@@ -394,7 +394,7 @@ var TableRow = React.createClass({
   render: function() {
     return (
       <tr>
-        <td><a href="#" class="name nochrome">Lorem Ipsum Dolor Sit Amet</a></td>
+        <td><a href="#" className="name nochrome">Lorem Ipsum Dolor Sit Amet</a></td>
         <td>2.1</td>
         <td>1.3</td>
         <td>0.8</td>

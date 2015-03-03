@@ -7,12 +7,22 @@ var Router = require('react-router');
 var ContactOverlay = require('./ContactOverlay');
 var MenuOverlay = require('./MenuOverlay');
 var Collections = require('./Collections');
+var HeadMixin = require('../lib/HeadMixin');
+
+var PictureFill;
+
+try {
+  PictureFill = require('picturefill');
+} catch (e) {
+  if (! e instanceof ReferenceError)
+    throw e;
+}
 
 var RESPONSIVE_BREAKPOINT = 800;
 
-// FIXME: Implement Picturefill() as before in main.jsx
-
 var Layout = React.createClass({
+  mixins: [HeadMixin],
+
   getInitialState: function() {
     return {
       menuOpen: false,
@@ -31,6 +41,8 @@ var Layout = React.createClass({
   componentDidMount: function() {
     // need to bind this at a higher level
     $(document).on('keydown', this.handleKeyDown);
+    
+    this.pictureFill();
     
     // FIXME: Hook into the $( window ).resize event handler and set state
     // appropriately as window resizes
@@ -62,6 +74,17 @@ var Layout = React.createClass({
     }
   },
   
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.params && PictureFill)
+      this.pictureFill();
+  },
+  
+  // Runs the picturefill polyfill
+  pictureFill: function() {
+    if (PictureFill)
+      window.picturefill();
+  },
+  
   render: function() {
     var layoutClasses = React.addons.classSet({
       'layout': true,
@@ -81,7 +104,7 @@ var Layout = React.createClass({
 
         <Router.RouteHandler {...childProps}/>
 
-        <ContactOverlay/>
+        <ContactOverlay openContact={this.openContact} />
         <MenuOverlay {...childProps}/>
       </div>
     )

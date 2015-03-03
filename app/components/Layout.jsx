@@ -1,3 +1,4 @@
+/*global document, window, location */
 'use strict';
 var _ = require('lodash');
 var $ = require('jquery');
@@ -32,7 +33,6 @@ var Layout = React.createClass({
   },
   
   componentWillMount: function() {
-    // FIXME: location is not isomorphic
     if (typeof location !== 'undefined' && location.hash === '#contact') {
       this.setState({contactOpen: true});
     }
@@ -41,18 +41,15 @@ var Layout = React.createClass({
   componentDidMount: function() {
     // need to bind this at a higher level
     $(document).on('keydown', this.handleKeyDown);
-    
+
+    $(window).on('resize', this.handleWindowResize);
+
     this.pictureFill();
-    
-    // FIXME: Hook into the $( window ).resize event handler and set state
-    // appropriately as window resizes
-    this.setState({
-      small: $(window).width() <= RESPONSIVE_BREAKPOINT
-    });
   },
   
   componentWillUnmount: function() {
     $(document).off('keydown', this.handleKeyDown);
+    $(window).off('resize', this.handleWindowResize);
   },
   
   openMenu: function(state) {
@@ -72,6 +69,12 @@ var Layout = React.createClass({
       this.openContact(false);
       this.openMenu(false);
     }
+  },
+  
+  handleWindowResize: function() {
+    this.setState({
+      small: $(window).width() <= RESPONSIVE_BREAKPOINT
+    });
   },
   
   componentWillReceiveProps: function(nextProps) {

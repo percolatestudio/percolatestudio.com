@@ -124,5 +124,5 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['static', 's3:deploy']);
 
   // For testing!
-  // grunt.registerTask('static', ['execute:static']);
+  grunt.registerTask('static-only', ['execute:static']);
 };

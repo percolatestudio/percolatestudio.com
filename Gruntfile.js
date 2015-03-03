@@ -1,5 +1,6 @@
 var _ = require('lodash');
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = function (grunt) {
   var s3Config = grunt.file.readJSON('./s3.config.json');
@@ -46,16 +47,20 @@ module.exports = function (grunt) {
         },
         entry: './app/client.js',
         output: {
-          path: './build/js',
+          path: './build',
           filename: 'client.js'
         },
         module: {
           loaders: [
             { test: /\.css$/, loader: 'style!css' },
-            { test: /\.less$/,loader: "style-loader!css-loader!less-loader" },
+            // Use "css-loader?minimize!less-loader" for minification
+            { test: /\.less$/,loader: ExtractTextPlugin.extract("style-loader", 
+              "css-loader!less-loader") }, 
             { test: /\.jsx$/, loader: 'jsx-loader' }
+            
           ]
         },
+        plugins: [ new ExtractTextPlugin("client.css") ],
         stats: {
           colors: true
         },
@@ -69,7 +74,7 @@ module.exports = function (grunt) {
       },
       static: {
         files: {
-          'static/js/client.js': ['build/js/client.js']
+          'static/js/client.js': ['build/client.js']
         }
       }
     },

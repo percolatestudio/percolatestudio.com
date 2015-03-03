@@ -18,11 +18,12 @@ var Html = React.createClass({
           <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width" />
 
           <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
+          <link href="/client.css" media="all" rel="stylesheet" />
 
           <script dangerouslySetInnerHTML={{__html: gaScript}}></script>
         </head>
         <body dangerouslySetInnerHTML={{__html: this.props.markup}} />
-        <script src="/js/client.js"></script>
+        <script src="/client.js" async></script>
       </html>
     );
   }

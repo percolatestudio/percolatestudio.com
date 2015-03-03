@@ -13,7 +13,7 @@ var routes = require('./components/Routes');
 window.React = React; // For chrome dev tool support
 
 Router.run(routes, Router.HistoryLocation, function (Handler, state) {
-  var bodyElement = React.createFactory(Handler)({ params: state.params });
+  var bodyElement = React.createFactory(Handler)({ params: state.params, clientReady: true });
   
   React.render(bodyElement, document.body);
   console.log('Client Rendered');

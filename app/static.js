@@ -33,7 +33,7 @@ paths.forEach(function(page) {
     var html = React.renderToStaticMarkup(HtmlComponent({
       // FIXME: hook this in
       title: 'Percolate Studio: Product Design & Software Engineering',
-      markup: React.renderToString(React.createFactory(Handler)({ params: state.params }))
+      markup: React.renderToString(React.createFactory(Handler)({ params: state.params, clientReady: false }))
     }));
 
     writePage(page, html);

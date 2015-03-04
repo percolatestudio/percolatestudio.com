@@ -15,14 +15,15 @@ var ProductLayout = React.createClass({
       return p.index === product.index - 1;
     });
     
-    var linkClassName = (nextProduct && previousProduct) ? 'grid-2-square' : 'grid-1';
-    var previousLink, nextLink
+    var large = ! (nextProduct && previousProduct);
+    var previousLink, nextLink;
     
     if (previousProduct)
-      previousLink = <ProductLink product={previousProduct} className={linkClassName}/>;
+      previousLink = <ProductLink product={previousProduct} large={large}/>;
 
     if (nextProduct)
-      nextLink = <ProductLink product={nextProduct} className={linkClassName}/>;
+      nextLink = <ProductLink product={nextProduct} large={large}/>;
+    
     return (
       <PageLayout className={'product-' + product.name} {...this.props}>
         {this.props.children}
@@ -42,10 +43,12 @@ var ProductLink = React.createClass({
 
   render: function() {
     var product = this.props.product;
-    var className = this.props.className;
-    var other = _.omit(this.props, 'product', 'className');
+    var large = this.props.large;
+    var other = _.omit(this.props, 'product', 'large');
     
-    var imageUrl = this.imageSource(product.thumbnailUrl);
+    var sourceUrl = large ? product.featureUrl : product.thumbnailUrl;
+    var imageUrl = this.imageSource(sourceUrl);
+    var className = large ? 'grid-1' : 'grid-2-square';
     className += ' item-project bg-image';
     
     return (

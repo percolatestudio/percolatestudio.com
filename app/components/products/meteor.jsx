@@ -38,9 +38,9 @@ product.component = React.createClass({
           </div>
           <div className="full-up formatting">
             <h2>Engineered Learning</h2>
-            <p>It&rsquo;s rare when a company whose product we use approaches us to collaborate; you can imagine our excitement when Meteor tasked us with conceiving open source example applications. They would need to pique developer curiosity and serve as reference material.</p>
+            <p>It&rsquo;s rare when a company whose product we use approaches us to collaborate; you can imagine our excitement when Meteor tasked us with conceiving open source example applications. They needed apps that would pique developer curiosity and serve as reference material.</p>
 
-            <p>In an engineering user funnel, example apps are the junction between acquisition and engagement. That is, they target folks who are interested but have yet to fully use the product. To engage these users, the apps would need to illuminate common development patterns and address real-life use cases. We started with concrete requirements: document essential framework concepts, showcase practical engineering patterns, and define best practices for app structure. Next, we identified use cases where Meteor adds tremendous value like social engagement, list-keeping, and game scoring. It was important to balance instruction and inspiration to show that great experiences were easily achievable with Meteor.</p>
+            <p>In an engineering user funnel, example apps are the segue from acquisition to engagement. Their audience is folks who are interested but have yet to fully use the product. To engage these new users, the apps need to illuminate common development patterns and address real-life use cases. We started with concrete requirements: document essential framework concepts, showcase practical engineering patterns, and define best practices for app structure. Next, we identified use cases where Meteor adds tremendous value like social engagement, list-keeping, and game scoring. It was important to balance instruction and inspiration to show that great experiences were easily achievable with Meteor.</p>
           </div>
         </div>
 
@@ -52,10 +52,10 @@ product.component = React.createClass({
         <div className="wrapper-content">
           <div className="full-up formatting">
             <h2>Meteor Fundamentals</h2>
-            <p>People are often incredulous when discovering how intuitively Meteor solves common challenges. One such challenge is ensuring that all connected users see the same up-to-date information. For example, a score board of a game should always reflect the current score. In the request-response world of technologies like Ruby and PHP data could not stay in sync without a page reload. Something seemingly as simple as showing the latest score in realtime would be nigh impossible. With Meteor&rsquo;s <em>Leaderboard</em> we prove it can be done elegantly.</p>
+            <p>People are often incredulous when discovering how intuitively Meteor solves common challenges. One such challenge is ensuring that all connected users see the same up-to-date information. For example, a score board of a game should always reflect the current score. In the request-response world of Ruby and PHP data could not be updated without a page reload. Something seemingly as simple as showing the latest score in realtime would be nigh impossible without user input. With Meteor&rsquo;s <em>Leaderboard</em> we prove it can be done elegantly.</p>
 
             <h2>Putting Concepts Together</h2>
-            <p>Todo apps are classNameic coding exercises. Our objective with <em>Todos</em> was to segue from <em>Leaderboard&rsquo;s</em> simple functionality to a more realistic feature set. We first identified common characteristics in modern apps: responsive layouts, accounts, and the ability to collaborate. A responsive layout accommodates users no matter the size of the screen. Accounts help users keep track of their own information. Collaboration allows more people to get involved at the same time. These pieces were combined into a todo list app that helps users create, share, and sync lists seamlessly on any device.</p>
+            <p>Todo apps are classic coding exercises. Our objective with <em>Todos</em> was to segue from <em>Leaderboard&rsquo;s</em> simple functionality to a more realistic feature set. We first identified common characteristics in modern apps: responsive layouts, accounts, and the ability to collaborate. A responsive layout accommodates users no matter the size of the screen. Accounts help users keep track of their own information. Collaboration allows more people to get involved at the same time. These pieces were combined into a todo list app that helps users create, share, and sync lists seamlessly on any device.</p>
           </div>
         </div>
 

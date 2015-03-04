@@ -187,10 +187,10 @@
   .collage-text {
     p:last-child { margin-bottom: 1em; } //resets global p:last-child
     @media only screen and (min-width: @breakpoint) {
-      .grid-2 {
+      [class*="grid-2"] {
         padding-right: 4%;
       }
-      .grid-2 + .grid-2 {
+      [class*="grid-2"] + [class*="grid-2"] {
         padding-right: 0;
         padding-left: 4%;
       }

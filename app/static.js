@@ -27,9 +27,16 @@ paths = interpolate(paths, '/careers/:name', 'name', jobNames);
 
 paths.push('/error'); // Will hit the NotFound route and generate error.html
 
+// Manually specify indexes on these directory paths. Otherwise navigating to
+// foo/ will do a directory listing. Its possible we can automate this in
+// interrogate()
+paths.push('/careers/');
+paths.push('/what/');
+
 // Render each path
 paths.forEach(function(page) {
   Router.run(routes, page, function (Handler, state) {
+    console.log(page);
     var html = React.renderToStaticMarkup(HtmlComponent({
       // FIXME: hook this in
       title: 'Percolate Studio: Product Design & Software Engineering',
@@ -42,8 +49,12 @@ paths.forEach(function(page) {
 
 // converts a page into a filepath relative to cwd and writes contents there
 function writePage(page, contents) {
-  if (page === '/')
-    page = '/index';
+  function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+  }
+
+  if (endsWith(page, '/'))
+    page += 'index'
 
   var filePath = path.join(cwd, page + '.html');
 
@@ -51,7 +62,6 @@ function writePage(page, contents) {
   mkdirp.sync(path.dirname(filePath));
 
   fs.writeFileSync(filePath, contents);
-  console.log(filePath);
 }
 
 // Returns an array containing paths that correspond to routes

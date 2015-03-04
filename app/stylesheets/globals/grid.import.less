@@ -36,9 +36,15 @@
   .transform( translate3d(0,0,0) );
   float: left;
   position: relative;
+
+  //Ensures grid's that are wrapped in .collage do not get a height assignment
+  *:not(.collage) & {
+    height: auto !important;
+  }
 }
 
 [class*="grid-1"] { height: 100%; }
+
 
 [class*="grid-2"] {
   height: 50% !important;

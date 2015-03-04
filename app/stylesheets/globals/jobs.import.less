@@ -7,26 +7,22 @@
     background: @color-empty;
     overflow: hidden;
     position: relative;
-    @media screen and (min-width: @breakpoint) {
-      height: 85%;
-      min-height: 600px;
-    }
+
+    height: 85%;
 
     z-index: 1;
     text-align: center;
   }
 
   .wrapper-hero {
-    @media screen and (min-width: @breakpoint) {
-      .position(absolute, 50%, 0, auto, 0);
-      .transform(translateY(-50%));
-    }
+    .position(absolute, 50%, 0, auto, 0);
+    .transform(translateY(-50%));
   }
   .hero {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     width: 96px;
     @media screen and (min-width: @breakpoint) {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       width: 192px;
     }
   }

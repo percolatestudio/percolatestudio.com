@@ -18,7 +18,7 @@ job.component = React.createClass({
           <div className="wrapper-hero">
             <img title="Engineering" className="hero" src="/img/services-engineering-160x160.svg"/>
             <h1 className="title-page">Software Engineer</h1>
-            <p className="description-page">We're looking for a full-stack engineer to build impactful features across client and internal products. You're at home in an agile product development cycle and able to adapt to changes in stride. You'll be working with our engineering team to prototype, build, and test software.</p>
+            <p className="description-page">We're looking for a full-stack engineer to build impactful features. You're at home in agile product development and are able to adapt to pivots in stride. You'll be working with our engineering team to prototype, build, and test software.</p>
           </div>
         </div>
 

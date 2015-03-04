@@ -18,7 +18,7 @@ job.component = React.createClass({
           <div className="wrapper-hero">
             <img title="Design" className="hero" src="/img/services-design-160x160.svg"/>
             <h1 className="title-page">Product Designer</h1>
-            <p className="description-page">We’re looking for a product designer to craft experiences across client and internal products. Your experience in the product cycle allows you to adapt to changes with ease. You'll be working with our global family to prototype, design, and build software that people love.</p>
+            <p className="description-page">We’re looking for a product designer to craft experiences. Your experience in the product cycle allows you to adapt to changes with ease. You'll be expected to prototype, design, and build software that people love.</p>
           </div>
         </div>
 

@@ -1,14 +1,11 @@
 'use strict';
 var React = require('react');
 var PageLayout = require('./PageLayout');
-var MetaTagsMixin = require('../lib/MetaTagsMixin');
 
 var How = React.createClass({
-  mixins: [MetaTagsMixin],
-  
   componentWillMount: function() {
-    this.setTitle("How | Percolate Studio");
-    this.setDescription("Our products are the result of integrated services, qualified team, and a process that delivers results.");
+    this.props.headParams.setTitle("How | Percolate Studio");
+    this.props.headParams.setDescription("Our products are the result of integrated services, qualified team, and a process that delivers results.");
   },
 
   render: function() {

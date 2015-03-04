@@ -6,6 +6,7 @@ var _ = require('lodash');
 var React = require('react');
 var HtmlComponent = React.createFactory(require('./components/Html'));
 var Router = require('react-router');
+var HeadParams = require('./lib/HeadParams');
 
 var cwd = process.cwd();
 var path = require('path');
@@ -33,14 +34,21 @@ paths.push('/error'); // Will hit the NotFound route and generate error.html
 paths.push('/careers/');
 paths.push('/what/');
 
+var headParams = new HeadParams();
+
 // Render each path
 paths.forEach(function(page) {
   Router.run(routes, page, function (Handler, state) {
     console.log(page);
+    var bodyElement = React.createFactory(Handler)({ 
+      params: state.params, 
+      headParams: headParams,
+      clientReady: false 
+    });
+    
     var html = React.renderToStaticMarkup(HtmlComponent({
-      // FIXME: hook this in
-      title: 'Percolate Studio: Product Design & Software Engineering',
-      markup: React.renderToString(React.createFactory(Handler)({ params: state.params, clientReady: false }))
+      headParams: headParams,
+      markup: React.renderToString(bodyElement)
     }));
 
     writePage(page, html);

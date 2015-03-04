@@ -3,15 +3,14 @@ var _ = require('lodash');
 var React = require('react');
 var Router = require('react-router');
 var PageLayout = require('./PageLayout');
-var MetaTagsMixin = require('../lib/MetaTagsMixin');
 var ImageSourceMixin = require('../lib/ImageSourceMixin');
 
 var What = React.createClass({
-  mixins: [MetaTagsMixin, ImageSourceMixin],
+  mixins: [ImageSourceMixin],
   
   componentWillMount: function() {
-    this.setTitle("What | Percolate Studio");
-    this.setDescription("Percolate designs and engineers digital products. We create beautiful, simple, and performant software that helps companies achieve their goals.");
+    this.props.headParams.setTitle("What | Percolate Studio");
+    this.props.headParams.setDescription("Percolate designs and engineers digital products. We create beautiful, simple, and performant software that helps companies achieve their goals.");
   },
     
   render: function() {

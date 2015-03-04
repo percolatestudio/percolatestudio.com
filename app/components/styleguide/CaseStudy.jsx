@@ -156,10 +156,10 @@ var StyleguideCaseStudy = React.createClass({
         </div>
         <div className="title-section featured">Featured Projects</div>
         <div className="collage">
-          <a className="grid-2-square item-project bg-image-test-1">
+          <a className="grid-2-square item-project bg-image-test-1" style={{backgroundImage: "url('/img/case-study/meteor/meteor-todos-home-iphone5s-600x600.jpg');"}}>
             <span className="subtitle-item">Meteor</span>
           </a>
-          <a className="grid-2-square item-project bg-image-test-2">
+          <a className="grid-2-square item-project bg-image-test-2" style={{backgroundImage: "url('/img/case-study/verso/verso-classes-iphone6-600x600.jpg');"}}>
             <span className="subtitle-item">Verso</span>
           </a>
         </div>

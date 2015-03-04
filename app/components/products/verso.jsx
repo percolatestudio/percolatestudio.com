@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react');
 var ProductLayout = require('./ProductLayout');
+var CtaLink = require('./CtaLink');
 
 var product = {
   name: 'verso',
@@ -96,10 +97,7 @@ product.component = React.createClass({
 
           <div className="center-up formatting">
             <p>Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years Verso has spread to thousands of schools. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>
-            <div className="wrapper-cta-case-study">
-              <p>Are you interested in education technology?</p>
-              <a className="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
-            </div>
+            <CtaLink title="Are you interested in education technology?" openContact={this.props.openContact} />
           </div>
         </div>
       </ProductLayout>

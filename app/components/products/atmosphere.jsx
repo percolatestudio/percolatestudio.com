@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react');
 var ProductLayout = require('./ProductLayout');
+var CtaLink = require('./CtaLink');
 
 var product = {
   name: 'atmosphere',
@@ -70,10 +71,7 @@ product.component = React.createClass({
           <div className="center-up formatting">
             <p>Open source packages will be instrumental in creating the apps of the future. We created <a href="https://atmospherejs.com" target="_blank">Atmosphere</a> to index and share our packages with others. What began as a small engineering tool has evolved into a steadily growing service used by thousands of innovators daily.
             </p>
-            <div className="wrapper-cta-case-study">
-              <p>Are you interested in open source?</p>
-              <a className="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
-            </div>
+            <CtaLink title="Are you interested in open source?" openContact={this.props.openContact} />
           </div>
         </div>
       </ProductLayout>

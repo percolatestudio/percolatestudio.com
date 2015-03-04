@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react');
 var ProductLayout = require('./ProductLayout');
+var CtaLink = require('./CtaLink');
 
 var product = {
   name: 'meetinghero',
@@ -71,10 +72,7 @@ product.component = React.createClass({
           <div className="conclusion">Hello effective meetings</div>
           <div className="center-up formatting">
             <p>MeetingHero makes it easy for teams to have highly productive, engaging meetings, by providing the right amount of structure to add ensure action. Attendees can work together to manage meetings in realtime. Summaries are emailed to all parties when the meeting ends. Meetings are synced via the cloud and seamlessly integrates with Google accounts. Our immersive engineering engagement resulted in a viable product that helps people create engaging meetings. MeetingHero has gone on to get traction and raise investment. Their time to market was three months.</p>
-            <div className="wrapper-cta-case-study">
-              <p>Are you interested in business utilities and organization?</p>
-              <a className="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
-            </div>
+            <CtaLink title="Are you interested in business utilities and organization?" openContact={this.props.openContact} />
           </div>
         </div>
 

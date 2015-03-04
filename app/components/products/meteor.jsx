@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react');
 var ProductLayout = require('./ProductLayout');
+var CtaLink = require('./CtaLink');
 
 var product = {
   name: 'meteor',
@@ -109,10 +110,7 @@ product.component = React.createClass({
 
           <div className="center-up formatting">
             <p>Our engineers and designers worked in tandem with Meteor&rsquo;s in-house team to create canonical open source apps that inform & inspire developers. <em>Leaderboard</em>, <em>Todos</em>, and <em>Local Market</em> have since been installed by tens of thousands of developers and deployed to both the Google Play and App Store.</p>
-            <div className="wrapper-cta-case-study">
-              <p>Are you interested in realtime experiences?</p>
-              <a className="btn-wire-inverse caps cta-case-study" data-contact>Get in Touch</a>
-            </div>
+            <CtaLink title="Are you interested in realtime experiences?" openContact={this.props.openContact} />
           </div>
         </div>
       </ProductLayout>

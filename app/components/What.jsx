@@ -8,15 +8,15 @@ var ImageSourceMixin = require('../lib/ImageSourceMixin');
 
 var What = React.createClass({
   mixins: [MetaTagsMixin, ImageSourceMixin],
-  
+
   componentWillMount: function() {
     this.setTitle("What | Percolate Studio");
     this.setDescription("Percolate designs and engineers digital products. We create beautiful, simple, and performant software that helps companies achieve their goals.");
   },
-    
+
   render: function() {
     var products = _.sortBy(this.props.collections.Products, function(p) { return p.index; });
-    
+
     var firstProduct = products.shift();
     var firstProductImageSrc = this.imageSource(this.props.small ? firstProduct.thumbnailUrl : firstProduct.featureUrl);
     var firstProductLink = (
@@ -36,7 +36,7 @@ var What = React.createClass({
         </Router.Link>
       );
     }.bind(this));
-    
+
     return (
       <PageLayout  {...this.props}>
 
@@ -57,13 +57,13 @@ var What = React.createClass({
 
         <div className="collage mini">
           <a className="grid-5 logo" href="http://apple.com" target="_blank">
-            <img title="Apple Computer" src="img/logo-apple.svg"/>
+            <img title="Apple Computer" src="/img/logo-apple.svg"/>
           </a>
           <a className="grid-5 logo" href="http://yummly.com" target="_blank">
-            <img title="Yummly" src="img/logo-yummly.svg"/>
+            <img title="Yummly" src="/img/logo-yummly.svg"/>
           </a>
           <a className="grid-5 logo" href="http://meteor.com" target="_blank">
-            <img title="MeteorJS" src="img/logo-meteor.svg"/>
+            <img title="MeteorJS" src="/img/logo-meteor.svg"/>
           </a>
         </div>
       </PageLayout>

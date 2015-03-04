@@ -8,7 +8,6 @@ var Router = require('react-router');
 var ContactOverlay = require('./ContactOverlay');
 var MenuOverlay = require('./MenuOverlay');
 var Collections = require('./Collections');
-var HeadMixin = require('../lib/HeadMixin');
 
 var PictureFill;
 
@@ -22,8 +21,6 @@ try {
 var RESPONSIVE_BREAKPOINT = 800;
 
 var Layout = React.createClass({
-  mixins: [HeadMixin],
-
   getInitialState: function() {
     return {
       menuOpen: false,

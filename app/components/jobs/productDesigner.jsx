@@ -25,11 +25,11 @@ job.component = React.createClass({
         <section className="section-about">
           <div className="title-section">About you</div>
           <ol className="details-about">
-            <li className="grid-2"><span className="meta">You want to design world-className digital products</span></li>
-            <li className="grid-2"><span className="meta">You build what you design (HTML, CSS, JS)</span></li>
-            <li className="grid-2"><span className="meta">You understand the constraints of the digital medium and are able to surpass them</span></li>
-            <li className="grid-2"><span className="meta">You transition between brand, visual design, user experience and code with ease.</span></li>
-            <li className="grid-2"><span className="meta">You possess the drive to pursue design goals and the practical skills to get 'em done</span></li>
+            <li className="grid-2-collapse"><span className="meta">You want to design world-className digital products</span></li>
+            <li className="grid-2-collapse"><span className="meta">You build what you design (HTML, CSS, JS)</span></li>
+            <li className="grid-2-collapse"><span className="meta">You understand the constraints of the digital medium and are able to surpass them</span></li>
+            <li className="grid-2-collapse"><span className="meta">You transition between brand, visual design, user experience and code with ease.</span></li>
+            <li className="grid-2-collapse"><span className="meta">You possess the drive to pursue design goals and the practical skills to get 'em done</span></li>
           </ol>
         </section>
 

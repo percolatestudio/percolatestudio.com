@@ -6,12 +6,12 @@ var MetaTagsMixin = require('../lib/MetaTagsMixin');
 
 var Home = React.createClass({
   mixins: [MetaTagsMixin],
-  
+
   componentWillMount: function() {
     this.setTitle("Percolate Studio: We build software that improves people's lives");
     this.setDescription("Percolate Studio is an interdisciplinary team of designers and engineers that help companies achieve their goals. We identify challenges, design solutions, and make technology human.");
   },
-  
+
   render: function() {
     return (
       <PageLayout  {...this.props}>
@@ -41,14 +41,14 @@ var Home = React.createClass({
         <section className="section-home-what">
           <h2 className="title-section">What we do</h2>
 
-          <div className="grid-2 col-content">
+          <div className="grid-2-collapse col-content">
             <p>We build software that spans consumer, education, and business intelligence. We help companies large and small achieve their goals. Businesses trust us to deliver elegant yet robust digital experiences.</p>
           </div>
-          <div className="grid-2 col-content">
+          <div className="grid-2-collapse col-content">
             <p>Our books, presentations, and articles help people understand the craft of creating software. Our frequent contributions to open source projects help bring ideas to life.</p>
           </div>
 
-          <div className="grid-1 col-content">
+          <div className="grid-1-collapse col-content">
             <Router.Link to="what" className="btn-secondary caps">See our work</Router.Link>
           </div>
 

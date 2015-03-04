@@ -21,10 +21,10 @@ product.component = React.createClass({
           <h1 className="title-case-study">The Building Blocks of Apps</h1>
 
           <div className="collage-text formatting">
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>Every once in awhile a product emerges that shifts the way people understand the world. Whether it’s physical with the steam engine or digital with cloud computing. We think of these products as so revolutionary, so unique in concept and exquisite in execution that their humble beginnings are often overlooked. The late nights. The hurried back of napkin sketches.</p>
             </div>
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>Folks that build products understand the shaky beginnings of successful companies. What begins as a delicate idea evolves with effort and practice. Despite advances in technology the product development process hasn’t changed much; it has only become faster. We designed and built Atmosphere to further accelerate app development by helping engineers discover open source software packages.</p>
             </div>
           </div>

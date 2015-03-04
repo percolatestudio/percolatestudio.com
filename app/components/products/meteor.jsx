@@ -21,11 +21,11 @@ product.component = React.createClass({
           <h1 className="title-case-study">Balancing Instruction &amp; Inspiration</h1>
 
           <div className="collage-text formatting">
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>We are on the cusp of a momentous shift in web technology. Witnessing the evolution of the web from documents to applications was awe inspiring. So to was people&#8217;s dexterity in inventing new ways engage with each other using technology. If the web is simply a communication medium, a stand-in for face-to-face interaction, then its natural evolution is to mirror the palpability of physical interactions. Modern web frameworks help achieve this by <em>reacting</em> to changes in a system and surfacing them to users in <em>realtime</em>.
         </p>
             </div>
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted  shining examples of their technology to accompany the official launch, they reached out to us to design and build it.</p>
             </div>
           </div>

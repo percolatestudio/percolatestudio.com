@@ -21,10 +21,10 @@ product.component = React.createClass({
           <h1 className="title-case-study">How much is time worth?</h1>
 
           <div className="collage-text formatting">
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>We often think to make time by chasing efficiency. The thought process is that increasing efficiency gives us more time to create bigger and better products. So we invest in tools that optimize our processes to get a little faster at things like design, project management, etc. However modern products are bigger than any individual. They are the result of coordinated cross disciplinary teams overcoming challenges together.</p>
             </div>
-            <div className="grid-2">
+            <div className="grid-2-collapse">
               <p>Communicating with teammates is where just under one quarter of an individual’s productive time disappears. Whether this is collaborating on a new sales initiative or conceiving features, we encounter the symptoms of ineffective collaboration in all aspects of professional life. When we signed on to help engineer MeetingHero's launch our objective was obvious: remedy inefficient collaboration starting with meetings.</p>
             </div>
           </div>

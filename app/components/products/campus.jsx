@@ -22,10 +22,10 @@ product.component = React.createClass({
             <h1 className="title-case-study">Delivering Actionable Insights</h1>
 
             <div className="collage-text formatting">
-              <div className="grid-2">
+              <div className="grid-2-collapse">
                 <p>It has never been easier to instrument, collect, and store vast quantities of information. Despite the clear business case for collecting this data, folks still wonder how best to apply it. What does it mean? How can it give decision-makers the information needed to be more effective? The big challenge in analytics is no longer the logistics of data collection, but rather translating immense data into actionable recommendations.</p>
               </div>
-              <div className="grid-2">
+              <div className="grid-2-collapse">
                 <p>Following the success of <a href="/what/verso">Verso</a>, we reconvened the team to tackle a new challenge. Educators used Verso's classroom data to respond to their students' needs. We saw an opportunity to promote effective teaching beyond individual classrooms using the breadth of Verso's engagement metrics. Our integrated design, engineering and strategy practice helped entire schools identify & replicate successful teaching.</p>
               </div>
             </div>

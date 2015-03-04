@@ -22,10 +22,10 @@ product.component = React.createClass({
             <h1 className="title-case-study">Activate Learning</h1>
 
             <div className="collage-text formatting">
-              <div className="grid-2">
+              <div className="grid-2-collapse">
                 <p>The reality of education technology never quite lived up to expectations. Putting devices in classrooms may have lead to savvier pupils, but have these tools actually improved learning ability? Edtech often takes path of incremental changes to the status quo rather than re-examining technologies potential impact on teaching. It seems that companies dedicated to improving classroom tools often ignore key factors to meaningful change: pedagogy and student curiosity.</p>
               </div>
-              <div className="grid-2">
+              <div className="grid-2-collapse">
                 <p>When we first met the Verso team, we were inspired by their empathy towards education. This team of seasoned educators and technologists shared a singular vision to expand students propensity to learn. Whereas many edtech products optimize rote learning, Verso partnered with us to transform their immense classroom experience into a product that sparks student curiosity. We applied our disciplined design, engineering, and strategy process to bring their idea to market.</p>
               </div>
             </div>

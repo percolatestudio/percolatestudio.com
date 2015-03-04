@@ -37,20 +37,17 @@
   float: left;
   position: relative;
 
-  //Ensures grid's that are wrapped in .collage do not get a height assignment
-  *:not(.collage) & {
-    height: auto !important;
-  }
+  //collapses grid items
+  &[class*="-collapse"] { height: auto !important; }
 }
 
 [class*="grid-1"] { height: 100%; }
 
-
 [class*="grid-2"] {
-  height: 50% !important;
+  height: 50%;
   min-height: 0;
 
-  &[class*="square"] { height: 100% !important; }
+  &[class*="square"] { height: 100%; }
 
   @media only screen and (max-width: (@breakpoint - 1px )) {
     // this really just applies to grid-2
@@ -63,7 +60,7 @@
     }
 
     &:not([class*="bg-image"]) {
-      height: auto !important;
+      height: auto;
     }
   }
 }

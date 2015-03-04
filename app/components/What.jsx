@@ -6,7 +6,7 @@ var PageLayout = require('./PageLayout');
 var ImageSourceMixin = require('../lib/ImageSourceMixin');
 
 var What = React.createClass({
-  mixins: [MetaTagsMixin, ImageSourceMixin],
+  mixins: [ImageSourceMixin],
   componentWillMount: function() {
     this.props.headParams.setTitle("What | Percolate Studio");
     this.props.headParams.setDescription("Percolate designs and engineers digital products. We create beautiful, simple, and performant software that helps companies achieve their goals.");

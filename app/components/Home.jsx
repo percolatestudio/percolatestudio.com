@@ -2,14 +2,12 @@
 var React = require('react');
 var Router = require('react-router');
 var PageLayout = require('./PageLayout');
-var MetaTagsMixin = require('../lib/MetaTagsMixin');
 
 var Home = React.createClass({
   mixins: [MetaTagsMixin],
-
   componentWillMount: function() {
-    this.setTitle("Percolate Studio: We build software that improves people's lives");
-    this.setDescription("Percolate Studio is an interdisciplinary team of designers and engineers that help companies achieve their goals. We identify challenges, design solutions, and make technology human.");
+    this.props.headParams.setTitle("Percolate Studio: We build software that improves people's lives");
+    this.props.headParams.setDescription("Percolate Studio is an interdisciplinary team of designers and engineers that help companies achieve their goals. We identify challenges, design solutions, and make technology human.");
   },
 
   render: function() {

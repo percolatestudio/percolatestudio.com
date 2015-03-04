@@ -1,11 +1,8 @@
 'use strict';
 var _ = require('lodash');
 var React = require('react');
-var MetaTagsMixin = require('../lib/MetaTagsMixin');
 
 var Job = React.createClass({
-  mixins: [MetaTagsMixin],
-  
   job: function() {
     var name = this.props.params.name;
     return _.find(this.props.collections.Jobs, function(j) {
@@ -15,8 +12,8 @@ var Job = React.createClass({
   
   componentWillMount: function() {
     var job = this.job();
-    this.setTitle(job.title + ' | Percolate Studio');
-    this.setDescription(job.description);
+    this.props.headParams.setTitle(job.title + ' | Percolate Studio');
+    this.props.headParams.setDescription(job.description);
   },
   
   render: function() {

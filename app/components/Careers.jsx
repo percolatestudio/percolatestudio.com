@@ -3,14 +3,11 @@ var _ = require('lodash');
 var React = require('react');
 var Router = require('react-router');
 var PageLayout = require('./PageLayout');
-var MetaTagsMixin = require('../lib/MetaTagsMixin');
 
 var Careers = React.createClass({
-  mixins: [MetaTagsMixin],
-
   componentWillMount: function() {
-    this.setTitle("Join Us | Percolate Studio");
-    this.setDescription("Join our team to solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.");
+    this.props.headParams.setTitle("Join Us | Percolate Studio");
+    this.props.headParams.setDescription("Join our team to solve diverse challenges with great people. We’ll push you to do the best work of your career, we ask that you push us to do the same.");
   },
 
   render: function() {

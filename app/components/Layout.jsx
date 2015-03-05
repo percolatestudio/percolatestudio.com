@@ -10,9 +10,11 @@ var MenuOverlay = require('./MenuOverlay');
 var Collections = require('./Collections');
 
 var PictureFill;
+var FastClick;
 
 try {
   PictureFill = require('picturefill');
+  FastClick = require('fastclick');
 } catch (e) {
   if (! e instanceof ReferenceError)
     throw e;
@@ -40,6 +42,8 @@ var Layout = React.createClass({
     $(document).on('keydown', this.handleKeyDown);
 
     $(window).on('resize', this.handleWindowResize);
+
+    FastClick.attach(document.body);
 
     this.pictureFill();
   },

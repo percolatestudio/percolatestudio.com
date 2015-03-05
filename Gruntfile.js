@@ -120,10 +120,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-execute');
   grunt.loadNpmTasks('grunt-s3');
+  grunt.loadNpmTasks('grunt-npm-install');
 
-  grunt.registerTask('default', ['clean', 'concurrent:dev']);
+  grunt.registerTask('default', ['clean', 'npm-install', 'concurrent:dev']);
 
-  grunt.registerTask('static', ['clean', 'webpack:static', 'copy:static', 
+  grunt.registerTask('static', ['clean', 'npm-install', 'webpack:static', 'copy:static', 
     'uglify:static', 'execute:static']);
       
   grunt.registerTask('deploy', ['static', 's3:deploy']);

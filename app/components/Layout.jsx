@@ -27,7 +27,7 @@ var Layout = React.createClass({
     return {
       menuOpen: false,
       contactOpen: false,
-      small: false
+      small: this.isSmall()
     }
   },
   
@@ -72,9 +72,13 @@ var Layout = React.createClass({
     }
   },
   
+  isSmall: function() {
+    return (typeof window !== 'undefined') && $(window).width() <= RESPONSIVE_BREAKPOINT;
+  },
+  
   handleWindowResize: function() {
     this.setState({
-      small: $(window).width() <= RESPONSIVE_BREAKPOINT
+      small: this.isSmall()
     });
   },
   

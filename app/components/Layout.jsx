@@ -75,14 +75,15 @@ var Layout = React.createClass({
   },
   
   componentWillReceiveProps: function(nextProps) {
-    if (nextProps.params && PictureFill)
+    if (nextProps.params)
       this.pictureFill();
   },
   
   // Runs the picturefill polyfill
   pictureFill: function() {
-    if (PictureFill)
-      window.picturefill();
+    // For browsers supporting <picture> natively, PictureFill will be undefined
+    if (PictureFill && _.isFunction(PictureFill))
+      PictureFill();
   },
   
   render: function() {

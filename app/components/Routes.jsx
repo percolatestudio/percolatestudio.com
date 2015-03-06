@@ -32,7 +32,7 @@ var routes = (
     <Route path="styleguide/base" name="styleguide-base" handler={StyleguideBase}/>
     <Route path="styleguide/case-study" name="styleguide-case-study" handler={StyleguideCaseStudy}/>
 
-    <NotFoundRoute handler={NotFound}/>
+    <NotFoundRoute name="not-found" handler={NotFound}/>
   </Route>
 );
 

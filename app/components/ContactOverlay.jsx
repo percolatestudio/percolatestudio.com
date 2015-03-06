@@ -327,7 +327,7 @@ var FormEmail = React.createClass({
         <dt>Services</dt><dd><ul>{servicesNodes}</ul></dd>
         <dt>Timing</dt><dd>{timing}</dd>
         {budgetNodes}
-        <dt>Referer</dt><dd>Blog</dd>
+        <dt>Referer</dt><dd>Site</dd>
       </dl>
     )
   }

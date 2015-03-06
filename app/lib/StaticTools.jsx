@@ -40,6 +40,11 @@ var StaticTools = {
     var result = [];
     routes = Array.isArray(routes) ? routes : [routes];
 
+    // strips regexp chars out of the route, eg a trailing ?
+    function fix(routePath) {
+      return routePath.replace(/\?$/, '');
+    }
+
     routes.forEach(function(route) {
       var props = route._store.props;
       var routePath = props.path;
@@ -47,7 +52,7 @@ var StaticTools = {
       if (routePath) {
         routePath = parentPath ? path.join(parentPath, routePath) : routePath;
 
-        result.push(routePath);
+        result.push(fix(routePath));
       }
       if (props.children) {
         result = result.concat(this.gather(props.children, routePath));
@@ -83,25 +88,23 @@ var StaticTools = {
     return result;
   },
   
-  // Converts a page to a filename, e.g '/' => 'index.html'
-  pageToFilename: function(page, extension) {
-    function endsWith(str, suffix) {
-      return str.indexOf(suffix, str.length - suffix.length) !== -1;
-    }
+  // converts a page into a html path relative to cwd and writes contents there
+  writeHtmlPage: function(dir, page, contents) {
+    // Replace trailing / with index.html
+    if (page.match(/\/$/))
+      page += 'index.html';
+    // else
+    //   page += '.html';
 
-    if (endsWith(page, '/'))
-      page += 'index';
-
-    return page + '.' + extension;
+    this.writeFile(dir, page, contents);
   },
   
-  // converts a page into a filepath relative to cwd and writes contents there
-  writePage: function(dir, page, contents, extension) {
-    var filePath = path.join(dir, this.pageToFilename(page, extension));
-    
+  // just writes a file
+  writeFile: function(dir, fileName, contents) {
+    var filePath = path.join(dir, fileName);
+
     // make all of the directories in filePath, like mkdir -p
     mkdirp.sync(path.dirname(filePath));
-
     fs.writeFileSync(filePath, contents);
   }
 }

@@ -90,12 +90,15 @@ module.exports = function (grunt) {
         bucket: s3Config.bucket,
         region: s3Config.region || 'us-west-2',
         access: 'public-read',
+        headers: {
+          'Content-Type': 'text/html'
+        },
         // headers: {
         //   // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
         //   "Cache-Control": "max-age=630720000, public",
         //   "Expires": new Date(Date.now() + 63072000000).toUTCString()
         // },
-        // maxOperations: 20,
+        maxOperations: 10,
         verify: true,
         gzipExclude: ['.jpg', '.jpeg', '.png']
       },

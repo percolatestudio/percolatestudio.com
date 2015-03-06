@@ -78,7 +78,7 @@ var gatherTruthy = function(/* obj, ...keys */) {
   var keys = Array.prototype.slice.call(arguments);
   var result = [];
 
-  obj = keys.shift();
+  var obj = keys.shift();
 
   _.each(keys, function(key) {
     if (obj[key] && result.indexOf(key) === -1)

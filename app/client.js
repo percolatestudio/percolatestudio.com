@@ -21,4 +21,8 @@ Router.run(routes, Router.HistoryLocation, function (Handler, state) {
   
   React.render(bodyElement, document.body);
   console.log('Client Rendered');
+  
+  // Track clientside routing with GA, it should be loaded...
+  if (window.ga)
+    window.ga('send', 'pageview', { 'page': state.path });
 });

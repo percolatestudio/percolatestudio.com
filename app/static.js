@@ -1,4 +1,5 @@
 // script assumes process.cwd() is the output directory
+var outputDir = process.cwd();
 
 require('node-jsx').install({ extension: '.jsx' });
 
@@ -7,11 +8,7 @@ var React = require('react');
 var HtmlComponent = React.createFactory(require('./components/Html'));
 var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
-
-var cwd = process.cwd();
-var path = require('path');
-var fs = require('fs');
-var mkdirp = require('mkdirp');
+var StaticTools = require('./lib/StaticTools');
 
 var routes = require('./components/Routes');
 var Collections = require('./components/Collections');
@@ -22,22 +19,26 @@ var Collections = require('./components/Collections');
 var productNames = _.pluck(Collections.Products, 'name');
 var jobNames = _.pluck(Collections.Jobs, 'name');
 
-var paths = gather(routes);
-paths = interpolate(paths, '/what/:name', 'name', productNames);
-paths = interpolate(paths, '/careers/:name', 'name', jobNames);
+var pages = StaticTools.gather(routes);
+pages = StaticTools.interpolate(pages, '/what/:name', 'name', productNames);
+pages = StaticTools.interpolate(pages, '/careers/:name', 'name', jobNames);
 
-paths.push('/error'); // Will hit the NotFound route and generate error.html
+// Write the sitemap with the pages we have so far
+StaticTools.writePage(outputDir, '/sitemap', 
+  StaticTools.makeSitemap(pages, 'http://percolatestudio.com'), 'xml');
+
+pages.push('/error'); // Will hit the NotFound route and generate error.html
 
 // Manually specify indexes on these directory paths. Otherwise navigating to
 // foo/ will do a directory listing. Its possible we can automate this in
 // interrogate()
-paths.push('/careers/');
-paths.push('/what/');
+pages.push('/careers/');
+pages.push('/what/');
 
 var headParams = new HeadParams();
 
 // Render each path
-paths.forEach(function(page) {
+pages.forEach(function(page) {
   Router.run(routes, page, function (Handler, state) {
     console.log(page);
     var bodyElement = React.createFactory(Handler)({ 
@@ -51,72 +52,6 @@ paths.forEach(function(page) {
       markup: React.renderToString(bodyElement)
     }));
 
-    writePage(page, html);
+    StaticTools.writePage(outputDir, page, html, 'html');
   });
 });
-
-// converts a page into a filepath relative to cwd and writes contents there
-function writePage(page, contents) {
-  function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
-  }
-
-  if (endsWith(page, '/'))
-    page += 'index'
-
-  var filePath = path.join(cwd, page + '.html');
-
-  // make all of the directories in filePath, like mkdir -p
-  mkdirp.sync(path.dirname(filePath));
-
-  fs.writeFileSync(filePath, contents);
-}
-
-// Returns an array containing paths that correspond to routes
-// For example: ['/', '/about']
-function gather(routes, parentPath) {
-  var result = [];
-  routes = Array.isArray(routes) ? routes : [routes];
-
-  routes.forEach(function(route) {
-    var props = route._store.props;
-    var routePath = props.path;
-
-    if (routePath) {
-      routePath = parentPath ? path.join(parentPath, routePath) : routePath;
-
-      result.push(routePath);
-    }
-    if (props.children) {
-      result = result.concat(gather(props.children, routePath));
-    }
-  });
-
-  return result;
-};
-
-// Takes an array of paths, a target path, path component key and an array of
-// values. Returns a new array of paths with the values interpolated in place
-// of the path component key.
-//
-// E.g:
-// interpolate(['/', '/what/:name'], '/what/:name', 'name', ['foo', 'bar'])
-//
-// returns ['/', '/what/foo', '/what/bar']
-function interpolate(paths, path, key, values) {
-  var result = [];
-  
-  paths.forEach(function(routePath) {
-    if (routePath === path) {
-      values.forEach(function(value) {
-        var interpolated = routePath.replace(':' + key, value);
-
-        result.push(interpolated);
-      });
-    } else {
-      result.push(routePath);
-    }
-  });
-  
-  return result;
-}

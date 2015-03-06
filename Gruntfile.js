@@ -85,30 +85,16 @@ module.exports = function (grunt) {
     },
     s3: {
       options: {
-        key: s3Config.key,
-        secret: s3Config.secret,
+        accessKeyId: s3Config.key,
+        secretAccessKey: s3Config.secret,
         bucket: s3Config.bucket,
         region: s3Config.region || 'us-west-2',
         access: 'public-read',
-        headers: {
-          'Content-Type': 'text/html'
-        },
-        // headers: {
-        //   // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
-        //   "Cache-Control": "max-age=630720000, public",
-        //   "Expires": new Date(Date.now() + 63072000000).toUTCString()
-        // },
-        maxOperations: 10,
-        verify: true,
-        gzipExclude: ['.jpg', '.jpeg', '.png']
+        mimeDefault: 'text/html' // important for pages without .html extension
       },
       deploy: {
-        sync: [{ 
-          src: 'static/**/*', 
-          dest: '/', 
-          rel: path.join(process.cwd(), "static"),
-          gzip: true
-        }]
+        cwd: "static/",
+        src: "**"
       }
     }
   };
@@ -127,7 +113,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-execute');
-  grunt.loadNpmTasks('grunt-s3');
+  grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-npm-install');
 
   grunt.registerTask('default', ['clean', 'npm-install', 'concurrent:dev']);

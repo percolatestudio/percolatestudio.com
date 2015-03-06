@@ -28,6 +28,11 @@ module.exports = function (grunt) {
           cwd: 'app/assets/',
           src: ['**/*'],
           dest: 'static/'
+        }, { 
+          expand: true,
+          cwd: 'build/',
+          src: 'client.css*', 
+          dest: 'static/',
         }]
       }
     },
@@ -74,7 +79,7 @@ module.exports = function (grunt) {
       },
       static: {
         files: {
-          'static/js/client.js': ['build/client.js']
+          'static/client.js': ['build/client.js']
         }
       }
     },

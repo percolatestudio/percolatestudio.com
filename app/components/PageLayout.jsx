@@ -28,8 +28,10 @@ var PageLayout = React.createClass({
     // NOTE: for some reason the event argument gets munged by the _.throttle.
     //  (something to do with the synthetic event being cleaned up before the 
     //   throttle fires it? Not sure). Else we'd use event.target, not this.refs
-    var page = this.refs.page.getDOMNode();
-    setHistoryState({lastScrollTop: page.scrollTop});
+    if (this.refs.page) {
+      var page = this.refs.page.getDOMNode();
+      setHistoryState({lastScrollTop: page.scrollTop});
+    }
   }, 500),
   
   render: function() {

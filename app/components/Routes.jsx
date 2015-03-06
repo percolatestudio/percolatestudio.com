@@ -32,8 +32,6 @@ var routes = (
     <Route path="styleguide/base" name="styleguide-base" handler={StyleguideBase}/>
     <Route path="styleguide/case-study" name="styleguide-case-study" handler={StyleguideCaseStudy}/>
 
-    {/* TODO: make this a server-side route */}
-    <Redirect from="case-studies/verso" to="what" params={{name: 'verso'}}/>
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );

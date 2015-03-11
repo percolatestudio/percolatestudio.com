@@ -82,9 +82,8 @@ var Layout = React.createClass({
     });
   },
   
-  componentWillReceiveProps: function(nextProps) {
-    if (nextProps.params)
-      this.pictureFill();
+  componentDidUpdate: function() {
+    this.pictureFill();
   },
   
   // Runs the picturefill polyfill

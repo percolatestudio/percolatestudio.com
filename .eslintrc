@@ -7,6 +7,7 @@
   },
   "rules": {
     "quotes": [0],
-    "no-trailing-spaces": [0]
+    "no-trailing-spaces": [0],
+    "indent": [2, 2]
   }
 }

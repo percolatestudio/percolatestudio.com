@@ -5,7 +5,6 @@ var Router = require('react-router');
 
 var MenuOverlay = React.createClass({
   handleClick: function(event) {
-    // FIXME: probably shouldn't use jQuery here
     if ($(event.target).closest('a').length) {
       this.props.openMenu(false);
     }

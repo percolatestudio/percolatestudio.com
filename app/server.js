@@ -1,5 +1,15 @@
 'use strict';
 
+/**
+ * This is the entry point for the node server that can run the app whilst its
+ * in development or later if dynamic content is added. It renders the <body>
+ * just like the client would, but in addition it also renders the actual
+ * <html> including the contents in the <head> needed for SEO.
+ *
+ * Routing is performed by React Router as in the client but here on the server
+ * its plugged into express.
+ */
+
 require('node-jsx').install({ extension: '.jsx' });
 
 var React = require('react');

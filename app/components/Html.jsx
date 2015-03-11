@@ -2,7 +2,7 @@
 var React = require('react');
 var HeadParams = require('../lib/HeadParams');
 
-// configure these
+// Configure these
 var GA_ACCOUNT = 'UA-32959034-1';
 var GA_OPTIONS = {
   'cookieDomain': 'auto'

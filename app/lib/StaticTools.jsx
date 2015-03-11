@@ -6,9 +6,15 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 
 var StaticTools = {
-  // Generates a sitemap.xml from your pages. Assigns priority based on depth.
-  // You will probably need to customize this for your own app if you want per
-  // page beahviour
+  /**
+   * Generates a sitemap.xml from your pages. Assigns priority based on depth.
+   * You will probably need to customize this for your own app if you want per
+   * page beahvior.
+   *
+   * @param {string[]} pages - Array containing pages, e.g '/', '/foo'
+   * @param {string} hostname - The hostname to use in the sitemap
+   * @returns {string} The sitemap xml contents
+   */
   makeSitemap: function(pages, hostname) {
     var urls = [];
     var now = new Date();
@@ -34,8 +40,13 @@ var StaticTools = {
     return sitemap.toString();
   },
   
-  // Returns an array containing paths that correspond to routes
-  // For example: ['/', '/about']
+  /**
+   * Turns React Router routes into a list of paths. Recursive.
+   *
+   * @param {Object} routes - React Router Routes
+   * @param {string} [parentPath] - Path to next results under
+   * @returns {string[]} The resulting pages, eg ['/', '/about']
+   */
   gather: function(routes, parentPath) {
     var result = [];
     routes = Array.isArray(routes) ? routes : [routes];
@@ -62,14 +73,15 @@ var StaticTools = {
     return result;
   },
 
-  // Takes an array of paths, a target path, path component key and an array of
-  // values. Returns a new array of paths with the values interpolated in place
-  // of the path component key.
-  //
-  // E.g:
-  // interpolate(['/', '/what/:name'], '/what/:name', 'name', ['foo', 'bar'])
-  //
-  // returns ['/', '/what/foo', '/what/bar']
+  /**
+   * Interpolates values into a parameterized route, replacing the target.
+   *
+   * @param {string[]} paths - A list of paths, eg ['/', '/what/:name']
+   * @param {string} forPath - The path we're interpolating eg '/what/:name'
+   * @param {string} key - The key we're interpolating for eg 'name'
+   * @param {string[]} values - The values to interpolate in eg ['foo', 'bar']
+   * @returns {string[]} The resulting pages, eg ['/', '/what/foo', '/what/bar']
+   */
   interpolate: function(paths, forPath, key, values) {
     var result = [];
   
@@ -88,7 +100,13 @@ var StaticTools = {
     return result;
   },
   
-  // converts a page into a html path relative to cwd and writes contents there
+  /**
+   * Converts a page into a html file path and writes contents to disk.
+   *
+   * @param {string} dir - The directory to write to.
+   * @param {string} page - The page to write.
+   * @param {string} contents - The contents of the page.
+   */
   writeHtmlPage: function(dir, page, contents) {
     // Replace trailing / with index.html
     if (page.match(/\/$/)) {
@@ -98,7 +116,13 @@ var StaticTools = {
     this.writeFile(dir, page, contents);
   },
   
-  // just writes a file
+  /**
+   * Just writes a file.
+   *
+   * @param {string} dir - The directory to write to.
+   * @param {string} fileName - The name of the file.
+   * @param {string} contents - The contents to write.
+   */
   writeFile: function(dir, fileName, contents) {
     var filePath = path.join(dir, fileName);
 

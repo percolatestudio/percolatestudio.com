@@ -16,6 +16,7 @@ var StyleguideCaseStudy = require('./styleguide/CaseStudy');
 // React.CreateElement
 
 /* eslint-disable no-unused-vars */
+var React = require('react');
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;

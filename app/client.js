@@ -1,5 +1,15 @@
-/*global document, window */
+/*global document, window*/
 'use strict';
+
+/**
+ * This is the entry point for the Single Page App that will run in the client.
+ * Its built by webpack and included via a <script> in the page that will
+ * be booting it up. It will render itself into the <body>, hopefully, the
+ * contents of which have been rendered by the server or a static page.
+ *
+ * Client side push state routing will be performed by React Router after the
+ * initial page load.
+ */ 
 
 require("./stylesheets/main.less");
 

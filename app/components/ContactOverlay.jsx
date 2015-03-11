@@ -14,11 +14,6 @@ try {
   }
 }
 
-
-// TODO: Add mailing list options
-// https://apidocs.mailchimp.com/api/2.0/lists/subscribe.php
-// http://stackoverflow.com/questions/19671676/javascript-mailchimp-api-subscribe
-
 var ContactOverlay = React.createClass({
   propTypes: {
     openContact: React.PropTypes.func.isRequired
@@ -178,11 +173,13 @@ var Form = React.createClass({
     var model = this.getModel();
     var to = 'us@percolatestudio.com';
     var subject = 'Work with us';
+    // The key is public anyway so we're ok with checking it into GH for now
+    var mandrillKey = '-JqlbKb2ZHU7R5NEkCvnKw';
     var body = React.renderToStaticMarkup(
       <FormEmail model={model}/>);
 
     var data = {
-        'key': '-JqlbKb2ZHU7R5NEkCvnKw', // changeme
+        'key': mandrillKey,
         'message': {
           'from_email': model.email,
           'to': [
@@ -191,8 +188,9 @@ var Form = React.createClass({
                 'name': 'Percolate Studio',
                 'type': 'to'
               },
+              // Just in case us@ alias breaks, yep it happens sometimes
               {
-                'email': 'zol@percolatestudio.com', // just in case us@ breaks
+                'email': 'zol@percolatestudio.com',
                 'name': 'Zoltan Olah',
                 'type': 'to'
               }

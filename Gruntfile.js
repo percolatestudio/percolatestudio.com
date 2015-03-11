@@ -1,5 +1,4 @@
 'use strict';
-
 var _ = require('lodash');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -121,13 +120,16 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-npm-install');
   grunt.loadNpmTasks('grunt-eslint');
 
+  // Run the node server and watch for changes
   grunt.registerTask('default', ['clean', 'npm-install', 'concurrent:dev']);
 
-  grunt.registerTask('static', ['clean', 'npm-install', 'webpack:static', 'copy:static', 
-    'uglify:static', 'execute:static']);
-      
+  // Build the static site
+  grunt.registerTask('static', ['clean', 'npm-install', 'webpack:static', 
+    'copy:static', 'uglify:static', 'execute:static']);
+  
+  // Build and deploy the static site
   grunt.registerTask('deploy', ['static', 's3:deploy']);
 
-  // For testing!
+  // For testing, just execute the static script
   grunt.registerTask('static-only', ['execute:static']);
 };

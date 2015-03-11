@@ -26,6 +26,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-uglify": "^0.8.0",
+    "grunt-eslint": "^8.0.0",
     "grunt-execute": "^0.2.2",
     "grunt-nodemon": "^0.3.0",
     "grunt-npm-install": "^0.2.0",

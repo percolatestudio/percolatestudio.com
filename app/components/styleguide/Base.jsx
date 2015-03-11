@@ -388,7 +388,7 @@ var TableHeading = React.createClass({
       </tr>
     );
   }
-})
+});
 
 var TableRow = React.createClass({
   render: function() {
@@ -401,6 +401,6 @@ var TableRow = React.createClass({
       </tr>
     );
   }
-})
+});
 
 module.exports = StyleguideBase;

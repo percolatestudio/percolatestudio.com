@@ -89,7 +89,7 @@ var How = React.createClass({
             <img title="Timothy Hingston" src="/img/headshots-tim-280x360.jpg"/>
             <div className="name">Timothy Hingston</div>
           </a>
-          <a className="grid-5 avatar"  href="https://twitter.com/chazbatrouney" rel="nofollow" target="_blank">
+          <a className="grid-5 avatar" href="https://twitter.com/chazbatrouney" rel="nofollow" target="_blank">
             <img title="Chaz Batrouney" src="/img/headshots-chaz-280x360.jpg"/>
             <div className="name">Chaz Batrouney</div>
           </a>

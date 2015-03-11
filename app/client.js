@@ -4,13 +4,11 @@
 require("./stylesheets/main.less");
 
 var React = require('react');
-window.React = React; // For chrome dev tool support
 var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
-
-var HistoryLocation = Router.HistoryLocation;
-
 var routes = require('./components/Routes');
+
+window.React = React; // For chrome dev tool support
 var headParams = new HeadParams();
 
 Router.run(routes, Router.HistoryLocation, function (Handler, state) {
@@ -23,6 +21,7 @@ Router.run(routes, Router.HistoryLocation, function (Handler, state) {
   console.log('Client Rendered');
   
   // Track clientside routing with GA, it should be loaded...
-  if (window.ga)
+  if (window.ga) {
     window.ga('send', 'pageview', { 'page': state.path });
+  }
 });

@@ -15,17 +15,19 @@ var ProductLayout = React.createClass({
       return p.index === product.index - 1;
     });
     
-    var wide = ! (nextProduct && previousProduct);
+    var wide = !(nextProduct && previousProduct);
     var previousLink, nextLink;
     
-    if (previousProduct)
+    if (previousProduct) {
       previousLink = <ProductLink product={previousProduct} wide={wide} 
         small={this.props.small}/>;
+    }
 
-    if (nextProduct)
+    if (nextProduct) {
       nextLink = <ProductLink product={nextProduct} wide={wide}
         small={this.props.small}/>;
-    
+    }
+
     return (
       <PageLayout className={'product-' + product.name} {...this.props}>
         {this.props.children}
@@ -36,7 +38,7 @@ var ProductLayout = React.createClass({
           {nextLink}
         </div>
       </PageLayout>
-    )
+    );
   }
 });
 
@@ -49,7 +51,7 @@ var ProductLink = React.createClass({
     var small = this.props.small;
     var other = _.omit(this.props, 'product', 'wide', 'small');
     
-    var sourceUrl = (wide && ! small) ? product.featureUrl : product.thumbnailUrl;
+    var sourceUrl = (wide && !small) ? product.featureUrl : product.thumbnailUrl;
     var imageUrl = this.imageSource(sourceUrl);
     var className = wide ? 'grid-1' : 'grid-2-square';
     className += ' item-project bg-image';

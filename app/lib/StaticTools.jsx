@@ -23,9 +23,9 @@ var StaticTools = {
       urls.push({
         url: page, changefreq: 'weekly', priority: priority, lastmod: now
       });
-    }.bind(this));
+    });
     
-    var sitemap = Sitemap.createSitemap ({
+    var sitemap = Sitemap.createSitemap({
       hostname: hostname,
       cacheTime: 600000,  // 600 sec cache period
       urls: urls
@@ -46,7 +46,7 @@ var StaticTools = {
     }
 
     routes.forEach(function(route) {
-      var props = route._store.props;
+      var props = route._store.props; // eslint-disable-line no-underscore-dangle
       var routePath = props.path;
 
       if (routePath) {
@@ -70,11 +70,11 @@ var StaticTools = {
   // interpolate(['/', '/what/:name'], '/what/:name', 'name', ['foo', 'bar'])
   //
   // returns ['/', '/what/foo', '/what/bar']
-  interpolate: function(paths, path, key, values) {
+  interpolate: function(paths, forPath, key, values) {
     var result = [];
   
     paths.forEach(function(routePath) {
-      if (routePath === path) {
+      if (routePath === forPath) {
         values.forEach(function(value) {
           var interpolated = routePath.replace(':' + key, value);
 
@@ -91,10 +91,9 @@ var StaticTools = {
   // converts a page into a html path relative to cwd and writes contents there
   writeHtmlPage: function(dir, page, contents) {
     // Replace trailing / with index.html
-    if (page.match(/\/$/))
+    if (page.match(/\/$/)) {
       page += 'index.html';
-    // else
-    //   page += '.html';
+    }
 
     this.writeFile(dir, page, contents);
   },
@@ -107,6 +106,6 @@ var StaticTools = {
     mkdirp.sync(path.dirname(filePath));
     fs.writeFileSync(filePath, contents);
   }
-}
+};
 
 module.exports = StaticTools;

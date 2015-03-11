@@ -75,7 +75,7 @@ product.component = React.createClass({
           </div>
         </div>
       </ProductLayout>
-    )
+    );
   }
 });
 

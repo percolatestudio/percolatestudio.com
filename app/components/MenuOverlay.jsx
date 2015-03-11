@@ -4,14 +4,16 @@ var React = require('react');
 var Router = require('react-router');
 
 var MenuOverlay = React.createClass({
-  handleClick: function() {
-    if ($(event.target).closest('a').length)
+  handleClick: function(event) {
+    // FIXME: probably shouldn't use jQuery here
+    if ($(event.target).closest('a').length) {
       this.props.openMenu(false);
+    }
   },
   
   render: function() {
     return (
-      <div className="overlay-screen-menu"  onClick={this.handleClick}>
+      <div className="overlay-screen-menu" onClick={this.handleClick}>
         <a className="overlay-close">
           <span className="icon-cross"></span>
         </a>

@@ -1,3 +1,4 @@
+/* global history */
 'use strict';
 var _ = require('lodash');
 var React = require('react');
@@ -6,12 +7,13 @@ var Router = require('react-router');
 // update the current page state with ourState, if history.replaceState
 //   is defined. If not, don't bother.
 var setHistoryState = function (ourState) {
-  if (! history.replaceState)
+  if (!history.replaceState) {
     return;
+  }
   
   var newState = _.extend({}, history.state, ourState);
   history.replaceState(newState);
-}
+};
 
 var PageLayout = React.createClass({
   mixins: [Router.State],
@@ -43,13 +45,14 @@ var PageLayout = React.createClass({
     // add the name of each route leading to this page to the classMap
     this.getRoutes().forEach(function(route) {
       classMap[route.name] = true;
-    }.bind(this));
+    });
     
     var pageClasses = React.addons.classSet(classMap);
     
     // plus any passed in classes
-    if (this.props.className)
+    if (this.props.className) {
       pageClasses += ' ' + this.props.className;
+    }
 
     return (
       <div ref="page" className={pageClasses} onScroll={this.handleScroll}>
@@ -73,7 +76,7 @@ var Nav = React.createClass({
         <div className="nav-group">
           <NavLink to='home'>Home</NavLink>
           <NavLink to='how'>How</NavLink>
-          <NavLink to={['what','product']}>What</NavLink>
+          <NavLink to={['what', 'product']}>What</NavLink>
           <a className="menu-link" onClick={this.props.openMenu.bind(null, true)}>Menu</a>
         </div>
 
@@ -88,7 +91,7 @@ var Nav = React.createClass({
       </nav>
     );
   }
-})
+});
 
 var NavLink = React.createClass({
   mixins: [Router.State],
@@ -100,7 +103,7 @@ var NavLink = React.createClass({
     
     var names = [].concat(this.props.to); // ensure array
     var isActive = _.any(names, function(name) {
-      this.isActive(name)
+      this.isActive(name);
     }.bind(this));
     
     var className = (isActive ? 'active ' : '') + (this.props.className || '');
@@ -109,6 +112,6 @@ var NavLink = React.createClass({
       <Router.Link to={names[0]} className={className} {...other} />
     );
   }
-})
+});
 
 module.exports = PageLayout;

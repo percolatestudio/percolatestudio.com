@@ -1,20 +1,23 @@
+'use strict';
+
 require('node-jsx').install({ extension: '.jsx' });
 
 var React = require('react');
-var HtmlComponent = React.createFactory(require('./components/Html'));
 var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
+var htmlComponent = React.createFactory(require('./components/Html'));
 
 var express = require('express');
 var routes = require('./components/Routes');
+var path = require('path');
 
 var server = express();
-server.use('/', express.static(__dirname + '/../build'));
-server.use(express.static(__dirname + '/assets'));
+server.use('/', express.static(path.join(__dirname, '../build')));
+server.use(express.static(path.join(__dirname, '/assets')));
 
 var headParams = new HeadParams();
 
-server.use(function (req, res, next) {
+server.use(function (req, res) {
   Router.run(routes, req.path, function (Handler, state) {
     var bodyElement = React.createFactory(Handler)({ 
       params: state.params, 
@@ -22,7 +25,7 @@ server.use(function (req, res, next) {
       clientReady: false 
     });
     
-    var html = React.renderToStaticMarkup(HtmlComponent({
+    var html = React.renderToStaticMarkup(htmlComponent({
       headParams: headParams,
       markup: React.renderToString(bodyElement)
     }));

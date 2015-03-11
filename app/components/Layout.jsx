@@ -9,15 +9,16 @@ var ContactOverlay = require('./ContactOverlay');
 var MenuOverlay = require('./MenuOverlay');
 var Collections = require('./Collections');
 
-var PictureFill;
+var pictureFill;
 var FastClick;
 
 try {
-  PictureFill = require('picturefill');
+  pictureFill = require('picturefill');
   FastClick = require('fastclick');
 } catch (e) {
-  if (! e instanceof ReferenceError)
+  if (!e instanceof ReferenceError) {
     throw e;
+  }
 }
 
 var RESPONSIVE_BREAKPOINT = 800;
@@ -28,7 +29,7 @@ var Layout = React.createClass({
       menuOpen: false,
       contactOpen: false,
       small: this.isSmall()
-    }
+    };
   },
   
   componentWillMount: function() {
@@ -63,9 +64,9 @@ var Layout = React.createClass({
   },
   
   handleKeyDown: function(event) {
-    if (event.which == 27) { // esc closes everything
-      if ( $('input, textarea').is(':focus')) {
-        return ; // input or textarea is focused, ignore other part of function
+    if (event.which === 27) { // esc closes everything
+      if ($('input, textarea').is(':focus')) {
+        return; // input or textarea is focused, ignore other part of function
       }
       this.openContact(false);
       this.openMenu(false);
@@ -88,9 +89,10 @@ var Layout = React.createClass({
   
   // Runs the picturefill polyfill
   pictureFill: function() {
-    // For browsers supporting <picture> natively, PictureFill will be undefined
-    if (PictureFill && _.isFunction(PictureFill))
-      PictureFill();
+    // For browsers supporting <picture> natively, pictureFill will be undefined
+    if (pictureFill && _.isFunction(pictureFill)) {
+      pictureFill();
+    }
   },
   
   render: function() {
@@ -105,7 +107,7 @@ var Layout = React.createClass({
       openMenu: this.openMenu,
       collections: Collections,
       small: this.state.small
-    })
+    });
     
     return (
       <div className={layoutClasses}>
@@ -115,7 +117,7 @@ var Layout = React.createClass({
         <ContactOverlay openContact={this.openContact} />
         <MenuOverlay {...childProps}/>
       </div>
-    )
+    );
   }
 });
 

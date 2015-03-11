@@ -83,6 +83,6 @@ var Opening = React.createClass({
       </div>
     );
   }
-})
+});
 
 module.exports = Careers;

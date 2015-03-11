@@ -36,7 +36,7 @@ var What = React.createClass({
     }.bind(this));
 
     return (
-      <PageLayout  {...this.props}>
+      <PageLayout {...this.props}>
 
         <header className="collage medium">
           <div className="grid-2-square">
@@ -65,7 +65,7 @@ var What = React.createClass({
           </a>
         </div>
       </PageLayout>
-    )
+    );
   }
 });
 

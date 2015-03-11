@@ -1,5 +1,6 @@
+'use strict';
+
 var _ = require('lodash');
-var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = function (grunt) {
@@ -32,7 +33,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'build/',
           src: 'client.css*', 
-          dest: 'static/',
+          dest: 'static/'
         }]
       }
     },
@@ -59,7 +60,7 @@ module.exports = function (grunt) {
           loaders: [
             { test: /\.css$/, loader: 'style!css' },
             // Use "css-loader?minimize!less-loader" for minification
-            { test: /\.less$/,loader: ExtractTextPlugin.extract("style-loader", 
+            { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", 
               "css-loader!less-loader") }, 
             { test: /\.jsx$/, loader: 'jsx-loader' }
             
@@ -96,6 +97,9 @@ module.exports = function (grunt) {
         cwd: "static/",
         src: "**"
       }
+    },
+    eslint: {
+      target: ['Gruntfile.js', 'app/**/*.js', 'app/**/*.jsx']
     }
   };
   
@@ -115,6 +119,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-execute');
   grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-npm-install');
+  grunt.loadNpmTasks('grunt-eslint');
 
   grunt.registerTask('default', ['clean', 'npm-install', 'concurrent:dev']);
 

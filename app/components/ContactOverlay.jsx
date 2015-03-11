@@ -1,3 +1,4 @@
+/* global window, escape, alert */
 'use strict';
 var _ = require('lodash');
 var $ = require('jquery');
@@ -8,8 +9,9 @@ var autosize;
 try {
   autosize = require('autosize');
 } catch (e) {
-  if (! e instanceof ReferenceError)
+  if (!e instanceof ReferenceError) {
     throw e;
+  }
 }
 
 
@@ -35,7 +37,7 @@ var ContactOverlay = React.createClass({
         </a>
         <Form setOverlayOpen={this.props.openContact} />
       </div>
-    )
+    );
   }
 });
 
@@ -61,14 +63,14 @@ var Footer = React.createClass({
             <span className="locality">San Francisco</span>, <span className="region">CA</span> <span className="postal-code">94103</span>
           </a>
           <a className="location-wrapper organization-unit adr"
-            href="https://www.google.com/maps/place/50+Herbert+St,+Northcote+VIC+3070,+Australia/@-37.771764,144.995165,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad6437ca420f13f:0xb6908ada5cdfa379"  target="_blank">
+            href="https://www.google.com/maps/place/50+Herbert+St,+Northcote+VIC+3070,+Australia/@-37.771764,144.995165,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad6437ca420f13f:0xb6908ada5cdfa379" target="_blank">
             <span>Percolate AUS</span><br/>
             <span className="street-address">50 Herbert Street</span><br/>
             <span className="locality">Melbourne</span>, <span className="region">VIC</span> <span className="postal-code">3001</span>
           </a>
         </div>
       </div>
-    )
+    );
   }
 });
 
@@ -81,12 +83,13 @@ var gatherTruthy = function(/* obj, ...keys */) {
   var obj = keys.shift();
 
   _.each(keys, function(key) {
-    if (obj[key] && result.indexOf(key) === -1)
+    if (obj[key] && result.indexOf(key) === -1) {
       result.push(key);
+    }
   });
 
   return result;
-}
+};
 
 var Form = React.createClass({
   mixins: [React.addons.LinkedStateMixin],
@@ -145,24 +148,24 @@ var Form = React.createClass({
       model = this.getModel();
 
     _.each(['name', 'email', 'about'], function(field) {
-      if (! model[field]) {
+      if (!model[field]) {
         errors[field] = 'is required';
         valid = false;
       } else if (model[field].length > 10000) {
         errors[field] = 'is too long';
         valid = false;
       }
-    }.bind(this));
+    });
 
     _.each(['services', 'timing'], function(field) {
-      if (! model[field].length) {
+      if (!model[field].length) {
         errors[field] = 'is required';
         valid = false;
       }
-    }.bind(this));
+    });
 
-    if (this.shouldHaveBudget() && ! model.budget.length) {
-      errors['budget'] = 'is required';
+    if (this.shouldHaveBudget() && !model.budget.length) {
+      errors.budget = 'is required';
       valid = false;
     }
 
@@ -171,7 +174,7 @@ var Form = React.createClass({
     return valid;
   },
 
-  send: function(model) {
+  send: function() {
     var model = this.getModel();
     var to = 'us@percolatestudio.com';
     var subject = 'Work with us';
@@ -203,7 +206,7 @@ var Form = React.createClass({
     this.setState({ submitting: true });
     $.post('https://mandrillapp.com/api/1.0/messages/send.json', data)
       .done(function() {
-        alert('Thank you. We will contact you shortly');
+        alert('Thank you. We will contact you shortly'); // eslint-disable-line no-alert
       })
       .fail(function() {
         // fallback incase ajax fails
@@ -219,8 +222,9 @@ var Form = React.createClass({
   },
 
   error: function(name) {
-    if (this.state.errors[name])
+    if (this.state.errors[name]) {
       return (<span className="error">{this.state.errors[name]}</span>);
+    }
   },
 
   shouldHaveBudget: function() {
@@ -288,13 +292,13 @@ var Form = React.createClass({
               <label htmlFor="25k" className="btn-toggle">25k–50k</label>
 
               <input type="radio" name="budget" value="50k" id="50k" checkedLink={this.linkState('50k')} />
-              <label htmlFor="50k"  className="btn-toggle">50k–100k</label>
+              <label htmlFor="50k" className="btn-toggle">50k–100k</label>
 
               <input type="radio" name="budget" value="100k" id="100k" checkedLink={this.linkState('100k')} />
               <label htmlFor="100k" className="btn-toggle" >+100k</label>
 
               <input type="radio" name="budget" value="notsure" id="notsure" checkedLink={this.linkState('notsure')} />
-              <label htmlFor="notsure"  className="btn-toggle">Not sure</label>
+              <label htmlFor="notsure" className="btn-toggle">Not sure</label>
             </div>
 
           </div>
@@ -302,7 +306,7 @@ var Form = React.createClass({
         </fieldset>
         <Footer />
       </form>
-    )
+    );
   }
 });
 
@@ -329,7 +333,7 @@ var FormEmail = React.createClass({
         {budgetNodes}
         <dt>Referer</dt><dd>Site</dd>
       </dl>
-    )
+    );
   }
 });
 

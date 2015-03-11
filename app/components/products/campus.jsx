@@ -55,7 +55,7 @@ product.component = React.createClass({
                 <li>Ensuring smooth operation means keeping abreast of the school's pulse; Campus should surface timely news & recommendations for continued success.</li>
               </ol>
 
-            <p style={{marginBottom:0}}>We engineered an insight engine to identify patterns and highlight outliers in realtime. Data was graphed and compared to school-wide averages to indicate progress at a glance. We designed a faceted analytics experience to make it easy to compare users by class, teacher, subject, or grade level. Timely insights were surfaced in natural language with prompts to act. For instance, <em>"Dominic had a great response rate today, kudos are in order"</em>. Our guiding principle was to present the right amount of information at the right time.</p>
+            <p style={{marginBottom: 0}}>We engineered an insight engine to identify patterns and highlight outliers in realtime. Data was graphed and compared to school-wide averages to indicate progress at a glance. We designed a faceted analytics experience to make it easy to compare users by class, teacher, subject, or grade level. Timely insights were surfaced in natural language with prompts to act. For instance, <em>"Dominic had a great response rate today, kudos are in order"</em>. Our guiding principle was to present the right amount of information at the right time.</p>
           </div>
         </div>
 

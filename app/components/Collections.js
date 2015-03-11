@@ -14,6 +14,6 @@ var Collections = {
     require('./jobs/engineeringIntern'),
     require('./jobs/designIntern')
   ]
-}
+};
 
 module.exports = Collections;

@@ -1,0 +1,12 @@
+{
+  "env": {
+    "node": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "rules": {
+    "quotes": [0],
+    "no-trailing-spaces": [0]
+  }
+}

@@ -6,12 +6,12 @@ var HeadParams = require('../lib/HeadParams');
 var GA_ACCOUNT = 'UA-32959034-1';
 var GA_OPTIONS = {
   'cookieDomain': 'auto'
-}
+};
 
 // From: https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced
-var gaSnippet = "window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; \
-ga('create', '" + GA_ACCOUNT + "', " + JSON.stringify(GA_OPTIONS) + "); \
-ga('send', 'pageview');"
+var gaSnippet = "window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;"
+  + "ga('create', '" + GA_ACCOUNT + "', " + JSON.stringify(GA_OPTIONS) + ");"
+  + "ga('send', 'pageview');";
 
 var Html = React.createClass({
   propTypes: {

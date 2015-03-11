@@ -1,3 +1,5 @@
+'use strict';
+
 // script assumes process.cwd() is the output directory
 var outputDir = process.cwd();
 
@@ -5,10 +7,10 @@ require('node-jsx').install({ extension: '.jsx' });
 
 var _ = require('lodash');
 var React = require('react');
-var HtmlComponent = React.createFactory(require('./components/Html'));
 var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
 var StaticTools = require('./lib/StaticTools');
+var htmlComponent = React.createFactory(require('./components/Html'));
 
 var routes = require('./components/Routes');
 var Collections = require('./components/Collections');
@@ -42,7 +44,7 @@ pages.forEach(function(page) {
       clientReady: false
     });
 
-    var html = React.renderToStaticMarkup(HtmlComponent({
+    var html = React.renderToStaticMarkup(htmlComponent({
       headParams: headParams,
       markup: React.renderToString(bodyElement)
     }));

@@ -1,4 +1,4 @@
-var React = require('react');
+'use strict';
 var Router = require('react-router');
 
 var Layout = require('./Layout');
@@ -12,11 +12,16 @@ var NotFound = require('./NotFound');
 var StyleguideBase = require('./styleguide/Base');
 var StyleguideCaseStudy = require('./styleguide/CaseStudy');
 
+// The eslint config below is needed for a jsx block that exists outside a
+// React.CreateElement
+
+/* eslint-disable no-unused-vars */
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;
-var Redirect = Router.Redirect;
+/*eslint-enable no-unused-vars */
 
+/* eslint-disable no-undef */
 var routes = (
   <Route name="appBody" path="/" handler={Layout}>
     <DefaultRoute name="home" handler={Home}/>
@@ -35,5 +40,6 @@ var routes = (
     <NotFoundRoute name="not-found" handler={NotFound}/>
   </Route>
 );
+/* eslint-enable no-undef */
 
 module.exports = routes;

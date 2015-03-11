@@ -8,6 +8,7 @@
   "rules": {
     "quotes": [0],
     "no-trailing-spaces": [0],
-    "indent": [2, 2]
+    "indent": [2, 2],
+    "no-warning-comments": 1
   }
 }

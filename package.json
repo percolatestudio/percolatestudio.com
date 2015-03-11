@@ -2,7 +2,7 @@
   "name": "static-site",
   "private": true,
   "version": "0.0.0",
-  "description": "Static site in react",
+  "description": "percolatestudio.com",
   "author": "Zoltan Olah <zol@percolatestudio.com>",
   "dependencies": {
     "autosize": "jackmoore/autosize#d8bf2a3f40f5d188a899c87a7e982d2d4de48e70",

@@ -2,8 +2,12 @@
 var _ = require('lodash');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// Optional S3 credentials if using the deploy task
+var S3_CONFIG_FILE = './s3.config.json';
+
 module.exports = function (grunt) {
-  var s3Config = grunt.file.readJSON('./s3.config.json');
+  var s3Config = grunt.file.exists(S3_CONFIG_FILE) ?
+    grunt.file.readJSON(S3_CONFIG_FILE) : {};
   
   var config = {
     clean: ['./build', './static'],

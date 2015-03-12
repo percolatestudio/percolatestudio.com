@@ -17,7 +17,7 @@ We believe this is a very powerful technique for building rich clientside websit
 
 First install the dependencies including grunt if you don't have it yet
 
-```bash
+``` bash
 $ npm install -g grunt-cli
 $ npm install
 ```
@@ -26,31 +26,31 @@ $ npm install
 
 The run the development node server (app/server.js)
 
-```bash
+``` bash
 $ grunt
 ```
 
 This will use `nodemon` and `webpack` to watch for changes and restart and rebuild as the app as needed.
 
-Open http://localhost:3000
+Open [http://localhost:3000](http://localhost:3000)
 
 ### Production
 
 To build the 'production' version (app/static.js)
 
-```bash
+``` bash
 $ grunt static
 ```
 
 This will build a complete static site in `./static` . The best way to test that this is working locally is to install and run a light http server.
 
-```bash
+``` bash
 $ npm install -g http-server
 $ cd static
 $ http-server
 ```
 
-Open http://localhost:8080
+Open [http://localhost:8080](http://localhost:8080)
 
 ### Deployment to S3
 
@@ -87,7 +87,7 @@ Open http://localhost:8080
 
 6. Build and deploy the site
 
-```bash
+``` bash
 $ grunt deploy
 ```
 

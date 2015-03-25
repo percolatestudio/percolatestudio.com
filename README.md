@@ -93,4 +93,6 @@ $ grunt deploy
 
 ### License & Copywrite
 
-The code in this project is copyright Percolate Studio Ltd, and licensed under the MIT license (see attached license file LICENSE.txt). All images and textual content is copyright Percolate Studio Ltd or the respective copyright holder and IS NOT available to be re-used.
+The code in this project is copyright Percolate Studio Ltd., and licensed under the MIT license (see attached license file LICENSE.txt). All images and textual content are copyright Percolate Studio Ltd. or the respective copyright holder and ARE NOT available to be re-used.
+
+Webfonts are copyright and subject to licensing agreements with their respective owners. They ARE NOT available for re-use. Please license them with their owners.

@@ -1,5 +1,5 @@
 .page.not-found {
-  //copied from jobs with minor tweaks
+  //similar to jobs with minor tweaks
   .header {
     .page-margins;
     .std-ypadding;
@@ -14,8 +14,8 @@
       margin-top: -36px;
     }
 
-    z-index: 1;
     text-align: center;
+    z-index: 1;
   }
 
   .wrapper-hero {
@@ -24,9 +24,11 @@
       .transform(translateY(-50%));
     }
   }
+
   .hero {
     margin-bottom: 1rem;
     width: 96px;
+
     @media screen and (min-width: @breakpoint) {
       margin-bottom: 2rem;
       width: 192px;
@@ -35,11 +37,10 @@
 
   .title-page {
     .font-m3;
-    margin-bottom: .5em;
     line-height: 1em !important;
-    @media screen and (min-width: @breakpoint) {
-      .font-l2;
-    }
+    margin-bottom: .5em;
+
+    @media screen and (min-width: @breakpoint) { .font-l2; }
   }
   .description-page {
     .font-s3;

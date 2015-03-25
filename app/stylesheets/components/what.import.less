@@ -5,13 +5,10 @@
     @media screen and (min-width: @breakpoint) { display: inline-block; }
   }
 
-  .item-project {
-    @media screen and (min-width: @breakpoint) {
-      &:nth-of-type(5n + 1) {
-        width: 100%;
-      }
-    }
+  @media screen and (min-width: @breakpoint) {
+    .item-project:nth-of-type(5n + 1) { width: 100%; }
   }
+
   .title-section { background: @color-rare; }
 }
 

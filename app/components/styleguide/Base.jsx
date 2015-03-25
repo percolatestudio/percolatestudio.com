@@ -304,7 +304,7 @@ var StyleguideBase = React.createClass({
               <div className="fieldset-group">
                 <div className="input-upload right">
                   <span className="icon-percolate" data-title="Clear"></span>
-                  <span className="pseudo-input"><span> roster-melbourne-secondary.csv</span></span>
+                  <span className="pseudo-input"><span> roster.csv</span></span>
                 </div>
                 <span className="confirm-upload"><span className="icon-check"></span> 20 teachers</span>
               </div>

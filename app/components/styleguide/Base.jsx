@@ -217,12 +217,6 @@ var StyleguideBase = React.createClass({
           <span className="icon-basket"></span>
           <span className="icon-google"></span>
           <span className="icon-location"></span>
-          <span className="icon-admin"></span>
-          <span className="icon-wrench"></span>
-          <span className="icon-unlock"></span>
-          <span className="icon-photo"></span>
-          <span className="icon-bookmark-hollow"></span>
-          <span className="icon-bookmark"></span>
         </div>
 
           <div id="forms" className="module">

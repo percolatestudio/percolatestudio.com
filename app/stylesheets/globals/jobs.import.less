@@ -5,22 +5,22 @@
     .std-xpadding;
 
     background: @color-empty;
+    height: 85%;
     overflow: hidden;
     position: relative;
-
-    height: 85%;
-
-    z-index: 1;
     text-align: center;
+    z-index: 1;
   }
 
   .wrapper-hero {
     .position(absolute, 50%, 0, auto, 0);
     .transform(translateY(-50%));
   }
+
   .hero {
     margin-bottom: 1.5rem;
     width: 96px;
+
     @media screen and (min-width: @breakpoint) {
       margin-bottom: 3rem;
       width: 192px;
@@ -31,11 +31,10 @@
     .font-m3;
     margin-bottom: .5em;
     line-height: 1em !important;
-    @media screen and (min-width: @breakpoint) {
-      .font-l2;
-    }
 
+    @media screen and (min-width: @breakpoint) { .font-l2; }
   }
+
   .description-page {
     .font-s3;
     margin: 0 auto 1.5rem;
@@ -51,6 +50,7 @@
 
   .section-about {
     background: @color-raw-alt;
+
     &:nth-child(even) { background: @color-empty; }
   }
 
@@ -66,7 +66,6 @@
     .std-xpadding;
     margin-bottom: 2rem;
     @media screen and (min-width: @breakpoint) { margin-bottom: 3rem; }
-
   }
 
   ol {
@@ -75,14 +74,15 @@
     list-style-type: none;
     overflow: hidden;
 
-
     li {
       .font-s3;
       @media screen and (min-width: @breakpoint) { .font-m1; }
       display: inline-block;
       float: none !important; //removes float from grid-2
-      vertical-align: top;
       margin-bottom: 1em;
+      vertical-align: top;
+
+
       &:before {
         .font-s1;
         .type-bold;
@@ -102,9 +102,11 @@
         margin-right: .75rem;
         margin-top: 6px;
       }
+
       &:nth-child(even) {
         @media screen and (min-width: @breakpoint) { .std-xpadding; }
       }
+
       .meta {
         display: block;
         overflow: hidden;
@@ -118,5 +120,4 @@
     .page-margins;
     text-align: center;
   }
-
 }

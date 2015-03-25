@@ -1,7 +1,11 @@
 [class^="overlay-screen"] {
   .position(fixed, 0, 0, 0, 0);
-
   background: rgba(237, 243, 245, 0.98);
+  opacity: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: -1;
+  -webkit-overflow-scrolling: touch;
 
   padding-top: 1.75em;
   padding-bottom: 1.75em;
@@ -18,18 +22,13 @@
     padding-bottom: 6em;
   }
 
-  opacity: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  z-index: -1;
-  -webkit-overflow-scrolling: touch;
-
   > .overlay-close {
     .position(absolute, .75em, .75em, auto, auto, 3em, 3em);
     padding-top: .75em;
     text-align: center;
     text-decoration: none;
     z-index: 1;
+
     .icon-cross {
       .font-s3;
       @media screen and (min-width: 40em) { .font-m2; }

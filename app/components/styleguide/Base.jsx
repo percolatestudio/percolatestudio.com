@@ -105,10 +105,7 @@ var StyleguideBase = React.createClass({
           <a className="btn-secondary caps">Secondary</a>
           <a className="btn-tertiary caps">Tertiary</a>
           <br/>
-          <a className="btn-primary-small caps">Primary-small</a>
-          <a className="btn-secondary-small caps">Secondary-small</a>
-          <a className="btn-tertiary-small caps">Tertiary-small</a>
-          <br/>
+
           <button className="btn-primary upload caps"><input type="file"/>Upload</button>
           <br/>
           <div className="btns-group">

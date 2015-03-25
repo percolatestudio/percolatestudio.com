@@ -16,9 +16,7 @@ nav {
     text-align: center;
     width: 36px;
 
-    @media screen and (min-width: @breakpoint) {
-      .transform(rotate(720deg));
-    }
+    @media screen and (min-width: @breakpoint) { .transform(rotate(720deg)); }
 
     img {
       display: inline-block;
@@ -56,7 +54,6 @@ nav {
       &.active { color: @color-empty; }
       &:active { color: @color-well; }
       & + a { margin-left: 2.5em; }
-
       &:not(.menu-link):not(.contact-link) { display: none; } //hide everything not menu or contact
       &.menu-link { margin-left: 0; } //reset margin left for menu
 

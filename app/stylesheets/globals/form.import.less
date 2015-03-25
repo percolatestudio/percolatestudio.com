@@ -5,10 +5,8 @@ fieldset,
   .clearfix;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  //padding-left: 1.25em;
-  //padding-right: 1.25em;
 
-  //spacing between fieldsets (can't use margins because of border)
+  // spacing between fieldsets (can't use margins because of border)
   & + fieldset,
   & + .fieldset {
     border-top: 1px solid @color-medium-rare;
@@ -28,9 +26,11 @@ fieldset,
 
     &:last-child { margin-bottom: 0; }
   }
+
   textarea {
     min-height: 7em;
   }
+
   [class^="btn-"],
   [class*=" btn-"],
   .a-select,
@@ -41,13 +41,16 @@ fieldset,
   label:not(.checkbox):not(.radio) {
     .type-semibold;
   }
+
   .checkbox {
     .font-s1;
     margin-bottom: 1rem;
   }
+
   .fieldset-group {
     margin-bottom: 1rem;
   }
+
   .checkbox-sliding-wrapper {
     .clearfix;
     margin-bottom: 1rem;
@@ -84,6 +87,7 @@ input[type="radio"] {
     display: block;
     background: @color-medium-rare;
   }
+
   &:checked + span:before { background: @color-positive; }
 }
 
@@ -98,11 +102,13 @@ label {
   clear: both;
   display: block;
   margin-bottom: .5em;
+
   &.checkbox,
   &.radio {
     cursor: pointer;
     min-height: 1em;
     position: relative; //necessary for special styling
+
     & + button {
       /* accounts for 4px margin bottom to = 16px */
       margin-top: 12px;
@@ -113,6 +119,7 @@ label {
     display: inline-block;
     line-height: 1em + .3em; //.3em is due to inherited top positioning
   }
+
   >.alert,
   >.error {
     .type-regular;
@@ -156,11 +163,11 @@ textarea {
   &:focus {
     box-shadow: rgba(0,0,0,.5) 0 -1px 0 0 inset;
   }
-  /* Alerts */
+
   &.alert {
     box-shadow: @color-negative 0 -1px 0 0 inset;
   }
-  /* Inverted colorway */
+
   &.inverse {
     .placeholder(@color-medium);
     background-color: #333;
@@ -174,7 +181,7 @@ textarea {
   margin-bottom: 2rem;
 }
 
-/* Styles for inputs with icons inside of them, see styleguide for markup */
+// Inputs with icons inside of them
 .input-symbol {
   display: inline-block;
   position: relative;
@@ -212,9 +219,8 @@ textarea {
 
     /* highlight submit button when input focussed */
     &:focus + button {
-      &[class^="icon-"], &[class*=" icon-"] {
-        color: @color-primary;
-      }
+      &[class^="icon-"],
+      &[class*=" icon-"] { color: @color-primary; }
     }
 
   }
@@ -229,14 +235,10 @@ textarea {
     margin-top: -.5em;
     width: 1em;
 
-    &.inverse {
-      color: @color-medium-rare;
-    }
+    &.inverse { color: @color-medium-rare; }
   }
 }
 
-
-/* Appears on the contact page */
 .input-upload {
   display: inline-block;
   position: relative;
@@ -270,6 +272,8 @@ textarea {
     text-align: left;
   }
   > [class^="icon-"], > [class*=" icon-"] {
+    .transform(translateY(-50%));
+    .transition( all 100ms ease-in );
     font-size: 14px;
 
     background: transparent;
@@ -281,8 +285,7 @@ textarea {
     top: 50%;
     width: 1em;
     height: 1em;
-    .transform(translateY(-50%));
-    .transition( all 100ms ease-in );
+
 
     &:hover {
       color: @color-primary;
@@ -303,7 +306,8 @@ textarea {
         z-index: 98;
       }
     }
-  }//icon
+  }
+
   + .confirm-upload {
     .font-s1;
     color: @color-medium;
@@ -316,7 +320,6 @@ textarea {
 
 
 // a form input with no chrome at all (ie. appears just as text)
-// search overlay page
 input[type="text"],
 input[type="search"],
 input[type="email"],

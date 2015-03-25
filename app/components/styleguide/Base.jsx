@@ -122,7 +122,7 @@ var StyleguideBase = React.createClass({
           </div>
         </div>
 
-          <div id="icons" className="module">
+        <div id="icons" className="module">
           <h5 className="subtitle">Icons</h5>
           <span className="icon-percolate"></span>
           <span className="icon-user"></span>
@@ -214,7 +214,15 @@ var StyleguideBase = React.createClass({
           <span className="icon-bookmark-hollow"></span>
           <span className="icon-bookmark"></span>
           <span className="icon-info"></span>
-        <span className="icon-basket"></span>
+          <span className="icon-basket"></span>
+          <span className="icon-google"></span>
+          <span className="icon-location"></span>
+          <span className="icon-admin"></span>
+          <span className="icon-wrench"></span>
+          <span className="icon-unlock"></span>
+          <span className="icon-photo"></span>
+          <span className="icon-bookmark-hollow"></span>
+          <span className="icon-bookmark"></span>
         </div>
 
           <div id="forms" className="module">
@@ -311,7 +319,7 @@ var StyleguideBase = React.createClass({
               <div className="fieldset-group">
                 <div className="input-upload right alert">
                   <span className="icon-percolate" data-title="Clear"></span>
-                  <span className="pseudo-input"><span> roster-melbourne-secondary.csv</span></span>
+                  <span className="pseudo-input"><span> roster.csv</span></span>
                 </div>
               </div>
               <textarea name="body" placeholder="Enter your response"></textarea>

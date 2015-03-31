@@ -77,6 +77,10 @@ var How = React.createClass({
             <img title="Tom Coleman" src="/img/portraits-tom-280x360.jpg"/>
             <div className="name">Tom Coleman</div>
           </a>
+          <a className="grid-4 avatar" href="https://twitter.com/timbotnik" rel="nofollow" target="_blank">
+            <img title="Timothy Hingston" src="/img/portraits-tim-280x360.jpg"/>
+            <div className="name">Timothy Hingston</div>
+          </a>
           <a className="grid-4 avatar" href="https://twitter.com/domyen" rel="nofollow" target="_blank">
             <img title="Dominic Nguyen" src="/img/portraits-dom-280x360.jpg"/>
             <div className="name">Dominic Nguyen</div>
@@ -84,10 +88,6 @@ var How = React.createClass({
           <a className="grid-4 avatar" href="https://twitter.com/zqzoltan" rel="nofollow" target="_blank">
             <img title="Zoltan Olah" src="/img/portraits-zol-280x360.jpg"/>
             <div className="name">Zoltan Olah</div>
-          </a>
-          <a className="grid-4 avatar" href="https://twitter.com/timbotnik" rel="nofollow" target="_blank">
-            <img title="Timothy Hingston" src="/img/portraits-tim-280x360.jpg"/>
-            <div className="name">Timothy Hingston</div>
           </a>
 
         </section>

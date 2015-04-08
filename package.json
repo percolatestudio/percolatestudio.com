@@ -14,7 +14,8 @@
     "picturefill": "^2.2.1",
     "react": "^0.12.0",
     "react-router": "^0.12.4",
-    "sitemap": "^0.7.4"
+    "sitemap": "^0.7.4",
+    "contact-form": "percolatestudio/contact-form"
   },
   "devDependencies": {
     "css-loader": "^0.9.1",

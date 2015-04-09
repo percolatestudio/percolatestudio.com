@@ -27,7 +27,7 @@ product.component = React.createClass({
         </p>
             </div>
             <div className="grid-2-collapse">
-              <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime & reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted  shining examples of their technology to accompany the official launch, they reached out to us to design and build it.</p>
+              <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime &amp; reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted  shining examples of their technology to accompany the official launch, they reached out to us to design and build it.</p>
             </div>
           </div>
         </header>
@@ -109,7 +109,7 @@ product.component = React.createClass({
           <div className="conclusion">Months of collaboration resulted in a suite of functionally rich yet strikingly simple examples.</div>
 
           <div className="center-up formatting">
-            <p>Our engineers and designers worked in tandem with Meteor&rsquo;s in-house team to create canonical open source apps that inform & inspire developers. <em>Leaderboard</em>, <em>Todos</em>, and <em>Local Market</em> have since been installed by tens of thousands of developers and deployed to both the Google Play and App Store.</p>
+            <p>Our engineers and designers worked in tandem with Meteor&rsquo;s in-house team to create canonical open source apps that inform &amp; inspire developers. <em>Leaderboard</em>, <em>Todos</em>, and <em>Local Market</em> have since been installed by tens of thousands of developers and deployed to both the Google Play and App Store.</p>
             <CtaLink title="Are you interested in realtime experiences?" openContact={this.props.openContact} />
           </div>
         </div>

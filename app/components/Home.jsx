@@ -23,7 +23,7 @@ var Home = React.createClass({
           <div className="grid-2-square">
             <h2 className="title-section">Our approach</h2>
             <div className="col-content">
-              <p>Clients hire our interdisciplinary team of designers & engineers to identify challenges, design solutions, and make technology human. We're the rare team that can take a product from idea to market.</p>
+              <p>Clients hire our interdisciplinary team of designers &amp; engineers to identify challenges, design solutions, and make technology human. We're the rare team that can take a product from idea to market.</p>
               <Router.Link to="how" className="btn-secondary caps">See how we do it</Router.Link>
             </div>
 
@@ -62,7 +62,7 @@ var Home = React.createClass({
 
              <source srcSet="/img/home-collage-mobile2-600x480@2x.jpg 2x,
                    /img/home-collage-mobile2-600x480.jpg 1x" />
-             <img src="/img/home-collage-mobile-1000x625.jpg" alt="Desktop & Mobile Apps" />
+             <img src="/img/home-collage-mobile-1000x625.jpg" alt="Desktop &amp; Mobile Apps" />
           </picture>
 
         </section>

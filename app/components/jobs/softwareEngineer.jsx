@@ -27,7 +27,7 @@ job.component = React.createClass({
           <ol className="details-about">
             <li className="grid-2-collapse"><span className="meta">You want to create world-class digital products and love the craft of engineering.</span></li>
             <li className="grid-2-collapse"><span className="meta">You're motivated to learn the latest web and mobile technologies.</span></li>
-            <li className="grid-2-collapse"><span className="meta">You have a deep understanding of client & server technologies and are able to interface with design and operations alike.</span></li>
+            <li className="grid-2-collapse"><span className="meta">You have a deep understanding of client &amp; server technologies and are able to interface with design and operations alike.</span></li>
             <li className="grid-2-collapse"><span className="meta">You've created things that people use and love.</span></li>
             <li className="grid-2-collapse"><span className="meta">You're curious about discovering how technology impacts people's lives.</span></li>
           </ol>

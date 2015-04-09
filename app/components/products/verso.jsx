@@ -96,7 +96,7 @@ product.component = React.createClass({
           <div className="conclusion">Verso helps students become lifelong learners.</div>
 
           <div className="center-up formatting">
-            <p>Our holistic process yielded a product that has a significant & measurable impact on class participation. In the span of less than two years Verso has spread to thousands of schools. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>
+            <p>Our holistic process yielded a product that has a significant &amp; measurable impact on class participation. In the span of less than two years Verso has spread to thousands of schools. The app has been subject of several conference keynotes and received accolades such as ELearning Victoria.</p>
             <CtaLink title="Are you interested in education technology?" openContact={this.props.openContact} />
           </div>
         </div>

@@ -42,7 +42,7 @@ product.component = React.createClass({
             <p>Modern applications are a culmination of past knowledge. They are an assemblage of discrete pieces. The open source movement formalized the path for people to share and re-use these pieces &mdash;packages&mdash; with the goal of making product development more efficient. Makers spend less time building boilerplate and instead dedicate themselves to creating real value. Thus resulting in more mature software coming to market in less time.
         </p>
 
-            <p>At scale, open source looks like millions of engineers & designers packaging discrete pieces of functionality and sharing via the internet. However to fully find and re-use this shared knowledge it needs to be structured. Enter package managers. They seek to index the packages in an open source ecosystem to facilitate discovery. When we realized that package management didn’t exist for a javascript framework we use to build client products (Meteor) we created Atmosphere.</p>
+            <p>At scale, open source looks like millions of engineers &amp; designers packaging discrete pieces of functionality and sharing via the internet. However to fully find and re-use this shared knowledge it needs to be structured. Enter package managers. They seek to index the packages in an open source ecosystem to facilitate discovery. When we realized that package management didn’t exist for a javascript framework we use to build client products (Meteor) we created Atmosphere.</p>
           </div>
         </div>
 

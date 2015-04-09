@@ -49,7 +49,7 @@ job.component = React.createClass({
           <ol className="details-about">
             <li className="grid-2-collapse"><span className="meta">Why do you want to intern at Percolate Studio?</span></li>
             <li className="grid-2-collapse"><span className="meta">Describe your interests in one sentence.</span></li>
-            <li className="grid-2-collapse"><span className="meta">How will your skills add to a design & engineering studio?</span></li>
+            <li className="grid-2-collapse"><span className="meta">How will your skills add to a design &amp; engineering studio?</span></li>
             <li className="grid-2-collapse"><span className="meta">What are your start and end dates?</span></li>
             <li className="grid-2-collapse"><span className="meta">Link to an online portfolio.</span></li>
           </ol>

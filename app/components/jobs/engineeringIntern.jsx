@@ -38,7 +38,7 @@ job.component = React.createClass({
           <ol className="details-about">
             <li className="grid-2-collapse-collapse"><span className="meta">You have an understanding of the structure of well-built software</span></li>
             <li className="grid-2-collapse"><span className="meta">You have interactive projects whose code is viewable on Github</span></li>
-            <li className="grid-2-collapse"><span className="meta">You have a knowledge of computer science and practical coding practices. Design tools like Photoshop & Sketch a bonus.</span></li>
+            <li className="grid-2-collapse"><span className="meta">You have a knowledge of computer science and practical coding practices. Design tools like Photoshop &amp; Sketch a bonus.</span></li>
             <li className="grid-2-collapse"><span className="meta">You love to see your ideas come to life in prototypes.</span></li>
           </ol>
         </section>
@@ -49,7 +49,7 @@ job.component = React.createClass({
           <ol className="details-about">
             <li className="grid-2-collapse"><span className="meta">Why do you want to intern at Percolate Studio?</span></li>
             <li className="grid-2-collapse"><span className="meta">Describe your interests in one sentence.</span></li>
-            <li className="grid-2-collapse"><span className="meta">How will your skills add value to a design & engineering studio?</span></li>
+            <li className="grid-2-collapse"><span className="meta">How will your skills add value to a design &amp; engineering studio?</span></li>
             <li className="grid-2-collapse"><span className="meta">What are your start and end dates?</span></li>
             <li className="grid-2-collapse"><span className="meta">Link to Github.</span></li>
           </ol>

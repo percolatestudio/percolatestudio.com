@@ -15,7 +15,7 @@ var How = React.createClass({
         <header className="collage medium">
           <div className="grid-2-square">
             <h1 className="title-page">How</h1>
-            <p className="description-page">With clients spanning consumer, education & business organizations our interdisciplinary team has the flexibility to impact any part of a product's lifecycle.</p>
+            <p className="description-page">With clients spanning consumer, education &amp; business organizations our interdisciplinary team has the flexibility to impact any part of a product's lifecycle.</p>
           </div>
           <div className="grid-2-square bg-image-how"></div>
         </header>

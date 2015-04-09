@@ -59,7 +59,7 @@ var Careers = React.createClass({
         <section className="section-openings">
           <h2 className="title-section">Openings</h2>
           <div className="grid-2-collapse openings">
-            <p className="subtitle-openings"><b>Team members</b> create the future of design & technology.</p>
+            <p className="subtitle-openings"><b>Team members</b> create the future of design &amp; technology.</p>
             {jobLinks}
           </div>
           <div className="grid-2-collapse openings">

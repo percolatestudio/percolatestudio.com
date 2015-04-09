@@ -91,7 +91,7 @@ Open [http://localhost:8080](http://localhost:8080)
 $ grunt deploy
 ```
 
-### License & Copywrite
+### License & Copyright
 
 The code in this project is copyright Percolate Studio Ltd., and licensed under the MIT license (see attached license file LICENSE.txt). All images and textual content are copyright Percolate Studio Ltd. or the respective copyright holder and ARE NOT available to be re-used.
 

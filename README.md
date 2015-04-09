@@ -1,8 +1,6 @@
 ## Description
 
-This is the code that runs Percolate Studio's website at http://percolatestudio.com . The site is a Single Page App built in React. It can be run as a node application with server side rendering, from a set of static pages that have been rendered to disk *or* as a pure client-side app.
-
-We run in production as a static site deployed to S3.
+This is the code that runs Percolate Studio's website at http://percolatestudio.com . The site is a Single Page App built in React. It can be run as a node application with server side rendering, from a set of static pages that have been rendered to disk *or* as a pure client-side app. We run in production as a static site deployed to S3.
 
 We believe this is a very powerful technique for building rich clientside websites that are:
 
@@ -12,6 +10,8 @@ We believe this is a very powerful technique for building rich clientside websit
 * Very cheap to host
 * Can connect to and use a 'backend as a service' if desired
 * Can be trivially upgraded to a dynamic node application if required in the future
+
+We wrote up our rationale in more detail on our [blog](http://blog.percolatestudio.com/engineering/architecting-better-landing-pages/).
 
 ## Usage
 

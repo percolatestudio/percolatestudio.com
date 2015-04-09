@@ -28,6 +28,7 @@ var Html = React.createClass({
           <meta name="description" content={this.props.headParams.description} />
           <meta name="robots" />
           <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width" />
+          <meta name="google-site-verification" content="G-f4VlVk_kGNsRzL_Oz7HODwbEGVJfB-xS2z0-hEC6I" />
 
           <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
           <link href="/client.css" media="all" rel="stylesheet" />

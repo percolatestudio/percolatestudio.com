@@ -52,7 +52,7 @@ product.component = React.createClass({
         <div className="wrapper-content">
           <div className="full-up formatting">
             <h2>Inverted Learning</h2>
-            <p>Verso builds upon the flipped classNameroom learning model which inverts traditional teaching methods. Instruction is delivered through the app outside of className while &lsquo;homework&rsquo; is done inside the classNameroom. Concept mastery happens in className with the guidance of peers and teachers.</p>
+            <p>Verso builds upon the flipped classroom learning model which inverts traditional teaching methods. Instruction is delivered through the app outside of class while &lsquo;homework&rsquo; is done inside the classroom. Concept mastery happens in class with the guidance of peers and teachers.</p>
             <p>Impacting learning necessitates an inclusive product development strategy. Since it’s impossible to foretell devices accessible to families and schools, we launched the Verso experience on all major platforms and devices. To reduce the scope of engineering and accelerate time to market we developed a robust platform-agnostic codebase.</p>
           </div>
         </div>

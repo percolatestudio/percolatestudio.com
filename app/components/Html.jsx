@@ -33,6 +33,7 @@ var Html = React.createClass({
           <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
           <link href="/client.css" media="all" rel="stylesheet" />
 
+          <script src="//cdn.optimizely.com/js/2857520328.js"></script>
           <script async src='//www.google-analytics.com/analytics.js'></script>
           <script dangerouslySetInnerHTML={{__html: gaSnippet}}></script>
         </head>

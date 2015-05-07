@@ -16,22 +16,41 @@ require("./stylesheets/main.less");
 var React = require('react');
 var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
+var HistoryLocation = require('react-router').HistoryLocation;
+
 var routes = require('./components/Routes');
 
 window.React = React; // For chrome dev tool support
 var headParams = new HeadParams();
 
-Router.run(routes, Router.RefreshLocation, function (Handler, state) {
+// Hack HistoryLocation to support running inside Optimizely's editor
+HistoryLocation.getCurrentPath = function() {
+  var path = decodeURI(window.location.pathname + window.location.search);
+  // When running inside the optimizely editor, path will be something like:
+  // "/http://static-test.percolatestudio.com/?optimizely_disable=true..."
+  //
+  // This regexp strips the start back to /?...
+  path = path.replace(/^\/https?\:\/\/.*?\//, '/');
+
+  return path;
+}
+
+Router.run(routes, HistoryLocation, function (Handler, state) {
   var bodyElement = React.createFactory(Handler)({
     params: state.params,
     headParams: headParams,
     clientReady: true });
 
-  React.render(bodyElement, document.body);
-  console.log('Client rendered at path ' + state.path);
+  React.render(bodyElement, document.body, function() {
+    console.log('Client rendered at path ' + state.path);
 
-  // Track clientside routing with GA, it should be loaded...
-  if (window.ga) {
-    window.ga('send', 'pageview', { 'page': state.path });
-  }
+    // Track clientside routing with GA, it should be loaded...
+    if (window.ga) {
+      window.ga('send', 'pageview', { 'page': state.path });
+    }
+
+    // Ensure optimizely reruns on route change
+    console.log('sending optimizely activation...')
+    window.optimizely.push(["activate", 2869250310]);
+  });
 });

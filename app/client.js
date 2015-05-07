@@ -21,7 +21,7 @@ var routes = require('./components/Routes');
 window.React = React; // For chrome dev tool support
 var headParams = new HeadParams();
 
-Router.run(routes, Router.HistoryLocation, function (Handler, state) {
+Router.run(routes, Router.RefreshLocation, function (Handler, state) {
   var bodyElement = React.createFactory(Handler)({
     params: state.params,
     headParams: headParams,

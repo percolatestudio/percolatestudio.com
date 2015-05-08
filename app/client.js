@@ -35,6 +35,27 @@ HistoryLocation.getCurrentPath = function() {
   return path;
 }
 
+// Enable logging for optimizely
+window['optimizely'] = window['optimizely'] || [];
+window['optimizely'].push(["log"]);
+
+// Activate all Optimizely experiments. This should be re-run if page content
+// that's targetted by Optimizely changes.
+// NOTE: Supposedly window.optimizely.push(["activate"]); should achieve the
+// same result however this doesn't seem to work properly in practice. I've
+// filed a support ticket for it.
+var activateAllOptimizelyExperiments = function() {
+  var ids = [];
+
+  if (window['optimizely'] && window['optimizely'].data)
+    ids = window['optimizely'].data.state.activeExperiments;
+
+  ids.forEach(function(id) {
+    console.log('sending optimizely activation for id ' + id);
+    window.optimizely.push(["activate", id]);
+  });
+}
+
 Router.run(routes, HistoryLocation, function (Handler, state) {
   var bodyElement = React.createFactory(Handler)({
     params: state.params,
@@ -50,7 +71,6 @@ Router.run(routes, HistoryLocation, function (Handler, state) {
     }
 
     // Ensure optimizely reruns on route change
-    console.log('sending optimizely activation...')
-    window.optimizely.push(["activate", 2869250310]);
+    activateAllOptimizelyExperiments();
   });
 });

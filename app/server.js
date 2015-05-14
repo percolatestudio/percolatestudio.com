@@ -29,12 +29,12 @@ var headParams = new HeadParams();
 
 server.use(function (req, res) {
   Router.run(routes, req.path, function (Handler, state) {
-    var bodyElement = React.createFactory(Handler)({ 
-      params: state.params, 
+    var bodyElement = React.createFactory(Handler)({
+      params: state.params,
       headParams: headParams,
-      clientReady: false 
+      clientReady: false
     });
-    
+
     var html = React.renderToStaticMarkup(htmlComponent({
       headParams: headParams,
       markup: React.renderToString(bodyElement)

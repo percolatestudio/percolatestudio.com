@@ -36,7 +36,7 @@ pages = StaticTools.interpolate(pages, '/what/:name', 'name', productNames);
 pages = StaticTools.interpolate(pages, '/careers/:name', 'name', jobNames);
 
 // Write the sitemap with the pages we have so far
-StaticTools.writeFile(outputDir, '/sitemap.xml', 
+StaticTools.writeFile(outputDir, '/sitemap.xml',
   StaticTools.makeSitemap(pages, 'http://percolatestudio.com'));
 
 // Will hit the NotFound route and generate error.html

@@ -15,11 +15,11 @@ var ImageSourceMixin = {
    * @param {string} original - The original, non @2x image url.
    */
   imageSource: function(original) {
-    if (typeof window === 'undefined' 
+    if (typeof window === 'undefined'
       || !window.devicePixelRatio || window.devicePixelRatio <= 1) {
       return original;
     }
-  
+
     return original.replace(/\.[^\.]*$/, '@2x$&');
   }
 };

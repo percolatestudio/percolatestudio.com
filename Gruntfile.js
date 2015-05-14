@@ -8,7 +8,7 @@ var S3_CONFIG_FILE = './s3.config.json';
 module.exports = function (grunt) {
   var s3Config = grunt.file.exists(S3_CONFIG_FILE) ?
     grunt.file.readJSON(S3_CONFIG_FILE) : {};
-  
+
   var config = {
     clean: ['./build', './static'],
     concurrent: {
@@ -32,10 +32,10 @@ module.exports = function (grunt) {
           cwd: 'app/assets/',
           src: ['**/*'],
           dest: 'static/'
-        }, { 
+        }, {
           expand: true,
           cwd: 'build/',
-          src: 'client.css*', 
+          src: 'client.css*',
           dest: 'static/'
         }]
       }
@@ -63,10 +63,10 @@ module.exports = function (grunt) {
           loaders: [
             { test: /\.css$/, loader: 'style!css' },
             // Use "css-loader?minimize!less-loader" for minification
-            { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", 
-              "css-loader!less-loader") }, 
+            { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader",
+              "css-loader!less-loader") },
             { test: /\.jsx$/, loader: 'jsx-loader' }
-            
+
           ]
         },
         plugins: [ new ExtractTextPlugin("client.css") ],
@@ -105,14 +105,14 @@ module.exports = function (grunt) {
       target: ['Gruntfile.js', 'app/**/*.js', 'app/**/*.jsx']
     }
   };
-  
+
   // Copy the dev webpack configuration but don't watch
   config.webpack.static = _.clone(config.webpack.dev);
   config.webpack.static.watch = false;
   config.webpack.static.keepalive = false;
 
   grunt.initConfig(config);
-  
+
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -128,9 +128,9 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean', 'npm-install', 'concurrent:dev']);
 
   // Build the static site
-  grunt.registerTask('static', ['clean', 'npm-install', 'webpack:static', 
+  grunt.registerTask('static', ['clean', 'npm-install', 'webpack:static',
     'copy:static', 'uglify:static', 'execute:static']);
-  
+
   // Build and deploy the static site
   grunt.registerTask('deploy', ['static', 's3:deploy']);
 

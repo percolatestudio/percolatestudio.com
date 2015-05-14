@@ -14,12 +14,12 @@ var ProductLayout = React.createClass({
     var previousProduct = _.find(this.props.collections.Products, function(p) {
       return p.index === product.index - 1;
     });
-    
+
     var wide = !(nextProduct && previousProduct);
     var previousLink, nextLink;
-    
+
     if (previousProduct) {
-      previousLink = <ProductLink product={previousProduct} wide={wide} 
+      previousLink = <ProductLink product={previousProduct} wide={wide}
         small={this.props.small}/>;
     }
 
@@ -50,14 +50,14 @@ var ProductLink = React.createClass({
     var wide = this.props.wide;
     var small = this.props.small;
     var other = _.omit(this.props, 'product', 'wide', 'small');
-    
+
     var sourceUrl = (wide && !small) ? product.featureUrl : product.thumbnailUrl;
     var imageUrl = this.imageSource(sourceUrl);
     var className = wide ? 'grid-1' : 'grid-2-square';
     className += ' item-project bg-image';
-    
+
     return (
-      <Router.Link to="product" params={this.props.product} 
+      <Router.Link to="product" params={this.props.product}
         className={className}
         style={{backgroundImage: "url('" + imageUrl + "')"}} {...other}>
         <span className="subtitle-item">{product.title}</span>

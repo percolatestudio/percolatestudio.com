@@ -9,7 +9,7 @@
  *
  * Client side push state routing will be performed by React Router after the
  * initial page load.
- */ 
+ */
 
 require("./stylesheets/main.less");
 
@@ -22,14 +22,14 @@ window.React = React; // For chrome dev tool support
 var headParams = new HeadParams();
 
 Router.run(routes, Router.HistoryLocation, function (Handler, state) {
-  var bodyElement = React.createFactory(Handler)({ 
-    params: state.params, 
+  var bodyElement = React.createFactory(Handler)({
+    params: state.params,
     headParams: headParams,
     clientReady: true });
-  
+
   React.render(bodyElement, document.body);
   console.log('Client Rendered');
-  
+
   // Track clientside routing with GA, it should be loaded...
   if (window.ga) {
     window.ga('send', 'pageview', { 'page': state.path });

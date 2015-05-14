@@ -9,13 +9,13 @@ var Job = React.createClass({
       return j.name === name;
     });
   },
-  
+
   componentWillMount: function() {
     var job = this.job();
     this.props.headParams.setTitle(job.title + ' | Percolate Studio');
     this.props.headParams.setDescription(job.description);
   },
-  
+
   render: function() {
     var job = this.job();
     return React.createElement(job.component, _.extend({}, this.props, {job: job}));

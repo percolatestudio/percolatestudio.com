@@ -10,14 +10,14 @@ var setHistoryState = function (ourState) {
   if (!history.replaceState) {
     return;
   }
-  
+
   var newState = _.extend({}, history.state, ourState);
   history.replaceState(newState);
 };
 
 var PageLayout = React.createClass({
   mixins: [Router.State],
-  
+
   componentDidMount: function() {
     var state = history.state;
     if (state && state.lastScrollTop) {
@@ -25,19 +25,19 @@ var PageLayout = React.createClass({
       page.scrollTop = state.lastScrollTop;
     }
   },
-  
+
   handleScroll: _.throttle(function() {
     // NOTE: for some reason the event argument gets munged by the _.throttle.
-    //  (something to do with the synthetic event being cleaned up before the 
+    //  (something to do with the synthetic event being cleaned up before the
     //   throttle fires it? Not sure). Else we'd use event.target, not this.refs
     if (this.refs.page) {
       var page = this.refs.page.getDOMNode();
       setHistoryState({lastScrollTop: page.scrollTop});
     }
   }, 500),
-  
+
   render: function() {
-    
+
     var classMap = {
       'page': true
     };
@@ -46,9 +46,9 @@ var PageLayout = React.createClass({
     this.getRoutes().forEach(function(route) {
       classMap[route.name] = true;
     });
-    
+
     var pageClasses = React.addons.classSet(classMap);
-    
+
     // plus any passed in classes
     if (this.props.className) {
       pageClasses += ' ' + this.props.className;
@@ -69,7 +69,7 @@ var Nav = React.createClass({
     openMenu: React.PropTypes.func.isRequired,
     openContact: React.PropTypes.func.isRequired
   },
-  
+
   render: function() {
     return (
       <nav>
@@ -80,7 +80,7 @@ var Nav = React.createClass({
           <a className="menu-link" onClick={this.props.openMenu.bind(null, true)}>Menu</a>
         </div>
 
-          
+
         <NavLink to='home' className='logo'><img src="/img/logo.svg"/></NavLink>
 
         <div className="nav-group right">
@@ -95,17 +95,17 @@ var Nav = React.createClass({
 
 var NavLink = React.createClass({
   mixins: [Router.State],
-  
+
   render: function() {
     // Not using harmony with node
     // var {to, className, ...other} = this.props;
     var other = _.omit(this.props, 'to', 'other');
-    
+
     var names = [].concat(this.props.to); // ensure array
     var isActive = _.any(names, function(name) {
       this.isActive(name);
     }.bind(this));
-    
+
     var className = (isActive ? 'active ' : '') + (this.props.className || '');
 
     return (

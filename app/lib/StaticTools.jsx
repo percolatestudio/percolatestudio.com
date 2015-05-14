@@ -18,11 +18,11 @@ var StaticTools = {
   makeSitemap: function(pages, hostname) {
     var urls = [];
     var now = new Date();
-    
+
     pages.forEach(function(page) {
       // / => 0, /foo => 1, /foo/bar => 2
       var depth = (page.match(/\//g) || []).length;
-      
+
       // / => 1, /foo => 0.5, /foo/bar => 0.33
       var priority = ( page === '/' ? 1 : 1 / (depth + 1) );
 
@@ -30,16 +30,16 @@ var StaticTools = {
         url: page, changefreq: 'weekly', priority: priority, lastmod: now
       });
     });
-    
+
     var sitemap = Sitemap.createSitemap({
       hostname: hostname,
       cacheTime: 600000,  // 600 sec cache period
       urls: urls
     });
-    
+
     return sitemap.toString();
   },
-  
+
   /**
    * Turns React Router routes into a list of paths. Recursive.
    *
@@ -84,7 +84,7 @@ var StaticTools = {
    */
   interpolate: function(paths, forPath, key, values) {
     var result = [];
-  
+
     paths.forEach(function(routePath) {
       if (routePath === forPath) {
         values.forEach(function(value) {
@@ -96,10 +96,10 @@ var StaticTools = {
         result.push(routePath);
       }
     });
-  
+
     return result;
   },
-  
+
   /**
    * Converts a page into a html file path and writes contents to disk.
    *
@@ -115,7 +115,7 @@ var StaticTools = {
 
     this.writeFile(dir, page, contents);
   },
-  
+
   /**
    * Just writes a file.
    *

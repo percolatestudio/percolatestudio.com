@@ -14,7 +14,7 @@ var Product = React.createClass({
     this.props.headParams.setTitle("Case Study | Percolate Studio");
     this.props.headParams.setDescription(this.product().description);
   },
-  
+
   render: function() {
     var product = this.product();
     return React.createElement(product.component, _.extend({}, this.props, {product: product}));

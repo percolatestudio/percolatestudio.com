@@ -31,13 +31,13 @@ var Layout = React.createClass({
       small: this.isSmall()
     };
   },
-  
+
   componentWillMount: function() {
     if (typeof location !== 'undefined' && location.hash === '#contact') {
       this.setState({contactOpen: true});
     }
   },
-  
+
   componentDidMount: function() {
     // need to bind this at a higher level
     $(document).on('keydown', this.handleKeyDown);
@@ -48,21 +48,21 @@ var Layout = React.createClass({
 
     this.pictureFill();
   },
-  
+
   componentWillUnmount: function() {
     $(document).off('keydown', this.handleKeyDown);
     $(window).off('resize', this.handleWindowResize);
   },
-  
+
   openMenu: function(state) {
     this.setState({menuOpen: state});
   },
-  
+
   openContact: function(state) {
     this.setState({contactOpen: state});
     location.hash = state ? 'contact' : '';
   },
-  
+
   handleKeyDown: function(event) {
     if (event.which === 27) { // esc closes everything
       if ($('input, textarea').is(':focus')) {
@@ -72,21 +72,21 @@ var Layout = React.createClass({
       this.openMenu(false);
     }
   },
-  
+
   isSmall: function() {
     return (typeof window !== 'undefined') && $(window).width() <= RESPONSIVE_BREAKPOINT;
   },
-  
+
   handleWindowResize: function() {
     this.setState({
       small: this.isSmall()
     });
   },
-  
+
   componentDidUpdate: function() {
     this.pictureFill();
   },
-  
+
   // Runs the picturefill polyfill
   pictureFill: function() {
     // For browsers supporting <picture> natively, pictureFill will be undefined
@@ -94,21 +94,21 @@ var Layout = React.createClass({
       pictureFill();
     }
   },
-  
+
   render: function() {
     var layoutClasses = React.addons.classSet({
       'layout': true,
       'menu-open': this.state.menuOpen,
       'contact-open': this.state.contactOpen
     });
-    
+
     var childProps = _.extend({}, this.props, {
       openContact: this.openContact,
       openMenu: this.openMenu,
       collections: Collections,
       small: this.state.small
     });
-    
+
     return (
       <div className={layoutClasses}>
 

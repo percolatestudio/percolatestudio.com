@@ -9,7 +9,7 @@ var MenuOverlay = React.createClass({
       this.props.openMenu(false);
     }
   },
-  
+
   render: function() {
     return (
       <div className="overlay-screen-menu" onClick={this.handleClick}>
@@ -18,22 +18,22 @@ var MenuOverlay = React.createClass({
         </a>
         <div className="wrapper-menu">
           <div className="level-top">
-    
+
             {/* <Router.Link to='why'>
               <span className="title-link">Why</span>
               <span className="subtitle-link">Our intent</span>
       </Router.Link> */}
-      
+
             <Router.Link to='home'>
               <span className="title-link">Home</span>
               <span className="subtitle-link">Our intent</span>
             </Router.Link>
-      
+
             <Router.Link to='how'>
               <span className="title-link">How</span>
               <span className="subtitle-link">The approach</span>
             </Router.Link>
-      
+
             <Router.Link to='what'>
               <span className="title-link">What</span>
               <span className="subtitle-link">Our work</span>

@@ -18,10 +18,11 @@ var Router = require('react-router');
 var HeadParams = require('./lib/HeadParams');
 var routes = require('./components/Routes');
 
-window.React = React; // For chrome dev tool support
+// For chrome dev tool support
+window.React = React;
 var headParams = new HeadParams();
 
-Router.run(routes, Router.HistoryLocation, function (Handler, state) {
+Router.run(routes, Router.HistoryLocation, function(Handler, state) {
   var bodyElement = React.createFactory(Handler)({
     params: state.params,
     headParams: headParams,

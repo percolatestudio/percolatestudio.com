@@ -13,6 +13,7 @@ var ImageSourceMixin = {
    * React will correct the DOM but complain that the checksum was invalid.
    *
    * @param {string} original - The original, non @2x image url.
+   * @return {void}
    */
   imageSource: function(original) {
     if (typeof window === 'undefined'

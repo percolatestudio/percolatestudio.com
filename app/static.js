@@ -46,7 +46,7 @@ var headParams = new HeadParams();
 
 // Render each path
 pages.forEach(function(page) {
-  Router.run(routes, page, function (Handler, state) {
+  Router.run(routes, page, function(Handler, state) {
     console.log(page);
     var bodyElement = React.createFactory(Handler)({
       params: state.params,

@@ -18,12 +18,6 @@ var MenuOverlay = React.createClass({
         </a>
         <div className="wrapper-menu">
           <div className="level-top">
-
-            {/* <Router.Link to='why'>
-              <span className="title-link">Why</span>
-              <span className="subtitle-link">Our intent</span>
-      </Router.Link> */}
-
             <Router.Link to='home'>
               <span className="title-link">Home</span>
               <span className="subtitle-link">Our intent</span>
@@ -40,7 +34,6 @@ var MenuOverlay = React.createClass({
             </Router.Link>
           </div>
           <div className="level-bottom">
-            {/* <Router.Link to='home' className="monochrome">Home</Router.Link> */}
             <Router.Link to='careers' className="monochrome">Join Us</Router.Link>
             <a href="http://blog.percolatestudio.com" className="monochrome">Blog</a>
             <a onClick={this.props.openContact.bind(null, true)} className="monochrome">Contact</a>

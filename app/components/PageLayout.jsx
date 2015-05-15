@@ -6,7 +6,7 @@ var Router = require('react-router');
 
 // update the current page state with ourState, if history.replaceState
 //   is defined. If not, don't bother.
-var setHistoryState = function (ourState) {
+var setHistoryState = function(ourState) {
   if (!history.replaceState) {
     return;
   }
@@ -37,7 +37,6 @@ var PageLayout = React.createClass({
   }, 500),
 
   render: function() {
-
     var classMap = {
       'page': true
     };
@@ -101,7 +100,8 @@ var NavLink = React.createClass({
     // var {to, className, ...other} = this.props;
     var other = _.omit(this.props, 'to', 'other');
 
-    var names = [].concat(this.props.to); // ensure array
+    // ensure array
+    var names = [].concat(this.props.to);
     var isActive = _.any(names, function(name) {
       this.isActive(name);
     }.bind(this));

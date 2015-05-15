@@ -64,9 +64,11 @@ var Layout = React.createClass({
   },
 
   handleKeyDown: function(event) {
-    if (event.which === 27) { // esc closes everything
+    // esc closes everything
+    if (event.which === 27) {
       if ($('input, textarea').is(':focus')) {
-        return; // input or textarea is focused, ignore other part of function
+        // input or textarea is focused, ignore other part of function
+        return;
       }
       this.openContact(false);
       this.openMenu(false);

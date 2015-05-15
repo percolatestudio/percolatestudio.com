@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 // Optional S3 credentials if using the deploy task
 var S3_CONFIG_FILE = './s3.config.json';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   var s3Config = grunt.file.exists(S3_CONFIG_FILE) ?
     grunt.file.readJSON(S3_CONFIG_FILE) : {};
 
@@ -94,7 +94,8 @@ module.exports = function (grunt) {
         bucket: s3Config.bucket,
         region: s3Config.region || 'us-west-2',
         access: 'public-read',
-        mimeDefault: 'text/html' // important for pages without .html extension
+        // important for pages without .html extension
+        mimeDefault: 'text/html'
       },
       deploy: {
         cwd: "static/",

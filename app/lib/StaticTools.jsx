@@ -24,7 +24,7 @@ var StaticTools = {
       var depth = (page.match(/\//g) || []).length;
 
       // / => 1, /foo => 0.5, /foo/bar => 0.33
-      var priority = ( page === '/' ? 1 : 1 / (depth + 1) );
+      var priority = (page === '/' ? 1 : 1 / (depth + 1));
 
       urls.push({
         url: page, changefreq: 'weekly', priority: priority, lastmod: now
@@ -33,7 +33,8 @@ var StaticTools = {
 
     var sitemap = Sitemap.createSitemap({
       hostname: hostname,
-      cacheTime: 600000,  // 600 sec cache period
+      // 600 sec cache period
+      cacheTime: 600000,
       urls: urls
     });
 
@@ -52,12 +53,14 @@ var StaticTools = {
     routes = Array.isArray(routes) ? routes : [routes];
 
     // strips regexp chars out of the route, eg a trailing ?
-    function fix(routePath) {
+    var fix = function(routePath) {
       return routePath.replace(/\?$/, '');
-    }
+    };
 
     routes.forEach(function(route) {
-      var props = route._store.props; // eslint-disable-line no-underscore-dangle
+      /* eslint-disable no-underscore-dangle */
+      var props = route._store.props;
+      /* eslint-enable no-underscore-dangle */
       var routePath = props.path;
 
       if (routePath) {
@@ -106,6 +109,7 @@ var StaticTools = {
    * @param {string} dir - The directory to write to.
    * @param {string} page - The page to write.
    * @param {string} contents - The contents of the page.
+   * @return {void}
    */
   writeHtmlPage: function(dir, page, contents) {
     // Replace trailing / with index.html
@@ -122,6 +126,7 @@ var StaticTools = {
    * @param {string} dir - The directory to write to.
    * @param {string} fileName - The name of the file.
    * @param {string} contents - The contents to write.
+   * @return {void}
    */
   writeFile: function(dir, fileName, contents) {
     var filePath = path.join(dir, fileName);

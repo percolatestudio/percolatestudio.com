@@ -27,8 +27,8 @@ server.use(express.static(path.join(__dirname, '/assets')));
 
 var headParams = new HeadParams();
 
-server.use(function (req, res) {
-  Router.run(routes, req.path, function (Handler, state) {
+server.use(function(req, res) {
+  Router.run(routes, req.path, function(Handler, state) {
     var bodyElement = React.createFactory(Handler)({
       params: state.params,
       headParams: headParams,

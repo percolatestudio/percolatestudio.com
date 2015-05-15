@@ -71,7 +71,7 @@ var Footer = React.createClass({
 
 // Gathers all truthy values in obj referenced by keys and returns matching
 // keys in an array
-var gatherTruthy = function(/* obj, ...keys */) {
+var gatherTruthy = function() {
   var keys = Array.prototype.slice.call(arguments);
   var result = [];
 
@@ -204,7 +204,9 @@ var Form = React.createClass({
     this.setState({ submitting: true });
     $.post('https://mandrillapp.com/api/1.0/messages/send.json', data)
       .done(function() {
-        alert('Thank you. We will contact you shortly'); // eslint-disable-line no-alert
+        /* eslint-disable no-alert */
+        alert('Thank you. We will contact you shortly');
+        /* eslint-enable no-alert */
       })
       .fail(function() {
         // fallback incase ajax fails
@@ -313,7 +315,7 @@ var FormEmail = React.createClass({
     var model = this.props.model;
 
     var servicesNodes = model.services.map(function(service, index) {
-      return ( <li key={index}>{service}</li> );
+      return (<li key={index}>{service}</li>);
     });
 
     var timing = model.timing.join();

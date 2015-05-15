@@ -1,20 +1,132 @@
+/* Percolate Studio's javascript base linting configuration
+ *
+ * Documentation on rules can be found at:
+ * http://eslint.org/docs/rules/ <- Optionally append the rulename
+*/
+
 {
   "env": {
-    "node": true
+    /* Allows global vars in a node environment to pass and enables certain rules */
+    "node": true,
+    "browser": true
   },
   "ecmaFeatures": {
+    /* Allows handling of jsx syntax */
     "jsx": true
   },
+  "plugins": [
+    /* Requires the eslint-plugin-react module */
+    "react"
+  ],
   "rules": {
-    "quotes": [0],
-/*    "no-trailing-spaces": [0],*/
+    /* Disallows TODO/FIXMEs */
+    "no-warning-comments": 2,
 
-    /* Enforces 2 spaces indentation
-       http://eslint.org/docs/rules/indent */
+    /* Ensures any jsdoc comments used are valid jsdoc */
+    "valid-jsdoc": 2,
+
+    /* Disallows shadowing and explicitly using undefined */
+    "no-undefined": 2,
+
+    /* -------------------- Best Practices ------------------- */
+
+    /* Disallow comparison like x == x */
+    "no-self-compare": 2,
+
+    /* Disallow null comparisons without a typecheck, x === null is ok */
+    "no-eq-null": 2,
+
+    /* Disallows redundant return from else */
+    "no-else-return": 2,
+
+    /* Guards against accidentally using a prototype's keys in a for..in loop */
+    "guard-for-in": 2,
+
+    /* Enforces consistent use of .properties in regards to newlines */
+    "dot-location": [2, "property"],
+
+    /* Enforces that switch statements always have a default case */
+    "default-case": 2,
+
+
+    /* -------------------- Stylistic Issues ------------------- */
+
+    /* 2 spaces indentation */
     "indent": [2, 2],
 
-    /* Disallows TODO/FIXMEs
-       http://eslint.org/docs/rules/no-warning-comments */
-    "no-warning-comments": 1
+    /* Unix style line endings */
+    "linebreak-style": [2, "unix"],
+
+    /* Double quotes unless single quotes are used to avoid escaping */
+    /*"quotes": [2, "double", "avoid-escape"],*/
+    /* XXX: discuss */
+    "quotes": 0,
+
+    /* At least one space after // comments */
+    "spaced-line-comment": 2,
+
+    /* Spacing on unary operators OK: delete x.y, !bar */
+    "space-unary-ops": [1, {"words": true, "nonwords": false}],
+
+    /* No spacing in params OK: (1 + 2) */
+    "space-in-parens": [2, "never"],
+
+    /* No spacing in brackets OK: [1, 2, 3], {x:1} */
+    /* XXX: discuss */
+    /*"space-in-brackets": [2, "never"]*/
+
+    /* Spacing in function declarations OK: function(foo)
+    "space-before-function-paren": [2, "never"],
+
+    /* Spacing in blocks OK: if (a) { */
+    "space-before-blocks": [2, "always"],
+
+    /* Spacing after keywords OK: if (a) */
+    "space-after-keywords": [2, "always"],
+
+    /* Force properties to be always quoted to prevent mistakes and ensure consistency */
+    /*"quote-props": [2, "always"]*/
+    /* XXX: discuss */
+
+    /* No padding within blocks */
+    "padded-blocks": [2, "never"],
+
+    /* When splitting operations over multiple lines, the operator should come before */
+    "operator-linebreak": [2, "before"],
+
+    /* Disallows use of uneccessary ternary ops eg: answer === 1 ? true : false */
+    "no-unneeded-ternary": 2,
+
+    /* Disallows nesting of ternary operations */
+    "no-nested-ternary": 2,
+
+    /* Maximum 2 empty lines */
+    "no-multiple-empty-lines": [2, {"max": 2}],
+
+    /* Must combine else and if to else if */
+    "no-lonely-if": 2,
+
+    /* Comments must be on their own line */
+    "no-inline-comments": 2,
+
+    /* Always add newline after var */
+    /* XXX: discuss */
+    /*"newline-after-var": [2, "always"]*/
+
+    /* Functions are always assigned to vars OK: var foo = function() */
+    "func-style": [2, "expression"],
+
+    /* Var capturing this should always be called self */
+    "consistent-this": [2, "self"],
+
+    /* Multiline expressions with commas must put comma on the end of the line */
+    "comma-style": [2, "last"],
+
+    /* Enforces comma spacing after comma but not before OK: [1, 2] */
+    "comma-spacing": [2, {"before": false, "after": true}],
+
+    /* Enforces 1 true brace style */
+    /* XXX: should we allow single line expressions? */
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }]
   }
 }

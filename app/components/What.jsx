@@ -63,6 +63,12 @@ var What = React.createClass({
           <a className="grid-5 logo" href="http://meteor.com" target="_blank">
             <img title="MeteorJS" src="/img/logo-meteor.svg"/>
           </a>
+          <a className="grid-5 logo" href="http://www.credomobile.com/" target="_blank">
+            <img title="CREDO Mobile" src="/img/logo-credo-mobile.svg"/>
+          </a>
+          <a className="grid-5 logo" href="http://havas.com" target="_blank">
+            <img title="Havas Worldwide" src="/img/logo-havas.svg"/>
+          </a>
         </div>
       </PageLayout>
     );

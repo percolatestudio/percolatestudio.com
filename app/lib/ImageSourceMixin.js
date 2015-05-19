@@ -1,5 +1,5 @@
 /*global window*/
-'use strict';
+"use strict";
 
 var ImageSourceMixin = {
   /**
@@ -16,12 +16,12 @@ var ImageSourceMixin = {
    * @return {void}
    */
   imageSource: function(original) {
-    if (typeof window === 'undefined'
+    if (typeof window === "undefined"
       || !window.devicePixelRatio || window.devicePixelRatio <= 1) {
       return original;
     }
 
-    return original.replace(/\.[^\.]*$/, '@2x$&');
+    return original.replace(/\.[^\.]*$/, "@2x$&");
   }
 };
 

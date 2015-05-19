@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-var Sitemap = require('sitemap');
-var path = require('path');
-var fs = require('fs');
-var mkdirp = require('mkdirp');
+var Sitemap = require("sitemap");
+var path = require("path");
+var fs = require("fs");
+var mkdirp = require("mkdirp");
 
 var StaticTools = {
   /**
@@ -11,7 +11,7 @@ var StaticTools = {
    * You will probably need to customize this for your own app if you want per
    * page beahvior.
    *
-   * @param {string[]} pages - Array containing pages, e.g '/', '/foo'
+   * @param {string[]} pages - Array containing pages, e.g "/", "/foo"
    * @param {string} hostname - The hostname to use in the sitemap
    * @returns {string} The sitemap xml contents
    */
@@ -24,10 +24,10 @@ var StaticTools = {
       var depth = (page.match(/\//g) || []).length;
 
       // / => 1, /foo => 0.5, /foo/bar => 0.33
-      var priority = (page === '/' ? 1 : 1 / (depth + 1));
+      var priority = (page === "/" ? 1 : 1 / (depth + 1));
 
       urls.push({
-        url: page, changefreq: 'weekly', priority: priority, lastmod: now
+        url: page, changefreq: "weekly", priority: priority, lastmod: now
       });
     });
 
@@ -46,7 +46,7 @@ var StaticTools = {
    *
    * @param {Object} routes - React Router Routes
    * @param {string} [parentPath] - Path to next results under
-   * @returns {string[]} The resulting pages, eg ['/', '/about']
+   * @returns {string[]} The resulting pages, eg ["/", "/about"]
    */
   gather: function(routes, parentPath) {
     var result = [];
@@ -54,7 +54,7 @@ var StaticTools = {
 
     // strips regexp chars out of the route, eg a trailing ?
     var fix = function(routePath) {
-      return routePath.replace(/\?$/, '');
+      return routePath.replace(/\?$/, "");
     };
 
     routes.forEach(function(route) {
@@ -79,11 +79,11 @@ var StaticTools = {
   /**
    * Interpolates values into a parameterized route, replacing the target.
    *
-   * @param {string[]} paths - A list of paths, eg ['/', '/what/:name']
-   * @param {string} forPath - The path we're interpolating eg '/what/:name'
-   * @param {string} key - The key we're interpolating for eg 'name'
-   * @param {string[]} values - The values to interpolate in eg ['foo', 'bar']
-   * @returns {string[]} The resulting pages, eg ['/', '/what/foo', '/what/bar']
+   * @param {string[]} paths - A list of paths, eg ["/", "/what/:name"]
+   * @param {string} forPath - The path we're interpolating eg "/what/:name"
+   * @param {string} key - The key we're interpolating for eg "name"
+   * @param {string[]} values - The values to interpolate in eg ["foo", "bar"]
+   * @returns {string[]} The resulting pages, eg ["/", "/what/foo", "/what/bar"]
    */
   interpolate: function(paths, forPath, key, values) {
     var result = [];
@@ -91,7 +91,7 @@ var StaticTools = {
     paths.forEach(function(routePath) {
       if (routePath === forPath) {
         values.forEach(function(value) {
-          var interpolated = routePath.replace(':' + key, value);
+          var interpolated = routePath.replace(":" + key, value);
 
           result.push(interpolated);
         });
@@ -114,7 +114,7 @@ var StaticTools = {
   writeHtmlPage: function(dir, page, contents) {
     // Replace trailing / with index.html
     if (page.match(/\/$/)) {
-      page += 'index.html';
+      page += "index.html";
     }
 
     this.writeFile(dir, page, contents);

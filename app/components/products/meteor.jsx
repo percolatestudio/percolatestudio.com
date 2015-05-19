@@ -1,15 +1,15 @@
-'use strict';
-var React = require('react');
-var ProductLayout = require('./ProductLayout');
-var CtaLink = require('./CtaLink');
+"use strict";
+var React = require("react");
+var ProductLayout = require("./ProductLayout");
+var CtaLink = require("./CtaLink");
 
 var product = {
-  name: 'meteor',
+  name: "meteor",
   index: 1,
   title: "Meteor",
   description: "Percolate Studio designed and engineered a suite of example applications and use cases to help developers learn Meteor",
-  featureUrl: '/img/case-study/meteor/meteor-todos-ipad-1200x600.jpg',
-  thumbnailUrl: '/img/case-study/meteor/meteor-todos-ipad-600x600.jpg'
+  featureUrl: "/img/case-study/meteor/meteor-todos-ipad-1200x600.jpg",
+  thumbnailUrl: "/img/case-study/meteor/meteor-todos-ipad-600x600.jpg"
 };
 
 product.component = React.createClass({
@@ -23,8 +23,7 @@ product.component = React.createClass({
 
           <div className="collage-text formatting">
             <div className="grid-2-collapse">
-              <p>We are on the cusp of a momentous shift in web technology. Witnessing the evolution of the web from documents to applications was awe inspiring. So to was people&#8217;s dexterity in inventing new ways engage with each other using technology. If the web is simply a communication medium, a stand-in for face-to-face interaction, then its natural evolution is to mirror the palpability of physical interactions. Modern web frameworks help achieve this by <em>reacting</em> to changes in a system and surfacing them to users in <em>realtime</em>.
-        </p>
+              <p>We are on the cusp of a momentous shift in web technology. Witnessing the evolution of the web from documents to applications was awe inspiring. So to was people&#8217;s dexterity in inventing new ways engage with each other using technology. If the web is simply a communication medium, a stand-in for face-to-face interaction, then its natural evolution is to mirror the palpability of physical interactions. Modern web frameworks help achieve this by <em>reacting</em> to changes in a system and surfacing them to users in <em>realtime</em>.</p>
             </div>
             <div className="grid-2-collapse">
               <p>Meteor is a framework that lowers the barrier to entry for building apps with presence. It is an open source platform for realtime &amp; reactive apps aligned toward the vision that delightful apps can be built easier, better, and faster than ever before. Developers can use Meteor to create software that feels alive with activity. Companies no longer have to forfeit palpable user experiences due to technical complexity. When Meteor wanted  shining examples of their technology to accompany the official launch, they reached out to us to design and build it.</p>
@@ -103,7 +102,6 @@ product.component = React.createClass({
             <div className="grid-4-square bg-image-localmarket-icon"></div>
             <div className="grid-4-square bg-image-localmarket-texture"></div>
           </div>
-
 
         <div className="wrapper-content">
           <div className="conclusion">Months of collaboration resulted in a suite of functionally rich yet strikingly simple examples.</div>

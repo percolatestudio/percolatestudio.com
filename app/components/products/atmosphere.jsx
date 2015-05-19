@@ -1,15 +1,15 @@
-'use strict';
-var React = require('react');
-var ProductLayout = require('./ProductLayout');
-var CtaLink = require('./CtaLink');
+"use strict";
+var React = require("react");
+var ProductLayout = require("./ProductLayout");
+var CtaLink = require("./CtaLink");
 
 var product = {
-  name: 'atmosphere',
+  name: "atmosphere",
   index: 0,
   title: "Atmosphere",
   description: "Percolate Studio designed and engineered a package manager for Meteor",
-  featureUrl: '/img/case-study/atmosphere/atmosphere-home-macbookpro-1200x600.jpg',
-  thumbnailUrl: '/img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg'
+  featureUrl: "/img/case-study/atmosphere/atmosphere-home-macbookpro-1200x600.jpg",
+  thumbnailUrl: "/img/case-study/atmosphere/atmosphere-ipadair-600x600.jpg"
 };
 
 product.component = React.createClass({

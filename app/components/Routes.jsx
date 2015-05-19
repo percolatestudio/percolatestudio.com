@@ -1,22 +1,22 @@
-'use strict';
-var Router = require('react-router');
+"use strict";
+var Router = require("react-router");
 
-var Layout = require('./Layout');
-var Home = require('./Home');
-var How = require('./How');
-var What = require('./What');
-var Product = require('./Product');
-var Careers = require('./Careers');
-var Job = require('./Job');
-var NotFound = require('./NotFound');
-var StyleguideBase = require('./styleguide/Base');
-var StyleguideCaseStudy = require('./styleguide/CaseStudy');
+var Layout = require("./Layout");
+var Home = require("./Home");
+var How = require("./How");
+var What = require("./What");
+var Product = require("./Product");
+var Careers = require("./Careers");
+var Job = require("./Job");
+var NotFound = require("./NotFound");
+var StyleguideBase = require("./styleguide/Base");
+var StyleguideCaseStudy = require("./styleguide/CaseStudy");
 
 // The eslint config below is needed for a jsx block that exists outside a
 // React.CreateElement
 
 /* eslint-disable no-unused-vars */
-var React = require('react');
+var React = require("react");
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;

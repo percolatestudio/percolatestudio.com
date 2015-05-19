@@ -1,5 +1,5 @@
-'use strict';
-var React = require('react');
+"use strict";
+var React = require("react");
 
 var CtaLink = React.createClass({
   render: function() {

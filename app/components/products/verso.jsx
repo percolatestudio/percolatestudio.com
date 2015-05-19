@@ -1,15 +1,15 @@
-'use strict';
-var React = require('react');
-var ProductLayout = require('./ProductLayout');
-var CtaLink = require('./CtaLink');
+"use strict";
+var React = require("react");
+var ProductLayout = require("./ProductLayout");
+var CtaLink = require("./CtaLink");
 
 var product = {
-  name: 'verso',
+  name: "verso",
   index: 2,
   title: "Verso",
   description: "Percolate Studio designed, engineered, and strategized Verso Learning's entry into the education app market",
-  featureUrl: '/img/case-study/verso/verso-class-iphone6ipadair-1200x600.jpg',
-  thumbnailUrl: '/img/case-study/verso/verso-classes-iphone6-600x600.jpg'
+  featureUrl: "/img/case-study/verso/verso-class-iphone6ipadair-1200x600.jpg",
+  thumbnailUrl: "/img/case-study/verso/verso-classes-iphone6-600x600.jpg"
 };
 
 product.component = React.createClass({

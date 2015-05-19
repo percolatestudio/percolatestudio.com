@@ -1,4 +1,4 @@
-/* Percolate Studio's javascript base linting configuration
+/* Percolate Studio's javascript linting configuration (React)
  *
  * Documentation on rules can be found at:
  * http://eslint.org/docs/rules/ <- Optionally append the rulename
@@ -15,20 +15,21 @@
     "jsx": true
   },
   "plugins": [
-    /* Requires the eslint-plugin-react module */
+    /* Requires the eslint-plugin-react module. Correctly lints jsx and enables
+       additional linting rules */
     "react"
   ],
   "rules": {
-    /* Disallows TODO/FIXMEs */
-    "no-warning-comments": 2,
+    /* -------------- Copied from base javascript linting config ------------ */
+
+    /* Warns on TODO/FIXMEs */
+    "no-warning-comments": 1,
 
     /* Ensures any jsdoc comments used are valid jsdoc */
     "valid-jsdoc": 2,
 
     /* Disallows shadowing and explicitly using undefined */
     "no-undefined": 2,
-
-    /* -------------------- Best Practices ------------------- */
 
     /* Disallow comparison like x == x */
     "no-self-compare": 2,
@@ -48,9 +49,6 @@
     /* Enforces that switch statements always have a default case */
     "default-case": 2,
 
-
-    /* -------------------- Stylistic Issues ------------------- */
-
     /* 2 spaces indentation */
     "indent": [2, 2],
 
@@ -58,9 +56,7 @@
     "linebreak-style": [2, "unix"],
 
     /* Double quotes unless single quotes are used to avoid escaping */
-    /*"quotes": [2, "double", "avoid-escape"],*/
-    /* XXX: discuss */
-    "quotes": 0,
+    "quotes": [2, "double", "avoid-escape"],
 
     /* At least one space after // comments */
     "spaced-line-comment": 2,
@@ -72,8 +68,7 @@
     "space-in-parens": [2, "never"],
 
     /* No spacing in brackets OK: [1, 2, 3], {x:1} */
-    /* XXX: discuss */
-    /*"space-in-brackets": [2, "never"]*/
+    "space-in-brackets": [2, "never"],
 
     /* Spacing in function declarations OK: function(foo)
     "space-before-function-paren": [2, "never"],
@@ -85,8 +80,7 @@
     "space-after-keywords": [2, "always"],
 
     /* Force properties to be always quoted to prevent mistakes and ensure consistency */
-    /*"quote-props": [2, "always"]*/
-    /* XXX: discuss */
+    "quote-props": [2, "as-needed"],
 
     /* No padding within blocks */
     "padded-blocks": [2, "never"],
@@ -101,17 +95,13 @@
     "no-nested-ternary": 2,
 
     /* Maximum 2 empty lines */
-    "no-multiple-empty-lines": [2, {"max": 2}],
+    "no-multiple-empty-lines": [2, {"max": 1}],
 
     /* Must combine else and if to else if */
     "no-lonely-if": 2,
 
     /* Comments must be on their own line */
     "no-inline-comments": 2,
-
-    /* Always add newline after var */
-    /* XXX: discuss */
-    /*"newline-after-var": [2, "always"]*/
 
     /* Functions are always assigned to vars OK: var foo = function() */
     "func-style": [2, "expression"],
@@ -126,7 +116,8 @@
     "comma-spacing": [2, {"before": false, "after": true}],
 
     /* Enforces 1 true brace style */
-    /* XXX: should we allow single line expressions? */
-    "brace-style": [2, "1tbs", { "allowSingleLine": true }]
+    "brace-style": [2, "stroustrop"]
+
+    /* ---------------------------------------------------------------------- */
   }
 }

@@ -1,11 +1,11 @@
-'use strict';
-var React = require('react');
-var HeadParams = require('../lib/HeadParams');
+"use strict";
+var React = require("react");
+var HeadParams = require("../lib/HeadParams");
 
 // Configure these
-var GA_ACCOUNT = 'UA-32959034-1';
+var GA_ACCOUNT = "UA-32959034-1";
 var GA_OPTIONS = {
-  'cookieDomain': 'auto'
+  cookieDomain: "auto"
 };
 
 // From: https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced
@@ -33,7 +33,7 @@ var Html = React.createClass({
           <link rel="shortcut icon" type="image/png" href="/favicon.png" sizes="16x16 32x32 64x64" />
           <link href="/client.css" media="all" rel="stylesheet" />
 
-          <script async src='//www.google-analytics.com/analytics.js'></script>
+          <script async src="//www.google-analytics.com/analytics.js"></script>
           <script dangerouslySetInnerHTML={{__html: gaSnippet}}></script>
         </head>
         <body dangerouslySetInnerHTML={{__html: this.props.markup}} />

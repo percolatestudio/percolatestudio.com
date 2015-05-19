@@ -1,7 +1,7 @@
-'use strict';
-var React = require('react');
-var Router = require('react-router');
-var PageLayout = require('./PageLayout');
+"use strict";
+var React = require("react");
+var Router = require("react-router");
+var PageLayout = require("./PageLayout");
 
 var Home = React.createClass({
   componentWillMount: function() {
@@ -32,7 +32,6 @@ var Home = React.createClass({
           <div className="grid-4-square bg-image-how-texture1"></div>
           <div className="grid-4-square bg-image-how-texture2"></div>
         </section>
-
 
         <section className="section-home-what">
           <h2 className="title-section">What we do</h2>

@@ -1,8 +1,8 @@
 /* global history */
-'use strict';
-var _ = require('lodash');
-var React = require('react');
-var Router = require('react-router');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
+var Router = require("react-router");
 
 // update the current page state with ourState, if history.replaceState
 //   is defined. If not, don't bother.
@@ -38,7 +38,7 @@ var PageLayout = React.createClass({
 
   render: function() {
     var classMap = {
-      'page': true
+      page: true
     };
 
     // add the name of each route leading to this page to the classMap
@@ -50,7 +50,7 @@ var PageLayout = React.createClass({
 
     // plus any passed in classes
     if (this.props.className) {
-      pageClasses += ' ' + this.props.className;
+      pageClasses += " " + this.props.className;
     }
 
     return (
@@ -62,7 +62,6 @@ var PageLayout = React.createClass({
   }
 });
 
-
 var Nav = React.createClass({
   propTypes: {
     openMenu: React.PropTypes.func.isRequired,
@@ -73,17 +72,16 @@ var Nav = React.createClass({
     return (
       <nav>
         <div className="nav-group">
-          <NavLink to='home'>Home</NavLink>
-          <NavLink to='how'>How</NavLink>
-          <NavLink to={['what', 'product']}>What</NavLink>
+          <NavLink to="home">Home</NavLink>
+          <NavLink to="how">How</NavLink>
+          <NavLink to={["what", "product"]}>What</NavLink>
           <a className="menu-link" onClick={this.props.openMenu.bind(null, true)}>Menu</a>
         </div>
 
-
-        <NavLink to='home' className='logo'><img src="/img/logo.svg"/></NavLink>
+        <NavLink to="home" className="logo"><img src="/img/logo.svg"/></NavLink>
 
         <div className="nav-group right">
-          <NavLink to='careers'>Join</NavLink>
+          <NavLink to="careers">Join</NavLink>
           <a href="http://blog.percolatestudio.com">Blog</a>
           <a className="contact-link" onClick={this.props.openContact.bind(null, true)}>Contact</a>
         </div>
@@ -98,7 +96,7 @@ var NavLink = React.createClass({
   render: function() {
     // Not using harmony with node
     // var {to, className, ...other} = this.props;
-    var other = _.omit(this.props, 'to', 'other');
+    var other = _.omit(this.props, "to", "other");
 
     // ensure array
     var names = [].concat(this.props.to);
@@ -106,7 +104,7 @@ var NavLink = React.createClass({
       this.isActive(name);
     }.bind(this));
 
-    var className = (isActive ? 'active ' : '') + (this.props.className || '');
+    var className = (isActive ? "active " : "") + (this.props.className || "");
 
     return (
       <Router.Link to={names[0]} className={className} {...other} />

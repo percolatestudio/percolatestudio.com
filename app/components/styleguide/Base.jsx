@@ -1,8 +1,8 @@
-'use strict';
-var React = require('react');
-var PageLayout = require('../PageLayout');
+"use strict";
+var React = require("react");
+var PageLayout = require("../PageLayout");
 
-var dummyText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.';
+var dummyText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.";
 
 var StyleguideBase = React.createClass({
   render: function() {

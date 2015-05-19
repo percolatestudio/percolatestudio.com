@@ -1,15 +1,15 @@
-'use strict';
-var React = require('react');
-var ProductLayout = require('./ProductLayout');
-var CtaLink = require('./CtaLink');
+"use strict";
+var React = require("react");
+var ProductLayout = require("./ProductLayout");
+var CtaLink = require("./CtaLink");
 
 var product = {
-  name: 'campus',
+  name: "campus",
   index: 4,
   title: "Campus",
   description: "Percolate Studio designed, engineered, and strategized Verso Learning's groundbreaking education analytics product.",
-  featureUrl: '/img/case-study/campus/verso-campus-macbookpro-1200x600.jpg',
-  thumbnailUrl: '/img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg'
+  featureUrl: "/img/case-study/campus/verso-campus-macbookpro-1200x600.jpg",
+  thumbnailUrl: "/img/case-study/campus/verso-campus-macbookpro-side-600x600.jpg"
 };
 
 product.component = React.createClass({
@@ -76,7 +76,6 @@ product.component = React.createClass({
         <div className="media-centeralign">
           <img src="/img/case-study/campus/verso-campus-texture-ui-kit-1200x750.jpg" srcSet="/img/case-study/campus/verso-campus-texture-ui-kit-1200x750@2x.jpg 1000w" alt="Campus UI Kit"/>
         </div>
-
 
         <div className="wrapper-content">
           <div className="conclusion">Campus provides the tools to promote successful teaching.</div>

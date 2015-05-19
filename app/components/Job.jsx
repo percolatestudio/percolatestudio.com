@@ -1,6 +1,6 @@
-'use strict';
-var _ = require('lodash');
-var React = require('react');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
 
 var Job = React.createClass({
   job: function() {
@@ -12,7 +12,7 @@ var Job = React.createClass({
 
   componentWillMount: function() {
     var job = this.job();
-    this.props.headParams.setTitle(job.title + ' | Percolate Studio');
+    this.props.headParams.setTitle(job.title + " | Percolate Studio");
     this.props.headParams.setDescription(job.description);
   },
 

@@ -1,15 +1,15 @@
-'use strict';
-var React = require('react');
-var ProductLayout = require('./ProductLayout');
-var CtaLink = require('./CtaLink');
+"use strict";
+var React = require("react");
+var ProductLayout = require("./ProductLayout");
+var CtaLink = require("./CtaLink");
 
 var product = {
-  name: 'meetinghero',
+  name: "meetinghero",
   index: 3,
   title: "MeetingHero",
   description: "Percolate Studio engineered a product to make meetings more effective",
-  featureUrl: '/img/case-study/meetinghero/meetinghero-macbookproiphone6-1600x1000.jpg',
-  thumbnailUrl: '/img/case-study/meetinghero/meetinghero-iphone6perspective-600x600.jpg'
+  featureUrl: "/img/case-study/meetinghero/meetinghero-macbookproiphone6-1600x1000.jpg",
+  thumbnailUrl: "/img/case-study/meetinghero/meetinghero-iphone6perspective-600x600.jpg"
 };
 
 product.component = React.createClass({
@@ -35,7 +35,6 @@ product.component = React.createClass({
           <div className="grid-1 bg-image-texture-meeting"></div>
         </div>
 
-
         <div className="wrapper-content">
           <div className="full-up formatting">
             <h2>The Definition of Soul-Crushing</h2>
@@ -52,7 +51,6 @@ product.component = React.createClass({
         <div className="collage">
           <div className="grid-1 bg-image-texture-calendar" ></div>
         </div>
-
 
         <div className="wrapper-content">
           <div className="full-up formatting">
@@ -75,8 +73,6 @@ product.component = React.createClass({
             <CtaLink title="Are you interested in business utilities and organization?" openContact={this.props.openContact} />
           </div>
         </div>
-
-
       </ProductLayout>
     );
   }

@@ -1,13 +1,13 @@
-'use strict';
-var React = require('react');
-var PageLayout = require('../PageLayout');
+"use strict";
+var React = require("react");
+var PageLayout = require("../PageLayout");
 
 var job = {
-  name: 'design-intern',
-  type: 'intern',
+  name: "design-intern",
+  type: "intern",
   title: "Design Intern",
   description: "Join our design team to research, design, and prototype new user experiences at Percolate San Francisco.",
-  locations: 'SFO'
+  locations: "SFO"
 };
 
 job.component = React.createClass({

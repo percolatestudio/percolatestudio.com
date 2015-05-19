@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * This is the entry point for the node server that can run the app whilst its
@@ -10,20 +10,20 @@
  * its plugged into express.
  */
 
-require('node-jsx').install({ extension: '.jsx' });
+require("node-jsx").install({extension: ".jsx"});
 
-var React = require('react');
-var Router = require('react-router');
-var HeadParams = require('./lib/HeadParams');
-var htmlComponent = React.createFactory(require('./components/Html'));
+var React = require("react");
+var Router = require("react-router");
+var HeadParams = require("./lib/HeadParams");
+var htmlComponent = React.createFactory(require("./components/Html"));
 
-var express = require('express');
-var routes = require('./components/Routes');
-var path = require('path');
+var express = require("express");
+var routes = require("./components/Routes");
+var path = require("path");
 
 var server = express();
-server.use('/', express.static(path.join(__dirname, '../build')));
-server.use(express.static(path.join(__dirname, '/assets')));
+server.use("/", express.static(path.join(__dirname, "../build")));
+server.use(express.static(path.join(__dirname, "/assets")));
 
 var headParams = new HeadParams();
 
@@ -40,11 +40,11 @@ server.use(function(req, res) {
       markup: React.renderToString(bodyElement)
     }));
 
-    console.log('Rendering ' + req.path);
+    console.log("Rendering " + req.path);
     res.send(html);
   });
 });
 
 var port = process.env.PORT || 3000;
 server.listen(port);
-console.log('Listening on port ' + port);
+console.log("Listening on port " + port);

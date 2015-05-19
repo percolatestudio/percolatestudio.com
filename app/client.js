@@ -1,5 +1,5 @@
 /*global document, window*/
-'use strict';
+"use strict";
 
 /**
  * This is the entry point for the Single Page App that will run in the client.
@@ -13,10 +13,10 @@
 
 require("./stylesheets/main.less");
 
-var React = require('react');
-var Router = require('react-router');
-var HeadParams = require('./lib/HeadParams');
-var routes = require('./components/Routes');
+var React = require("react");
+var Router = require("react-router");
+var HeadParams = require("./lib/HeadParams");
+var routes = require("./components/Routes");
 
 // For chrome dev tool support
 window.React = React;
@@ -26,13 +26,13 @@ Router.run(routes, Router.HistoryLocation, function(Handler, state) {
   var bodyElement = React.createFactory(Handler)({
     params: state.params,
     headParams: headParams,
-    clientReady: true });
+    clientReady: true});
 
   React.render(bodyElement, document.body);
-  console.log('Client Rendered');
+  console.log("Client Rendered");
 
   // Track clientside routing with GA, it should be loaded...
   if (window.ga) {
-    window.ga('send', 'pageview', { 'page': state.path });
+    window.ga("send", "pageview", {page: state.path});
   }
 });

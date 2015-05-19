@@ -1,6 +1,6 @@
-'use strict';
-var _ = require('lodash');
-var React = require('react');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
 
 var Product = React.createClass({
   product: function() {

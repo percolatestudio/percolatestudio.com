@@ -1,9 +1,9 @@
-'use strict';
-var _ = require('lodash');
-var React = require('react');
-var Router = require('react-router');
-var PageLayout = require('./PageLayout');
-var ImageSourceMixin = require('../lib/ImageSourceMixin');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
+var Router = require("react-router");
+var PageLayout = require("./PageLayout");
+var ImageSourceMixin = require("../lib/ImageSourceMixin");
 
 var What = React.createClass({
   mixins: [ImageSourceMixin],
@@ -13,14 +13,16 @@ var What = React.createClass({
   },
 
   render: function() {
-    var products = _.sortBy(this.props.collections.Products, function(p) { return p.index; });
+    var products = _.sortBy(this.props.collections.Products, function(p) {
+      return p.index;
+    });
 
     var firstProduct = products.shift();
     var firstProductImageSrc = this.imageSource(this.props.small ? firstProduct.thumbnailUrl : firstProduct.featureUrl);
     var firstProductLink = (
       <Router.Link to="product" params={firstProduct}
         className="featured grid-2-square item-project bg-image"
-        style={{backgroundImage: "url('" + firstProductImageSrc + "')" }}>
+        style={{backgroundImage: "url('" + firstProductImageSrc + "')"}}>
         <span className="subtitle-item">{firstProduct.title}</span>
       </Router.Link>
     );

@@ -1,13 +1,13 @@
 /* global window, escape, alert */
-'use strict';
-var _ = require('lodash');
-var $ = require('jquery');
-var React = require('react/addons');
+"use strict";
+var _ = require("lodash");
+var $ = require("jquery");
+var React = require("react/addons");
 
 var autosize;
 
 try {
-  autosize = require('autosize');
+  autosize = require("autosize");
 } catch (e) {
   if (!e instanceof ReferenceError) {
     throw e;
@@ -26,7 +26,7 @@ var ContactOverlay = React.createClass({
 
   render: function() {
     return (
-      <div className='overlay-screen-contact'>
+      <div className="overlay-screen-contact">
         <a className="overlay-close" onClick={this.handleClose}>
           <span className="icon-cross"></span>
         </a>
@@ -52,7 +52,7 @@ var Footer = React.createClass({
           <div className="title-ancillary">Visit Us</div>
           <a className="location-wrapper organization-unit adr"
             href="https://www.google.com/maps/place/169+11th+St,+San+Francisco,+CA+94103/@37.77357,-122.415787,17z/data=!3m1!4b1!4m2!3m1!1s0x8085809d83ced185:0xf5e9ad23d5cd5ce5" target="_blank">
-            <span className="fn organization-name" style={ {display: 'none'} }>Percolate Studio</span>
+            <span className="fn organization-name" style={ {display: "none"} }>Percolate Studio</span>
             <span>Percolate USA</span><br/>
             <span className="street-address">169 11th Street</span><br/>
             <span className="locality">San Francisco</span>, <span className="region">CA</span> <span className="postal-code">94103</span>
@@ -91,9 +91,9 @@ var Form = React.createClass({
 
   getInitialState: function() {
     return {
-      name: '',
-      email: '',
-      about: '',
+      name: "",
+      email: "",
+      about: "",
       strategy: false,
       design: false,
       engineering: false,
@@ -101,9 +101,9 @@ var Form = React.createClass({
       today: false,
       quarter: false,
       year: false,
-      '25k': false,
-      '50k': false,
-      '100k': false,
+      "25k": false,
+      "50k": false,
+      "100k": false,
       notsure: false,
       errors: {},
       submitting: false
@@ -111,11 +111,11 @@ var Form = React.createClass({
   },
 
   getModel: function() {
-    var model = _.pick(this.state, 'name', 'email', 'about');
-    model.services = gatherTruthy(this.state, 'strategy', 'design',
-      'engineering', 'consulting');
-    model.timing = gatherTruthy(this.state, 'today', 'quarter', 'year');
-    model.budget = gatherTruthy(this.state, '25k', '50k', '100k', 'notsure');
+    var model = _.pick(this.state, "name", "email", "about");
+    model.services = gatherTruthy(this.state, "strategy", "design",
+      "engineering", "consulting");
+    model.timing = gatherTruthy(this.state, "today", "quarter", "year");
+    model.budget = gatherTruthy(this.state, "25k", "50k", "100k", "notsure");
 
     return model;
   },
@@ -133,7 +133,7 @@ var Form = React.createClass({
   },
 
   alertClass: function(name) {
-    return this.state.errors[name] ? 'alert' : '';
+    return this.state.errors[name] ? "alert" : "";
   },
 
   // urgh, wish we had a schema library
@@ -142,25 +142,25 @@ var Form = React.createClass({
       valid = true,
       model = this.getModel();
 
-    _.each(['name', 'email', 'about'], function(field) {
+    _.each(["name", "email", "about"], function(field) {
       if (!model[field]) {
-        errors[field] = 'is required';
+        errors[field] = "is required";
         valid = false;
       } else if (model[field].length > 10000) {
-        errors[field] = 'is too long';
+        errors[field] = "is too long";
         valid = false;
       }
     });
 
-    _.each(['services', 'timing'], function(field) {
+    _.each(["services", "timing"], function(field) {
       if (!model[field].length) {
-        errors[field] = 'is required';
+        errors[field] = "is required";
         valid = false;
       }
     });
 
     if (this.shouldHaveBudget() && !model.budget.length) {
-      errors.budget = 'is required';
+      errors.budget = "is required";
       valid = false;
     }
 
@@ -171,52 +171,54 @@ var Form = React.createClass({
 
   send: function() {
     var model = this.getModel();
-    var to = 'us@percolatestudio.com';
-    var subject = 'Work with us';
+    var to = "us@percolatestudio.com";
+    var subject = "Work with us";
     // The key is public anyway so we're ok with checking it into GH for now
-    var mandrillKey = '-JqlbKb2ZHU7R5NEkCvnKw';
+    var mandrillKey = "-JqlbKb2ZHU7R5NEkCvnKw";
     var body = React.renderToStaticMarkup(
       <FormEmail model={model}/>);
 
     var data = {
-        'key': mandrillKey,
-        'message': {
-          'from_email': model.email,
-          'to': [
+        key: mandrillKey,
+        message: {
+          /* eslint-disable camelcase */
+          from_email: model.email,
+          /* eslint-enable camelcase */
+          to: [
               {
-                'email': to,
-                'name': 'Percolate Studio',
-                'type': 'to'
+                email: to,
+                name: "Percolate Studio",
+                type: "to"
               },
               // Just in case us@ alias breaks, yep it happens sometimes
               {
-                'email': 'zol@percolatestudio.com',
-                'name': 'Zoltan Olah',
-                'type': 'to'
+                email: "zol@percolatestudio.com",
+                name: "Zoltan Olah",
+                type: "to"
               }
             ],
-          'autotext': 'true',
-          'subject': subject,
-          'html': body
+          autotext: "true",
+          subject: subject,
+          html: body
         }
       };
 
-    this.setState({ submitting: true });
-    $.post('https://mandrillapp.com/api/1.0/messages/send.json', data)
+    this.setState({submitting: true});
+    $.post("https://mandrillapp.com/api/1.0/messages/send.json", data)
       .done(function() {
         /* eslint-disable no-alert */
-        alert('Thank you. We will contact you shortly');
+        alert("Thank you. We will contact you shortly");
         /* eslint-enable no-alert */
       })
       .fail(function() {
         // fallback incase ajax fails
-        window.open('mailto:' + to
-          + '?subject=' + subject + ' (mailto)'
-          + '&body=' + escape(body)
+        window.open("mailto:" + to
+          + "?subject=" + subject + " (mailto)"
+          + "&body=" + escape(body)
         );
       })
       .always(function() {
-        this.setState({ submitting: false });
+        this.setState({submitting: false});
         this.props.setOverlayOpen(false);
       }.bind(this));
   },
@@ -233,9 +235,9 @@ var Form = React.createClass({
 
   render: function() {
     var budgetFieldsetClasses = "fieldset-group hidden "
-      + (this.shouldHaveBudget() ? 'visible' : '');
+      + (this.shouldHaveBudget() ? "visible" : "");
 
-    var servicesError = this.error('services');
+    var servicesError = this.error("services");
 
     var servicesLabel = servicesError ? servicesError :
       (<span className="subtext">Select all that apply</span>);
@@ -245,59 +247,59 @@ var Form = React.createClass({
         <div className="title-overlay">Work with us</div>
         <fieldset>
           <div className="input-symbol left">
-            <input type="text" name="name" className={this.alertClass('name')} placeholder="Name" valueLink={this.linkState('name')} />
+            <input type="text" name="name" className={this.alertClass("name")} placeholder="Name" valueLink={this.linkState("name")} />
             <span className="icon-user"></span>
           </div>
           <div className="input-symbol left">
-            <input type="email" name="email" className={this.alertClass('email')} placeholder="Email Address" valueLink={this.linkState('email')} />
+            <input type="email" name="email" className={this.alertClass("email")} placeholder="Email Address" valueLink={this.linkState("email")} />
             <span className="icon-email"></span>
           </div>
-          <textarea className={'about ' + this.alertClass('about')} name="about" placeholder="About your company and project" valueLink={this.linkState('about')} ref="about" />
+          <textarea className={"about " + this.alertClass("about")} name="about" placeholder="About your company and project" valueLink={this.linkState("about")} ref="about" />
           <div className="fieldset-group services">
             <div className="fieldset-group-title">Services {servicesLabel}</div>
 
             <div className="btns-group">
-              <input type="checkbox" name="services" value="strategy" id="strategy" checkedLink={this.linkState('strategy')} />
+              <input type="checkbox" name="services" value="strategy" id="strategy" checkedLink={this.linkState("strategy")} />
               <label htmlFor="strategy" className="btn-toggle">Strategy</label>
 
-              <input type="checkbox" name="services" value="design" id="design" checkedLink={this.linkState('design')} />
+              <input type="checkbox" name="services" value="design" id="design" checkedLink={this.linkState("design")} />
               <label htmlFor="design" className="btn-toggle">Design</label>
 
-              <input type="checkbox" name="services" value="engineering" id="engineering" checkedLink={this.linkState('engineering')} />
+              <input type="checkbox" name="services" value="engineering" id="engineering" checkedLink={this.linkState("engineering")} />
               <label htmlFor="engineering" className="btn-toggle">Engineering</label>
 
-              <input type="checkbox" name="services" value="consulting" id="consulting" checkedLink={this.linkState('consulting')} />
+              <input type="checkbox" name="services" value="consulting" id="consulting" checkedLink={this.linkState("consulting")} />
               <label htmlFor="consulting" className="btn-toggle">Consulting</label>
             </div>
           </div>
           <div className="fieldset-group">
-            <div className="fieldset-group-title">Timing {this.error('timing')}</div>
+            <div className="fieldset-group-title">Timing {this.error("timing")}</div>
 
             <div className="btns-group">
-              <input type="radio" name="timing" value="today" id="today" checkedLink={this.linkState('today')} />
+              <input type="radio" name="timing" value="today" id="today" checkedLink={this.linkState("today")} />
               <label htmlFor="today" className="btn-toggle">Today</label>
 
-              <input type="radio" name="timing" value="quarter" id="quarter" checkedLink={this.linkState('quarter')} />
+              <input type="radio" name="timing" value="quarter" id="quarter" checkedLink={this.linkState("quarter")} />
               <label htmlFor="quarter" className="btn-toggle">Quarter</label>
 
-              <input type="radio" name="timing" value="year" id="year" checkedLink={this.linkState('year')} />
+              <input type="radio" name="timing" value="year" id="year" checkedLink={this.linkState("year")} />
               <label htmlFor="year" className="btn-toggle">This Year</label>
             </div>
           </div>
           <div className={budgetFieldsetClasses}>
-            <div className="fieldset-group-title">Budget {this.error('budget')}</div>
+            <div className="fieldset-group-title">Budget {this.error("budget")}</div>
 
             <div className="btns-group">
-              <input type="radio" name="budget" value="25k" id="25k" checkedLink={this.linkState('25k')} />
+              <input type="radio" name="budget" value="25k" id="25k" checkedLink={this.linkState("25k")} />
               <label htmlFor="25k" className="btn-toggle">25k–50k</label>
 
-              <input type="radio" name="budget" value="50k" id="50k" checkedLink={this.linkState('50k')} />
+              <input type="radio" name="budget" value="50k" id="50k" checkedLink={this.linkState("50k")} />
               <label htmlFor="50k" className="btn-toggle">50k–100k</label>
 
-              <input type="radio" name="budget" value="100k" id="100k" checkedLink={this.linkState('100k')} />
+              <input type="radio" name="budget" value="100k" id="100k" checkedLink={this.linkState("100k")} />
               <label htmlFor="100k" className="btn-toggle" >+100k</label>
 
-              <input type="radio" name="budget" value="notsure" id="notsure" checkedLink={this.linkState('notsure')} />
+              <input type="radio" name="budget" value="notsure" id="notsure" checkedLink={this.linkState("notsure")} />
               <label htmlFor="notsure" className="btn-toggle">Not sure</label>
             </div>
 
@@ -321,7 +323,7 @@ var FormEmail = React.createClass({
     var timing = model.timing.join();
     var budget = model.budget.join();
 
-    var budgetNodes = budget ? [<dt key='0'>Budget</dt>, <dd key='1'>{budget}</dd>] : null;
+    var budgetNodes = budget ? [<dt key="0">Budget</dt>, <dd key="1">{budget}</dd>] : null;
 
     return (
       <dl>

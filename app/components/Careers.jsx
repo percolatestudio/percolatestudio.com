@@ -1,8 +1,8 @@
-'use strict';
-var _ = require('lodash');
-var React = require('react');
-var Router = require('react-router');
-var PageLayout = require('./PageLayout');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
+var Router = require("react-router");
+var PageLayout = require("./PageLayout");
 
 var Careers = React.createClass({
   componentWillMount: function() {
@@ -11,12 +11,18 @@ var Careers = React.createClass({
   },
 
   render: function() {
-    var jobs = _.filter(this.props.collections.Jobs, function(j) { return j.type === 'job'; });
+    var jobs = _.filter(this.props.collections.Jobs, function(j) {
+      return j.type === "job";
+    });
+
     var jobLinks = jobs.map(function(job) {
       return <Opening job={job} key={job.name}/>;
     });
 
-    var interns = _.filter(this.props.collections.Jobs, function(j) { return j.type === 'intern'; });
+    var interns = _.filter(this.props.collections.Jobs, function(j) {
+      return j.type === "intern";
+    });
+
     var internLinks = interns.map(function(intern) {
       return <Opening job={intern} key={intern.name}/>;
     });

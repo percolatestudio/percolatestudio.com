@@ -1,20 +1,20 @@
 /*global document, window, location */
-'use strict';
-var _ = require('lodash');
-var $ = require('jquery');
-var React = require('react/addons');
-var Router = require('react-router');
+"use strict";
+var _ = require("lodash");
+var $ = require("jquery");
+var React = require("react/addons");
+var Router = require("react-router");
 
-var ContactOverlay = require('./ContactOverlay');
-var MenuOverlay = require('./MenuOverlay');
-var Collections = require('./Collections');
+var ContactOverlay = require("./ContactOverlay");
+var MenuOverlay = require("./MenuOverlay");
+var Collections = require("./Collections");
 
 var pictureFill;
 var FastClick;
 
 try {
-  pictureFill = require('picturefill');
-  FastClick = require('fastclick');
+  pictureFill = require("picturefill");
+  FastClick = require("fastclick");
 } catch (e) {
   if (!e instanceof ReferenceError) {
     throw e;
@@ -33,16 +33,16 @@ var Layout = React.createClass({
   },
 
   componentWillMount: function() {
-    if (typeof location !== 'undefined' && location.hash === '#contact') {
+    if (typeof location !== "undefined" && location.hash === "#contact") {
       this.setState({contactOpen: true});
     }
   },
 
   componentDidMount: function() {
     // need to bind this at a higher level
-    $(document).on('keydown', this.handleKeyDown);
+    $(document).on("keydown", this.handleKeyDown);
 
-    $(window).on('resize', this.handleWindowResize);
+    $(window).on("resize", this.handleWindowResize);
 
     FastClick.attach(document.body);
 
@@ -50,8 +50,8 @@ var Layout = React.createClass({
   },
 
   componentWillUnmount: function() {
-    $(document).off('keydown', this.handleKeyDown);
-    $(window).off('resize', this.handleWindowResize);
+    $(document).off("keydown", this.handleKeyDown);
+    $(window).off("resize", this.handleWindowResize);
   },
 
   openMenu: function(state) {
@@ -60,13 +60,13 @@ var Layout = React.createClass({
 
   openContact: function(state) {
     this.setState({contactOpen: state});
-    location.hash = state ? 'contact' : '';
+    location.hash = state ? "contact" : "";
   },
 
   handleKeyDown: function(event) {
     // esc closes everything
     if (event.which === 27) {
-      if ($('input, textarea').is(':focus')) {
+      if ($("input, textarea").is(":focus")) {
         // input or textarea is focused, ignore other part of function
         return;
       }
@@ -76,7 +76,7 @@ var Layout = React.createClass({
   },
 
   isSmall: function() {
-    return (typeof window !== 'undefined') && $(window).width() <= RESPONSIVE_BREAKPOINT;
+    return (typeof window !== "undefined") && $(window).width() <= RESPONSIVE_BREAKPOINT;
   },
 
   handleWindowResize: function() {
@@ -99,9 +99,9 @@ var Layout = React.createClass({
 
   render: function() {
     var layoutClasses = React.addons.classSet({
-      'layout': true,
-      'menu-open': this.state.menuOpen,
-      'contact-open': this.state.contactOpen
+      layout: true,
+      "menu-open": this.state.menuOpen,
+      "contact-open": this.state.contactOpen
     });
 
     var childProps = _.extend({}, this.props, {

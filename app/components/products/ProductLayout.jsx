@@ -1,9 +1,9 @@
-'use strict';
-var _ = require('lodash');
-var React = require('react');
-var Router = require('react-router');
-var PageLayout = require('../PageLayout');
-var ImageSourceMixin = require('../../lib/ImageSourceMixin');
+"use strict";
+var _ = require("lodash");
+var React = require("react");
+var Router = require("react-router");
+var PageLayout = require("../PageLayout");
+var ImageSourceMixin = require("../../lib/ImageSourceMixin");
 
 var ProductLayout = React.createClass({
   render: function() {
@@ -29,7 +29,7 @@ var ProductLayout = React.createClass({
     }
 
     return (
-      <PageLayout className={'product-' + product.name} {...this.props}>
+      <PageLayout className={"product-" + product.name} {...this.props}>
         {this.props.children}
 
         <div className="title-section featured">More Projects</div>
@@ -49,12 +49,12 @@ var ProductLink = React.createClass({
     var product = this.props.product;
     var wide = this.props.wide;
     var small = this.props.small;
-    var other = _.omit(this.props, 'product', 'wide', 'small');
+    var other = _.omit(this.props, "product", "wide", "small");
 
     var sourceUrl = (wide && !small) ? product.featureUrl : product.thumbnailUrl;
     var imageUrl = this.imageSource(sourceUrl);
-    var className = wide ? 'grid-1' : 'grid-2-square';
-    className += ' item-project bg-image';
+    var className = wide ? "grid-1" : "grid-2-square";
+    className += " item-project bg-image";
 
     return (
       <Router.Link to="product" params={this.props.product}

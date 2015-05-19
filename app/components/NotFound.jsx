@@ -1,6 +1,6 @@
-'use strict';
-var React = require('react');
-var PageLayout = require('./PageLayout');
+"use strict";
+var React = require("react");
+var PageLayout = require("./PageLayout");
 
 var NotFound = React.createClass({
   render: function() {

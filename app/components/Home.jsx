@@ -15,6 +15,7 @@ var Home = React.createClass({
         <section className="section-home-why">
           <div className="hero-wrapper">
             <h1 className="title-page">Percolate Studio builds digital products to improve people's lives.</h1>
+            <div className="note"><b>Announcement</b><br/><a href="http://blog.percolatestudio.com/design/percolate-studio-joins-meteor/">Percolate Studio Joins Meteor</a></div>
           </div>
         </section>
 

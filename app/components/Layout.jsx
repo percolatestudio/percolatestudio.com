@@ -5,7 +5,7 @@ var $ = require("jquery");
 var React = require("react/addons");
 var Router = require("react-router");
 
-var ContactOverlay = require("./ContactOverlay");
+var ContactOverlay = require("percolate-contact-form");
 var MenuOverlay = require("./MenuOverlay");
 var Collections = require("./Collections");
 
